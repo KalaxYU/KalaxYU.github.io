@@ -8,7 +8,7 @@
       <link href="/2025/11/24/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E7%89%A9%E7%90%86%E7%AC%94%E8%AE%B0/"/>
       <url>/2025/11/24/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E7%89%A9%E7%90%86%E7%AC%94%E8%AE%B0/</url>
       
-        <content type="html"><![CDATA[<p>这是我的第一篇测试文章。</p><p>我们可以讨论一下爱因斯坦的质能方程：<br>$E = mc^2$  </p><p>或者更复杂的麦克斯韦方程组：</p><script type="math/tex; mode=display"></script><script type="math/tex; mode=display">\begin{cases}\nabla \cdot \mathbf{E} = \frac{\rho}{\epsilon_0} \cr\nabla \cdot \mathbf{B} = 0 \cr\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t} \cr\nabla \times \mathbf{B} = \mu_0\mathbf{J} + \mu_0\epsilon_0\frac{\partial \mathbf{E}}{\partial t}\end{cases}</script>]]></content>
+        <content type="html"><![CDATA[<p>这是我的第一篇测试文章。</p><p>我们可以讨论一下爱因斯坦的质能方程：<br>$E = mc^2$  </p><p>或者更复杂的麦克斯韦方程组：</p><p>$\begin{cases}<br>\nabla \cdot \mathbf{E} = \frac{\rho}{\epsilon_0} \cr<br>\nabla \cdot \mathbf{B} = 0 \cr<br>\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t} \cr<br>\nabla \times \mathbf{B} = \mu_0\mathbf{J} + \mu_0\epsilon_0\frac{\partial \mathbf{E}}{\partial t}<br>\end{cases}$</p>]]></content>
       
       
       
