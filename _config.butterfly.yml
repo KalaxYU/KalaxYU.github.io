@@ -1,0 +1,192 @@
+# Butterfly theme overrides for kalax524.com.
+
+nav:
+  logo:
+  display_title: true
+  display_post_title: true
+  fixed: true
+
+menu:
+  Home: / || fas fa-home
+  Notes: /notes/ || fas fa-book-open
+  Daily English: /english-reading/ || fas fa-feather-alt
+  Archives: /archives/ || fas fa-archive
+  Tags: /tags/ || fas fa-tags
+  About: /about/ || fas fa-user-astronaut
+  notes.kalax524.com: https://notes.kalax524.com || fas fa-external-link-alt
+
+social:
+  fab fa-github: https://github.com/KalaxYU || GitHub || '#24292e'
+  fas fa-envelope: mailto:ibioancialo524@gmail.com || Email || '#2b7a78'
+
+favicon: /img/favicon.ico
+
+avatar:
+  img: https://github.com/KalaxYU.png
+  effect: false
+
+disable_top_img: false
+index_img: /img/bg.jpg
+default_top_img: /img/bg.jpg
+archive_img: /img/bg.jpg
+tag_img: /img/bg.jpg
+category_img: /img/bg.jpg
+footer_img: false
+background:
+
+cover:
+  index_enable: true
+  aside_enable: true
+  archives_enable: true
+  default_cover:
+
+subtitle:
+  enable: true
+  effect: true
+  source: false
+  sub:
+    - 把零散的笔记变成能被再次遇见的思想。
+    - Mathematics, languages, reading, and the daily work of becoming.
+    - I write to remember, and I publish to think again.
+
+index_site_info_top:
+index_top_img_height: 58vh
+index_layout: 6
+index_post_content:
+  method: 2
+  length: 220
+
+post_meta:
+  page:
+    date_type: created
+    date_format: date
+    categories: true
+    tags: true
+    label: true
+  post:
+    position: left
+    date_type: both
+    date_format: date
+    categories: true
+    tags: true
+    label: true
+
+toc:
+  post: true
+  page: true
+  number: true
+  expand: false
+  style_simple: false
+  scroll_percent: true
+
+post_copyright:
+  enable: true
+  decode: false
+  author_href: https://kalax524.com
+  license: CC BY-NC-SA 4.0
+  license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+aside:
+  enable: true
+  hide: false
+  button: true
+  mobile: true
+  position: right
+  display:
+    archive: true
+    tag: true
+    category: true
+  card_author:
+    enable: true
+    description: 数学、语言、阅读和一点日常的长期主义。
+    button:
+      enable: true
+      icon: fas fa-sticky-note
+      text: Notes Hub
+      link: https://notes.kalax524.com
+  card_announcement:
+    enable: true
+    content: Obsidian 笔记已同步到 Notes；每日英语专栏会沉淀晨读、词汇和句子。
+  card_recent_post:
+    enable: true
+    limit: 6
+    sort: date
+  card_categories:
+    enable: true
+    limit: 12
+    expand: none
+  card_tags:
+    enable: true
+    limit: 60
+    color: false
+    orderby: random
+    order: 1
+  card_archives:
+    enable: true
+    type: monthly
+    format: MMMM YYYY
+    order: -1
+    limit: 8
+  card_post_series:
+    enable: true
+    orderBy: date
+    order: -1
+  card_webinfo:
+    enable: true
+    post_count: true
+    last_push_date: true
+
+readmode: true
+darkmode:
+  enable: true
+  button: true
+  autoChangeMode: false
+
+copy:
+  enable: true
+  copyright:
+    enable: true
+    limit_count: 150
+
+wordcount:
+  enable: true
+  post_wordcount: true
+  min2read: true
+  total_wordcount: true
+
+busuanzi:
+  site_uv: false
+  site_pv: false
+  page_pv: false
+
+math:
+  use: mathjax
+  per_page: true
+  hide_scrollbar: false
+  mathjax:
+    enableMenu: true
+    tags: none
+
+search:
+  use: local_search
+  placeholder: Search notes, essays, and readings
+  local_search:
+    preload: false
+    CDN:
+    pagination:
+      enable: true
+      per_page: 6
+
+footer:
+  owner:
+    enable: true
+    since: 2025
+  copyright:
+    enable: true
+    version: false
+  custom_text: Built from Obsidian notes and slow thinking.
+
+inject:
+  head:
+    - <link rel="stylesheet" href="/css/kalax.css">
+  bottom:
