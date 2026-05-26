@@ -4,10 +4,11 @@ date: 2026-05-26 17:04:48
 updated: 2026-05-26 17:04:48
 permalink: notes/法语-fraçais-祈使句-8d70f85c/
 categories:
-  - "Notes"
+  - "法语"
   - "法语  Fraçais"
 tags:
   - "obsidian"
+  - "法语"
   - "法语  Fraçais"
 description: "1. 祈使句只有三个人称 法语祈使句只用于： 人称 含义 例子 --- --- --- tu 你 Écoute ! nous 我们 Écoutons ! vous 你们 / 您 Écoutez ! 没有 je / il / elle / ils / elles 的祈使形式。 --- 2. 基本变法："
 ---

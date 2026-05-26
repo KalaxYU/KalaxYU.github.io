@@ -4,10 +4,11 @@ date: 2026-05-25 23:37:38
 updated: 2026-05-25 23:37:38
 permalink: notes/法语-fraçais-lesson-1-12-flashcards-03932e5b/
 categories:
-  - "Notes"
+  - "法语"
   - "法语  Fraçais"
 tags:
   - "obsidian"
+  - "法语"
   - "法语  Fraçais"
   - "flashcards"
 description: "flashcards 返回词汇表 · 图片选词练习 人物、身份、职业 monsieur::先生 madame::女士，夫人 mademoiselle::小姐 ami(e)::朋友 copain/copine::朋友，同伴 garçon::男孩，服务员 fille::女孩，女儿 femme::女人，妻"

@@ -4,10 +4,11 @@ date: 2026-05-25 17:03:37
 updated: 2026-05-25 17:03:37
 permalink: notes/法语-fraçais-介词-préposition-97ba8a7b/
 categories:
-  - "Notes"
+  - "法语"
   - "法语  Fraçais"
 tags:
   - "obsidian"
+  - "法语"
   - "法语  Fraçais"
 description: "一、介词是什么？ 介词就是放在名词、代词、动词不定式前面，表示关系的词。 比如： Je vais à Paris . 我去巴黎。 Le livre de Marie . Marie 的书。 Il parle avec Paul . 他和 Paul 说话。 介词后面常接： 结构 例子 --- --- "
 ---

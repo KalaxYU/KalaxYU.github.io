@@ -4,10 +4,11 @@ date: 2026-05-25 23:37:38
 updated: 2026-05-25 23:37:38
 permalink: notes/法语-fraçais-lesson-1-12-图片选词练习-c231870c/
 categories:
-  - "Notes"
+  - "法语"
   - "法语  Fraçais"
 tags:
   - "obsidian"
+  - "法语"
   - "法语  Fraçais"
   - "flashcards"
 description: "先选择一个词汇分类，再像百词斩一样一张一张选择对应的法语单词。每次打开页面都会重新随机排序。 返回词汇表 · 打开闪卡 正在加载词卡..."

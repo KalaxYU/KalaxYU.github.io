@@ -4,10 +4,11 @@ date: 2026-05-26 18:39:21
 updated: 2026-05-26 18:39:21
 permalink: notes/法语-fraçais-动词-verbe-aa685f77/
 categories:
-  - "Notes"
+  - "法语"
   - "法语  Fraçais"
 tags:
   - "obsidian"
+  - "法语"
   - "法语  Fraçais"
 description: "Francisez 初学者的必备的１００个动词 常见法语动词变位（吐血整理，建议收藏） - 知乎 人称 appeler faire prendre porter avoir être aller trouver -------------- ----------------- -----------"
 ---

@@ -4,10 +4,11 @@ date: 2026-05-25 16:47:40
 updated: 2026-05-25 16:47:40
 permalink: notes/法语-fraçais-形容词-f21da34a/
 categories:
-  - "Notes"
+  - "法语"
   - "法语  Fraçais"
 tags:
   - "obsidian"
+  - "法语"
   - "法语  Fraçais"
 description: "1. 形容词要配合名词的阴阳性、单复数 法语形容词通常要和它修饰的名词保持一致： 名词 形容词 --- --- 阳性单数 petit 阴性单数 petite 阳性复数 petits 阴性复数 petites 比如： 最基本规律是： 但有很多特殊变化。 --- 2. 阴性变化：通常加 -e，但有特殊形"
 ---

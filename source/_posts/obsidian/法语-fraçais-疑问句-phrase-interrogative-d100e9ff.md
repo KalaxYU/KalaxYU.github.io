@@ -4,10 +4,11 @@ date: 2026-05-19 11:15:37
 updated: 2026-05-19 11:15:37
 permalink: notes/法语-fraçais-疑问句-phrase-interrogative-d100e9ff/
 categories:
-  - "Notes"
+  - "法语"
   - "法语  Fraçais"
 tags:
   - "obsidian"
+  - "法语"
   - "法语  Fraçais"
 description: "一般疑问句（Interrogative Sentences） 用于询问某动作或状态是否发生，回答通常为 Oui/ Non 1. 陈述句语序 Vous paelez français? 2. Est-ce que+陈述句 Est-ce que vous aimez le café? 3. 主谓倒装 -"
 ---

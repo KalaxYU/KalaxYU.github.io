@@ -65,7 +65,7 @@ prismjs:
 # per_page: Posts displayed per page. (0 = disable pagination)
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
-  path: ''
+  path: articles
   per_page: 10
   order_by: -date
 
@@ -109,9 +109,13 @@ deploy:
   type: git
   repo: https://github.com/KalaxYU/KalaxYU.github.io.git
   branch: main
-# 数学公式配置
+# Math rendering used by hexo-math tag helpers.
 math:
-  engine: 'mathjax'
   mathjax:
-    src: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'
+    css: 'https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css'
+    options:
+      conversion:
+        display: true
+      tex:
+      svg:
 

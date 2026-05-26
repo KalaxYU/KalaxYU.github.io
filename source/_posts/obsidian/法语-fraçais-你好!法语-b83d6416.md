@@ -4,10 +4,11 @@ date: 2026-05-19 17:21:57
 updated: 2026-05-19 17:21:57
 permalink: notes/法语-fraçais-你好!法语-b83d6416/
 categories:
-  - "Notes"
+  - "法语"
   - "法语  Fraçais"
 tags:
   - "obsidian"
+  - "法语"
   - "法语  Fraçais"
   - "flashcards"
 description: "Lesson 5 -Son chapeau et son blouson, c'est ça ? -Oui, son chapeau et son blouson. Ils sont dans la chambre de Mélanie, sous l'étagère à côté de la fe"

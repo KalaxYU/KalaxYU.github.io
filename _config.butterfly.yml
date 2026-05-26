@@ -9,9 +9,9 @@ nav:
 menu:
   Home: / || fas fa-home
   Notes: /notes/ || fas fa-book-open
-  Daily English: /english-reading/ || fas fa-feather-alt
+  TOEFL Reading: /english-reading/ || fas fa-feather-alt
+  Articles: /articles/ || fas fa-layer-group
   Archives: /archives/ || fas fa-archive
-  Tags: /tags/ || fas fa-tags
   About: /about/ || fas fa-user-astronaut
   notes.kalax524.com: https://notes.kalax524.com || fas fa-external-link-alt
 
@@ -26,11 +26,11 @@ avatar:
   effect: false
 
 disable_top_img: false
-index_img: /img/bg.jpg
-default_top_img: /img/bg.jpg
-archive_img: /img/bg.jpg
-tag_img: /img/bg.jpg
-category_img: /img/bg.jpg
+index_img: /img/bg.JPG
+default_top_img: /img/bg.JPG
+archive_img: /img/bg.JPG
+tag_img: /img/bg.JPG
+category_img: /img/bg.JPG
 footer_img: false
 background:
 
@@ -45,9 +45,8 @@ subtitle:
   effect: true
   source: false
   sub:
-    - 把零散的笔记变成能被再次遇见的思想。
-    - Mathematics, languages, reading, and the daily work of becoming.
-    - I write to remember, and I publish to think again.
+    - 数学、语言、阅读，以及慢慢成形的知识地图。
+    - Notes that are written to be used again.
 
 index_site_info_top:
 index_top_img_height: 58vh
@@ -98,7 +97,7 @@ aside:
     category: true
   card_author:
     enable: true
-    description: 数学、语言、阅读和一点日常的长期主义。
+    description: 数学、英语、法语、CS，还有一些正在路上的想法。
     button:
       enable: true
       icon: fas fa-sticky-note
@@ -106,7 +105,7 @@ aside:
       link: https://notes.kalax524.com
   card_announcement:
     enable: true
-    content: Obsidian 笔记已同步到 Notes；每日英语专栏会沉淀晨读、词汇和句子。
+    content: 首页按学科进入；英语专栏改为托福难度原版文本精读。
   card_recent_post:
     enable: true
     limit: 6
@@ -160,7 +159,7 @@ busuanzi:
   page_pv: false
 
 math:
-  use: mathjax
+  use:
   per_page: true
   hide_scrollbar: false
   mathjax:
@@ -189,4 +188,3 @@ footer:
 inject:
   head:
     - <link rel="stylesheet" href="/css/kalax.css">
-  bottom:
