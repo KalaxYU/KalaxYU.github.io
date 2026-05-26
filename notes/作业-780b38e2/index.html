@@ -1,0 +1,758 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>高等代数 II 第十次作业解答 | Kalax524</title><meta name="author" content="Nemo YU"><meta name="copyright" content="Nemo YU"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="高等代数 II 第十次作业解答 题号：7.2.19，7.2.21，7.2.22，7.2.24，7.2.25，7.2.27，7.2.28，7.2.30，7.2.31，7.2.32 --- 习题 7.2.19 设 mathcal A in operatorname{End}(V) 为正规变换。证明： o">
+<meta property="og:type" content="article">
+<meta property="og:title" content="高等代数 II 第十次作业解答">
+<meta property="og:url" content="https://kalax524.com/notes/%E4%BD%9C%E4%B8%9A-780b38e2/index.html">
+<meta property="og:site_name" content="Kalax524">
+<meta property="og:description" content="高等代数 II 第十次作业解答 题号：7.2.19，7.2.21，7.2.22，7.2.24，7.2.25，7.2.27，7.2.28，7.2.30，7.2.31，7.2.32 --- 习题 7.2.19 设 mathcal A in operatorname{End}(V) 为正规变换。证明： o">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://github.com/KalaxYU.png">
+<meta property="article:published_time" content="2026-05-19T14:51:00.000Z">
+<meta property="article:modified_time" content="2026-05-19T14:51:00.000Z">
+<meta property="article:author" content="Nemo YU">
+<meta property="article:tag" content="obsidian">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://github.com/KalaxYU.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "高等代数 II 第十次作业解答",
+  "url": "https://kalax524.com/notes/%E4%BD%9C%E4%B8%9A-780b38e2/",
+  "image": "https://github.com/KalaxYU.png",
+  "datePublished": "2026-05-19T14:51:00.000Z",
+  "dateModified": "2026-05-19T14:51:00.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Nemo YU",
+      "url": "https://kalax524.com"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://kalax524.com/notes/%E4%BD%9C%E4%B8%9A-780b38e2/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="stylesheet" href="/css/index.css?v=5.5.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":true,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":150,"languages":{"author":"作者: Nemo YU","link":"链接: ","source":"来源: Kalax524","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.12.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '高等代数 II 第十次作业解答',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/kalax.css"><!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://github.com/KalaxYU.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">24</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">12</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/notes/"><i class="fa-fw fas fa-book-open"></i><span> Notes</span></a></div><div class="menus_item"><a class="site-page" href="/english-reading/"><i class="fa-fw fas fa-feather-alt"></i><span> Daily English</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user-astronaut"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://notes.kalax524.com"><i class="fa-fw fas fa-external-link-alt"></i><span> notes.kalax524.com</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/img/bg.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Kalax524</span></a><a class="nav-page-title" href="/"><span class="site-name">高等代数 II 第十次作业解答</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/notes/"><i class="fa-fw fas fa-book-open"></i><span> Notes</span></a></div><div class="menus_item"><a class="site-page" href="/english-reading/"><i class="fa-fw fas fa-feather-alt"></i><span> Daily English</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user-astronaut"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://notes.kalax524.com"><i class="fa-fw fas fa-external-link-alt"></i><span> notes.kalax524.com</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">高等代数 II 第十次作业解答</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-05-19T14:51:00.000Z" title="发表于 2026-05-19 22:51:00">2026-05-19</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-05-19T14:51:00.000Z" title="更新于 2026-05-19 22:51:00">2026-05-19</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Notes/">Notes</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">1.7k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>7分钟</span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1 id="高等代数-II-第十次作业解答"><a href="#高等代数-II-第十次作业解答" class="headerlink" title="高等代数 II 第十次作业解答"></a>高等代数 II 第十次作业解答</h1><p>题号：7.2.19，7.2.21，7.2.22，7.2.24，7.2.25，7.2.27，7.2.28，7.2.30，7.2.31，7.2.32</p>
+<hr>
+<h2 id="习题-7-2-19"><a href="#习题-7-2-19" class="headerlink" title="习题 7.2.19"></a>习题 7.2.19</h2><p>设 $\mathcal A\in \operatorname{End}(V)$ 为正规变换。证明：</p>
+<script type="math/tex; mode=display">
+\operatorname{Im}(\mathcal A)=\operatorname{Im}(\mathcal A^*).</script><p>因为 $\mathcal A$ 是正规变换，所以</p>
+<script type="math/tex; mode=display">
+\mathcal A\mathcal A^*=\mathcal A^*\mathcal A.</script><p>对任意 $x\in V$，有</p>
+<script type="math/tex; mode=display">
+\|\mathcal A x\|^2
+=\langle \mathcal A x,\mathcal A x\rangle
+=\langle \mathcal A^*\mathcal A x,x\rangle,</script><p>而</p>
+<script type="math/tex; mode=display">
+\|\mathcal A^*x\|^2
+=\langle \mathcal A^*x,\mathcal A^*x\rangle
+=\langle \mathcal A\mathcal A^*x,x\rangle.</script><p>由正规性可得</p>
+<script type="math/tex; mode=display">
+\|\mathcal A x\|^2=\|\mathcal A^*x\|^2.</script><p>因此</p>
+<script type="math/tex; mode=display">
+\mathcal A x=0
+\iff
+\mathcal A^*x=0.</script><p>所以</p>
+<script type="math/tex; mode=display">
+\ker \mathcal A=\ker \mathcal A^*.</script><p>又因为有限维内积空间中有</p>
+<script type="math/tex; mode=display">
+\operatorname{Im}(\mathcal A)
+=
+(\ker \mathcal A^*)^\perp,</script><p>以及</p>
+<script type="math/tex; mode=display">
+\operatorname{Im}(\mathcal A^*)
+=
+(\ker \mathcal A)^\perp.</script><p>于是</p>
+<script type="math/tex; mode=display">
+\operatorname{Im}(\mathcal A)
+=
+(\ker \mathcal A^*)^\perp
+=
+(\ker \mathcal A)^\perp
+=
+\operatorname{Im}(\mathcal A^*).</script><p>所以</p>
+<script type="math/tex; mode=display">
+\boxed{\operatorname{Im}(\mathcal A)=\operatorname{Im}(\mathcal A^*)}.</script><hr>
+<h2 id="习题-7-2-21"><a href="#习题-7-2-21" class="headerlink" title="习题 7.2.21"></a>习题 7.2.21</h2><p>设 $A\in M_n(\mathbb R)$ 为对称矩阵。对于每个 $i\in[1,n]$，记 $c_i$ 为 $A$ 的所有 $i$ 阶主子式之和。</p>
+<p>证明：如果 $c_i\ge 0$ 对每个 $i\in[1,n]$ 成立，那么 $A$ 是半正定的。如果再有 $c_n&gt;0$，则 $A$ 是正定的。</p>
+<p>因为 $A$ 是实对称矩阵，所以存在正交矩阵 $Q$，使得</p>
+<script type="math/tex; mode=display">
+Q^TAQ=\operatorname{diag}(\lambda_1,\dots,\lambda_n),</script><p>其中 $\lambda_1,\dots,\lambda_n\in\mathbb R$。</p>
+<p>矩阵 $A$ 的特征多项式为</p>
+<script type="math/tex; mode=display">
+p_A(t)=\det(tI-A)
+=t^n-c_1t^{n-1}+c_2t^{n-2}-\cdots+(-1)^nc_n.</script><p>反设 $A$ 有负特征值。设该负特征值为 $-s$，其中 $s&gt;0$。因为 $-s$ 是特征值，所以</p>
+<script type="math/tex; mode=display">
+p_A(-s)=0.</script><p>但是</p>
+<script type="math/tex; mode=display">
+p_A(-s)
+=
+(-1)^n
+\left(
+s^n+c_1s^{n-1}+c_2s^{n-2}+\cdots+c_n
+\right).</script><p>由于</p>
+<script type="math/tex; mode=display">
+s>0,\qquad c_i\ge 0,</script><p>所以上式括号中的数严格大于 $0$，因此</p>
+<script type="math/tex; mode=display">
+p_A(-s)\neq 0.</script><p>这与 $p_A(-s)=0$ 矛盾。</p>
+<p>所以 $A$ 没有负特征值，即</p>
+<script type="math/tex; mode=display">
+\lambda_i\ge 0,\qquad i=1,\dots,n.</script><p>因此 $A$ 是半正定矩阵。</p>
+<p>如果进一步有</p>
+<script type="math/tex; mode=display">
+c_n>0,</script><p>注意到</p>
+<script type="math/tex; mode=display">
+c_n=\det A=\lambda_1\lambda_2\cdots\lambda_n.</script><p>而所有 $\lambda_i\ge 0$，且它们的乘积大于 $0$，所以每个 $\lambda_i$ 都大于 $0$。因此 $A$ 是正定矩阵。</p>
+<p>综上，结论成立。</p>
+<hr>
+<h2 id="习题-7-2-22"><a href="#习题-7-2-22" class="headerlink" title="习题 7.2.22"></a>习题 7.2.22</h2><p>设 $A,B\in M_n(\mathbb R)$ 均为对称矩阵，其中 $A$ 正定。证明：存在可逆矩阵 $P\in M_n(\mathbb R)$，使得</p>
+<script type="math/tex; mode=display">
+P^TAP</script><p>和</p>
+<script type="math/tex; mode=display">
+P^TBP</script><p>同时为对角矩阵。</p>
+<p>因为 $A$ 正定，所以存在可逆矩阵 $S$，使得</p>
+<script type="math/tex; mode=display">
+S^TAS=I.</script><p>令</p>
+<script type="math/tex; mode=display">
+C=S^TBS.</script><p>因为 $B$ 是对称矩阵，所以</p>
+<script type="math/tex; mode=display">
+C^T=(S^TBS)^T=S^TB^TS=S^TBS=C.</script><p>因此 $C$ 也是实对称矩阵。</p>
+<p>由实对称矩阵正交对角化定理，存在正交矩阵 $Q$，使得</p>
+<script type="math/tex; mode=display">
+Q^TCQ=D,</script><p>其中 $D$ 是对角矩阵。</p>
+<p>令</p>
+<script type="math/tex; mode=display">
+P=SQ.</script><p>则</p>
+<script type="math/tex; mode=display">
+P^TAP
+=
+Q^TS^TASQ
+=
+Q^TIQ
+=
+I,</script><p>是对角矩阵。</p>
+<p>同时</p>
+<script type="math/tex; mode=display">
+P^TBP
+=
+Q^TS^TBSQ
+=
+Q^TCQ
+=
+D,</script><p>也是对角矩阵。</p>
+<p>因此存在可逆矩阵 $P$，使得 $P^TAP$ 和 $P^TBP$ 同时为对角矩阵。</p>
+<hr>
+<h2 id="习题-7-2-24"><a href="#习题-7-2-24" class="headerlink" title="习题 7.2.24"></a>习题 7.2.24</h2><p>设 $b,c\in\mathbb R$ 且</p>
+<script type="math/tex; mode=display">
+b^2-4c<0.</script><p>举例说明：存在一个线性变换 $\mathcal A\in\operatorname{End}(V)$，使得</p>
+<script type="math/tex; mode=display">
+\mathcal A^2+b\mathcal A+cI</script><p>不可逆。</p>
+<p>因为</p>
+<script type="math/tex; mode=display">
+b^2-4c<0,</script><p>所以多项式</p>
+<script type="math/tex; mode=display">
+x^2+bx+c</script><p>在实数范围内没有根，但在复数范围内有一对共轭复根</p>
+<script type="math/tex; mode=display">
+\alpha\pm i\beta,</script><p>其中</p>
+<script type="math/tex; mode=display">
+\alpha=-\frac b2,\qquad
+\beta=\frac{\sqrt{4c-b^2}}2\neq 0.</script><p>取 $V=\mathbb R^2$，定义线性变换 $\mathcal A$ 在标准基下的矩阵为</p>
+<script type="math/tex; mode=display">
+A=
+\begin{pmatrix}
+\alpha & -\beta\\
+\beta & \alpha
+\end{pmatrix}.</script><p>该矩阵对应复平面中“乘以复数 $\alpha+i\beta$”的线性变换。</p>
+<p>由于 $\alpha+i\beta$ 是方程</p>
+<script type="math/tex; mode=display">
+x^2+bx+c=0</script><p>的根，所以对应的实矩阵满足</p>
+<script type="math/tex; mode=display">
+A^2+bA+cI=0.</script><p>因此</p>
+<script type="math/tex; mode=display">
+\mathcal A^2+b\mathcal A+cI</script><p>是零变换。</p>
+<p>零变换不可逆，所以这就给出了所需例子。</p>
+<p>这也说明，如果不假设 $\mathcal A$ 自伴，那么结论不再成立。</p>
+<hr>
+<h2 id="习题-7-2-25"><a href="#习题-7-2-25" class="headerlink" title="习题 7.2.25"></a>习题 7.2.25</h2><p>设 $\mathcal A,\mathcal B$ 是 $n$ 维内积空间 $V$ 上的两个自伴算子。证明下列陈述等价：</p>
+<ol>
+<li>存在 $V$ 的一组规范正交基 $\mathcal E$，使得 $M<em>\mathcal E(\mathcal A)$ 和 $M</em>\mathcal E(\mathcal B)$ 同时为对角矩阵；</li>
+<li>$\mathcal A$ 和 $\mathcal B$ 可交换，即</li>
+</ol>
+<script type="math/tex; mode=display">
+\mathcal A\mathcal B=\mathcal B\mathcal A.</script><h3 id="证明-1-Rightarrow-2"><a href="#证明-1-Rightarrow-2" class="headerlink" title="证明 $1\Rightarrow 2$"></a>证明 $1\Rightarrow 2$</h3><p>若存在一组规范正交基 $\mathcal E$，使得</p>
+<script type="math/tex; mode=display">
+M_\mathcal E(\mathcal A)</script><p>和</p>
+<script type="math/tex; mode=display">
+M_\mathcal E(\mathcal B)</script><p>同时为对角矩阵。</p>
+<p>因为对角矩阵之间一定可交换，所以</p>
+<script type="math/tex; mode=display">
+M_\mathcal E(\mathcal A)M_\mathcal E(\mathcal B)
+=
+M_\mathcal E(\mathcal B)M_\mathcal E(\mathcal A).</script><p>因此</p>
+<script type="math/tex; mode=display">
+\mathcal A\mathcal B=\mathcal B\mathcal A.</script><h3 id="证明-2-Rightarrow-1"><a href="#证明-2-Rightarrow-1" class="headerlink" title="证明 $2\Rightarrow 1$"></a>证明 $2\Rightarrow 1$</h3><p>因为 $\mathcal A$ 是自伴算子，所以 $V$ 可以正交分解为 $\mathcal A$ 的特征子空间直和：</p>
+<script type="math/tex; mode=display">
+V=\bigoplus_\lambda V_\lambda,</script><p>其中</p>
+<script type="math/tex; mode=display">
+V_\lambda=\ker(\mathcal A-\lambda I).</script><p>下面证明每个 $V_\lambda$ 在 $\mathcal B$ 下不变。</p>
+<p>任取 $v\in V_\lambda$，则</p>
+<script type="math/tex; mode=display">
+\mathcal Av=\lambda v.</script><p>又因为</p>
+<script type="math/tex; mode=display">
+\mathcal A\mathcal B=\mathcal B\mathcal A,</script><p>所以</p>
+<script type="math/tex; mode=display">
+\mathcal A(\mathcal Bv)
+=
+\mathcal B(\mathcal Av)
+=
+\mathcal B(\lambda v)
+=
+\lambda\mathcal Bv.</script><p>因此</p>
+<script type="math/tex; mode=display">
+\mathcal Bv\in V_\lambda.</script><p>所以 $\mathcal B$ 保持 $\mathcal A$ 的每个特征子空间不变。</p>
+<p>由于 $\mathcal B$ 也是自伴算子，所以 $\mathcal B$ 在每个 $V<em>\lambda$ 上的限制仍然是自伴算子。于是可以在每个 $V</em>\lambda$ 中选取一组规范正交基，使得 $\mathcal B$ 在该子空间上对角化。</p>
+<p>把所有这些规范正交基合并起来，就得到 $V$ 的一组规范正交基。</p>
+<p>在这组基下，$\mathcal A$ 在每个 $V_\lambda$ 上都是数乘 $\lambda I$，因此 $\mathcal A$ 是对角的；而 $\mathcal B$ 也被构造为对角的。</p>
+<p>所以 $\mathcal A$ 和 $\mathcal B$ 可以同时正交对角化。</p>
+<p>因此两条陈述等价。</p>
+<hr>
+<h2 id="习题-7-2-27"><a href="#习题-7-2-27" class="headerlink" title="习题 7.2.27"></a>习题 7.2.27</h2><p>设 $A$ 为 $n$ 阶实正规矩阵。假设 $\lambda\in\mathbb C$ 是 $A$ 的一个复特征值，列向量 $\alpha\in\mathbb C^n$ 满足</p>
+<script type="math/tex; mode=display">
+A\alpha=\lambda\alpha.</script><p>证明：</p>
+<script type="math/tex; mode=display">
+A^T\alpha=\overline{\lambda}\alpha.</script><p>因为 $A$ 是实正规矩阵，所以</p>
+<script type="math/tex; mode=display">
+AA^T=A^TA.</script><p>把 $A$ 看作复空间 $\mathbb C^n$ 上的矩阵，则它仍然是正规矩阵，并且它的伴随矩阵为</p>
+<script type="math/tex; mode=display">
+A^*=A^T.</script><p>由正规矩阵的性质可知：如果</p>
+<script type="math/tex; mode=display">
+A\alpha=\lambda\alpha,</script><p>那么</p>
+<script type="math/tex; mode=display">
+A^*\alpha=\overline{\lambda}\alpha.</script><p>又因为这里</p>
+<script type="math/tex; mode=display">
+A^*=A^T,</script><p>所以</p>
+<script type="math/tex; mode=display">
+A^T\alpha=\overline{\lambda}\alpha.</script><p>证毕。</p>
+<hr>
+<h2 id="习题-7-2-28"><a href="#习题-7-2-28" class="headerlink" title="习题 7.2.28"></a>习题 7.2.28</h2><p>设 $\mathcal A\in \operatorname{End}(V)$ 是正规变换，且最小多项式为</p>
+<script type="math/tex; mode=display">
+g(X)=(X-a)^2+b^2,</script><p>其中 $a,b\in\mathbb R$，$b\neq 0$。</p>
+<p>证明：</p>
+<script type="math/tex; mode=display">
+\mathcal A</script><p>可逆，且</p>
+<script type="math/tex; mode=display">
+\mathcal A^*=(a^2+b^2)\mathcal A^{-1}.</script><p>由最小多项式可知</p>
+<script type="math/tex; mode=display">
+(\mathcal A-aI)^2+b^2I=0.</script><p>展开得</p>
+<script type="math/tex; mode=display">
+\mathcal A^2-2a\mathcal A+(a^2+b^2)I=0.</script><p>于是</p>
+<script type="math/tex; mode=display">
+\mathcal A(2aI-\mathcal A)=(a^2+b^2)I.</script><p>因为</p>
+<script type="math/tex; mode=display">
+a^2+b^2>0,</script><p>所以 $\mathcal A$ 可逆，并且</p>
+<script type="math/tex; mode=display">
+\mathcal A^{-1}
+=
+\frac{1}{a^2+b^2}(2aI-\mathcal A).</script><p>因此</p>
+<script type="math/tex; mode=display">
+(a^2+b^2)\mathcal A^{-1}=2aI-\mathcal A.</script><p>下面证明</p>
+<script type="math/tex; mode=display">
+\mathcal A^*=2aI-\mathcal A.</script><p>令</p>
+<script type="math/tex; mode=display">
+\mathcal B=\mathcal A-aI.</script><p>因为 $\mathcal A$ 正规，所以 $\mathcal B$ 也是正规变换。并且</p>
+<script type="math/tex; mode=display">
+\mathcal B^2=-b^2I.</script><p>因此 $\mathcal B$ 的特征值只能是</p>
+<script type="math/tex; mode=display">
+ib</script><p>或</p>
+<script type="math/tex; mode=display">
+-ib.</script><p>由于正规变换可以酉对角化，所以在一组规范正交基下，$\mathcal B$ 的矩阵为对角矩阵，对角线上只可能出现 $ib$ 或 $-ib$。</p>
+<p>于是 $\mathcal B^*$ 的特征值是这些特征值的共轭，即 $-ib$ 或 $ib$。</p>
+<p>因此</p>
+<script type="math/tex; mode=display">
+\mathcal B^*=-\mathcal B.</script><p>也就是说</p>
+<script type="math/tex; mode=display">
+(\mathcal A-aI)^*=-(\mathcal A-aI).</script><p>展开得</p>
+<script type="math/tex; mode=display">
+\mathcal A^*-aI=-\mathcal A+aI.</script><p>所以</p>
+<script type="math/tex; mode=display">
+\mathcal A^*=2aI-\mathcal A.</script><p>结合前面得到的</p>
+<script type="math/tex; mode=display">
+2aI-\mathcal A=(a^2+b^2)\mathcal A^{-1},</script><p>可得</p>
+<script type="math/tex; mode=display">
+\boxed{\mathcal A^*=(a^2+b^2)\mathcal A^{-1}}.</script><hr>
+<h2 id="习题-7-2-30"><a href="#习题-7-2-30" class="headerlink" title="习题 7.2.30"></a>习题 7.2.30</h2><p>设 $C[-\pi,\pi]$ 是闭区间 $[-\pi,\pi]$ 上所有实值连续函数构成的空间，在其上定义内积：</p>
+<script type="math/tex; mode=display">
+\langle f,g\rangle
+=
+\int_{-\pi}^{\pi}f(x)g(x)\,dx.</script><p>取</p>
+<script type="math/tex; mode=display">
+V=\operatorname{span}
+(1,\cos x,\cos 2x,\cos 3x,\sin x,\sin 2x,\sin 3x).</script><h3 id="1-证明：对于任意-f-in-V-，其导函数-f’-也属于-V"><a href="#1-证明：对于任意-f-in-V-，其导函数-f’-也属于-V" class="headerlink" title="1. 证明：对于任意 $f\in V$，其导函数 $f’$ 也属于 $V$"></a>1. 证明：对于任意 $f\in V$，其导函数 $f’$ 也属于 $V$</h3><p>任取 $f\in V$，则 $f$ 可以写成</p>
+<script type="math/tex; mode=display">
+f(x)
+=
+a_0+a_1\cos x+a_2\cos 2x+a_3\cos 3x
++b_1\sin x+b_2\sin 2x+b_3\sin 3x.</script><p>求导得</p>
+<script type="math/tex; mode=display">
+f'(x)
+=
+-a_1\sin x-2a_2\sin 2x-3a_3\sin 3x
++b_1\cos x+2b_2\cos 2x+3b_3\cos 3x.</script><p>显然 $f’(x)$ 仍然是</p>
+<script type="math/tex; mode=display">
+1,\cos x,\cos 2x,\cos 3x,\sin x,\sin 2x,\sin 3x</script><p>的线性组合。</p>
+<p>因此</p>
+<script type="math/tex; mode=display">
+f'\in V.</script><h3 id="2-定义-mathcal-A-V-to-V-f-mapsto-f’-，证明-mathcal-A-是斜对称变换"><a href="#2-定义-mathcal-A-V-to-V-f-mapsto-f’-，证明-mathcal-A-是斜对称变换" class="headerlink" title="2. 定义 $\mathcal A:V\to V,\ f\mapsto f’$，证明 $\mathcal A$ 是斜对称变换"></a>2. 定义 $\mathcal A:V\to V,\ f\mapsto f’$，证明 $\mathcal A$ 是斜对称变换</h3><p>要证明 $\mathcal A$ 是斜对称变换，即证明对任意 $f,g\in V$，有</p>
+<script type="math/tex; mode=display">
+\langle \mathcal Af,g\rangle
+=
+-\langle f,\mathcal Ag\rangle.</script><p>也就是证明</p>
+<script type="math/tex; mode=display">
+\langle f',g\rangle
+=
+-\langle f,g'\rangle.</script><p>由分部积分公式，</p>
+<script type="math/tex; mode=display">
+\int_{-\pi}^{\pi}f'(x)g(x)\,dx
+=
+f(x)g(x)\bigg|_{-\pi}^{\pi}
+-
+\int_{-\pi}^{\pi}f(x)g'(x)\,dx.</script><p>因为 $f,g\in V$ 都是由 $1,\sin kx,\cos kx$ 线性组合而成，所以它们满足</p>
+<script type="math/tex; mode=display">
+f(\pi)=f(-\pi),
+\qquad
+g(\pi)=g(-\pi).</script><p>因此</p>
+<script type="math/tex; mode=display">
+f(x)g(x)\bigg|_{-\pi}^{\pi}=0.</script><p>所以</p>
+<script type="math/tex; mode=display">
+\int_{-\pi}^{\pi}f'(x)g(x)\,dx
+=
+-\int_{-\pi}^{\pi}f(x)g'(x)\,dx.</script><p>即</p>
+<script type="math/tex; mode=display">
+\langle \mathcal Af,g\rangle
+=
+-\langle f,\mathcal Ag\rangle.</script><p>所以 $\mathcal A$ 是斜对称变换。</p>
+<h3 id="3-求-V-的一组规范正交基，使得-M-mathcal-E-mathcal-A-具有正交相似标准形"><a href="#3-求-V-的一组规范正交基，使得-M-mathcal-E-mathcal-A-具有正交相似标准形" class="headerlink" title="3. 求 $V$ 的一组规范正交基，使得 $M_\mathcal E(\mathcal A)$ 具有正交相似标准形"></a>3. 求 $V$ 的一组规范正交基，使得 $M_\mathcal E(\mathcal A)$ 具有正交相似标准形</h3><p>注意到</p>
+<script type="math/tex; mode=display">
+\int_{-\pi}^{\pi}1^2\,dx=2\pi,</script><p>并且对于 $k=1,2,3$，</p>
+<script type="math/tex; mode=display">
+\int_{-\pi}^{\pi}\cos^2 kx\,dx=\pi,
+\qquad
+\int_{-\pi}^{\pi}\sin^2 kx\,dx=\pi.</script><p>同时，不同频率之间正交，$\sin$ 与 $\cos$ 之间也正交。</p>
+<p>所以取</p>
+<script type="math/tex; mode=display">
+e_0=\frac{1}{\sqrt{2\pi}},</script><p>以及</p>
+<script type="math/tex; mode=display">
+c_k=\frac{\cos kx}{\sqrt{\pi}},
+\qquad
+s_k=\frac{\sin kx}{\sqrt{\pi}},
+\qquad k=1,2,3.</script><p>令</p>
+<script type="math/tex; mode=display">
+\mathcal E=(e_0,c_1,s_1,c_2,s_2,c_3,s_3).</script><p>则 $\mathcal E$ 是 $V$ 的一组规范正交基。</p>
+<p>因为</p>
+<script type="math/tex; mode=display">
+\mathcal A(e_0)=0,</script><script type="math/tex; mode=display">
+\mathcal A(c_k)=-ks_k,</script><script type="math/tex; mode=display">
+\mathcal A(s_k)=kc_k.</script><p>所以在基 $\mathcal E$ 下，$\mathcal A$ 的矩阵为</p>
+<script type="math/tex; mode=display">
+M_\mathcal E(\mathcal A)
+=
+\begin{pmatrix}
+0&0&0&0&0&0&0\\
+0&0&1&0&0&0&0\\
+0&-1&0&0&0&0&0\\
+0&0&0&0&2&0&0\\
+0&0&0&-2&0&0&0\\
+0&0&0&0&0&0&3\\
+0&0&0&0&0&-3&0
+\end{pmatrix}.</script><p>即</p>
+<script type="math/tex; mode=display">
+M_\mathcal E(\mathcal A)
+=
+0
+\oplus
+\begin{pmatrix}
+0&1\\
+-1&0
+\end{pmatrix}
+\oplus
+\begin{pmatrix}
+0&2\\
+-2&0
+\end{pmatrix}
+\oplus
+\begin{pmatrix}
+0&3\\
+-3&0
+\end{pmatrix}.</script><p>这就是斜对称矩阵的正交相似标准形。</p>
+<hr>
+<h2 id="习题-7-2-31"><a href="#习题-7-2-31" class="headerlink" title="习题 7.2.31"></a>习题 7.2.31</h2><p>设 $A,B\in M_n(\mathbb R)$，其中 $A$ 正定。证明：</p>
+<ol>
+<li>对任意正整数 $k$，矩阵 $A^k$ 也正定；</li>
+<li>如果存在正整数 $r$，使得 $B$ 与 $A^r$ 可交换，则 $B$ 与 $A$ 也可交换。</li>
+</ol>
+<h3 id="1-证明-A-k-正定"><a href="#1-证明-A-k-正定" class="headerlink" title="1. 证明 $A^k$ 正定"></a>1. 证明 $A^k$ 正定</h3><p>因为 $A$ 正定，所以 $A$ 是实对称矩阵，且所有特征值都为正。</p>
+<p>由谱定理，存在正交矩阵 $Q$，使得</p>
+<script type="math/tex; mode=display">
+A=QDQ^T,</script><p>其中</p>
+<script type="math/tex; mode=display">
+D=\operatorname{diag}(\lambda_1,\dots,\lambda_n),
+\qquad
+\lambda_i>0.</script><p>于是</p>
+<script type="math/tex; mode=display">
+A^k=QD^kQ^T,</script><p>其中</p>
+<script type="math/tex; mode=display">
+D^k=\operatorname{diag}(\lambda_1^k,\dots,\lambda_n^k).</script><p>因为</p>
+<script type="math/tex; mode=display">
+\lambda_i>0,</script><p>所以</p>
+<script type="math/tex; mode=display">
+\lambda_i^k>0.</script><p>因此 $A^k$ 的所有特征值仍然为正，所以 $A^k$ 正定。</p>
+<h3 id="2-证明若-B-与-A-r-可交换，则-B-与-A-可交换"><a href="#2-证明若-B-与-A-r-可交换，则-B-与-A-可交换" class="headerlink" title="2. 证明若 $B$ 与 $A^r$ 可交换，则 $B$ 与 $A$ 可交换"></a>2. 证明若 $B$ 与 $A^r$ 可交换，则 $B$ 与 $A$ 可交换</h3><p>仍设</p>
+<script type="math/tex; mode=display">
+A=QDQ^T,</script><p>其中</p>
+<script type="math/tex; mode=display">
+D=\operatorname{diag}(\lambda_1,\dots,\lambda_n),
+\qquad
+\lambda_i>0.</script><p>于是</p>
+<script type="math/tex; mode=display">
+A^r=QD^rQ^T,</script><p>其中</p>
+<script type="math/tex; mode=display">
+D^r=\operatorname{diag}(\lambda_1^r,\dots,\lambda_n^r).</script><p>由于函数</p>
+<script type="math/tex; mode=display">
+x\mapsto x^r</script><p>在正实数范围内严格单调，所以</p>
+<script type="math/tex; mode=display">
+\lambda_i^r=\lambda_j^r
+\iff
+\lambda_i=\lambda_j.</script><p>这说明 $A$ 与 $A^r$ 有相同的特征子空间分解。</p>
+<p>若</p>
+<script type="math/tex; mode=display">
+BA^r=A^rB,</script><p>则 $B$ 保持 $A^r$ 的每个特征子空间不变。</p>
+<p>由于 $A$ 与 $A^r$ 的特征子空间相同，所以 $B$ 也保持 $A$ 的每个特征子空间不变。</p>
+<p>而在 $A$ 的每个特征子空间上，$A$ 都只是数乘变换。因此在每个特征子空间上，$A$ 与 $B$ 可交换。</p>
+<p>所以在整个空间上有</p>
+<script type="math/tex; mode=display">
+BA=AB.</script><p>即 $B$ 与 $A$ 可交换。</p>
+<hr>
+<h2 id="习题-7-2-32"><a href="#习题-7-2-32" class="headerlink" title="习题 7.2.32"></a>习题 7.2.32</h2><p>设 $U$ 和 $V$ 分别为 $n$ 维和 $m$ 维内积空间，</p>
+<script type="math/tex; mode=display">
+W=\operatorname{Hom}(U,V).</script><p>取定 $U$ 的一组规范正交基</p>
+<script type="math/tex; mode=display">
+\varepsilon_1,\dots,\varepsilon_n.</script><h3 id="1-证明映射"><a href="#1-证明映射" class="headerlink" title="1. 证明映射"></a>1. 证明映射</h3><script type="math/tex; mode=display">
+\langle f,g\rangle_W
+=
+\sum_{i=1}^n
+\langle f(\varepsilon_i),g(\varepsilon_i)\rangle_V</script><p>是 $W$ 上的一个内积。</p>
+<p>首先，线性性来自于 $V$ 上内积的线性性。</p>
+<p>对称性如下：</p>
+<script type="math/tex; mode=display">
+\langle f,g\rangle_W
+=
+\sum_{i=1}^n
+\langle f(\varepsilon_i),g(\varepsilon_i)\rangle_V
+=
+\sum_{i=1}^n
+\langle g(\varepsilon_i),f(\varepsilon_i)\rangle_V
+=
+\langle g,f\rangle_W.</script><p>正定性如下：</p>
+<script type="math/tex; mode=display">
+\langle f,f\rangle_W
+=
+\sum_{i=1}^n
+\langle f(\varepsilon_i),f(\varepsilon_i)\rangle_V
+=
+\sum_{i=1}^n
+\|f(\varepsilon_i)\|^2
+\ge 0.</script><p>若</p>
+<script type="math/tex; mode=display">
+\langle f,f\rangle_W=0,</script><p>则</p>
+<script type="math/tex; mode=display">
+\sum_{i=1}^n\|f(\varepsilon_i)\|^2=0.</script><p>由于每一项都非负，所以每一项都为 $0$。因此</p>
+<script type="math/tex; mode=display">
+f(\varepsilon_i)=0,\qquad i=1,\dots,n.</script><p>因为 $\varepsilon_1,\dots,\varepsilon_n$ 是 $U$ 的一组基，所以</p>
+<script type="math/tex; mode=display">
+f=0.</script><p>因此该映射是 $W$ 上的一个内积。</p>
+<h3 id="2-定义"><a href="#2-定义" class="headerlink" title="2. 定义"></a>2. 定义</h3><script type="math/tex; mode=display">
+T(\mathcal A):W\to W,</script><p>其中</p>
+<script type="math/tex; mode=display">
+T(\mathcal A)(f):x\mapsto f(\mathcal A x).</script><p>证明 $T(\mathcal A)$ 是 $W$ 上的线性变换。</p>
+<p>任取 $f,g\in W$，$\lambda\in\mathbb R$。对任意 $x\in U$，有</p>
+<script type="math/tex; mode=display">
+T(\mathcal A)(f+\lambda g)(x)
+=
+(f+\lambda g)(\mathcal A x)
+=
+f(\mathcal A x)+\lambda g(\mathcal A x).</script><p>所以</p>
+<script type="math/tex; mode=display">
+T(\mathcal A)(f+\lambda g)
+=
+T(\mathcal A)(f)+\lambda T(\mathcal A)(g).</script><p>因此 $T(\mathcal A)$ 是线性变换。</p>
+<h3 id="3-证明-T-mathcal-A-是-W-上的正交变换，当且仅当-mathcal-A-是-U-上的正交变换"><a href="#3-证明-T-mathcal-A-是-W-上的正交变换，当且仅当-mathcal-A-是-U-上的正交变换" class="headerlink" title="3. 证明 $T(\mathcal A)$ 是 $W$ 上的正交变换，当且仅当 $\mathcal A$ 是 $U$ 上的正交变换"></a>3. 证明 $T(\mathcal A)$ 是 $W$ 上的正交变换，当且仅当 $\mathcal A$ 是 $U$ 上的正交变换</h3><p>先证充分性。</p>
+<p>若 $\mathcal A$ 是 $U$ 上的正交变换，则</p>
+<script type="math/tex; mode=display">
+\mathcal A\varepsilon_1,\dots,\mathcal A\varepsilon_n</script><p>也是 $U$ 的一组规范正交基。</p>
+<p>于是</p>
+<script type="math/tex; mode=display">
+\langle T(\mathcal A)f,T(\mathcal A)g\rangle_W
+=
+\sum_{i=1}^n
+\langle f(\mathcal A\varepsilon_i),g(\mathcal A\varepsilon_i)\rangle_V.</script><p>由于 $\mathcal A\varepsilon_1,\dots,\mathcal A\varepsilon_n$ 也是一组规范正交基，所以上式等于</p>
+<script type="math/tex; mode=display">
+\sum_{i=1}^n
+\langle f(\varepsilon_i),g(\varepsilon_i)\rangle_V
+=
+\langle f,g\rangle_W.</script><p>因此 $T(\mathcal A)$ 保持内积，所以 $T(\mathcal A)$ 是正交变换。</p>
+<p>再证必要性。</p>
+<p>若 $T(\mathcal A)$ 是 $W$ 上的正交变换，则它保持 $W$ 上的范数。</p>
+<p>任取 $u\in U$，固定一个单位向量 $v_0\in V$，定义线性映射</p>
+<script type="math/tex; mode=display">
+f_u:U\to V</script><p>为</p>
+<script type="math/tex; mode=display">
+f_u(x)=\langle x,u\rangle_U v_0.</script><p>则</p>
+<script type="math/tex; mode=display">
+\|f_u\|_W^2
+=
+\sum_{i=1}^n
+\|f_u(\varepsilon_i)\|^2
+=
+\sum_{i=1}^n
+|\langle \varepsilon_i,u\rangle|^2
+=
+\|u\|^2.</script><p>另一方面，</p>
+<script type="math/tex; mode=display">
+T(\mathcal A)(f_u)(x)
+=
+f_u(\mathcal A x)
+=
+\langle \mathcal A x,u\rangle_U v_0
+=
+\langle x,\mathcal A^*u\rangle_U v_0.</script><p>所以</p>
+<script type="math/tex; mode=display">
+T(\mathcal A)(f_u)=f_{\mathcal A^*u}.</script><p>由于 $T(\mathcal A)$ 保持范数，有</p>
+<script type="math/tex; mode=display">
+\|f_u\|_W
+=
+\|T(\mathcal A)(f_u)\|_W.</script><p>于是</p>
+<script type="math/tex; mode=display">
+\|u\|
+=
+\|\mathcal A^*u\|.</script><p>这对任意 $u\in U$ 都成立，所以 $\mathcal A^<em>$ 保持范数，因此 $\mathcal A^</em>$ 是正交变换。</p>
+<p>于是 $\mathcal A$ 也是正交变换。</p>
+<p>综上，</p>
+<script type="math/tex; mode=display">
+\boxed{
+T(\mathcal A)\text{ 是正交变换}
+\iff
+\mathcal A\text{ 是正交变换}
+}.</script></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://kalax524.com">Nemo YU</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://kalax524.com/notes/%E4%BD%9C%E4%B8%9A-780b38e2/">https://kalax524.com/notes/%E4%BD%9C%E4%B8%9A-780b38e2/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://kalax524.com" target="_blank">Kalax524</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/obsidian/">obsidian</a></div><div class="post-share"><div class="social-share" data-image="https://github.com/KalaxYU.png" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/notes/abstract-algebra-the-structure-of-groups-f73e7b0f/" title="The Action Of A Group On A Set"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">The Action Of A Group On A Set</div></div><div class="info-2"><div class="info-item-1">The Action Of A Group On A Set Definition 4.1 An action of a group G on a set is a function G times S to S usually denoted by (g,x) mapsto gx such tha</div></div></div></a><a class="pagination-related" href="/notes/%E6%B3%95%E8%AF%AD-fra%C3%A7ais-%E4%BA%BA%E7%A7%B0-personne-cdddf900/" title="1. 主语人称代词：谁做动作"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">1. 主语人称代词：谁做动作</div></div><div class="info-2"><div class="info-item-1">1. 主语人称代词：谁做动作 这是最基础的： 法语 中文 例子 --- --- --- je / j’ 我 Je suis étudiant. 我是学生。 tu 你 Tu parles français. 你说法语。 il 他 / 它 Il est chinois. 他是中国人。 elle 她 / </div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/notes/abstract-algebra-rings-d3fd75f5/" title="Rings"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-05-19</div><div class="info-item-2">Rings</div></div><div class="info-2"><div class="info-item-1">p is prime if and only if (p) is nonzero prime ideal p is prime ⟺(p) is a nonzero prime ideal</div></div></div></a><a class="pagination-related" href="/notes/abstract-algebra-the-structure-of-groups-f73e7b0f/" title="The Action Of A Group On A Set"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-05-25</div><div class="info-item-2">The Action Of A Group On A Set</div></div><div class="info-2"><div class="info-item-1">The Action Of A Group On A Set Definition 4.1 An action of a group G on a set is a function G times S to S usually denoted by (g,x) mapsto gx such tha</div></div></div></a><a class="pagination-related" href="/notes/abstract-algebra-%E6%9C%AA%E5%91%BD%E5%90%8D-1-2.1-exercise-46463242/" title="2.1 Exercise"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-05-25</div><div class="info-item-2">2.1 Exercise</div></div><div class="info-2"><div class="info-item-1">1. Let G be a group and A a normal abelian subgroup. Show that G/A operates on A by conjugation and obtain a homomorphism G/A to AutA . Proof: forall </div></div></div></a><a class="pagination-related" href="/notes/abstract-algebra-%E5%BD%A2%E5%BC%8F%E5%B9%82%E7%BA%A7%E6%95%B0-629503a4/" title="形式幂级数"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-05-18</div><div class="info-item-2">形式幂级数</div></div><div class="info-2"><div class="info-item-1">https://chengzhaoxi.xyz/483c751f.html</div></div></div></a><a class="pagination-related" href="/notes/linear-algebra-1-8f1d439e/" title="#1"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-05-11</div><div class="info-item-2">#1</div></div><div class="info-2"><div class="info-item-1">1 1 bamt cong</div></div></div></a><a class="pagination-related" href="/notes/se3-jounals-d78e1346/" title="Journals"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-05-19</div><div class="info-item-2">Journals</div></div><div class="info-2"><div class="info-item-1">Journals Week 4 I went to Imagine Dragons’ concert in Guangzhou, March 20th. The atmosphere is vivid and some of my favorite songs are played, like Bi</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://github.com/KalaxYU.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Nemo YU</div><div class="author-info-description">数学、语言、阅读和一点日常的长期主义。</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">24</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">12</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://notes.kalax524.com"><i class="fas fa-sticky-note"></i><span>Notes Hub</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/KalaxYU" target="_blank" title="GitHub"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:ibioancialo524@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #2b7a78;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">Obsidian 笔记已同步到 Notes；每日英语专栏会沉淀晨读、词汇和句子。</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0-II-%E7%AC%AC%E5%8D%81%E6%AC%A1%E4%BD%9C%E4%B8%9A%E8%A7%A3%E7%AD%94"><span class="toc-number">1.</span> <span class="toc-text">高等代数 II 第十次作业解答</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%A0%E9%A2%98-7-2-19"><span class="toc-number">1.1.</span> <span class="toc-text">习题 7.2.19</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%A0%E9%A2%98-7-2-21"><span class="toc-number">1.2.</span> <span class="toc-text">习题 7.2.21</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%A0%E9%A2%98-7-2-22"><span class="toc-number">1.3.</span> <span class="toc-text">习题 7.2.22</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%A0%E9%A2%98-7-2-24"><span class="toc-number">1.4.</span> <span class="toc-text">习题 7.2.24</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%A0%E9%A2%98-7-2-25"><span class="toc-number">1.5.</span> <span class="toc-text">习题 7.2.25</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%81%E6%98%8E-1-Rightarrow-2"><span class="toc-number">1.5.1.</span> <span class="toc-text">证明 $1\Rightarrow 2$</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%81%E6%98%8E-2-Rightarrow-1"><span class="toc-number">1.5.2.</span> <span class="toc-text">证明 $2\Rightarrow 1$</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%A0%E9%A2%98-7-2-27"><span class="toc-number">1.6.</span> <span class="toc-text">习题 7.2.27</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%A0%E9%A2%98-7-2-28"><span class="toc-number">1.7.</span> <span class="toc-text">习题 7.2.28</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%A0%E9%A2%98-7-2-30"><span class="toc-number">1.8.</span> <span class="toc-text">习题 7.2.30</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E8%AF%81%E6%98%8E%EF%BC%9A%E5%AF%B9%E4%BA%8E%E4%BB%BB%E6%84%8F-f-in-V-%EF%BC%8C%E5%85%B6%E5%AF%BC%E5%87%BD%E6%95%B0-f%E2%80%99-%E4%B9%9F%E5%B1%9E%E4%BA%8E-V"><span class="toc-number">1.8.1.</span> <span class="toc-text">1. 证明：对于任意 $f\in V$，其导函数 $f’$ 也属于 $V$</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%AE%9A%E4%B9%89-mathcal-A-V-to-V-f-mapsto-f%E2%80%99-%EF%BC%8C%E8%AF%81%E6%98%8E-mathcal-A-%E6%98%AF%E6%96%9C%E5%AF%B9%E7%A7%B0%E5%8F%98%E6%8D%A2"><span class="toc-number">1.8.2.</span> <span class="toc-text">2. 定义 $\mathcal A:V\to V,\ f\mapsto f’$，证明 $\mathcal A$ 是斜对称变换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%B1%82-V-%E7%9A%84%E4%B8%80%E7%BB%84%E8%A7%84%E8%8C%83%E6%AD%A3%E4%BA%A4%E5%9F%BA%EF%BC%8C%E4%BD%BF%E5%BE%97-M-mathcal-E-mathcal-A-%E5%85%B7%E6%9C%89%E6%AD%A3%E4%BA%A4%E7%9B%B8%E4%BC%BC%E6%A0%87%E5%87%86%E5%BD%A2"><span class="toc-number">1.8.3.</span> <span class="toc-text">3. 求 $V$ 的一组规范正交基，使得 $M_\mathcal E(\mathcal A)$ 具有正交相似标准形</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%A0%E9%A2%98-7-2-31"><span class="toc-number">1.9.</span> <span class="toc-text">习题 7.2.31</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E8%AF%81%E6%98%8E-A-k-%E6%AD%A3%E5%AE%9A"><span class="toc-number">1.9.1.</span> <span class="toc-text">1. 证明 $A^k$ 正定</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E8%AF%81%E6%98%8E%E8%8B%A5-B-%E4%B8%8E-A-r-%E5%8F%AF%E4%BA%A4%E6%8D%A2%EF%BC%8C%E5%88%99-B-%E4%B8%8E-A-%E5%8F%AF%E4%BA%A4%E6%8D%A2"><span class="toc-number">1.9.2.</span> <span class="toc-text">2. 证明若 $B$ 与 $A^r$ 可交换，则 $B$ 与 $A$ 可交换</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%A0%E9%A2%98-7-2-32"><span class="toc-number">1.10.</span> <span class="toc-text">习题 7.2.32</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E8%AF%81%E6%98%8E%E6%98%A0%E5%B0%84"><span class="toc-number">1.10.1.</span> <span class="toc-text">1. 证明映射</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%AE%9A%E4%B9%89"><span class="toc-number">1.10.2.</span> <span class="toc-text">2. 定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E8%AF%81%E6%98%8E-T-mathcal-A-%E6%98%AF-W-%E4%B8%8A%E7%9A%84%E6%AD%A3%E4%BA%A4%E5%8F%98%E6%8D%A2%EF%BC%8C%E5%BD%93%E4%B8%94%E4%BB%85%E5%BD%93-mathcal-A-%E6%98%AF-U-%E4%B8%8A%E7%9A%84%E6%AD%A3%E4%BA%A4%E5%8F%98%E6%8D%A2"><span class="toc-number">1.10.3.</span> <span class="toc-text">3. 证明 $T(\mathcal A)$ 是 $W$ 上的正交变换，当且仅当 $\mathcal A$ 是 $U$ 上的正交变换</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/readings/2026-05-26-quiet-work-in-a-noisy-age/" title="Quiet Work in a Noisy Age"><img src="/img/bg.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Quiet Work in a Noisy Age"/></a><div class="content"><a class="title" href="/readings/2026-05-26-quiet-work-in-a-noisy-age/" title="Quiet Work in a Noisy Age">Quiet Work in a Noisy Age</a><time datetime="2026-05-26T14:00:00.000Z" title="发表于 2026-05-26 22:00:00">2026-05-26</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/notes/%E6%B3%95%E8%AF%AD-fra%C3%A7ais-%E5%8A%A8%E8%AF%8D-verbe-aa685f77/" title="动词  Verbe">动词  Verbe</a><time datetime="2026-05-26T10:39:21.000Z" title="发表于 2026-05-26 18:39:21">2026-05-26</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/notes/%E6%B3%95%E8%AF%AD-fra%C3%A7ais-%E7%A5%88%E4%BD%BF%E5%8F%A5-8d70f85c/" title="1. 祈使句只有三个人称">1. 祈使句只有三个人称</a><time datetime="2026-05-26T09:04:48.000Z" title="发表于 2026-05-26 17:04:48">2026-05-26</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/notes/%E6%B3%95%E8%AF%AD-fra%C3%A7ais-lesson-1-12-flashcards-03932e5b/" title="人物、身份、职业">人物、身份、职业</a><time datetime="2026-05-25T15:37:38.000Z" title="发表于 2026-05-25 23:37:38">2026-05-25</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/notes/%E6%B3%95%E8%AF%AD-fra%C3%A7ais-lesson-1-12-%E5%9B%BE%E7%89%87%E9%80%89%E8%AF%8D%E7%BB%83%E4%B9%A0-c231870c/" title="Lesson 1-12 图片选词练习">Lesson 1-12 图片选词练习</a><time datetime="2026-05-25T15:37:38.000Z" title="发表于 2026-05-25 23:37:38">2026-05-25</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/notes/%E6%B3%95%E8%AF%AD-fra%C3%A7ais-%E5%86%A0%E8%AF%8D-d95f3f3e/" title="一、介词是什么？">一、介词是什么？</a><time datetime="2026-05-25T09:03:42.000Z" title="发表于 2026-05-25 17:03:42">2026-05-25</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Nemo YU</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></span></div><div class="footer_custom_text">Built from Obsidian notes and slow thinking.</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.2"></script><script src="/js/main.js?v=5.5.2"></script><div class="js-pjax"><script>(() => {
+  const loadMathjax = () => {
+    if (!window.MathJax) {
+      window.MathJax = {
+        loader: {
+          load: [
+            // Four font extension packages (optional)
+            //- '[tex]/bbm',
+            //- '[tex]/bboldx',
+            //- '[tex]/dsfont',
+            '[tex]/mhchem'
+          ],
+          paths: {
+            'mathjax-newcm': '[mathjax]/../@mathjax/mathjax-newcm-font',
+
+            //- // Four font extension packages (optional)
+            //- 'mathjax-bbm-extension': '[mathjax]/../@mathjax/mathjax-bbm-font-extension',
+            //- 'mathjax-bboldx-extension': '[mathjax]/../@mathjax/mathjax-bboldx-font-extension',
+            //- 'mathjax-dsfont-extension': '[mathjax]/../@mathjax/mathjax-dsfont-font-extension',
+            'mathjax-mhchem-extension': '[mathjax]/../@mathjax/mathjax-mhchem-font-extension'
+          }
+        },
+        output: {
+          font: 'mathjax-newcm',
+        },
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          tags: 'none',
+          packages: {
+            '[+]': [
+              'mhchem'
+            ]
+          }
+        },
+        chtml: {
+          scale: 1.1
+        },
+        options: {
+          enableMenu: true,
+          menuOptions: {
+            settings: {
+              enrich: false  // Turn off Braille and voice narration text automatic generation
+            }
+          },
+          renderActions: {
+            findScript: [10, doc => {
+              for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+                const display = !!node.type.match(/; *mode=display/)
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+                const text = document.createTextNode('')
+                node.parentNode.replaceChild(text, node)
+                math.start = {node: text, delim: '', n: 0}
+                math.end = {node: text, delim: '', n: 0}
+                doc.math.push(math)
+              }
+            }, '']
+          }
+        }
+      }
+
+      const script = document.createElement('script')
+      script.src = 'https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-mml-chtml.min.js'
+      script.id = 'MathJax-script'
+      script.async = true
+      document.head.appendChild(script)
+    } else {
+      MathJax.startup.document.state(0)
+      MathJax.texReset()
+      MathJax.typesetPromise()
+    }
+  }
+
+  btf.addGlobalFn('encrypt', loadMathjax, 'mathjax')
+  window.pjax ? loadMathjax() : window.addEventListener('load', loadMathjax)
+})()</script></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="Search notes, essays, and readings" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.5.2"></script></div></div><!-- hexo injector body_end start -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [ ['$','$'], ['\(','\)'] ],
+        processEscapes: true
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<!-- hexo injector body_end end --></body></html>
