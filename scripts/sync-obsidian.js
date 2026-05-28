@@ -133,6 +133,31 @@ function yamlList(name, values) {
   return [`${name}:`, ...unique.map(value => `  - ${yamlString(value)}`)].join('\n');
 }
 
+function readExistingDate(filePath, fallback) {
+  if (!fs.existsSync(filePath)) return fallback;
+  try {
+    const raw = fs.readFileSync(filePath, 'utf8').replace(/^\uFEFF/, '');
+    const match = raw.match(/^date:\s*(.+)$/m);
+    return match ? match[1].trim() : fallback;
+  } catch {
+    return fallback;
+  }
+}
+
+function writeFileIfChanged(filePath, nextContent) {
+  const normalizedNext = nextContent.replace(/\r\n/g, '\n');
+  if (fs.existsSync(filePath)) {
+    try {
+      const current = fs.readFileSync(filePath, 'utf8').replace(/^\uFEFF/, '').replace(/\r\n/g, '\n');
+      if (current === normalizedNext) return false;
+    } catch {
+      // Fall through and attempt the write below.
+    }
+  }
+  fs.writeFileSync(filePath, nextContent, 'utf8');
+  return true;
+}
+
 function stripFrontmatter(text) {
   const match = text.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?/);
   if (!match) return { frontmatter: '', body: text };
@@ -437,11 +462,12 @@ function renderModuleCard(module, items) {
 }
 
 function renderHome(records) {
+  const homeDate = readExistingDate(HOME_PAGE, formatDate(new Date()));
   const byModule = groupByModule(records);
   const lines = [
     '---',
     'title: Kalax524',
-    `date: ${formatDate(new Date())}`,
+    `date: ${homeDate}`,
     'comments: false',
     'top_img: /img/bg.JPG',
     '---',
@@ -465,10 +491,12 @@ function renderHome(records) {
 }
 
 function renderModulePage(module, items) {
+  const pagePath = path.join(MODULE_PAGE_DIR, module.key, 'index.md');
+  const pageDate = readExistingDate(pagePath, formatDate(new Date()));
   const lines = [
     '---',
     `title: ${module.title}`,
-    `date: ${formatDate(new Date())}`,
+    `date: ${pageDate}`,
     'comments: false',
     '---',
     '',
@@ -528,14 +556,14 @@ function main() {
     fs.writeFileSync(outputPath, renderPost(record, body), 'utf8');
   }
 
-  fs.writeFileSync(NOTES_PAGE, renderIndex(records), 'utf8');
-  fs.writeFileSync(HOME_PAGE, renderHome(records), 'utf8');
+  writeFileIfChanged(NOTES_PAGE, renderIndex(records));
+  writeFileIfChanged(HOME_PAGE, renderHome(records));
   const byModule = groupByModule(records);
   for (const module of MODULES) {
     const pagePath = path.join(MODULE_PAGE_DIR, module.key, 'index.md');
     assertInside(BLOG_ROOT, pagePath);
     fs.mkdirSync(path.dirname(pagePath), { recursive: true });
-    fs.writeFileSync(pagePath, renderModulePage(module, byModule.get(module.key) || []), 'utf8');
+    writeFileIfChanged(pagePath, renderModulePage(module, byModule.get(module.key) || []));
   }
   console.log(`Synced ${records.length} Obsidian notes from ${VAULT_ROOT}`);
 }
