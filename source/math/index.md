@@ -7,7 +7,7 @@ comments: false
 <div class="module-page">
 <p class="hub-kicker">数学</p>
 <h2>Mathematics</h2>
-<p class="hub-intro">线性代数、抽象代数、证明题和那些需要慢慢嚼开的结构。</p>
+<p class="hub-intro">线性代数、抽象代数、数学符号、证明题和作业整理。</p>
 
 <div class="note-list">
 <a class="note-row" href="/notes/abstract-algebra-未命名-1-2.1-exercise-46463242/">

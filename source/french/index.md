@@ -7,7 +7,7 @@ comments: false
 <div class="module-page">
 <p class="hub-kicker">法语</p>
 <h2>French</h2>
-<p class="hub-intro">从词汇、变位到句法，把法语学习拆成可以反复练习的小块。</p>
+<p class="hub-intro">法语词汇、动词变位、介词、冠词、句式和练习。</p>
 
 <div class="note-list">
 <a class="note-row" href="/notes/法语-fraçais-动词-verbe-aa685f77/">

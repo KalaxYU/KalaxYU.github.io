@@ -7,7 +7,7 @@ comments: false
 <div class="module-page">
 <p class="hub-kicker">札记</p>
 <h2>Journal</h2>
-<p class="hub-intro">读书、日常、音乐和那些还没有归入学科的想法。</p>
+<p class="hub-intro">读书记录、日常札记、课程记录和未分类文本。</p>
 
 <div class="note-list">
 <a class="note-row" href="/notes/se3-jounals-d78e1346/">

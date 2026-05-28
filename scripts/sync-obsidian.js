@@ -23,8 +23,8 @@ const MODULES = [
     href: '/math/',
     icon: 'fas fa-square-root-variable',
     accent: '#2b7a78',
-    description: '线性代数、抽象代数、证明题和那些需要慢慢嚼开的结构。',
-    empty: '数学笔记会从这里展开：定义、定理、证明和习题都放在一起。',
+    description: '线性代数、抽象代数、数学符号、证明题和作业整理。',
+    empty: '数学笔记：定义、定理、证明、例题和作业。',
     matcher: text => /(abstract algebra|linear algebra|数学|代数|rings|groups|作业|符号|theorem|exercise)/i.test(text)
   },
   {
@@ -34,8 +34,8 @@ const MODULES = [
     href: '/english/',
     icon: 'fas fa-feather-pointed',
     accent: '#4666a5',
-    description: '托福难度的原版文本精读：词汇、长难句、段落逻辑，以及可以写进作文里的表达。',
-    empty: '英语模块先从 TOEFL Reading 精读开始，之后再慢慢放进写作和词汇笔记。',
+    description: 'TOEFL Reading、原版文本精读、词汇、长难句和写作表达。',
+    empty: '英语笔记：阅读、词汇、句法、写作和备考材料。',
     matcher: text => /(english|gatsby|toefl|reading|vocabulary|cet|晨读|美文)/i.test(text)
   },
   {
@@ -45,8 +45,8 @@ const MODULES = [
     href: '/french/',
     icon: 'fas fa-language',
     accent: '#d96c4f',
-    description: '从词汇、变位到句法，把法语学习拆成可以反复练习的小块。',
-    empty: '法语笔记会按语法、词汇、练习整理。',
+    description: '法语词汇、动词变位、介词、冠词、句式和练习。',
+    empty: '法语笔记：语法、词汇、听写、句型和练习。',
     matcher: text => /(法语|fraçais|français|french|verbe|préposition|personne|vocabulaire|interrogative|négative)/i.test(text)
   },
   {
@@ -56,8 +56,8 @@ const MODULES = [
     href: '/cs/',
     icon: 'fas fa-code',
     accent: '#7b5aa6',
-    description: '先留一个位置给算法、系统、工具和项目记录。',
-    empty: '第一篇 CS 笔记出现后，会进入这个模块。',
+    description: '算法、数据结构、系统、工具和项目记录。',
+    empty: 'CS 笔记：算法、系统、编程工具和项目记录。',
     matcher: text => /(computer science|cs|algorithm|data structure|programming|code|计算机|算法|系统)/i.test(text)
   },
   {
@@ -67,8 +67,8 @@ const MODULES = [
     href: '/journal/',
     icon: 'fas fa-compass',
     accent: '#c99a35',
-    description: '读书、日常、音乐和那些还没有归入学科的想法。',
-    empty: '没有明确学科归属的文字会先放在这里。',
+    description: '读书记录、日常札记、课程记录和未分类文本。',
+    empty: '札记：读书记录、日常记录、课程记录和未分类文本。',
     matcher: text => /(journal|daily|music|hope|gatsby|日记|札记|随笔|阅读)/i.test(text)
   }
 ];
@@ -421,9 +421,9 @@ function renderIndex(records) {
     '',
     '<div class="note-map">',
     '',
-    '<p class="hub-kicker">Knowledge Map</p>',
-    '<h2>不是时间线，是入口。</h2>',
-    '<p class="hub-intro">从 Obsidian 同步来的笔记会按方向重新排布。先选一个领域，再进入具体文章；还没开始的方向会先留一个位置。</p>',
+    '<p class="hub-kicker">Knowledge Index</p>',
+    '<h2>Notes by Subject</h2>',
+    '<p class="hub-intro">Obsidian 笔记按学科和用途索引，包含数学、英语、法语、CS 和札记。</p>',
     '',
     '<div class="module-grid">',
     ...MODULES.map(module => renderModuleCard(module, byModule.get(module.key) || [])),
@@ -474,8 +474,8 @@ function renderHome(records) {
     '',
     '<div class="home-lab">',
     '<p class="hub-kicker">Kalax524</p>',
-    '<h2>把学习分门别类，给思考留一条回来的路。</h2>',
-    '<p class="hub-intro">首页只放五个入口：数学、英语、法语、CS 和札记。具体文章放进各自的房间里，找起来更清楚，也更像一张长期生长的学习地图。</p>',
+    '<h2>Subject Index</h2>',
+    '<p class="hub-intro">数学、英语、法语、CS 和札记五个区域。每个区域收录对应的笔记、阅读和课程材料。</p>',
     '<div class="module-grid">',
     ...MODULES.map(module => renderModuleCard(module, byModule.get(module.key) || [])),
     '</div>',

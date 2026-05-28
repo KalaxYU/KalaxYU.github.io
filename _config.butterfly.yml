@@ -17,12 +17,13 @@ menu:
 
 social:
   fab fa-github: https://github.com/KalaxYU || GitHub || '#24292e'
+  fas fa-sticky-note: https://notes.kalax524.com || Notes Hub || '#2b7a78'
   fas fa-envelope: mailto:ibioancialo524@gmail.com || Email || '#2b7a78'
 
 favicon: /img/favicon.ico
 
 avatar:
-  img: https://github.com/KalaxYU.png
+  img: /img/avatar.svg
   effect: false
 
 disable_top_img: false
@@ -45,8 +46,8 @@ subtitle:
   effect: true
   source: false
   sub:
-    - 数学、语言、阅读，以及慢慢成形的知识地图。
-    - Notes that are written to be used again.
+    - Mathematics, languages, reading, and coursework.
+    - Notes and readings by subject.
 
 index_site_info_top:
 index_top_img_height: 58vh
@@ -97,15 +98,15 @@ aside:
     category: true
   card_author:
     enable: true
-    description: 数学、英语、法语、CS，还有一些正在路上的想法。
+    description: 数学 / 英语 / 法语 / CS
     button:
       enable: true
-      icon: fas fa-sticky-note
-      text: Notes Hub
-      link: https://notes.kalax524.com
+      icon: fab fa-github
+      text: GitHub
+      link: https://github.com/KalaxYU
   card_announcement:
     enable: true
-    content: 首页按学科进入；英语专栏改为托福难度原版文本精读。
+    content: 学科索引：数学、英语、法语、CS、札记；每日英语为 TOEFL 原版精读。
   card_recent_post:
     enable: true
     limit: 6
@@ -183,7 +184,7 @@ footer:
   copyright:
     enable: true
     version: false
-  custom_text: Built from Obsidian notes and slow thinking.
+  custom_text: Coursework, reading notes, and language study.
 
 inject:
   head:
