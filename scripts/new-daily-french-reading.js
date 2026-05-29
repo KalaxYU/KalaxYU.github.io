@@ -157,10 +157,10 @@ function dayIndex(dateText) {
 
 function renderIndex(links) {
   const items = links
-    .map(link => `  <li><a href="${link.href}">${link.title}</a></li>`)
+    .map(link => `- [${link.title}](${link.href})`)
     .join('\n');
 
-  return `---\ntitle: French Reading\ndate: 2026-05-30 08:10:00\ncomments: false\n---\n\n<p class="hub-kicker">Français A1-A2</p>\n<h2>French Daily Reading</h2>\n\n<div class="reading-callout">\n每天一篇 A1-A2 法语短文，包含逐句中文翻译、词汇和语法分析。选中页面上的法语单词或句子，也会自动弹出中文翻译。\n</div>\n\n<h2 id="readings">Readings</h2>\n<ul class="note-list">\n${LINK_MARKER}\n${items}\n</ul>\n`;
+  return `---\ntitle: French Reading\ndate: 2026-05-30 08:10:00\ncomments: false\n---\n\n**Français A1-A2**\n\n## French Daily Reading\n\n> 每天一篇 A1-A2 法语短文，包含逐句中文翻译、词汇和语法分析。选中页面上的法语单词或句子，也会自动弹出中文翻译。\n\n## Readings\n\n${LINK_MARKER}\n${items}\n`;
 }
 
 function extractIndexLinks(content) {
