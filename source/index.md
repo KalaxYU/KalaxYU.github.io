@@ -12,14 +12,14 @@ top_img: /img/bg.JPG
 <div class="module-grid">
 <a class="module-card" style="--module-accent: #2b7a78" href="/math/">
 <span class="module-icon"><i class="fas fa-square-root-variable"></i></span>
-<span class="module-count">7 notes</span>
+<span class="module-count">6 notes</span>
 <strong>数学</strong>
 <span>Mathematics</span>
 <p>线性代数、抽象代数、数学符号、证明题和作业整理。</p>
 </a>
 <a class="module-card" style="--module-accent: #4666a5" href="/english/">
 <span class="module-icon"><i class="fas fa-feather-pointed"></i></span>
-<span class="module-count">TOEFL series</span>
+<span class="module-count">1 notes + TOEFL</span>
 <strong>英语</strong>
 <span>English</span>
 <p>TOEFL Reading、原版文本精读、词汇、长难句和写作表达。</p>
@@ -33,14 +33,14 @@ top_img: /img/bg.JPG
 </a>
 <a class="module-card" style="--module-accent: #7b5aa6" href="/cs/">
 <span class="module-icon"><i class="fas fa-code"></i></span>
-<span class="module-count">planned</span>
+<span class="module-count">22 notes</span>
 <strong>CS</strong>
 <span>Computer Science</span>
-<p>算法、数据结构、系统、工具和项目记录。</p>
+<p>Python、算法、数据结构、系统、工具和项目记录。</p>
 </a>
 <a class="module-card" style="--module-accent: #c99a35" href="/journal/">
 <span class="module-icon"><i class="fas fa-compass"></i></span>
-<span class="module-count">1 note</span>
+<span class="module-count">0 notes</span>
 <strong>札记</strong>
 <span>Journal</span>
 <p>读书记录、日常札记、课程记录和未分类文本。</p>

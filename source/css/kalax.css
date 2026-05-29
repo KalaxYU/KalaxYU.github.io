@@ -126,6 +126,79 @@ a,
   background: rgba(255, 255, 255, 0.64);
 }
 
+#kalax-word-translate {
+  position: fixed;
+  z-index: 2147483647;
+  width: min(18rem, calc(100vw - 24px));
+  padding: 0.85rem 0.9rem 0.75rem;
+  border: 1px solid rgba(47, 79, 115, 0.18);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 18px 45px rgba(24, 35, 47, 0.18);
+  color: var(--kalax-ink);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  backdrop-filter: blur(10px);
+}
+
+#kalax-word-translate[hidden] {
+  display: none;
+}
+
+.kalax-word-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.35rem;
+}
+
+.kalax-word-term {
+  color: var(--kalax-blue);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.kalax-word-close {
+  display: inline-grid;
+  width: 1.55rem;
+  height: 1.55rem;
+  place-items: center;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(47, 79, 115, 0.08);
+  color: var(--kalax-muted);
+  cursor: pointer;
+}
+
+.kalax-word-body {
+  color: var(--kalax-ink);
+  word-break: break-word;
+}
+
+.kalax-word-body.is-loading {
+  color: var(--kalax-muted);
+}
+
+.kalax-word-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 0.45rem;
+  font-size: 0.82rem;
+}
+
+.kalax-word-actions a,
+.kalax-word-actions button {
+  border: 0;
+  background: transparent;
+  color: var(--kalax-blue);
+  cursor: pointer;
+  font: inherit;
+  padding: 0;
+}
+
 #aside-content .card-widget.card-announcement .item-headline i,
 #aside-content .card-widget.card-categories .item-headline i,
 #aside-content .card-widget.card-tags .item-headline i,
@@ -313,6 +386,17 @@ a,
 
 [data-theme='dark'] #aside-content .card-info .card-info-social-icons a {
   background: rgba(20, 27, 36, 0.72);
+}
+
+[data-theme='dark'] #kalax-word-translate {
+  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(20, 27, 36, 0.96);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.36);
+}
+
+[data-theme='dark'] .kalax-word-close {
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.72);
 }
 
 @media (max-width: 768px) {

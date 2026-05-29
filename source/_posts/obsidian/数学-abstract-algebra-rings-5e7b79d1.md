@@ -2,7 +2,7 @@
 title: "Rings"
 date: 2026-05-19 09:50:23
 updated: 2026-05-19 09:50:23
-permalink: notes/abstract-algebra-rings-d3fd75f5/
+permalink: notes/数学-abstract-algebra-rings-5e7b79d1/
 categories:
   - "数学"
   - "Abstract algebra"

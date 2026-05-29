@@ -2,20 +2,22 @@
 title: "人物、身份、职业"
 date: 2026-05-25 23:37:38
 updated: 2026-05-25 23:37:38
-permalink: notes/法语-fraçais-lesson-1-12-flashcards-03932e5b/
+permalink: notes/法语-fraçais-词汇-lesson-1-12-flashcards-5bfbbef2/
 categories:
   - "法语"
   - "法语  Fraçais"
+  - "词汇"
 tags:
   - "obsidian"
   - "法语"
   - "法语  Fraçais"
+  - "词汇"
   - "flashcards"
 description: "flashcards 返回词汇表 · 图片选词练习 人物、身份、职业 monsieur::先生 madame::女士，夫人 mademoiselle::小姐 ami(e)::朋友 copain/copine::朋友，同伴 garçon::男孩，服务员 fille::女孩，女儿 femme::女人，妻"
 ---
 #flashcards
 
-[返回词汇表](/notes/法语-fraçais-lesson-1-12-vocabulaire-2a01e623/) · [图片选词练习](/notes/法语-fraçais-lesson-1-12-图片选词练习-c231870c/)
+[返回词汇表](/notes/法语-fraçais-词汇-lesson-1-12-vocabulaire-e825f934/) · [图片选词练习](/notes/法语-fraçais-词汇-lesson-1-12-图片选词练习-697ff1b3/)
 
 ## 人物、身份、职业
 

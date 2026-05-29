@@ -2,14 +2,16 @@
 title: "1. 人物、身份、职业"
 date: 2026-05-19 20:34:57
 updated: 2026-05-19 20:34:57
-permalink: notes/法语-fraçais-lesson-1-12-vocabulaire-2a01e623/
+permalink: notes/法语-fraçais-词汇-lesson-1-12-vocabulaire-e825f934/
 categories:
   - "法语"
   - "法语  Fraçais"
+  - "词汇"
 tags:
   - "obsidian"
   - "法语"
   - "法语  Fraçais"
+  - "词汇"
 description: "1. 人物、身份、职业 法语 中文 ----------------------- ------ monsieur n.m. 先生 madame n.f. 女士，夫人 mademoiselle n.f. 小姐 ami(e) n. 朋友 copain/copine n. 朋友，同伴 garçon n."
 ---
 ## 1. 人物、身份、职业

@@ -189,3 +189,5 @@ footer:
 inject:
   head:
     - <link rel="stylesheet" href="/css/kalax.css">
+  bottom:
+    - <script defer src="/js/word-translate.js"></script>

@@ -2,13 +2,13 @@
 title: "Journals"
 date: 2026-05-19 10:53:47
 updated: 2026-05-19 10:53:47
-permalink: notes/se3-jounals-d78e1346/
+permalink: notes/英语-se3-jounals-55ff7c67/
 categories:
-  - "札记"
+  - "英语"
   - "SE3"
 tags:
   - "obsidian"
-  - "札记"
+  - "英语"
   - "SE3"
 description: "Journals Week 4 I went to Imagine Dragons’ concert in Guangzhou, March 20th. The atmosphere is vivid and some of my favorite songs are played, like Bi"
 ---

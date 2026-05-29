@@ -19,6 +19,7 @@ comments: false
 
 ## Readings
 
+- [John Muir on the Economy of Forests](/readings/2026-05-29-muir-forest-economy/)
 - [Huxley on Reading a Piece of Chalk](/readings/2026-05-28-huxley-piece-of-chalk/)
 - [Darwin on the Struggle for Existence](/readings/2026-05-27-darwin-struggle-for-existence/)
 

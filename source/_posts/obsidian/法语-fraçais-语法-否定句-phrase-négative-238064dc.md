@@ -2,14 +2,16 @@
 title: "1. 最基本：ne … pas"
 date: 2026-05-19 20:12:12
 updated: 2026-05-19 20:12:12
-permalink: notes/法语-fraçais-否定句-phrase-négative-ad151415/
+permalink: notes/法语-fraçais-语法-否定句-phrase-négative-238064dc/
 categories:
   - "法语"
   - "法语  Fraçais"
+  - "语法"
 tags:
   - "obsidian"
   - "法语"
   - "法语  Fraçais"
+  - "语法"
 description: "1. 最基本：ne … pas 结构： 主语 + ne + 动词 + pas + 其他成分 例子： Je suis étudiant. 我是学生。 Je ne suis pas étudiant. 我不是学生。 Il aime le café. 他喜欢咖啡。 Il n’aime pas le caf"
 ---
 ## 1. 最基本：ne … pas

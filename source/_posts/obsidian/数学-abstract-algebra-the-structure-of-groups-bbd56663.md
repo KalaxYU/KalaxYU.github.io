@@ -2,7 +2,7 @@
 title: "The Action Of A Group On A Set"
 date: 2026-05-25 15:51:52
 updated: 2026-05-25 15:51:52
-permalink: notes/abstract-algebra-the-structure-of-groups-f73e7b0f/
+permalink: notes/数学-abstract-algebra-the-structure-of-groups-bbd56663/
 categories:
   - "数学"
   - "Abstract algebra"

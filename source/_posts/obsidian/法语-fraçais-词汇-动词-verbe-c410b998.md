@@ -2,14 +2,16 @@
 title: "动词  Verbe"
 date: 2026-05-26 18:39:21
 updated: 2026-05-26 18:39:21
-permalink: notes/法语-fraçais-动词-verbe-aa685f77/
+permalink: notes/法语-fraçais-词汇-动词-verbe-c410b998/
 categories:
   - "法语"
   - "法语  Fraçais"
+  - "词汇"
 tags:
   - "obsidian"
   - "法语"
   - "法语  Fraçais"
+  - "词汇"
 description: "Francisez 初学者的必备的１００个动词 常见法语动词变位（吐血整理，建议收藏） - 知乎 人称 appeler faire prendre porter avoir être aller trouver -------------- ----------------- -----------"
 ---
 [Francisez | 初学者的必备的１００个动词](https://www.francisez.com/zh/xuexi/liebiao/chuxuezhe-de-100)

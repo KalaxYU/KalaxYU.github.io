@@ -15,6 +15,18 @@ const SKIP_DIRS = new Set(['.obsidian', '.git', '.trash', 'node_modules']);
 const SKIP_EMPTY_NOTES = true;
 const SKIP_DEFAULT_NOTES = new Set(['Welcome.md']);
 
+function moduleByKey(key) {
+  return MODULES.find(module => module.key === key);
+}
+
+function normalizeFolderName(value) {
+  return String(value || '')
+    .normalize('NFKC')
+    .toLowerCase()
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 const MODULES = [
   {
     key: 'math',
@@ -56,9 +68,9 @@ const MODULES = [
     href: '/cs/',
     icon: 'fas fa-code',
     accent: '#7b5aa6',
-    description: '算法、数据结构、系统、工具和项目记录。',
-    empty: 'CS 笔记：算法、系统、编程工具和项目记录。',
-    matcher: text => /(computer science|cs|algorithm|data structure|programming|code|计算机|算法|系统)/i.test(text)
+    description: 'Python、算法、数据结构、系统、工具和项目记录。',
+    empty: 'CS 笔记：Python、算法、系统、编程工具和项目记录。',
+    matcher: text => /(python|computer science|cs|algorithm|data structure|programming|code|计算机|算法|系统)/i.test(text)
   },
   {
     key: 'journal',
@@ -71,6 +83,14 @@ const MODULES = [
     empty: '札记：读书记录、日常记录、课程记录和未分类文本。',
     matcher: text => /(journal|daily|music|hope|gatsby|日记|札记|随笔|阅读)/i.test(text)
   }
+];
+
+const FOLDER_MODULES = [
+  { key: 'math', names: ['数学', 'math', 'mathematics'] },
+  { key: 'english', names: ['英语', 'english', 'toefl'] },
+  { key: 'french', names: ['法语', '法语 français', '法语 fraçais', 'français', 'francais', 'fraçais', 'french'] },
+  { key: 'cs', names: ['cs', 'computer science', 'python', 'programming'] },
+  { key: 'journal', names: ['daily conclusions', 'journal', '札记', '日记', 'daily'] }
 ];
 
 function assertInside(parent, child) {
@@ -154,7 +174,15 @@ function writeFileIfChanged(filePath, nextContent) {
       // Fall through and attempt the write below.
     }
   }
-  fs.writeFileSync(filePath, nextContent, 'utf8');
+  try {
+    fs.writeFileSync(filePath, nextContent, 'utf8');
+  } catch (error) {
+    if (error && (error.code === 'EPERM' || error.code === 'EACCES')) {
+      console.warn(`Skipped locked file: ${filePath}`);
+      return false;
+    }
+    throw error;
+  }
   return true;
 }
 
@@ -196,24 +224,38 @@ function collectInlineTags(body) {
   return tags;
 }
 
+function moduleForFolder(relativePath) {
+  const firstFolder = toPosix(relativePath).split('/').filter(Boolean)[0];
+  if (!firstFolder || /\.md$/i.test(firstFolder)) return null;
+  const normalized = normalizeFolderName(firstFolder);
+  const folderRule = FOLDER_MODULES.find(rule => rule.names.some(name => {
+    const candidate = normalizeFolderName(name);
+    return normalized === candidate || normalized.startsWith(`${candidate} `);
+  }));
+  return folderRule ? moduleByKey(folderRule.key) : null;
+}
+
 function moduleFor(relativePath, title, body) {
+  const byFolder = moduleForFolder(relativePath);
+  if (byFolder) return byFolder;
+
   const haystack = `${relativePath}\n${title}\n${body}`.toLowerCase();
   if (/(^|\/)(se3|daily conclusions)(\/|$)|journal|jounals|日记|札记|随笔/i.test(`${relativePath}\n${title}`)) {
-    return MODULES.find(module => module.key === 'journal');
+    return moduleByKey('journal');
   }
   if (/(法语|fraçais|français|french|verbe|préposition|personne|vocabulaire|interrogative|négative)/i.test(haystack)) {
-    return MODULES.find(module => module.key === 'french');
+    return moduleByKey('french');
   }
   if (/(abstract algebra|linear algebra|高等代数|数学|代数|rings|groups|作业|符号|theorem|exercise)/i.test(haystack)) {
-    return MODULES.find(module => module.key === 'math');
+    return moduleByKey('math');
   }
   if (/(english|gatsby|toefl|reading|vocabulary|cet|晨读|美文)/i.test(haystack)) {
-    return MODULES.find(module => module.key === 'english');
+    return moduleByKey('english');
   }
-  if (/(computer science|cs|algorithm|data structure|programming|code|计算机|算法|系统)/i.test(haystack)) {
-    return MODULES.find(module => module.key === 'cs');
+  if (/(python|computer science|cs|algorithm|data structure|programming|code|计算机|算法|系统)/i.test(haystack)) {
+    return moduleByKey('cs');
   }
-  return MODULES.find(module => module.key === 'journal');
+  return moduleByKey('journal');
 }
 
 function inferTitle(relativePath, body) {

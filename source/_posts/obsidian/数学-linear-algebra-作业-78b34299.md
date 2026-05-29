@@ -2,12 +2,14 @@
 title: "高等代数 II 第十次作业解答"
 date: 2026-05-19 22:51:00
 updated: 2026-05-19 22:51:00
-permalink: notes/作业-780b38e2/
+permalink: notes/数学-linear-algebra-作业-78b34299/
 categories:
   - "数学"
+  - "Linear Algebra"
 tags:
   - "obsidian"
   - "数学"
+  - "Linear Algebra"
 description: "高等代数 II 第十次作业解答 题号：7.2.19，7.2.21，7.2.22，7.2.24，7.2.25，7.2.27，7.2.28，7.2.30，7.2.31，7.2.32 --- 习题 7.2.19 设 {% mathjax '{\"conversion\":{\"display\":false}}'"
 mathjax: true
 ---

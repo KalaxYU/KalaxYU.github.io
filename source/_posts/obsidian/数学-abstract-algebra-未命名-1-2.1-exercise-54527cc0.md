@@ -2,7 +2,7 @@
 title: "2.1 Exercise"
 date: 2026-05-25 16:19:54
 updated: 2026-05-25 16:19:54
-permalink: notes/abstract-algebra-未命名-1-2.1-exercise-46463242/
+permalink: notes/数学-abstract-algebra-未命名-1-2.1-exercise-54527cc0/
 categories:
   - "数学"
   - "Abstract algebra"

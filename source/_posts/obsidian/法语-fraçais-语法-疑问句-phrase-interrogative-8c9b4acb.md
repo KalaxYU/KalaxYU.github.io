@@ -2,14 +2,16 @@
 title: "一般疑问句（Interrogative Sentences）"
 date: 2026-05-19 11:15:37
 updated: 2026-05-19 11:15:37
-permalink: notes/法语-fraçais-疑问句-phrase-interrogative-d100e9ff/
+permalink: notes/法语-fraçais-语法-疑问句-phrase-interrogative-8c9b4acb/
 categories:
   - "法语"
   - "法语  Fraçais"
+  - "语法"
 tags:
   - "obsidian"
   - "法语"
   - "法语  Fraçais"
+  - "语法"
 description: "一般疑问句（Interrogative Sentences） 用于询问某动作或状态是否发生，回答通常为 Oui/ Non 1. 陈述句语序 Vous paelez français? 2. Est-ce que+陈述句 Est-ce que vous aimez le café? 3. 主谓倒装 -"
 ---
 ## 一般疑问句（Interrogative Sentences）
@@ -28,7 +30,7 @@ Est-ce que vous aimez le café?
   Vous amis sont-ils français?（你们的朋友是法国人吗？）
 
 ## 特殊疑问句（Special Interrogative Sentences）
-![Pasted image 20260518234614](/notes-assets/pasted-image-20260518234614-7a73abc9.jpg)
+![Pasted image 20260518234614](/notes-assets/pasted-image-20260518234614-2603a02d.jpg)
 
 **基本形式
 

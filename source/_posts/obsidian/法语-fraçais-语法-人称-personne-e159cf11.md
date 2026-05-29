@@ -2,14 +2,16 @@
 title: "1. 主语人称代词：谁做动作"
 date: 2026-05-19 20:52:37
 updated: 2026-05-19 20:52:37
-permalink: notes/法语-fraçais-人称-personne-cdddf900/
+permalink: notes/法语-fraçais-语法-人称-personne-e159cf11/
 categories:
   - "法语"
   - "法语  Fraçais"
+  - "语法"
 tags:
   - "obsidian"
   - "法语"
   - "法语  Fraçais"
+  - "语法"
 description: "1. 主语人称代词：谁做动作 这是最基础的： 法语 中文 例子 --- --- --- je / j’ 我 Je suis étudiant. 我是学生。 tu 你 Tu parles français. 你说法语。 il 他 / 它 Il est chinois. 他是中国人。 elle 她 / "
 ---
 ## 1. 主语人称代词：谁做动作
