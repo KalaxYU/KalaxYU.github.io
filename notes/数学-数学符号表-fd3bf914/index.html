@@ -1,0 +1,169 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>数学符号表 | Kalax524</title><meta name="author" content="Nemo YU"><meta name="copyright" content="Nemo YU"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="forall exists in subseteq Rightarrow Longleftrightarrow leq trianglelefteq ker operatorname{Im} langle a rangle square exists in subseteq Rightarrow L">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数学符号表">
+<meta property="og:url" content="https://kalax524.com/notes/%E6%95%B0%E5%AD%A6-%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7%E8%A1%A8-fd3bf914/index.html">
+<meta property="og:site_name" content="Kalax524">
+<meta property="og:description" content="forall exists in subseteq Rightarrow Longleftrightarrow leq trianglelefteq ker operatorname{Im} langle a rangle square exists in subseteq Rightarrow L">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://kalax524.com/img/avatar.svg">
+<meta property="article:published_time" content="2026-05-25T08:14:29.000Z">
+<meta property="article:modified_time" content="2026-05-25T08:14:29.000Z">
+<meta property="article:author" content="Nemo YU">
+<meta property="article:tag" content="obsidian">
+<meta property="article:tag" content="数学">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://kalax524.com/img/avatar.svg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "数学符号表",
+  "url": "https://kalax524.com/notes/%E6%95%B0%E5%AD%A6-%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7%E8%A1%A8-fd3bf914/",
+  "image": "https://kalax524.com/img/avatar.svg",
+  "datePublished": "2026-05-25T08:14:29.000Z",
+  "dateModified": "2026-05-25T08:14:29.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Nemo YU",
+      "url": "https://kalax524.com"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://kalax524.com/notes/%E6%95%B0%E5%AD%A6-%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7%E8%A1%A8-fd3bf914/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="stylesheet" href="/css/index.css?v=5.5.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":true,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":150,"languages":{"author":"作者: Nemo YU","link":"链接: ","source":"来源: Kalax524","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.12.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '数学符号表',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/kalax.css"><!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.svg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">47</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">55</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">15</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/notes/"><i class="fa-fw fas fa-book-open"></i><span> Notes</span></a></div><div class="menus_item"><a class="site-page" href="/english-reading/"><i class="fa-fw fas fa-feather-alt"></i><span> TOEFL Reading</span></a></div><div class="menus_item"><a class="site-page" href="/articles/"><i class="fa-fw fas fa-layer-group"></i><span> Articles</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user-astronaut"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://notes.kalax524.com"><i class="fa-fw fas fa-external-link-alt"></i><span> notes.kalax524.com</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/img/bg.JPG);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Kalax524</span></a><a class="nav-page-title" href="/"><span class="site-name">数学符号表</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/notes/"><i class="fa-fw fas fa-book-open"></i><span> Notes</span></a></div><div class="menus_item"><a class="site-page" href="/english-reading/"><i class="fa-fw fas fa-feather-alt"></i><span> TOEFL Reading</span></a></div><div class="menus_item"><a class="site-page" href="/articles/"><i class="fa-fw fas fa-layer-group"></i><span> Articles</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user-astronaut"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://notes.kalax524.com"><i class="fa-fw fas fa-external-link-alt"></i><span> notes.kalax524.com</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">数学符号表</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-05-25T08:14:29.000Z" title="发表于 2026-05-25 16:14:29">2026-05-25</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-05-25T08:14:29.000Z" title="更新于 2026-05-25 16:14:29">2026-05-25</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">23</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>1分钟</span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p>\forall<br>\exists<br>\in<br>\subseteq<br>\Rightarrow<br>\Longleftrightarrow<br>\leq<br>\trianglelefteq<br>\ker<br>\operatorname{Im}<br>\langle a \rangle<br>\square</p>
+<p>$<br>\exists<br>\in<br>\subseteq<br>\Rightarrow<br>\Longleftrightarrow<br><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.312ex;" xmlns="http://www.w3.org/2000/svg" width="1.76ex" height="1.751ex" role="img" focusable="false" viewBox="0 -636 778 774" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="MJX-4-TEX-N-2264" d="M674 636Q682 636 688 630T694 615T687 601Q686 600 417 472L151 346L399 228Q687 92 691 87Q694 81 694 76Q694 58 676 56H670L382 192Q92 329 90 331Q83 336 83 348Q84 359 96 365Q104 369 382 500T665 634Q669 636 674 636ZM84 -118Q84 -108 99 -98H678Q694 -104 694 -118Q694 -130 679 -138H98Q84 -131 84 -118Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><use data-c="2264" xlink:href="#MJX-4-TEX-N-2264"></use></g></g></g></svg></mjx-container><br><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.312ex;" xmlns="http://www.w3.org/2000/svg" width="1.76ex" height="1.751ex" role="img" focusable="false" viewBox="0 -636 778 774" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="MJX-4-TEX-N-22B4" d="M694 71Q686 58 676 56H670L382 192Q92 329 90 331Q83 336 83 346Q83 359 96 364Q101 367 379 498T665 634Q671 636 674 636Q686 636 694 621V71ZM654 108T654 346T653 584T402 466T151 346L275 287Q399 228 524 169T652 108Q654 108 654 346ZM83 -120Q83 -116 84 -113T86 -108T89 -104T92 -102T96 -100T99 -98H678Q679 -98 681 -99T684 -101T688 -104T691 -108T693 -113T694 -120Q692 -130 679 -138H98Q84 -130 83 -120Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><use data-c="22B4" xlink:href="#MJX-4-TEX-N-22B4"></use></g></g></g></svg></mjx-container><br><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="3.086ex" height="1.595ex" role="img" focusable="false" viewBox="0 -694 1364 705" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="MJX-4-TEX-N-6B" d="M36 46H50Q89 46 97 60V68Q97 77 97 91T97 124T98 167T98 217T98 272T98 329Q98 366 98 407T98 482T98 542T97 586T97 603Q94 622 83 628T38 637H20V660Q20 683 22 683L32 684Q42 685 61 686T98 688Q115 689 135 690T165 693T176 694H179V463L180 233L240 287Q300 341 304 347Q310 356 310 364Q310 383 289 385H284V431H293Q308 428 412 428Q475 428 484 431H489V385H476Q407 380 360 341Q286 278 286 274Q286 273 349 181T420 79Q434 60 451 53T500 46H511V0H505Q496 3 418 3Q322 3 307 0H299V46H306Q330 48 330 65Q330 72 326 79Q323 84 276 153T228 222L176 176V120V84Q176 65 178 59T189 49Q210 46 238 46H254V0H246Q231 3 137 3T28 0H20V46H36Z"></path><path id="MJX-4-TEX-N-65" d="M28 218Q28 273 48 318T98 391T163 433T229 448Q282 448 320 430T378 380T406 316T415 245Q415 238 408 231H126V216Q126 68 226 36Q246 30 270 30Q312 30 342 62Q359 79 369 104L379 128Q382 131 395 131H398Q415 131 415 121Q415 117 412 108Q393 53 349 21T250 -11Q155 -11 92 58T28 218ZM333 275Q322 403 238 411H236Q228 411 220 410T195 402T166 381T143 340T127 274V267H333V275Z"></path><path id="MJX-4-TEX-N-72" d="M36 46H50Q89 46 97 60V68Q97 77 97 91T98 122T98 161T98 203Q98 234 98 269T98 328L97 351Q94 370 83 376T38 385H20V408Q20 431 22 431L32 432Q42 433 60 434T96 436Q112 437 131 438T160 441T171 442H174V373Q213 441 271 441H277Q322 441 343 419T364 373Q364 352 351 337T313 322Q288 322 276 338T263 372Q263 381 265 388T270 400T273 405Q271 407 250 401Q234 393 226 386Q179 341 179 207V154Q179 141 179 127T179 101T180 81T180 66V61Q181 59 183 57T188 54T193 51T200 49T207 48T216 47T225 47T235 46T245 46H276V0H267Q249 3 140 3Q37 3 28 0H20V46H36Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="6B" xlink:href="#MJX-4-TEX-N-6B"></use><use data-c="65" xlink:href="#MJX-4-TEX-N-65" transform="translate(528,0)"></use><use data-c="72" xlink:href="#MJX-4-TEX-N-72" transform="translate(972,0)"></use></g></g></g></svg></mjx-container><br>\operatorname{Im}<br><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="2.957ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 1307 1000" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="MJX-4-TEX-N-27E8" d="M333 -232Q332 -239 327 -244T313 -250Q303 -250 296 -240Q293 -233 202 6T110 250T201 494T296 740Q299 745 306 749L309 750Q312 750 313 750Q331 750 333 732Q333 727 243 489Q152 252 152 250T243 11Q333 -227 333 -232Z"></path><path id="MJX-4-TEX-I-1D44E" d="M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z"></path><path id="MJX-4-TEX-N-27E9" d="M55 732Q56 739 61 744T75 750Q85 750 92 740Q95 733 186 494T278 250T187 6T92 -240Q85 -250 75 -250Q67 -250 62 -245T55 -232Q55 -227 145 11Q236 248 236 250T145 489Q55 727 55 732Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><use data-c="27E8" xlink:href="#MJX-4-TEX-N-27E8"></use></g><g data-mml-node="mi" transform="translate(389,0)"><use data-c="1D44E" xlink:href="#MJX-4-TEX-I-1D44E"></use></g><g data-mml-node="mo" transform="translate(918,0)"><use data-c="27E9" xlink:href="#MJX-4-TEX-N-27E9"></use></g></g></g></svg></mjx-container><br>\square<br>$</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://kalax524.com">Nemo YU</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://kalax524.com/notes/%E6%95%B0%E5%AD%A6-%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7%E8%A1%A8-fd3bf914/">https://kalax524.com/notes/%E6%95%B0%E5%AD%A6-%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7%E8%A1%A8-fd3bf914/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://kalax524.com" target="_blank">Kalax524</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/obsidian/">obsidian</a><a class="post-meta__tags" href="/tags/%E6%95%B0%E5%AD%A6/">数学</a></div><div class="post-share"><div class="social-share" data-image="/img/avatar.svg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/notes/%E6%95%B0%E5%AD%A6-abstract-algebra-%E6%9C%AA%E5%91%BD%E5%90%8D-1-2.1-exercise-54527cc0/" title="2.1 Exercise"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">2.1 Exercise</div></div><div class="info-2"><div class="info-item-1">1. Let {% mathjax '{"conversion":{"display":false}}' %}G{% endmathjax %} be a group and {% mathjax '{"conversion":{"display":false}}' %}A{% endmathjax</div></div></div></a><a class="pagination-related" href="/notes/%E6%95%B0%E5%AD%A6-abstract-algebra-the-structure-of-groups-bbd56663/" title="The Action Of A Group On A Set"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">The Action Of A Group On A Set</div></div><div class="info-2"><div class="info-item-1">The Action Of A Group On A Set Definition 4.1 An action of a group {% mathjax '{"conversion":{"display":false}}' %}G{% endmathjax %} on a set is a fun</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/notes/%E6%95%B0%E5%AD%A6-abstract-algebra-rings-5e7b79d1/" title="Rings"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-05-19</div><div class="info-item-2">Rings</div></div><div class="info-2"><div class="info-item-1">p is prime if and only if (p) is nonzero prime ideal p is prime ⟺(p) is a nonzero prime ideal</div></div></div></a><a class="pagination-related" href="/notes/%E6%95%B0%E5%AD%A6-abstract-algebra-the-structure-of-groups-bbd56663/" title="The Action Of A Group On A Set"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-05-25</div><div class="info-item-2">The Action Of A Group On A Set</div></div><div class="info-2"><div class="info-item-1">The Action Of A Group On A Set Definition 4.1 An action of a group {% mathjax '{"conversion":{"display":false}}' %}G{% endmathjax %} on a set is a fun</div></div></div></a><a class="pagination-related" href="/notes/%E6%95%B0%E5%AD%A6-abstract-algebra-%E5%BD%A2%E5%BC%8F%E5%B9%82%E7%BA%A7%E6%95%B0-e0bcb283/" title="形式幂级数"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-05-18</div><div class="info-item-2">形式幂级数</div></div><div class="info-2"><div class="info-item-1">https://chengzhaoxi.xyz/483c751f.html</div></div></div></a><a class="pagination-related" href="/notes/%E6%95%B0%E5%AD%A6-abstract-algebra-%E6%9C%AA%E5%91%BD%E5%90%8D-1-2.1-exercise-54527cc0/" title="2.1 Exercise"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-05-25</div><div class="info-item-2">2.1 Exercise</div></div><div class="info-2"><div class="info-item-1">1. Let {% mathjax '{"conversion":{"display":false}}' %}G{% endmathjax %} be a group and {% mathjax '{"conversion":{"display":false}}' %}A{% endmathjax</div></div></div></a><a class="pagination-related" href="/notes/%E6%95%B0%E5%AD%A6-linear-algebra-%E4%BD%9C%E4%B8%9A-78b34299/" title="高等代数 II 第十次作业解答"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-05-19</div><div class="info-item-2">高等代数 II 第十次作业解答</div></div><div class="info-2"><div class="info-item-1">高等代数 II 第十次作业解答 题号：7.2.19，7.2.21，7.2.22，7.2.24，7.2.25，7.2.27，7.2.28，7.2.30，7.2.31，7.2.32 --- 习题 7.2.19 设 {% mathjax '{"conversion":{"display":false}}'</div></div></div></a><a class="pagination-related" href="/notes/%E6%B3%95%E8%AF%AD-fra%C3%A7ais-%E8%AF%8D%E6%B1%87-lesson-1-12-vocabulaire-e825f934/" title="1. 人物、身份、职业"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-05-19</div><div class="info-item-2">1. 人物、身份、职业</div></div><div class="info-2"><div class="info-item-1">1. 人物、身份、职业 法语 中文 ----------------------- ------ monsieur n.m. 先生 madame n.f. 女士，夫人 mademoiselle n.f. 小姐 ami(e) n. 朋友 copain/copine n. 朋友，同伴 garçon n.</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.svg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Nemo YU</div><div class="author-info-description">数学 / 英语 / 法语 / CS</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">47</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">55</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">15</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/KalaxYU"><i class="fab fa-github"></i><span>GitHub</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/KalaxYU" target="_blank" title="GitHub"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://notes.kalax524.com" target="_blank" title="Notes Hub"><i class="fas fa-sticky-note" style="color: #2b7a78;"></i></a><a class="social-icon" href="mailto:ibioancialo524@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #2b7a78;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">学科索引：数学、英语、法语、CS、札记；每日英语为 TOEFL 原版精读。</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/notes/cs-python-index-0ffafc34/" title="Python 总目录">Python 总目录</a><time datetime="2026-05-29T07:10:41.000Z" title="发表于 2026-05-29 15:10:41">2026-05-29</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/notes/cs-python-11_testing_debugging_logging-e4d36020/" title="测试、调试与日志">测试、调试与日志</a><time datetime="2026-05-29T07:03:20.000Z" title="发表于 2026-05-29 15:03:20">2026-05-29</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/notes/cs-python-10_type_hints_datamodel-977490f0/" title="类型注解与数据模型">类型注解与数据模型</a><time datetime="2026-05-29T07:03:20.000Z" title="发表于 2026-05-29 15:03:20">2026-05-29</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/notes/cs-python-12_code_quality_project_structure-e0da07ef/" title="代码质量与项目结构">代码质量与项目结构</a><time datetime="2026-05-29T07:03:20.000Z" title="发表于 2026-05-29 15:03:20">2026-05-29</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/notes/cs-python-13_concurrency_async_performance-2a0d0b44/" title="并发、异步与性能">并发、异步与性能</a><time datetime="2026-05-29T07:03:20.000Z" title="发表于 2026-05-29 15:03:20">2026-05-29</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/notes/cs-python-16_data_analysis_visualization-a25a0e0e/" title="数据分析与可视化">数据分析与可视化</a><time datetime="2026-05-29T07:03:20.000Z" title="发表于 2026-05-29 15:03:20">2026-05-29</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Nemo YU</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></span></div><div class="footer_custom_text">Coursework, reading notes, and language study.</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.2"></script><script src="/js/main.js?v=5.5.2"></script><div class="js-pjax"></div><script defer src="/js/word-translate.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="Search notes, essays, and readings" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.5.2"></script></div></div></body></html>
