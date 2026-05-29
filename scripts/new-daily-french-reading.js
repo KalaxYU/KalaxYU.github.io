@@ -4,7 +4,6 @@ const path = require('path');
 const BLOG_ROOT = path.resolve(__dirname, '..');
 const POSTS_OUT = path.join(BLOG_ROOT, 'source', '_posts', 'french-reading');
 const INDEX_PAGE = path.join(BLOG_ROOT, 'source', 'french-reading', 'index.md');
-const LINK_MARKER = '<!-- FRENCH_READING_LINKS -->';
 
 const readings = [
   {
@@ -160,7 +159,7 @@ function renderIndex(links) {
     .map(link => `- [${link.title}](${link.href})`)
     .join('\n');
 
-  return `---\ntitle: French Reading\ndate: 2026-05-30 08:10:00\ncomments: false\n---\n\n**Français A1-A2**\n\n## French Daily Reading\n\n> 每天一篇 A1-A2 法语短文，包含逐句中文翻译、词汇和语法分析。选中页面上的法语单词或句子，也会自动弹出中文翻译。\n\n## Readings\n\n${LINK_MARKER}\n${items}\n`;
+  return `---\ntitle: French Reading\ndate: 2026-05-30 08:10:00\ncomments: false\n---\n\n**Français A1-A2**\n\n## French Daily Reading\n\n> 每天一篇 A1-A2 法语短文，包含逐句中文翻译、词汇和语法分析。选中页面上的法语单词或句子，也会自动弹出中文翻译。\n\n## Readings\n\n${items}\n`;
 }
 
 function extractIndexLinks(content) {

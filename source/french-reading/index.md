@@ -12,5 +12,4 @@ comments: false
 
 ## Readings
 
-<!-- FRENCH_READING_LINKS -->
 - [Le marché du samedi](/lectures-francaises/2026-05-30-marche-samedi/)
