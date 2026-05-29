@@ -523,6 +523,7 @@ function renderHome(records) {
     '</div>',
     '<div class="home-actions">',
     '<a class="text-link" href="/english-reading/">TOEFL Reading</a>',
+    '<a class="text-link" href="/french-reading/">French Reading</a>',
     '<a class="text-link" href="/articles/">All Articles</a>',
     '<a class="text-link" href="https://notes.kalax524.com" target="_blank" rel="noopener">notes.kalax524.com</a>',
     '</div>',
@@ -551,6 +552,10 @@ function renderModulePage(module, items) {
 
   if (module.key === 'english') {
     lines.push('<p><a class="text-link" href="/english-reading/">进入 TOEFL Reading 精读专栏</a></p>', '');
+  }
+
+  if (module.key === 'french') {
+    lines.push('<p><a class="text-link" href="/french-reading/">进入 French Reading A1-A2 阅读</a></p>', '');
   }
 
   if (!items.length) {

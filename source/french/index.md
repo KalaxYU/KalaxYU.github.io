@@ -9,6 +9,8 @@ comments: false
 <h2>French</h2>
 <p class="hub-intro">法语词汇、动词变位、介词、冠词、句式和练习。</p>
 
+<p><a class="text-link" href="/french-reading/">进入 French Reading A1-A2 阅读</a></p>
+
 <div class="note-list">
 <a class="note-row" href="/notes/法语-fraçais-词汇-动词-verbe-c410b998/">
 <strong>动词  Verbe</strong>

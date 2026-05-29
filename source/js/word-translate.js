@@ -1,53 +1,41 @@
 (function () {
   const LOCAL_DICT = {
-    acid: '酸；酸性的',
-    assert: '断言；明确主张',
-    broad: '广泛的；概括性的',
-    bubbling: '冒泡；起泡',
-    carbonic: '碳酸的',
-    carbonate: '碳酸盐',
-    carpenter: '木匠',
     chalk: '粉笔；白垩',
-    chapter: '章节；历史阶段',
-    compound: '化合物；复合物',
-    conception: '观念；构想',
-    direct: '直接的',
-    dissolve: '溶解',
-    dissolved: '溶解的',
-    enunciate: '阐明；清楚表达',
-    essentially: '本质上；基本上',
     evidence: '证据',
-    experiment: '实验',
-    feature: '特征；特点',
-    fragment: '片段；残片',
-    globe: '地球；球体',
-    humanity: '人类；人文学科',
-    ignorant: '不了解的；无知的',
-    indirect: '间接的',
-    learned: '博学的',
-    lime: '石灰',
-    mass: '大量；块；质量',
-    overwhelming: '压倒性的；巨大的',
-    passage: '段落；通道',
-    procedure: '过程；方法',
-    profound: '深刻的',
-    propose: '打算；提议',
-    quicklime: '生石灰',
-    relation: '关系；联系',
-    significance: '意义；重要性',
-    testify: '证明；作证',
-    ultimate: '最终的；根本的',
-    universe: '宇宙；万物',
-    vanish: '消失',
-    vinegar: '醋',
-    weigh: '权衡；称重'
+    forest: '森林',
+    economy: '经济；运行方式',
+    preserve: '保护；保存',
+    scarcity: '稀缺',
+    drought: '干旱',
+    moisture: '水分；湿气',
+    timber: '木材',
+    sunlight: '阳光',
+    sol: '太阳；阳光',
+    livre: '书',
+    matin: '早晨',
+    soir: '晚上',
+    ville: '城市',
+    chemin: '路；道路',
+    devoir: '作业；责任',
+    apprendre: '学习',
+    regarder: '看',
+    penser: '想；思考',
+    travailler: '工作；学习',
+    doucement: '慢慢地；轻轻地',
+    souvent: '经常',
+    toujours: '总是',
+    aujourd: '今天'
   };
 
   const API_URL = 'https://api.mymemory.translated.net/get';
-  const CACHE_PREFIX = 'kalax-word-zh:';
+  const CACHE_PREFIX = 'kalax-selection-zh:v2:';
+  const MAX_SELECTION_LENGTH = 900;
+  const LATIN_RE = /[A-Za-zÀ-ÖØ-öø-ÿ]/;
+  const WORD_RE = /^[A-Za-zÀ-ÖØ-öø-ÿ][A-Za-zÀ-ÖØ-öø-ÿ'’.-]*$/;
   const memoryCache = new Map();
   let activeRequest = null;
   let hideTimer = null;
+  let requestSeq = 0;
 
   const popover = document.createElement('div');
   popover.id = 'kalax-word-translate';
@@ -66,22 +54,48 @@
     })[char]);
   }
 
+  function decodeHtml(value) {
+    const textarea = document.createElement('textarea');
+    textarea.innerHTML = value;
+    return textarea.value;
+  }
+
   function normalizeSelection(text) {
-    const normalized = text
+    const normalized = String(text || '')
       .replace(/[“”]/g, '"')
       .replace(/[‘’]/g, "'")
       .replace(/\s+/g, ' ')
       .trim()
-      .replace(/^[^A-Za-z]+|[^A-Za-z]+$/g, '');
+      .replace(/^[\s"'“”‘’()[\]{}<>，。！？；：、,.!?;:]+|[\s"'“”‘’()[\]{}<>，。！？；：、,.!?;:]+$/g, '');
 
-    if (!normalized || normalized.length > 72) return '';
-    if (!/[A-Za-z]/.test(normalized)) return '';
-    if (!/^[A-Za-z][A-Za-z'-]*(?:\s+[A-Za-z][A-Za-z'-]*){0,3}$/.test(normalized)) return '';
+    if (!normalized || normalized.length > MAX_SELECTION_LENGTH) return null;
+    if (!LATIN_RE.test(normalized)) return null;
     return normalized;
   }
 
-  function lookupLocal(term) {
-    const lower = term.toLowerCase().replace(/'s$/, '');
+  function isSingleWord(text) {
+    return WORD_RE.test(text) && !/\s/.test(text);
+  }
+
+  function detectLanguage(text) {
+    const lower = ` ${text.toLowerCase()} `;
+    let score = 0;
+
+    if (/[àâæçéèêëîïôœùûüÿ]/i.test(text)) score += 3;
+    if (/\b(je|tu|il|elle|nous|vous|ils|elles|est|sont|etre|être|avoir|avec|dans|pour|mais|parce|quand|aujourd'hui)\b/i.test(text)) score += 2;
+    if (/\b(le|la|les|un|une|des|du|de|d'|l'|au|aux|ce|cette|mon|ma|mes|son|sa|ses)\b/i.test(lower)) score += 1;
+    if (/\b(ne|pas|plus|très|bien|petit|petite|grand|grande|bonjour|merci)\b/i.test(text)) score += 1;
+
+    return score >= 2 ? 'fr' : 'en';
+  }
+
+  function cacheKey(lang, text) {
+    return `${lang}:${text.toLowerCase()}`;
+  }
+
+  function lookupLocal(lang, text) {
+    if (!isSingleWord(text)) return '';
+    const lower = text.toLowerCase().replace(/'s$/, '').replace(/[’']/g, '');
     if (LOCAL_DICT[lower]) return LOCAL_DICT[lower];
 
     const candidates = [
@@ -94,14 +108,18 @@
       lower.replace(/s$/, ''),
       lower.replace(/ied$/, 'y'),
       lower.replace(/ed$/, ''),
-      lower.replace(/ing$/, '')
+      lower.replace(/ing$/, ''),
+      lower.replace(/es$/, 'er'),
+      lower.replace(/ons$/, 'er'),
+      lower.replace(/ez$/, 'er'),
+      lower.replace(/ent$/, 'er')
     ];
 
     return candidates.map(key => LOCAL_DICT[key]).find(Boolean) || '';
   }
 
-  function getCached(term) {
-    const key = term.toLowerCase();
+  function getCached(lang, text) {
+    const key = cacheKey(lang, text);
     if (memoryCache.has(key)) return memoryCache.get(key);
 
     try {
@@ -116,29 +134,58 @@
     }
   }
 
-  function setCached(term, text) {
-    const key = term.toLowerCase();
-    memoryCache.set(key, text);
+  function setCached(lang, text, translated) {
+    const key = cacheKey(lang, text);
+    memoryCache.set(key, translated);
     try {
-      localStorage.setItem(CACHE_PREFIX + key, JSON.stringify({ text, time: Date.now() }));
+      localStorage.setItem(CACHE_PREFIX + key, JSON.stringify({ text: translated, time: Date.now() }));
     } catch (error) {
       // Some browsers disable localStorage in strict privacy modes.
     }
   }
 
-  function render(term, body, state) {
-    const safeTerm = escapeHtml(term);
+  function languageLabel(lang) {
+    return lang === 'fr' ? '法语' : '英语';
+  }
+
+  function externalLinks(text, lang, wordMode) {
+    const encoded = encodeURIComponent(text);
+    const google = `https://translate.google.com/?sl=${lang}&tl=zh-CN&text=${encoded}&op=translate`;
+    const youdaoLang = lang === 'fr' ? 'fr' : 'en';
+    const links = [
+      `<a href="${google}" target="_blank" rel="noopener">Google</a>`,
+      `<a href="https://www.youdao.com/result?word=${encoded}&lang=${youdaoLang}" target="_blank" rel="noopener">有道</a>`
+    ];
+
+    if (wordMode) {
+      if (lang === 'fr') {
+        links.push(`<a href="https://dictionary.cambridge.org/dictionary/french-english/${encoded}" target="_blank" rel="noopener">Cambridge</a>`);
+      } else {
+        links.push(`<a href="https://www.merriam-webster.com/dictionary/${encoded}" target="_blank" rel="noopener">Merriam</a>`);
+        links.push(`<a href="https://dictionary.cambridge.org/dictionary/english/${encoded}" target="_blank" rel="noopener">Cambridge</a>`);
+      }
+    }
+
+    return links.join('');
+  }
+
+  function render(info, body, state) {
+    const safeText = escapeHtml(info.text);
     const safeBody = escapeHtml(body);
-    const searchUrl = `https://www.youdao.com/result?word=${encodeURIComponent(term)}&lang=en`;
+    const wordMode = isSingleWord(info.text);
+    const links = externalLinks(info.text, info.lang, wordMode);
+
     popover.innerHTML = [
       '<div class="kalax-word-head">',
-      `<span class="kalax-word-term">${safeTerm}</span>`,
-      '<button class="kalax-word-close" type="button" aria-label="关闭">×</button>',
+      `<span class="kalax-word-term">${wordMode ? safeText : '选中内容'}</span>`,
+      '<button class="kalax-word-close" type="button" aria-label="关闭">&times;</button>',
       '</div>',
+      wordMode ? '' : `<div class="kalax-word-source">${safeText}</div>`,
       `<div class="kalax-word-body ${state === 'loading' ? 'is-loading' : ''}">${safeBody}</div>`,
+      `<div class="kalax-word-meta">自动翻译 · ${languageLabel(info.lang)} → 中文</div>`,
       '<div class="kalax-word-actions">',
-      `<a href="${searchUrl}" target="_blank" rel="noopener">有道</a>`,
-      `<button type="button" data-copy="${safeBody}">复制</button>`,
+      links,
+      `<button type="button" data-copy="${safeBody}">复制译文</button>`,
       '</div>'
     ].join('');
   }
@@ -169,31 +216,42 @@
     }, delay);
   }
 
-  async function fetchTranslation(term) {
-    const local = lookupLocal(term);
+  async function fetchTranslation(info) {
+    const local = lookupLocal(info.lang, info.text);
     if (local) return local;
 
-    const cached = getCached(term);
+    const cached = getCached(info.lang, info.text);
     if (cached) return cached;
 
     if (activeRequest) activeRequest.abort();
     activeRequest = new AbortController();
-    const timeout = setTimeout(() => activeRequest.abort(), 4500);
+    const timeout = setTimeout(() => activeRequest.abort(), 5500);
 
     try {
-      const url = `${API_URL}?q=${encodeURIComponent(term)}&langpair=en%7Czh-CN`;
+      const langpair = `${info.lang}|zh-CN`;
+      const url = `${API_URL}?q=${encodeURIComponent(info.text)}&langpair=${encodeURIComponent(langpair)}`;
       const response = await fetch(url, { signal: activeRequest.signal });
       const data = await response.json();
       const translated = data && data.responseData && data.responseData.translatedText;
-      if (!translated || translated.toLowerCase() === term.toLowerCase()) {
+      if (!translated || translated.toLowerCase() === info.text.toLowerCase()) {
         throw new Error('empty translation');
       }
-      setCached(term, translated);
-      return translated;
+      const decoded = decodeHtml(translated);
+      setCached(info.lang, info.text, decoded);
+      return decoded;
     } finally {
       clearTimeout(timeout);
       activeRequest = null;
     }
+  }
+
+  function selectedRect(selection) {
+    if (!selection.rangeCount) return null;
+    const range = selection.getRangeAt(0);
+    const rect = range.getBoundingClientRect();
+    if (rect && (rect.width || rect.height)) return rect;
+    const rects = range.getClientRects();
+    return rects.length ? rects[0] : null;
   }
 
   async function handleSelection() {
@@ -206,25 +264,28 @@
     const target = selection.anchorNode && selection.anchorNode.parentElement;
     if (target && target.closest('input, textarea, select, button, a, #kalax-word-translate')) return;
 
-    const term = normalizeSelection(selection.toString());
-    if (!term) {
+    const text = normalizeSelection(selection.toString());
+    if (!text) {
       hidePopover(120);
       return;
     }
 
-    const range = selection.getRangeAt(0);
-    const rect = range.getBoundingClientRect();
-    if (!rect || (rect.width === 0 && rect.height === 0)) return;
+    const rect = selectedRect(selection);
+    if (!rect) return;
 
-    render(term, '查询中...', 'loading');
+    const info = { text, lang: detectLanguage(text) };
+    const seq = ++requestSeq;
+    render(info, '查询中...', 'loading');
     positionPopover(rect);
 
     try {
-      const translated = await fetchTranslation(term);
-      render(term, translated, 'success');
+      const translated = await fetchTranslation(info);
+      if (seq !== requestSeq) return;
+      render(info, translated, 'success');
       positionPopover(rect);
     } catch (error) {
-      render(term, '暂时没有查到。可以点有道继续查词。', 'error');
+      if (seq !== requestSeq) return;
+      render(info, '暂时没有查到译文，可以点 Google 或有道继续查看。', 'error');
       positionPopover(rect);
     }
   }

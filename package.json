@@ -5,6 +5,7 @@
   "scripts": {
     "sync:notes": "node scripts/sync-obsidian.js",
     "new:reading": "node scripts/new-daily-reading.js",
+    "new:french-reading": "node scripts/new-daily-french-reading.js",
     "build": "npm run sync:notes && hexo generate",
     "clean": "hexo clean",
     "deploy": "hexo deploy",

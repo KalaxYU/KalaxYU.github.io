@@ -10,6 +10,7 @@ menu:
   Home: / || fas fa-home
   Notes: /notes/ || fas fa-book-open
   TOEFL Reading: /english-reading/ || fas fa-feather-alt
+  French Reading: /french-reading/ || fas fa-book-reader
   Articles: /articles/ || fas fa-layer-group
   Archives: /archives/ || fas fa-archive
   About: /about/ || fas fa-user-astronaut
@@ -106,7 +107,7 @@ aside:
       link: https://github.com/KalaxYU
   card_announcement:
     enable: true
-    content: 学科索引：数学、英语、法语、CS、札记；每日英语为 TOEFL 原版精读。
+    content: 学科索引：数学、英语、法语、CS、札记；英语与法语每日阅读已启用。
   card_recent_post:
     enable: true
     limit: 6

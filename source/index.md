@@ -48,6 +48,7 @@ top_img: /img/bg.JPG
 </div>
 <div class="home-actions">
 <a class="text-link" href="/english-reading/">TOEFL Reading</a>
+<a class="text-link" href="/french-reading/">French Reading</a>
 <a class="text-link" href="/articles/">All Articles</a>
 <a class="text-link" href="https://notes.kalax524.com" target="_blank" rel="noopener">notes.kalax524.com</a>
 </div>
