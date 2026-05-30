@@ -3,13 +3,15 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "sync:english-reading-notes": "node scripts/sync-english-reading-notes.js",
+    "sync:french-reading-notes": "node scripts/sync-french-reading-notes.js",
     "sync:notes": "node scripts/sync-obsidian.js",
     "new:reading": "node scripts/new-daily-reading.js",
     "new:french-reading": "node scripts/new-daily-french-reading.js",
-    "build": "npm run sync:notes && hexo generate",
+    "build": "npm run sync:english-reading-notes && npm run sync:french-reading-notes && npm run sync:notes && hexo generate",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
-    "server": "npm run sync:notes && hexo server"
+    "server": "npm run sync:english-reading-notes && npm run sync:french-reading-notes && npm run sync:notes && hexo server"
   },
   "hexo": {
     "version": "8.1.1"

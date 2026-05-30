@@ -1,6 +1,6 @@
 ---
 title: Notes
-date: 2026-05-30 16:18:21
+date: 2026-05-30 23:52:06
 comments: false
 ---
 
@@ -20,14 +20,14 @@ comments: false
 </a>
 <a class="module-card" style="--module-accent: #4666a5" href="/english/">
 <span class="module-icon"><i class="fas fa-feather-pointed"></i></span>
-<span class="module-count">1 notes + TOEFL</span>
+<span class="module-count">4 notes + TOEFL</span>
 <strong>英语</strong>
 <span>English</span>
 <p>TOEFL Reading、原版文本精读、词汇、长难句和写作表达。</p>
 </a>
 <a class="module-card" style="--module-accent: #d96c4f" href="/french/">
 <span class="module-icon"><i class="fas fa-language"></i></span>
-<span class="module-count">12 notes</span>
+<span class="module-count">13 notes</span>
 <strong>法语</strong>
 <span>French</span>
 <p>法语词汇、动词变位、介词、冠词、句式和练习。</p>
@@ -50,12 +50,12 @@ comments: false
 
 ## 最近更新
 
+- [Darwin on the Struggle for Existence](/notes/英语-toefl-reading-2026-05-27-darwin-struggle-for-existence-3c3ba9dd/) · 英语
+- [Le marché du samedi](/notes/法语-fraçais-阅读-2026-05-30-marche-samedi-4d868dde/) · 法语
+- [Huxley on Reading a Piece of Chalk](/notes/英语-toefl-reading-2026-05-28-huxley-piece-of-chalk-3e5b7e72/) · 英语
+- [John Muir on the Economy of Forests](/notes/英语-toefl-reading-2026-05-29-muir-forest-economy-6183680e/) · 英语
 - [Python 总目录](/notes/cs-python-index-0ffafc34/) · CS
 - [类型注解与数据模型](/notes/cs-python-10_type_hints_datamodel-977490f0/) · CS
 - [测试、调试与日志](/notes/cs-python-11_testing_debugging_logging-e4d36020/) · CS
 - [代码质量与项目结构](/notes/cs-python-12_code_quality_project_structure-e0da07ef/) · CS
-- [并发、异步与性能](/notes/cs-python-13_concurrency_async_performance-2a0d0b44/) · CS
-- [网络、Web 与 API](/notes/cs-python-14_web_api-1d365c52/) · CS
-- [数据库与持久化](/notes/cs-python-15_database_persistence-54b79e4a/) · CS
-- [数据分析与可视化](/notes/cs-python-16_data_analysis_visualization-a25a0e0e/) · CS
 </div>

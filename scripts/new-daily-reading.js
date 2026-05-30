@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { formatResult, syncEnglishReadingNotes } = require('./sync-english-reading-notes');
 
 const BLOG_ROOT = path.resolve(__dirname, '..');
 const POSTS_OUT = path.join(BLOG_ROOT, 'source', '_posts', 'english-reading');
@@ -66,6 +67,15 @@ function dayIndex(dateText) {
   return Math.floor(date.getTime() / 86400000) % readings.length;
 }
 
+function existingPostForDate(dateText) {
+  if (!fs.existsSync(POSTS_OUT)) return '';
+  const prefix = `${dateText}-`;
+  const match = fs.readdirSync(POSTS_OUT)
+    .filter(name => name.startsWith(prefix) && /\.md$/i.test(name))
+    .sort()[0];
+  return match ? path.join(POSTS_OUT, match) : '';
+}
+
 function render(dateText, reading) {
   const wordRows = reading.vocabulary
     .map(([word, meaning, note]) => `| ${word} | ${meaning} | ${note} |`)
@@ -90,18 +100,21 @@ function main() {
     throw new Error('Use --date=YYYY-MM-DD');
   }
 
+  const existingPost = existingPostForDate(dateText);
+  if (existingPost) {
+    console.log(`Reading already exists for ${dateText}: ${existingPost}`);
+    console.log(formatResult(syncEnglishReadingNotes({ files: [existingPost] })));
+    return;
+  }
+
   const reading = readings[dayIndex(dateText)];
   const output = path.join(POSTS_OUT, `${dateText}-${reading.slug}.md`);
   fs.mkdirSync(POSTS_OUT, { recursive: true });
 
-  if (fs.existsSync(output)) {
-    console.log(`Reading already exists: ${output}`);
-    return;
-  }
-
   fs.writeFileSync(output, render(dateText, reading), 'utf8');
   updateIndex(dateText, reading);
   console.log(`Created TOEFL reading post: ${output}`);
+  console.log(formatResult(syncEnglishReadingNotes({ files: [output] })));
 }
 
 if (require.main === module) {

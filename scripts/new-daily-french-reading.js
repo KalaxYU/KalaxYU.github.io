@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { formatResult, syncFrenchReadingNotes } = require('./sync-french-reading-notes');
 
 const BLOG_ROOT = path.resolve(__dirname, '..');
 const POSTS_OUT = path.join(BLOG_ROOT, 'source', '_posts', 'french-reading');
@@ -233,6 +234,7 @@ function main() {
     console.log(`Created French reading post: ${output}`);
   }
   updateIndex(dateText, reading);
+  console.log(formatResult(syncFrenchReadingNotes({ files: [output] })));
 }
 
 if (require.main === module) {
