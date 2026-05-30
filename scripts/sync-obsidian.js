@@ -452,12 +452,13 @@ function renderPost(record, body) {
 }
 
 function renderIndex(records) {
+  const notesDate = readExistingDate(NOTES_PAGE, formatDate(new Date()));
   const byModule = groupByModule(records);
 
   const lines = [
     '---',
     'title: Notes',
-    `date: ${formatDate(new Date())}`,
+    `date: ${notesDate}`,
     'comments: false',
     '---',
     '',
