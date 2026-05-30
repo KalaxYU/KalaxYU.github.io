@@ -32,6 +32,18 @@
   const MAX_SELECTION_LENGTH = 900;
   const LATIN_RE = /[A-Za-zÀ-ÖØ-öø-ÿ]/;
   const WORD_RE = /^[A-Za-zÀ-ÖØ-öø-ÿ][A-Za-zÀ-ÖØ-öø-ÿ'’.-]*$/;
+  const FRENCH_WORD_HINTS = new Set([
+    'apprendre', 'aujourd', 'bonjour', 'cahier', 'chemin', 'cours',
+    'devoir', 'doucement', 'eau', 'exemple', 'exemples', 'fenetre',
+    'fleur', 'fleurs', 'fromage', 'fruit', 'fruits', 'grand', 'grande',
+    'langue', 'lait', 'liste', 'livre', 'maison', 'marche', 'matin',
+    'merci', 'mere', 'monnaie', 'mot', 'mots', 'nouveau', 'nouveaux',
+    'pain', 'papier', 'penser', 'personne', 'personnes', 'petit',
+    'petite', 'piece', 'pieces', 'poche', 'pomme', 'pommes', 'prix',
+    'professeur', 'question', 'refrigerateur', 'regarder', 'soir',
+    'souvent', 'stylo', 'table', 'tables', 'toujours', 'travailler',
+    'vendeur', 'ville'
+  ]);
   const memoryCache = new Map();
   let activeRequest = null;
   let hideTimer = null;
@@ -87,6 +99,55 @@
     if (/\b(ne|pas|plus|très|bien|petit|petite|grand|grande|bonjour|merci)\b/i.test(text)) score += 1;
 
     return score >= 2 ? 'fr' : 'en';
+  }
+
+  function stripMarks(value) {
+    return String(value || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  }
+
+  function safePathname() {
+    const raw = window.location.pathname || '';
+    try {
+      return decodeURIComponent(raw).toLowerCase();
+    } catch (error) {
+      return raw.toLowerCase();
+    }
+  }
+
+  function pageLanguageHint() {
+    const path = safePathname();
+    const isFrenchPath =
+      /\/(?:french|french-reading|lectures-francaises)(?:\/|$)/.test(path) ||
+      path.includes('/categories/french') ||
+      path.includes('/tags/french') ||
+      path.includes('/tags/a1-a2') ||
+      path.includes('/categories/法语') ||
+      path.includes('/tags/法语') ||
+      path.includes('/notes/法语');
+
+    if (isFrenchPath) return 'fr';
+
+    const isEnglishPath =
+      /\/(?:english|english-reading|readings)(?:\/|$)/.test(path) ||
+      path.includes('/categories/english') ||
+      path.includes('/tags/toefl');
+
+    return isEnglishPath ? 'en' : '';
+  }
+
+  function detectLanguageForSelection(text) {
+    const guessed = detectLanguage(text);
+    if (guessed === 'fr') return 'fr';
+
+    const hint = pageLanguageHint();
+    if (hint) return hint;
+
+    if (isSingleWord(text)) {
+      const normalizedWord = stripMarks(text.toLowerCase()).replace(/[’']/g, '');
+      if (FRENCH_WORD_HINTS.has(normalizedWord)) return 'fr';
+    }
+
+    return guessed;
   }
 
   function cacheKey(lang, text) {
@@ -273,7 +334,7 @@
     const rect = selectedRect(selection);
     if (!rect) return;
 
-    const info = { text, lang: detectLanguage(text) };
+    const info = { text, lang: detectLanguageForSelection(text) };
     const seq = ++requestSeq;
     render(info, '查询中...', 'loading');
     positionPopover(rect);
