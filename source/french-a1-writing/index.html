@@ -1,0 +1,1436 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Français A1 - Rédaction 80 mots</title>
+  <style>
+    :root {
+      --bg: #f5f7f6;
+      --ink: #202124;
+      --muted: #667085;
+      --line: #d8dedb;
+      --panel: #ffffff;
+      --teal: #087f7a;
+      --teal-soft: #dff3ef;
+      --coral: #d95032;
+      --coral-soft: #fde8df;
+      --gold: #b97610;
+      --gold-soft: #fff0cc;
+      --blue: #365f91;
+      --blue-soft: #e4edf8;
+      --green: #2f7d3f;
+      --green-soft: #e4f2e6;
+      --shadow: 0 16px 40px rgba(32, 33, 36, 0.09);
+      --radius: 8px;
+      font-family: Inter, "Segoe UI", "Microsoft YaHei", Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background:
+        linear-gradient(135deg, rgba(8, 127, 122, 0.08), transparent 32%),
+        linear-gradient(315deg, rgba(217, 80, 50, 0.08), transparent 36%),
+        var(--bg);
+      color: var(--ink);
+      min-height: 100vh;
+    }
+
+    button,
+    textarea,
+    input {
+      font: inherit;
+    }
+
+    .app {
+      width: min(1440px, 100%);
+      margin: 0 auto;
+      padding: 18px;
+    }
+
+    .topbar {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 16px;
+      align-items: center;
+      padding: 14px 2px 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .brand-mark {
+      width: 46px;
+      height: 46px;
+      border-radius: var(--radius);
+      background: conic-gradient(from 210deg, var(--teal), var(--gold), var(--coral), var(--blue), var(--teal));
+      display: grid;
+      place-items: center;
+      color: #fff;
+      box-shadow: var(--shadow);
+      flex: 0 0 auto;
+    }
+
+    .brand-mark svg {
+      width: 28px;
+      height: 28px;
+      stroke-width: 2.2;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(22px, 3vw, 34px);
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+
+    .subtitle {
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .top-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      justify-content: end;
+    }
+
+    .icon-button,
+    .text-button {
+      min-height: 38px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      color: var(--ink);
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+    }
+
+    .icon-button {
+      width: 40px;
+      display: grid;
+      place-items: center;
+    }
+
+    .text-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 0 12px;
+      white-space: nowrap;
+    }
+
+    .icon-button:hover,
+    .text-button:hover {
+      transform: translateY(-1px);
+      border-color: #9aa8a3;
+    }
+
+    .icon-button svg,
+    .text-button svg {
+      width: 18px;
+      height: 18px;
+      stroke-width: 2;
+    }
+
+    .workspace {
+      display: grid;
+      grid-template-columns: minmax(320px, 0.78fr) minmax(420px, 1.22fr);
+      gap: 18px;
+      align-items: start;
+    }
+
+    .panel {
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .panel-header {
+      padding: 15px 16px;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .panel-title {
+      margin: 0;
+      font-size: 17px;
+      line-height: 1.2;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border-radius: 999px;
+      padding: 5px 9px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #15413d;
+      background: var(--teal-soft);
+      white-space: nowrap;
+    }
+
+    .tabs {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1px;
+      background: var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .tab {
+      border: 0;
+      background: #f8faf9;
+      min-height: 58px;
+      padding: 8px;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      color: var(--muted);
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    .tab.active {
+      color: var(--ink);
+      background: var(--panel);
+      box-shadow: inset 0 -4px 0 var(--accent, var(--teal));
+    }
+
+    .prompt-body {
+      padding: 18px;
+    }
+
+    .prompt-visual {
+      height: 118px;
+      border-radius: var(--radius);
+      background: var(--visual-bg, var(--teal-soft));
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 16px;
+      border: 1px solid rgba(0, 0, 0, 0.04);
+    }
+
+    .prompt-visual svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .topic-kicker {
+      color: var(--accent, var(--teal));
+      font-weight: 800;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0;
+      margin-bottom: 8px;
+    }
+
+    .topic-title {
+      margin: 0 0 10px;
+      font-size: 24px;
+      line-height: 1.15;
+      letter-spacing: 0;
+    }
+
+    .topic-cn {
+      margin: 0 0 14px;
+      color: #39434a;
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    .prompt-fr {
+      margin: 0 0 18px;
+      padding-left: 18px;
+      line-height: 1.7;
+      color: #30363a;
+    }
+
+    .section-label {
+      margin: 18px 0 9px;
+      color: #39434a;
+      font-weight: 800;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .chip {
+      border: 1px solid var(--line);
+      background: #fff;
+      color: #27323a;
+      border-radius: 999px;
+      padding: 6px 9px;
+      font-size: 13px;
+      line-height: 1;
+    }
+
+    .chip.used {
+      color: #0b514d;
+      border-color: rgba(8, 127, 122, 0.38);
+      background: var(--teal-soft);
+    }
+
+    .editor-wrap {
+      display: grid;
+      gap: 18px;
+    }
+
+    .editor-shell {
+      padding: 0;
+    }
+
+    .editor-toolbar {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .meter-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+    }
+
+    .word-number {
+      font-size: 31px;
+      font-weight: 850;
+      min-width: 66px;
+      color: var(--accent, var(--teal));
+      line-height: 1;
+    }
+
+    .meter-copy {
+      min-width: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.35;
+    }
+
+    .meter {
+      height: 8px;
+      width: 180px;
+      border-radius: 999px;
+      background: #e8ecea;
+      overflow: hidden;
+      flex: 0 0 auto;
+    }
+
+    .meter-fill {
+      height: 100%;
+      width: 0%;
+      background: var(--accent, var(--teal));
+      transition: width 0.2s ease, background 0.2s ease;
+    }
+
+    .toolbar-buttons {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      justify-content: end;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 360px;
+      display: block;
+      resize: vertical;
+      border: 0;
+      padding: 20px;
+      background: #fff;
+      color: var(--ink);
+      line-height: 1.75;
+      font-size: 18px;
+      outline: none;
+    }
+
+    textarea::placeholder {
+      color: #9aa4aa;
+    }
+
+    .status-strip {
+      border-top: 1px solid var(--line);
+      padding: 10px 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 14px;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--muted);
+      font-size: 13px;
+      min-height: 48px;
+    }
+
+    .toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      user-select: none;
+      font-weight: 700;
+      color: #30363a;
+    }
+
+    .toggle input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .switch {
+      width: 44px;
+      height: 24px;
+      border-radius: 999px;
+      background: #d6ddda;
+      position: relative;
+      transition: background 0.2s ease;
+      flex: 0 0 auto;
+    }
+
+    .switch::after {
+      content: "";
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.18);
+      transition: transform 0.2s ease;
+    }
+
+    .toggle input:checked + .switch {
+      background: var(--teal);
+    }
+
+    .toggle input:checked + .switch::after {
+      transform: translateX(20px);
+    }
+
+    .results-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(260px, 0.62fr);
+      gap: 18px;
+    }
+
+    .results-main,
+    .word-bank {
+      padding: 16px;
+    }
+
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .summary-item {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 10px;
+      background: #fff;
+      min-height: 70px;
+    }
+
+    .summary-value {
+      font-size: 22px;
+      font-weight: 850;
+      line-height: 1;
+      color: var(--accent, var(--teal));
+    }
+
+    .summary-label {
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .message-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .message {
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--accent, var(--teal));
+      border-radius: var(--radius);
+      padding: 11px;
+      background: #fff;
+    }
+
+    .message.warning {
+      border-left-color: var(--gold);
+    }
+
+    .message.error {
+      border-left-color: var(--coral);
+    }
+
+    .message.good {
+      border-left-color: var(--green);
+      background: var(--green-soft);
+    }
+
+    .message-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: start;
+    }
+
+    .message-title {
+      font-weight: 800;
+      line-height: 1.35;
+    }
+
+    .message-source {
+      color: var(--muted);
+      font-size: 12px;
+      flex: 0 0 auto;
+    }
+
+    .message-context {
+      margin-top: 7px;
+      color: #4b5560;
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .suggestions {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-top: 9px;
+    }
+
+    .suggestion {
+      border: 1px solid rgba(8, 127, 122, 0.28);
+      background: var(--teal-soft);
+      color: #084b47;
+      border-radius: 999px;
+      padding: 5px 8px;
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .suggestion:hover {
+      border-color: var(--teal);
+    }
+
+    .bank-group {
+      margin-bottom: 15px;
+    }
+
+    .bank-title {
+      margin: 0 0 8px;
+      font-size: 14px;
+      color: #30363a;
+    }
+
+    .mini-map {
+      height: 128px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--line);
+      margin-bottom: 14px;
+      background: #fff;
+    }
+
+    .mini-map svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .empty {
+      border: 1px dashed #c8d0cd;
+      color: var(--muted);
+      background: #fff;
+      border-radius: var(--radius);
+      padding: 18px;
+      text-align: center;
+      line-height: 1.55;
+    }
+
+    .toast {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      background: #202124;
+      color: #fff;
+      padding: 10px 12px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      pointer-events: none;
+      font-size: 14px;
+      max-width: min(360px, calc(100vw - 36px));
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 1120px) {
+      .workspace {
+        grid-template-columns: 1fr;
+      }
+
+      .results-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .app {
+        padding: 12px;
+      }
+
+      .topbar,
+      .editor-toolbar {
+        grid-template-columns: 1fr;
+      }
+
+      .top-actions,
+      .toolbar-buttons {
+        justify-content: start;
+      }
+
+      .tabs {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .meter-row {
+        align-items: start;
+        flex-wrap: wrap;
+      }
+
+      .meter {
+        width: 100%;
+      }
+
+      .summary {
+        grid-template-columns: 1fr;
+      }
+
+      textarea {
+        min-height: 320px;
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M4 19.5V5.8A2.8 2.8 0 0 1 6.8 3H20v15H6.8A2.8 2.8 0 0 0 4 20.8" />
+            <path d="M8 7h8M8 11h8M8 15h5" />
+          </svg>
+        </div>
+        <div>
+          <h1>Français A1 - 80 mots</h1>
+          <div class="subtitle">Leçons 7-12 · shopping · appartement · chemin · voyage</div>
+        </div>
+      </div>
+      <div class="top-actions">
+        <button class="text-button" id="sampleBtn" type="button" title="填入一段示例文本">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+            <path d="M12 20h9" />
+            <path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z" />
+          </svg>
+          Exemple
+        </button>
+        <button class="icon-button" id="themeBtn" type="button" title="切换当前题目">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+            <path d="m17 2 4 4-4 4" />
+            <path d="M3 11V9a3 3 0 0 1 3-3h15" />
+            <path d="m7 22-4-4 4-4" />
+            <path d="M21 13v2a3 3 0 0 1-3 3H3" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <section class="workspace">
+      <aside class="panel" id="promptPanel">
+        <div class="panel-header">
+          <h2 class="panel-title">Sujets</h2>
+          <span class="badge" id="lessonBadge">Lecon 7</span>
+        </div>
+        <nav class="tabs" id="tabs" aria-label="Writing topics"></nav>
+        <div class="prompt-body">
+          <div class="prompt-visual" id="promptVisual"></div>
+          <div class="topic-kicker" id="topicKicker">Sujet 1</div>
+          <h2 class="topic-title" id="topicTitle">Dans une boutique</h2>
+          <p class="topic-cn" id="topicCn"></p>
+          <ol class="prompt-fr" id="promptFr"></ol>
+          <div class="section-label">Mots à placer</div>
+          <div class="chips" id="promptWords"></div>
+          <div class="section-label">Grammaire visée</div>
+          <div class="chips" id="promptGrammar"></div>
+        </div>
+      </aside>
+
+      <div class="editor-wrap">
+        <section class="panel editor-shell">
+          <div class="editor-toolbar">
+            <div class="meter-row">
+              <div class="word-number" id="wordCount">0</div>
+              <div class="meter" aria-label="word target">
+                <div class="meter-fill" id="meterFill"></div>
+              </div>
+              <div class="meter-copy" id="meterCopy">Objectif: 80 mots</div>
+            </div>
+            <div class="toolbar-buttons">
+              <button class="icon-button" id="copyBtn" type="button" title="复制文本">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                  <rect x="9" y="9" width="13" height="13" rx="2" />
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+                </svg>
+              </button>
+              <button class="icon-button" id="clearBtn" type="button" title="清空文本">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                  <path d="M3 6h18" />
+                  <path d="M8 6V4h8v2" />
+                  <path d="M19 6l-1 14H6L5 6" />
+                  <path d="M10 11v6M14 11v6" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <textarea id="writer" spellcheck="false" lang="fr" placeholder="Écris ici en français..."></textarea>
+          <div class="status-strip">
+            <label class="toggle" title="调用 LanguageTool 公共接口">
+              <input type="checkbox" id="onlineToggle">
+              <span class="switch" aria-hidden="true"></span>
+              <span>LanguageTool</span>
+            </label>
+            <span id="onlineStatus">Vérification locale active</span>
+          </div>
+        </section>
+
+        <section class="results-grid">
+          <div class="panel results-main">
+            <div class="panel-header" style="padding: 0 0 14px; border-bottom: 0;">
+              <h2 class="panel-title">Corrections</h2>
+              <span class="badge" id="scoreBadge">Pret</span>
+            </div>
+            <div class="summary">
+              <div class="summary-item">
+                <div class="summary-value" id="issueCount">0</div>
+                <div class="summary-label">points à revoir</div>
+              </div>
+              <div class="summary-item">
+                <div class="summary-value" id="vocabCount">0</div>
+                <div class="summary-label">mots du cours</div>
+              </div>
+              <div class="summary-item">
+                <div class="summary-value" id="sentenceCount">0</div>
+                <div class="summary-label">phrases</div>
+              </div>
+            </div>
+            <div class="message-list" id="messages"></div>
+          </div>
+
+          <aside class="panel word-bank">
+            <div class="mini-map" aria-hidden="true">
+              <svg viewBox="0 0 420 170" fill="none">
+                <rect width="420" height="170" fill="#fff" />
+                <path d="M0 52h420M0 118h420M74 0v170M158 0v170M244 0v170M336 0v170" stroke="#e0e7e3" stroke-width="2" />
+                <path d="M28 139C75 108 98 105 133 118C168 130 181 73 226 79C271 85 285 31 340 38C371 42 391 58 407 74" stroke="#087f7a" stroke-width="8" stroke-linecap="round" />
+                <path d="M28 139C75 108 98 105 133 118C168 130 181 73 226 79C271 85 285 31 340 38C371 42 391 58 407 74" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-dasharray="9 13" />
+                <circle cx="28" cy="139" r="12" fill="#d95032" />
+                <circle cx="226" cy="79" r="12" fill="#b97610" />
+                <circle cx="407" cy="74" r="12" fill="#365f91" />
+              </svg>
+            </div>
+            <h2 class="panel-title" style="margin-bottom: 12px;">Banque de mots</h2>
+            <div id="wordBank"></div>
+          </aside>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    const prompts = [
+      {
+        id: "shopping",
+        tab: "Boutique",
+        lesson: "Leçon 7",
+        accent: "#087f7a",
+        soft: "#dff3ef",
+        title: "Dans une boutique",
+        cn: "你在服装店给家人买衣服。写 80 词左右，说明你找什么、颜色、尺码、价格，以及你喜欢或不喜欢什么。",
+        fr: [
+          "Présente la situation: pour qui est-ce que tu cherches des vêtements ?",
+          "Décris deux articles avec la couleur, la taille et le prix.",
+          "Dis ce que tu aimes, ce qui est cher ou pas cher, puis choisis."
+        ],
+        words: ["des vêtements", "une robe", "un pantalon", "un pull", "la taille", "bleu", "gris", "noir", "vert", "joli", "cher", "coûter", "combien", "j'aime bien", "pas du tout"],
+        grammar: ["quel / quelle / quels / quelles", "ce / cet / cette / ces", "combien", "adjectifs"],
+        sample: "Bonjour, madame. Je cherche des vêtements pour ma soeur. Elle a seize ans. Elle aime le bleu et le vert. Je regarde une robe verte et un pantalon noir. La robe est très jolie, mais elle coûte cinquante-neuf euros. C'est un peu cher. Le pantalon est en taille trente-huit et il n'est pas cher. J'aime bien aussi ce pull bleu et blanc. Finalement, je prends le pull et le pantalon. Ça fait quatre-vingt-quatorze euros."
+      },
+      {
+        id: "room",
+        tab: "Maison",
+        lesson: "Leçons 8-9",
+        accent: "#d95032",
+        soft: "#fde8df",
+        title: "Ma chambre ou mon appartement",
+        cn: "给朋友写一封简短邮件，介绍你的房间或一套待租公寓。写 80 词左右，重点练位置词和房间名称。",
+        fr: [
+          "Situe l'immeuble ou la chambre dans la ville.",
+          "Décris les pièces: salon, cuisine, chambre, salle de bains.",
+          "Utilise au moins quatre expressions de lieu."
+        ],
+        words: ["un appartement", "un immeuble", "une chambre", "le salon", "la cuisine", "la salle de bains", "les toilettes", "le couloir", "à gauche", "à droite", "en face de", "au bout de", "près de", "clair", "calme", "sombre", "un parking"],
+        grammar: ["prépositions de lieu", "où", "nous / vous / eux", "adjectifs"],
+        sample: "Cher Paul, je visite un appartement près du centre. L'immeuble est récent et calme. L'appartement est au troisième étage, avec un parking. À gauche de l'entrée, il y a la cuisine. En face de la cuisine, il y a les toilettes et une salle de bains. Au bout du couloir, la chambre est claire. Le salon est à droite, près d'une grande fenêtre. Il n'est pas sombre. Pour moi, c'est très bien, mais le loyer est un peu cher."
+      },
+      {
+        id: "route",
+        tab: "Chemin",
+        lesson: "Leçon 10",
+        accent: "#b97610",
+        soft: "#fff0cc",
+        title: "C'est par ou ?",
+        cn: "你在城市里给一位游客指路。写 80 词左右，说明从一个地点到博物馆、邮局或广场怎么走，也说明交通方式。",
+        fr: [
+          "Commence par une question polie.",
+          "Donne un itinéraire avec des verbes à l'impératif.",
+          "Ajoute le moyen de transport: à pied, en bus, en métro, en voiture."
+        ],
+        words: ["pardon", "monsieur", "madame", "le musée", "la poste", "la banque", "la place", "la rue", "le pont", "prenez", "tournez", "traversez", "continuez", "tout droit", "à gauche", "à droite", "à pied", "en bus", "en métro"],
+        grammar: ["impératif", "prendre au présent", "au / aux / du / des", "y"],
+        sample: "Pardon, monsieur, le musée, c'est par où ? Vous êtes devant la banque. Prenez la rue Scribe et continuez tout droit jusqu'à la place. Après, tournez à gauche et traversez le boulevard. Passez devant la poste. Le musée est à droite, en face du jardin. C'est assez loin à pied. Vous pouvez aussi prendre le bus au coin de la rue. Descendez à l'Opéra et allez encore tout droit. Voilà, vous arrivez au musée."
+      },
+      {
+        id: "postcard",
+        tab: "Voyage",
+        lesson: "Leçons 11-12",
+        accent: "#365f91",
+        soft: "#e4edf8",
+        title: "Carte postale de voyage",
+        cn: "你在马赛或马提尼克旅行，给朋友写明信片。写 80 词左右，介绍位置、交通、旅馆、参观活动和感受。",
+        fr: [
+          "Dis où tu es et comment tu arrives.",
+          "Decris l'hotel, la mer ou la ville.",
+          "Donne un conseil ou annonce une visite."
+        ],
+        words: ["Marseille", "la Martinique", "un hôtel", "une plage", "la mer", "au bord de", "le port", "un musée", "le bateau", "en avion", "en train", "partir", "arriver", "visiter", "le week-end", "au nord", "au sud", "à bientôt"],
+        grammar: ["c'est / ce sont", "on", "nord / sud / ouest / est", "à / en + transport"],
+        sample: "Chère Alice, je suis à Marseille pour le week-end. Je pars de Paris en train et j'arrive à la gare Saint-Charles. La ville est au sud de la France, au bord de la mer. Mon hôtel est près du Vieux-Port. La chambre est petite, mais elle est claire et il y a une salle de bains. Aujourd'hui, on visite un musée et le quartier du Panier. Demain, prenez le bateau avec moi pour voir les îles. C'est très beau. À bientôt !"
+      }
+    ];
+
+    const bankGroups = [
+      ["Leçon 7 - shopping", ["vêtements", "robe", "pantalon", "pull", "taille", "couleur", "bleu", "gris", "noir", "vert", "joli", "cher", "coûte", "combien", "euro", "type"]],
+      ["Leçon 8 - artistes", ["artiste", "film", "peintre", "poète", "musicien", "écrivain", "tableau", "tapis", "entre", "à côté de", "à gauche", "à droite"]],
+      ["Leçon 9 - appartement", ["appartement", "immeuble", "agence", "chambre", "salon", "cuisine", "salle de bains", "toilettes", "couloir", "parking", "clair", "calme", "sombre"]],
+      ["Leçon 10 - chemin", ["musée", "poste", "banque", "place", "pont", "rue", "métro", "bus", "vélo", "voiture", "prenez", "tournez", "traversez", "continuez"]],
+      ["Leçons 11-12 - voyage", ["voyage", "hôtel", "plage", "mer", "port", "bateau", "train", "avion", "aéroport", "Marseille", "musée", "visiter", "partir", "arriver", "week-end"]]
+    ];
+
+    const nounGender = {
+      robe: "f", taille: "f", couleur: "f", fille: "f", chambre: "f", cuisine: "f", salle: "f",
+      douche: "f", entree: "f", entrée: "f", avenue: "f", banque: "f", poste: "f", place: "f",
+      plage: "f", piscine: "f", mer: "f", ville: "f", carte: "f", bise: "f", gare: "f",
+      voiture: "f", moto: "f", maison: "f", bibliotheque: "f", bibliothèque: "f", rue: "f",
+      table: "f", orange: "f", jupe: "f", agence: "f", annonce: "f", visite: "f",
+      pantalon: "m", pull: "m", fils: "m", garcon: "m", garçon: "m", homme: "m", musee: "m",
+      musée: "m", appartement: "m", salon: "m", couloir: "m", bureau: "m", immeuble: "m",
+      parking: "m", hotel: "m", hôtel: "m", restaurant: "m", bar: "m", port: "m", bateau: "m",
+      train: "m", avion: "m", aeroport: "m", aéroport: "m", metro: "m", métro: "m", bus: "m",
+      velo: "m", vélo: "m", jardin: "m", pont: "m", quartier: "m", chateau: "m", château: "m",
+      billet: "m", centre: "m", jour: "m", "week-end": "m", voyage: "m", loyer: "m"
+    };
+
+    const commonWords = new Set([
+      "je", "j", "tu", "il", "elle", "nous", "vous", "ils", "elles", "on", "me", "moi", "toi",
+      "le", "la", "les", "un", "une", "des", "du", "de", "d", "au", "aux", "a", "à", "en",
+      "dans", "sur", "sous", "avec", "pour", "par", "pres", "près", "chez", "et", "ou", "où",
+      "mais", "puis", "alors", "apres", "après", "devant", "derriere", "derrière", "ici", "la",
+      "là", "ce", "cet", "cette", "ces", "mon", "ma", "mes", "ton", "ta", "tes", "son", "sa",
+      "ses", "notre", "votre", "leur", "est", "sont", "suis", "es", "sommes", "etes", "êtes",
+      "ai", "as", "a", "avons", "avez", "ont", "vais", "vas", "va", "allons", "allez", "vont",
+      "ne", "n", "pas", "tres", "très", "bien", "beaucoup", "plus", "moins", "peu", "tout",
+      "toute", "tous", "toutes", "bon", "bonne", "bonjour", "merci", "voila", "voilà", "oui",
+      "non", "cher", "chere", "chère", "madame", "monsieur", "comment", "combien", "quel",
+      "quelle", "quels", "quelles", "qui", "que", "quoi", "qu", "c", "ca", "ça", "se", "ce",
+      "du", "des", "l", "y"
+    ]);
+
+    const allCourseTerms = Array.from(new Set([
+      ...prompts.flatMap(item => item.words),
+      ...bankGroups.flatMap(group => group[1])
+    ].map(normalizeTerm)));
+
+    let activeIndex = 0;
+    let localMatches = [];
+    let onlineMatches = [];
+    let onlineTimer = null;
+    let onlineController = null;
+
+    const tabs = document.getElementById("tabs");
+    const lessonBadge = document.getElementById("lessonBadge");
+    const promptPanel = document.getElementById("promptPanel");
+    const promptVisual = document.getElementById("promptVisual");
+    const topicKicker = document.getElementById("topicKicker");
+    const topicTitle = document.getElementById("topicTitle");
+    const topicCn = document.getElementById("topicCn");
+    const promptFr = document.getElementById("promptFr");
+    const promptWords = document.getElementById("promptWords");
+    const promptGrammar = document.getElementById("promptGrammar");
+    const writer = document.getElementById("writer");
+    const wordCount = document.getElementById("wordCount");
+    const meterFill = document.getElementById("meterFill");
+    const meterCopy = document.getElementById("meterCopy");
+    const messages = document.getElementById("messages");
+    const issueCount = document.getElementById("issueCount");
+    const vocabCount = document.getElementById("vocabCount");
+    const sentenceCount = document.getElementById("sentenceCount");
+    const scoreBadge = document.getElementById("scoreBadge");
+    const wordBank = document.getElementById("wordBank");
+    const onlineToggle = document.getElementById("onlineToggle");
+    const onlineStatus = document.getElementById("onlineStatus");
+    const toast = document.getElementById("toast");
+
+    function normalizeTerm(value) {
+      return value
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/[’']/g, "'")
+        .trim();
+    }
+
+    function escapeRegExp(value) {
+      return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    }
+
+    function wordsOf(text) {
+      return text.match(/[A-Za-zÀ-ÖØ-öø-ÿ]+(?:['’-][A-Za-zÀ-ÖØ-öø-ÿ]+)?|\d+(?:[,.]\d+)?/g) || [];
+    }
+
+    function countSentences(text) {
+      const matches = text.match(/[^.!?。！？]+[.!?。！？]+/g);
+      if (matches) return matches.length;
+      return text.trim() ? 1 : 0;
+    }
+
+    function contextFor(text, offset, length) {
+      const start = Math.max(0, offset - 34);
+      const end = Math.min(text.length, offset + length + 34);
+      const before = text.slice(start, offset);
+      const hit = text.slice(offset, offset + length);
+      const after = text.slice(offset + length, end);
+      return `${start > 0 ? "..." : ""}${before}[${hit}]${after}${end < text.length ? "..." : ""}`;
+    }
+
+    function addMatch(list, text, offset, length, message, replacements = [], type = "warning", source = "local") {
+      list.push({
+        offset,
+        length,
+        message,
+        replacements: replacements.slice(0, 5),
+        type,
+        source,
+        context: contextFor(text, offset, length)
+      });
+    }
+
+    function findPattern(list, text, regex, message, replacement, type = "warning") {
+      let match;
+      while ((match = regex.exec(text)) !== null) {
+        addMatch(list, text, match.index, match[0].length, message, replacement ? [replacement(match)] : [], type);
+        if (match.index === regex.lastIndex) regex.lastIndex++;
+      }
+    }
+
+    function runLocalChecks(text) {
+      const list = [];
+      if (!text.trim()) return list;
+
+      findPattern(list, text, /\bje\s+ai\b/gi, "Devant une voyelle, ecris plutot j'ai.", () => "j'ai", "error");
+      findPattern(list, text, /\bje\s+(aime|habite|arrive|entre|ai|adore)\b/gi, "Avec je devant une voyelle ou h muet, utilise l'apostrophe.", m => `j'${m[1]}`, "error");
+      findPattern(list, text, /\b(le|la)\s+(aeroport|aéroport|hotel|hôtel|appartement|immeuble|homme|artiste|agence)\b/gi, "Pense a l'elision avec l' devant voyelle ou h muet.", m => `l'${m[2]}`, "warning");
+
+      findPattern(list, text, /\b(?:a|à)\s+le\b/gi, "a + le devient au.", () => "au", "error");
+      findPattern(list, text, /\b(?:a|à)\s+les\b/gi, "a + les devient aux.", () => "aux", "error");
+      findPattern(list, text, /\bde\s+le\b/gi, "de + le devient du.", () => "du", "error");
+      findPattern(list, text, /\bde\s+les\b/gi, "de + les devient des.", () => "des", "error");
+
+      findPattern(list, text, /\b(?:à|a)\s+(bus|metro|métro|train|avion|voiture|bateau|taxi)\b/gi, "Pour ce moyen de transport, on dit souvent en + transport.", m => `en ${m[1]}`, "warning");
+      findPattern(list, text, /\ben\s+(pied|velo|vélo|moto)\b/gi, "Pour pied, velo et moto, utilise a/à.", m => `à ${m[1]}`, "warning");
+
+      const nouns = Object.keys(nounGender).sort((a, b) => b.length - a.length).map(escapeRegExp).join("|");
+      const articleRegex = new RegExp(`\\b(un|une|le|la)\\s+(${nouns})\\b`, "gi");
+      let match;
+      while ((match = articleRegex.exec(text)) !== null) {
+        const article = match[1].toLowerCase();
+        const noun = normalizeTerm(match[2]);
+        const gender = nounGender[noun] || nounGender[match[2].toLowerCase()];
+        if (!gender) continue;
+        if ((article === "un" || article === "le") && gender === "f") {
+          addMatch(list, text, match.index, match[0].length, `Le mot "${match[2]}" est feminin.`, [article === "un" ? `une ${match[2]}` : `la ${match[2]}`], "warning");
+        }
+        if ((article === "une" || article === "la") && gender === "m") {
+          addMatch(list, text, match.index, match[0].length, `Le mot "${match[2]}" est masculin.`, [article === "une" ? `un ${match[2]}` : `le ${match[2]}`], "warning");
+        }
+      }
+
+      findPattern(list, text, /\bce\s+(appartement|hotel|hôtel|immeuble|aeroport|aéroport|artiste|homme|etudiant|étudiant)\b/gi, "Devant voyelle ou h muet, ce devient cet.", m => `cet ${m[1]}`, "warning");
+      findPattern(list, text, /\bcet\s+(robe|fille|chambre|cuisine|salle|plage|ville|voiture|maison)\b/gi, "Avec un nom feminin, utilise cette.", m => `cette ${m[1]}`, "warning");
+      findPattern(list, text, /\bcette\s+(pantalon|pull|musee|musée|appartement|hotel|hôtel|restaurant|bateau|train|port|parking)\b/gi, "Avec ce nom masculin, choisis ce ou cet.", m => (/^[aeiouhàâéèêëîïôùûü]/i.test(m[1]) ? `cet ${m[1]}` : `ce ${m[1]}`), "warning");
+
+      const pluralNouns = ["appartement", "restaurant", "musee", "musée", "hotel", "hôtel", "chambre", "pantalon", "pull", "robe", "rue", "place", "bateau", "train", "avion", "jour", "mot", "couleur"];
+      findPattern(list, text, new RegExp(`\\b(des|les|ces)\\s+(${pluralNouns.join("|")})\\b`, "gi"), "Apres des/les/ces, le nom est generalement au pluriel.", m => `${m[1]} ${m[2]}s`, "warning");
+
+      const wrongVerbRules = [
+        [/\bje\s+est\b/gi, "Avec je, le verbe etre devient suis.", "je suis"],
+        [/\btu\s+est\b/gi, "Avec tu, le verbe etre devient es.", "tu es"],
+        [/\b(il|elle|on)\s+es\b/gi, "Avec il/elle/on, le verbe etre devient est.", m => `${m[1]} est`],
+        [/\bnous\s+(est|etes|êtes|sont)\b/gi, "Avec nous, le verbe etre devient sommes.", "nous sommes"],
+        [/\bvous\s+(est|sommes|sont)\b/gi, "Avec vous, le verbe etre devient etes.", "vous etes"],
+        [/\b(ils|elles)\s+est\b/gi, "Avec ils/elles, le verbe etre devient sont.", m => `${m[1]} sont`],
+        [/\btu\s+a\b/gi, "Avec tu, avoir devient as.", "tu as"],
+        [/\b(il|elle|on)\s+as\b/gi, "Avec il/elle/on, avoir devient a.", m => `${m[1]} a`],
+        [/\bnous\s+avez\b/gi, "Avec nous, avoir devient avons.", "nous avons"],
+        [/\bvous\s+avons\b/gi, "Avec vous, avoir devient avez.", "vous avez"],
+        [/\b(ils|elles)\s+a\b/gi, "Avec ils/elles, avoir devient ont.", m => `${m[1]} ont`],
+        [/\bje\s+va\b/gi, "Avec je, aller devient vais.", "je vais"],
+        [/\btu\s+vais\b/gi, "Avec tu, aller devient vas.", "tu vas"],
+        [/\b(il|elle|on)\s+(vais|vas)\b/gi, "Avec il/elle/on, aller devient va.", m => `${m[1]} va`],
+        [/\bnous\s+allez\b/gi, "Avec nous, aller devient allons.", "nous allons"],
+        [/\bvous\s+allons\b/gi, "Avec vous, aller devient allez.", "vous allez"],
+        [/\b(ils|elles)\s+va\b/gi, "Avec ils/elles, aller devient vont.", m => `${m[1]} vont`],
+        [/\bje\s+prend\b/gi, "Avec je, prendre devient prends.", "je prends"],
+        [/\btu\s+prend\b/gi, "Avec tu, prendre devient prends.", "tu prends"],
+        [/\b(il|elle|on)\s+prends\b/gi, "Avec il/elle/on, prendre devient prend.", m => `${m[1]} prend`],
+        [/\bnous\s+prenez\b/gi, "Avec nous, prendre devient prenons.", "nous prenons"],
+        [/\bvous\s+prenons\b/gi, "Avec vous, prendre devient prenez.", "vous prenez"],
+        [/\b(ils|elles)\s+prend\b/gi, "Avec ils/elles, prendre devient prennent.", m => `${m[1]} prennent`]
+      ];
+      wrongVerbRules.forEach(([regex, message, replacement]) => {
+        findPattern(list, text, regex, message, typeof replacement === "function" ? replacement : () => replacement, "error");
+      });
+
+      const erVerbs = [
+        ["cherche", "cherch"], ["aime", "aim"], ["trouve", "trouv"], ["visite", "visit"],
+        ["habite", "habit"], ["continue", "continu"], ["tourne", "tourn"], ["arrive", "arriv"],
+        ["entre", "entr"], ["passe", "pass"], ["demande", "demand"]
+      ];
+      erVerbs.forEach(([singular, stem]) => {
+        findPattern(list, text, new RegExp(`\\bje\\s+${stem}(ez|ons|ent)\\b`, "gi"), `Avec je, ecris je ${singular}.`, () => `je ${singular}`, "warning");
+        findPattern(list, text, new RegExp(`\\btu\\s+${singular}\\b`, "gi"), `Avec tu, ajoute -s: tu ${singular}s.`, () => `tu ${singular}s`, "warning");
+        findPattern(list, text, new RegExp(`\\b(il|elle|on)\\s+${stem}(ez|ons|ent)\\b`, "gi"), `Avec il/elle/on, ecris ${singular}.`, m => `${m[1]} ${singular}`, "warning");
+        findPattern(list, text, new RegExp(`\\bnous\\s+${stem}(e|es|ez|ent)\\b`, "gi"), `Avec nous, utilise -ons.`, () => `nous ${stem}ons`, "warning");
+        findPattern(list, text, new RegExp(`\\bvous\\s+${stem}(e|es|ons|ent)\\b`, "gi"), `Avec vous, utilise -ez.`, () => `vous ${stem}ez`, "warning");
+        findPattern(list, text, new RegExp(`\\b(ils|elles)\\s+${singular}\\b`, "gi"), `Avec ils/elles, utilise -ent.`, m => `${m[1]} ${stem}ent`, "warning");
+      });
+
+      findPattern(list, text, /\b(il\s+y\s+est|il\s+est\s+a)\b/gi, "Pour dire 'there is', ecris il y a.", () => "il y a", "warning");
+      findPattern(list, text, /\b(ca|ça)\s+fait\s+combien\b/gi, "Tres bien: pour demander le prix, on peut dire ca fait combien ?", m => m[0], "good");
+
+      let punct;
+      const punctRegex = /[!?;:]/g;
+      while ((punct = punctRegex.exec(text)) !== null) {
+        if (punct.index > 0 && !/\s/.test(text[punct.index - 1])) {
+          addMatch(list, text, punct.index, 1, "En francais imprime, on met une espace avant ? ! : ;", [` ${punct[0]}`], "warning");
+        }
+      }
+
+      const lower = normalizeTerm(text);
+      const pasRegex = /\bpas\b/g;
+      while ((match = pasRegex.exec(lower)) !== null) {
+        const before = lower.slice(Math.max(0, match.index - 38), match.index);
+        const after = lower.slice(match.index, match.index + 12);
+        const standAlone = /(^|[.!?]\s*)$/.test(before) && after.startsWith("pas du tout");
+        if (!standAlone && !/(ne\s+|n')([a-z]+[' ]?){0,3}$/.test(before)) {
+          addMatch(list, text, match.index, 3, "Dans une phrase complete, encadre souvent la negation avec ne ... pas.", ["ne ... pas"], "warning");
+        }
+      }
+
+      if (wordsOf(text).length < 70) {
+        addMatch(list, text, 0, Math.min(text.length, 1), "Le texte est encore court pour l'objectif de 80 mots.", [], "warning");
+      } else if (wordsOf(text).length > 95) {
+        addMatch(list, text, 0, Math.min(text.length, 1), "Le texte depasse beaucoup 80 mots. Essaie de couper une phrase.", [], "warning");
+      }
+
+      return dedupeMatches(list);
+    }
+
+    function dedupeMatches(list) {
+      const seen = new Set();
+      return list.filter(item => {
+        const key = `${item.offset}:${item.length}:${item.message}`;
+        if (seen.has(key)) return false;
+        seen.add(key);
+        return true;
+      }).sort((a, b) => {
+        const severity = { error: 0, warning: 1, good: 2 };
+        return severity[a.type] - severity[b.type] || a.offset - b.offset;
+      }).slice(0, 18);
+    }
+
+    function vocabularyHits(text) {
+      const normalized = normalizeTerm(text);
+      const hits = new Set();
+      allCourseTerms.forEach(term => {
+        if (!term) return;
+        const phrase = term.includes(" ");
+        const pattern = phrase ? escapeRegExp(term) : `\\b${escapeRegExp(term)}s?\\b`;
+        if (new RegExp(pattern, "i").test(normalized)) hits.add(term);
+      });
+      return hits;
+    }
+
+    function unknownWordCount(text) {
+      const normalizedWords = wordsOf(text).map(normalizeTerm).filter(word => !/^\d/.test(word));
+      return normalizedWords.filter(word => {
+        if (word.length <= 2 || commonWords.has(word)) return false;
+        if (allCourseTerms.some(term => term === word || term.split(" ").includes(word) || `${word}s` === term)) return false;
+        return false;
+      }).length;
+    }
+
+    function renderTabs() {
+      tabs.innerHTML = "";
+      prompts.forEach((prompt, index) => {
+        const button = document.createElement("button");
+        button.className = `tab${index === activeIndex ? " active" : ""}`;
+        button.type = "button";
+        button.textContent = prompt.tab;
+        button.style.setProperty("--accent", prompt.accent);
+        button.addEventListener("click", () => setActivePrompt(index));
+        tabs.appendChild(button);
+      });
+    }
+
+    function visualSvg(prompt) {
+      const color = prompt.accent;
+      if (prompt.id === "shopping") {
+        return `<svg viewBox="0 0 620 180" fill="none">
+          <rect width="620" height="180" fill="${prompt.soft}"/>
+          <path d="M0 128h620" stroke="rgba(0,0,0,.08)" stroke-width="2"/>
+          <path d="M94 42h74l18 78H76l18-78Z" fill="#fff" stroke="${color}" stroke-width="5"/>
+          <path d="M113 42c0-18 36-18 36 0" stroke="${color}" stroke-width="6" stroke-linecap="round"/>
+          <path d="M268 38h120M268 76h166M268 114h88" stroke="${color}" stroke-width="10" stroke-linecap="round"/>
+          <circle cx="486" cy="68" r="32" fill="#fff" stroke="#d95032" stroke-width="6"/>
+          <path d="M468 68h36M486 50v36" stroke="#d95032" stroke-width="6" stroke-linecap="round"/>
+        </svg>`;
+      }
+      if (prompt.id === "room") {
+        return `<svg viewBox="0 0 620 180" fill="none">
+          <rect width="620" height="180" fill="${prompt.soft}"/>
+          <rect x="64" y="28" width="226" height="116" rx="4" fill="#fff" stroke="${color}" stroke-width="5"/>
+          <path d="M64 86h226M150 28v116M222 86v58" stroke="${color}" stroke-width="4"/>
+          <rect x="342" y="48" width="180" height="72" rx="5" fill="#fff" stroke="#087f7a" stroke-width="5"/>
+          <path d="M372 120v28M492 120v28M370 72h126" stroke="#087f7a" stroke-width="5" stroke-linecap="round"/>
+        </svg>`;
+      }
+      if (prompt.id === "route") {
+        return `<svg viewBox="0 0 620 180" fill="none">
+          <rect width="620" height="180" fill="${prompt.soft}"/>
+          <path d="M0 58h620M0 126h620M112 0v180M236 0v180M384 0v180M516 0v180" stroke="rgba(0,0,0,.09)" stroke-width="3"/>
+          <path d="M72 136C142 108 180 110 218 86C270 54 300 52 352 76C405 100 430 100 536 42" stroke="${color}" stroke-width="9" stroke-linecap="round"/>
+          <circle cx="72" cy="136" r="15" fill="#d95032"/><circle cx="536" cy="42" r="15" fill="#087f7a"/>
+        </svg>`;
+      }
+      return `<svg viewBox="0 0 620 180" fill="none">
+        <rect width="620" height="180" fill="${prompt.soft}"/>
+        <path d="M0 128c84-26 150-23 236-1 83 22 154 25 232 1 48-15 94-16 152-1v53H0v-52Z" fill="#fff"/>
+        <path d="M88 118c64-70 128-78 184-28 66 58 132 54 218-38" stroke="${color}" stroke-width="8" stroke-linecap="round"/>
+        <path d="M82 54h96l-18 60H64l18-60Z" fill="#fff" stroke="#d95032" stroke-width="5"/>
+        <path d="M106 54V38h48v16" stroke="#d95032" stroke-width="5"/>
+        <circle cx="490" cy="52" r="23" fill="#fff" stroke="#087f7a" stroke-width="6"/>
+      </svg>`;
+    }
+
+    function setActivePrompt(index) {
+      activeIndex = index;
+      const prompt = prompts[activeIndex];
+      document.documentElement.style.setProperty("--accent", prompt.accent);
+      lessonBadge.textContent = prompt.lesson;
+      lessonBadge.style.background = prompt.soft;
+      lessonBadge.style.color = prompt.accent;
+      promptPanel.style.setProperty("--accent", prompt.accent);
+      promptPanel.style.setProperty("--visual-bg", prompt.soft);
+      promptVisual.innerHTML = visualSvg(prompt);
+      topicKicker.textContent = `Sujet ${index + 1} · ${prompt.lesson}`;
+      topicKicker.style.color = prompt.accent;
+      topicTitle.textContent = prompt.title;
+      topicCn.textContent = prompt.cn;
+      promptFr.innerHTML = prompt.fr.map(line => `<li>${line}</li>`).join("");
+      promptWords.innerHTML = prompt.words.map(word => `<span class="chip" data-term="${normalizeTerm(word)}">${word}</span>`).join("");
+      promptGrammar.innerHTML = prompt.grammar.map(word => `<span class="chip">${word}</span>`).join("");
+      renderTabs();
+      updateAll(false);
+    }
+
+    function renderWordBank(hits) {
+      wordBank.innerHTML = bankGroups.map(([title, terms]) => {
+        const chips = terms.map(term => {
+          const used = hits.has(normalizeTerm(term));
+          return `<span class="chip${used ? " used" : ""}">${term}</span>`;
+        }).join("");
+        return `<div class="bank-group"><h3 class="bank-title">${title}</h3><div class="chips">${chips}</div></div>`;
+      }).join("");
+    }
+
+    function renderMessages(text) {
+      const combined = [...localMatches, ...onlineMatches].filter(item => item.type !== "good");
+      const goodItems = localMatches.filter(item => item.type === "good");
+      const display = [...combined, ...goodItems].slice(0, 20);
+
+      if (!text.trim()) {
+        messages.innerHTML = `<div class="empty">Choisis un sujet et commence ton texte.</div>`;
+        return;
+      }
+      if (!display.length) {
+        messages.innerHTML = `<div class="message good"><div class="message-top"><div class="message-title">Aucun probleme evident pour le moment.</div><div class="message-source">local</div></div><div class="message-context">Relis quand meme les accords, les accents et la ponctuation.</div></div>`;
+        return;
+      }
+
+      messages.innerHTML = display.map((item, index) => {
+        const suggestions = item.replacements.length
+          ? `<div class="suggestions">${item.replacements.map(rep => `<button class="suggestion" type="button" data-index="${index}" data-rep="${escapeHtml(rep)}">${escapeHtml(rep)}</button>`).join("")}</div>`
+          : "";
+        return `<article class="message ${item.type}">
+          <div class="message-top">
+            <div class="message-title">${escapeHtml(item.message)}</div>
+            <div class="message-source">${escapeHtml(item.source)}</div>
+          </div>
+          <div class="message-context">${escapeHtml(item.context)}</div>
+          ${suggestions}
+        </article>`;
+      }).join("");
+
+      messages.querySelectorAll(".suggestion").forEach(button => {
+        button.addEventListener("click", () => {
+          const item = display[Number(button.dataset.index)];
+          applySuggestion(item, button.dataset.rep);
+        });
+      });
+    }
+
+    function escapeHtml(value) {
+      return String(value).replace(/[&<>"']/g, char => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        "\"": "&quot;",
+        "'": "&#39;"
+      }[char]));
+    }
+
+    function applySuggestion(item, replacement) {
+      const text = writer.value;
+      if (item.offset < 0 || item.offset > text.length) return;
+      writer.value = text.slice(0, item.offset) + replacement + text.slice(item.offset + item.length);
+      writer.focus();
+      writer.selectionStart = item.offset + replacement.length;
+      writer.selectionEnd = item.offset + replacement.length;
+      onlineMatches = [];
+      updateAll(true);
+      showToast("Correction inseree");
+    }
+
+    function updateWordChips(hits) {
+      promptWords.querySelectorAll(".chip").forEach(chip => {
+        chip.classList.toggle("used", hits.has(chip.dataset.term));
+      });
+    }
+
+    function updateAll(scheduleOnline = true) {
+      const text = writer.value;
+      const words = wordsOf(text);
+      const wordTotal = words.length;
+      const sentenceTotal = countSentences(text);
+      const hits = vocabularyHits(text);
+
+      localMatches = runLocalChecks(text);
+      const issueTotal = [...localMatches, ...onlineMatches].filter(item => item.type !== "good").length;
+
+      wordCount.textContent = wordTotal;
+      sentenceCount.textContent = sentenceTotal;
+      vocabCount.textContent = hits.size;
+      issueCount.textContent = issueTotal;
+
+      const pct = Math.min(120, Math.round((wordTotal / 80) * 100));
+      meterFill.style.width = `${Math.min(100, pct)}%`;
+      if (wordTotal >= 70 && wordTotal <= 90) {
+        meterCopy.textContent = "Tres proche de 80 mots";
+        meterFill.style.background = "#2f7d3f";
+      } else if (wordTotal < 70) {
+        meterCopy.textContent = `Encore ${70 - wordTotal} mots pour entrer dans la zone`;
+        meterFill.style.background = prompts[activeIndex].accent;
+      } else {
+        meterCopy.textContent = `${wordTotal - 90} mots au-dessus de la zone`;
+        meterFill.style.background = "#d95032";
+      }
+
+      if (!text.trim()) {
+        scoreBadge.textContent = "Pret";
+        scoreBadge.style.background = prompts[activeIndex].soft;
+        scoreBadge.style.color = prompts[activeIndex].accent;
+      } else if (issueTotal === 0 && wordTotal >= 70 && wordTotal <= 90) {
+        scoreBadge.textContent = "Solide";
+        scoreBadge.style.background = "#e4f2e6";
+        scoreBadge.style.color = "#2f7d3f";
+      } else if (issueTotal <= 3) {
+        scoreBadge.textContent = "A relire";
+        scoreBadge.style.background = "#fff0cc";
+        scoreBadge.style.color = "#7a4d04";
+      } else {
+        scoreBadge.textContent = "Travail";
+        scoreBadge.style.background = "#fde8df";
+        scoreBadge.style.color = "#a53720";
+      }
+
+      updateWordChips(hits);
+      renderWordBank(hits);
+      renderMessages(text);
+
+      if (scheduleOnline && onlineToggle.checked) scheduleOnlineCheck();
+    }
+
+    function scheduleOnlineCheck() {
+      clearTimeout(onlineTimer);
+      const text = writer.value.trim();
+      if (!text || text.length < 12) {
+        onlineMatches = [];
+        onlineStatus.textContent = "LanguageTool en attente";
+        renderMessages(writer.value);
+        return;
+      }
+      onlineStatus.textContent = "LanguageTool: verification...";
+      onlineTimer = setTimeout(() => runOnlineCheck(text), 850);
+    }
+
+    async function runOnlineCheck(text) {
+      if (onlineController) onlineController.abort();
+      onlineController = new AbortController();
+      try {
+        const body = new URLSearchParams({
+          text,
+          language: "fr",
+          enabledOnly: "false"
+        });
+        const response = await fetch("https://api.languagetool.org/v2/check", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body,
+          signal: onlineController.signal
+        });
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const data = await response.json();
+        onlineMatches = (data.matches || []).slice(0, 12).map(item => ({
+          offset: item.offset,
+          length: item.length,
+          message: item.message,
+          replacements: (item.replacements || []).map(rep => rep.value),
+          type: item.rule && item.rule.issueType === "misspelling" ? "error" : "warning",
+          source: "LanguageTool",
+          context: contextFor(writer.value, item.offset, item.length)
+        }));
+        onlineStatus.textContent = onlineMatches.length ? `LanguageTool: ${onlineMatches.length} point(s)` : "LanguageTool: rien a signaler";
+        updateAll(false);
+      } catch (error) {
+        if (error.name === "AbortError") return;
+        onlineMatches = [];
+        onlineStatus.textContent = "LanguageTool indisponible";
+        updateAll(false);
+      }
+    }
+
+    function showToast(message) {
+      toast.textContent = message;
+      toast.classList.add("show");
+      setTimeout(() => toast.classList.remove("show"), 1800);
+    }
+
+    function fillSample() {
+      writer.value = prompts[activeIndex].sample;
+      onlineMatches = [];
+      updateAll(true);
+      writer.focus();
+    }
+
+    document.getElementById("sampleBtn").addEventListener("click", fillSample);
+    document.getElementById("themeBtn").addEventListener("click", () => {
+      setActivePrompt((activeIndex + 1) % prompts.length);
+      showToast(prompts[activeIndex].title);
+    });
+    document.getElementById("copyBtn").addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(writer.value);
+        showToast("Texte copie");
+      } catch {
+        writer.select();
+        document.execCommand("copy");
+        showToast("Texte copie");
+      }
+    });
+    document.getElementById("clearBtn").addEventListener("click", () => {
+      writer.value = "";
+      onlineMatches = [];
+      updateAll(false);
+      writer.focus();
+    });
+    writer.addEventListener("input", () => {
+      onlineMatches = [];
+      updateAll(true);
+    });
+    onlineToggle.addEventListener("change", () => {
+      onlineMatches = [];
+      if (onlineToggle.checked) scheduleOnlineCheck();
+      else onlineStatus.textContent = "Verification locale active";
+      updateAll(false);
+    });
+
+    renderTabs();
+    setActivePrompt(0);
+  </script>
+</body>
+</html>
