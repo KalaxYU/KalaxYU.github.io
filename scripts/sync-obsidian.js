@@ -358,18 +358,35 @@ function transformLinks(body, currentRelative, noteMaps, assetMap) {
 
 function normalizeMath(body) {
   const displays = [];
-  let next = body.replace(/\$\$\s*([\s\S]*?)\s*\$\$/g, (match, content) => {
+  const escapeMathHtml = value => value
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+
+  const displayMath = content => {
     const clean = content.trim();
     if (!clean) return '';
     const token = `@@KALAX_DISPLAY_MATH_${displays.length}@@`;
-    displays.push(`\\[\n${clean}\n\\]`);
+    displays.push(`<div class="kalax-display-math">${escapeMathHtml(clean)}</div>`);
     return token;
-  });
+  };
+
+  const inlineMath = content => {
+    const clean = content.trim();
+    return clean
+      ? `<span class="kalax-inline-math">${escapeMathHtml(clean)}</span>`
+      : '';
+  };
+
+  let next = body.replace(/\\\[\s*([\s\S]*?)\s*\\\]/g, (match, content) => displayMath(content) || match);
+
+  next = next.replace(/\$\$\s*([\s\S]*?)\s*\$\$/g, (match, content) => displayMath(content) || match);
+
+  next = next.replace(/\\\(([\s\S]*?)\\\)/g, (match, content) => inlineMath(content) || match);
 
   next = next.replace(/(^|[^\\])\$([^$\n]+?)\$/g, (match, prefix, content) => {
-    const clean = content.trim();
-    if (!clean) return match;
-    return `${prefix}\\(${clean}\\)`;
+    const rendered = inlineMath(content);
+    return rendered ? `${prefix}${rendered}` : match;
   });
 
   return next.replace(/@@KALAX_DISPLAY_MATH_(\d+)@@/g, (match, index) => displays[Number(index)] || match);

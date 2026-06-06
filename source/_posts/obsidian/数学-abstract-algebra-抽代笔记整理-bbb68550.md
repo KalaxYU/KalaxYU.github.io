@@ -26,2384 +26,1812 @@ mathjax: true
 
 ### 生成子群
 
-设 \(G\) 为群，\(S\subseteq G\)。由 \(S\) 生成的子群记作
+设 <span class="kalax-inline-math">G</span> 为群，<span class="kalax-inline-math">S\subseteq G</span>。由 <span class="kalax-inline-math">S</span> 生成的子群记作
 
-\[
-\langle S\rangle.
-\]
+<div class="kalax-display-math">\langle S\rangle.</div>
 
-它可以刻画为包含 \(S\) 的所有子群的交：
+它可以刻画为包含 <span class="kalax-inline-math">S</span> 的所有子群的交：
 
-\[
-\langle S\rangle=\bigcap_{S\subseteq H\le G}H.
-\]
+<div class="kalax-display-math">\langle S\rangle=\bigcap_{S\subseteq H\le G}H.</div>
 
-等价地，\(\langle S\rangle\) 由 \(S\) 中元素及其逆元的有限乘积组成。若 \(S=\{x_1,\dots,x_n\}\)，常写作
+等价地，<span class="kalax-inline-math">\langle S\rangle</span> 由 <span class="kalax-inline-math">S</span> 中元素及其逆元的有限乘积组成。若 <span class="kalax-inline-math">S=\{x_1,\dots,x_n\}</span>，常写作
 
-\[
-\langle x_1,\dots,x_n\rangle.
-\]
+<div class="kalax-display-math">\langle x_1,\dots,x_n\rangle.</div>
 
 ### 换位子与换位子子群
 
-对 \(g,h\in G\)，定义换位子
+对 <span class="kalax-inline-math">g,h\in G</span>，定义换位子
 
-\[
-[g,h]=ghg^{-1}h^{-1}.
-\]
+<div class="kalax-display-math">[g,h]=ghg^{-1}h^{-1}.</div>
 
-若 \(H,K\le G\)，则定义
+若 <span class="kalax-inline-math">H,K\le G</span>，则定义
 
-\[
-[H,K]=\langle [h,k]:h\in H,\ k\in K\rangle.
-\]
+<div class="kalax-display-math">[H,K]=\langle [h,k]:h\in H,\ k\in K\rangle.</div>
 
 特别地，
 
-\[
-[G,G]
-\]
+<div class="kalax-display-math">[G,G]</div>
 
-称为 \(G\) 的换位子子群。
+称为 <span class="kalax-inline-math">G</span> 的换位子子群。
 
 ### 命题：换位子子群正规
 
-对任意群 \(G\)，\([G,G]\) 是 \(G\) 的正规子群。
+对任意群 <span class="kalax-inline-math">G</span>，<span class="kalax-inline-math">[G,G]</span> 是 <span class="kalax-inline-math">G</span> 的正规子群。
 
-**证明。** 首先 \([G,G]\) 由所有换位子生成，故是子群。对任意 \(x,g,h\in G\)，有
+**证明。** 首先 <span class="kalax-inline-math">[G,G]</span> 由所有换位子生成，故是子群。对任意 <span class="kalax-inline-math">x,g,h\in G</span>，有
 
-\[
-x[g,h]x^{-1}
+<div class="kalax-display-math">x[g,h]x^{-1}
 =xghg^{-1}h^{-1}x^{-1}
-=(xgx^{-1})(xhx^{-1})(xgx^{-1})^{-1}(xhx^{-1})^{-1},
-\]
+=(xgx^{-1})(xhx^{-1})(xgx^{-1})^{-1}(xhx^{-1})^{-1},</div>
 
-仍为换位子。因此 \(x[G,G]x^{-1}\subseteq [G,G]\)，反向包含同理，故 \([G,G]\triangleleft G\)。
+仍为换位子。因此 <span class="kalax-inline-math">x[G,G]x^{-1}\subseteq [G,G]</span>，反向包含同理，故 <span class="kalax-inline-math">[G,G]\triangleleft G</span>。
 
 ### 命题：商群的交换化
 
 商群
 
-\[
-G/[G,G]
-\]
+<div class="kalax-display-math">G/[G,G]</div>
 
-是交换群。并且若 \(N\triangleleft G\) 且 \(G/N\) 是交换群，则
+是交换群。并且若 <span class="kalax-inline-math">N\triangleleft G</span> 且 <span class="kalax-inline-math">G/N</span> 是交换群，则
 
-\[
-[G,G]\subseteq N.
-\]
+<div class="kalax-display-math">[G,G]\subseteq N.</div>
 
-因此 \(G/[G,G]\) 可看作 \(G\) 的最大交换商群。
+因此 <span class="kalax-inline-math">G/[G,G]</span> 可看作 <span class="kalax-inline-math">G</span> 的最大交换商群。
 
-**证明。** 在 \(G/[G,G]\) 中，任意 \(g,h\in G\) 满足
+**证明。** 在 <span class="kalax-inline-math">G/[G,G]</span> 中，任意 <span class="kalax-inline-math">g,h\in G</span> 满足
 
-\[
-gh[G,G]=hg[G,G],
-\]
+<div class="kalax-display-math">gh[G,G]=hg[G,G],</div>
 
-因为 \(gh(hg)^{-1}=ghg^{-1}h^{-1}\in [G,G]\)。若 \(G/N\) 交换，则所有换位子在商群中为单位元，所以 \([G,G]\subseteq N\)。
+因为 <span class="kalax-inline-math">gh(hg)^{-1}=ghg^{-1}h^{-1}\in [G,G]</span>。若 <span class="kalax-inline-math">G/N</span> 交换，则所有换位子在商群中为单位元，所以 <span class="kalax-inline-math">[G,G]\subseteq N</span>。
 
 ## 2. 群作用
 
 ### 定义：群作用
 
-设 \(G\) 为群，\(S\) 为集合。\(G\) 在 \(S\) 上的一个左作用是映射
+设 <span class="kalax-inline-math">G</span> 为群，<span class="kalax-inline-math">S</span> 为集合。<span class="kalax-inline-math">G</span> 在 <span class="kalax-inline-math">S</span> 上的一个左作用是映射
 
-\[
-G\times S\to S,\qquad (g,x)\mapsto gx
-\]
+<div class="kalax-display-math">G\times S\to S,\qquad (g,x)\mapsto gx</div>
 
 满足：
 
-1. \(ex=x\)；
-2. \(g_1(g_2x)=(g_1g_2)x\)。
+1. <span class="kalax-inline-math">ex=x</span>；
+2. <span class="kalax-inline-math">g_1(g_2x)=(g_1g_2)x</span>。
 
 记作
 
-\[
-G\curvearrowright S.
-\]
+<div class="kalax-display-math">G\curvearrowright S.</div>
 
 ### 例
 
-1. \(S_n\) 作用在 \(\{1,2,\dots,n\}\) 上：
+1. <span class="kalax-inline-math">S_n</span> 作用在 <span class="kalax-inline-math">\{1,2,\dots,n\}</span> 上：
 
-   \[
-(\sigma,i)\mapsto \sigma(i).
-\]
+   <div class="kalax-display-math">(\sigma,i)\mapsto \sigma(i).</div>
 
-2. \(G\) 作用在自身上：
+2. <span class="kalax-inline-math">G</span> 作用在自身上：
 
-   - 左平移：\((h,g)\mapsto hg\)；
-   - 右平移：\((h,g)\mapsto gh^{-1}\)；
-   - 共轭作用：\((h,g)\mapsto hgh^{-1}\)。
+   - 左平移：<span class="kalax-inline-math">(h,g)\mapsto hg</span>；
+   - 右平移：<span class="kalax-inline-math">(h,g)\mapsto gh^{-1}</span>；
+   - 共轭作用：<span class="kalax-inline-math">(h,g)\mapsto hgh^{-1}</span>。
 
-3. 若 \(H\le G\)，则 \(H\) 作用在 \(G\) 上：
+3. 若 <span class="kalax-inline-math">H\le G</span>，则 <span class="kalax-inline-math">H</span> 作用在 <span class="kalax-inline-math">G</span> 上：
 
-   \[
-(h,g)\mapsto hg
-\]
+   <div class="kalax-display-math">(h,g)\mapsto hg</div>
 
    其轨道为左陪集。
 
-4. 若 \(H\le G\)，\(H\) 作用在 \(G\) 上：
+4. 若 <span class="kalax-inline-math">H\le G</span>，<span class="kalax-inline-math">H</span> 作用在 <span class="kalax-inline-math">G</span> 上：
 
-   \[
-(h,g)\mapsto gh^{-1}
-\]
+   <div class="kalax-display-math">(h,g)\mapsto gh^{-1}</div>
 
    可看作右平移。
 
-5. 若 \(H\le G\)，\(H\) 作用在子群集合上：
+5. 若 <span class="kalax-inline-math">H\le G</span>，<span class="kalax-inline-math">H</span> 作用在子群集合上：
 
-   \[
-(h,K)\mapsto hKh^{-1},
-\]
+   <div class="kalax-display-math">(h,K)\mapsto hKh^{-1},</div>
 
    称为共轭作用。
 
 ### 轨道与稳定子
 
-设 \(G\curvearrowright S\)。定义关系
+设 <span class="kalax-inline-math">G\curvearrowright S</span>。定义关系
 
-\[
-x\sim y
+<div class="kalax-display-math">x\sim y
 \iff
-\exists g\in G,\ gx=y.
-\]
+\exists g\in G,\ gx=y.</div>
 
 这是等价关系。
 
-元素 \(x\) 的轨道为
+元素 <span class="kalax-inline-math">x</span> 的轨道为
 
-\[
-Gx=\{gx:g\in G\}.
-\]
+<div class="kalax-display-math">Gx=\{gx:g\in G\}.</div>
 
 稳定子为
 
-\[
-G_x=\{g\in G:gx=x\}.
-\]
+<div class="kalax-display-math">G_x=\{g\in G:gx=x\}.</div>
 
-稳定子 \(G_x\) 是 \(G\) 的子群。
+稳定子 <span class="kalax-inline-math">G_x</span> 是 <span class="kalax-inline-math">G</span> 的子群。
 
 ### 轨道-稳定子定理
 
-若 \(G\curvearrowright S\)，则
+若 <span class="kalax-inline-math">G\curvearrowright S</span>，则
 
-\[
-|Gx|=[G:G_x].
-\]
+<div class="kalax-display-math">|Gx|=[G:G_x].</div>
 
 **证明。** 映射
 
-\[
-G/G_x\to Gx,\qquad gG_x\mapsto gx
-\]
+<div class="kalax-display-math">G/G_x\to Gx,\qquad gG_x\mapsto gx</div>
 
 良定义且为双射。具体地，若
 
-\[
-gG_x=hG_x,
-\]
+<div class="kalax-display-math">gG_x=hG_x,</div>
 
-则 \(h^{-1}g\in G_x\)，所以 \((h^{-1}g)x=x\)，从而 \(gx=hx\)，映射良定义。若 \(gx=hx\)，则 \(h^{-1}gx=x\)，所以 \(h^{-1}g\in G_x\)，即 \(gG_x=hG_x\)，故单射。任意轨道元素都形如 \(gx\)，所以满射。
+则 <span class="kalax-inline-math">h^{-1}g\in G_x</span>，所以 <span class="kalax-inline-math">(h^{-1}g)x=x</span>，从而 <span class="kalax-inline-math">gx=hx</span>，映射良定义。若 <span class="kalax-inline-math">gx=hx</span>，则 <span class="kalax-inline-math">h^{-1}gx=x</span>，所以 <span class="kalax-inline-math">h^{-1}g\in G_x</span>，即 <span class="kalax-inline-math">gG_x=hG_x</span>，故单射。任意轨道元素都形如 <span class="kalax-inline-math">gx</span>，所以满射。
 
 ### 共轭类、中心化子、正规化子
 
-若 \(G\) 作用在自身上：
+若 <span class="kalax-inline-math">G</span> 作用在自身上：
 
-\[
-h\cdot g=hgh^{-1},
-\]
+<div class="kalax-display-math">h\cdot g=hgh^{-1},</div>
 
-则 \(g\) 的轨道称为 \(g\) 的**共轭类**：
+则 <span class="kalax-inline-math">g</span> 的轨道称为 <span class="kalax-inline-math">g</span> 的**共轭类**：
 
-\[
-\operatorname{Cl}(g)=\{hgh^{-1}:h\in G\}.
-\]
+<div class="kalax-display-math">\operatorname{Cl}(g)=\{hgh^{-1}:h\in G\}.</div>
 
-稳定子称为 \(g\) 的**中心化子**：
+稳定子称为 <span class="kalax-inline-math">g</span> 的**中心化子**：
 
-\[
-C_G(g)=\{h\in G:hg=gh\}.
-\]
+<div class="kalax-display-math">C_G(g)=\{h\in G:hg=gh\}.</div>
 
-若 \(K\le G\)，共轭作用在子群集合上：
+若 <span class="kalax-inline-math">K\le G</span>，共轭作用在子群集合上：
 
-\[
-h\cdot K=hKh^{-1}.
-\]
+<div class="kalax-display-math">h\cdot K=hKh^{-1}.</div>
 
-其稳定子为 \(K\) 的**正规化子**：
+其稳定子为 <span class="kalax-inline-math">K</span> 的**正规化子**：
 
-\[
-N_G(K)=\{g\in G:gKg^{-1}=K\}.
-\]
+<div class="kalax-display-math">N_G(K)=\{g\in G:gKg^{-1}=K\}.</div>
 
 有
 
-\[
-K\triangleleft N_G(K)\le G.
-\]
+<div class="kalax-display-math">K\triangleleft N_G(K)\le G.</div>
 
 ### 类方程
 
-设 \(G\) 为有限群，\(x_1,\dots,x_r\) 为所有非中心元素的共轭类代表，则
+设 <span class="kalax-inline-math">G</span> 为有限群，<span class="kalax-inline-math">x_1,\dots,x_r</span> 为所有非中心元素的共轭类代表，则
 
-\[
-|G|
+<div class="kalax-display-math">|G|
 =
-|Z(G)|+\sum_{i=1}^r [G:C_G(x_i)].
-\]
+|Z(G)|+\sum_{i=1}^r [G:C_G(x_i)].</div>
 
-若 \(K\le G\)，则 \(K\) 的共轭子群个数为
+若 <span class="kalax-inline-math">K\le G</span>，则 <span class="kalax-inline-math">K</span> 的共轭子群个数为
 
-\[
-[G:N_G(K)].
-\]
+<div class="kalax-display-math">[G:N_G(K)].</div>
 
 ### 群作用诱导置换表示
 
-若 \(G\curvearrowright S\)，则得到群同态
+若 <span class="kalax-inline-math">G\curvearrowright S</span>，则得到群同态
 
-\[
-\theta:G\to A(S),
-\]
+<div class="kalax-display-math">\theta:G\to A(S),</div>
 
-其中 \(A(S)\) 是 \(S\) 上所有双射构成的群，且
+其中 <span class="kalax-inline-math">A(S)</span> 是 <span class="kalax-inline-math">S</span> 上所有双射构成的群，且
 
-\[
-\theta(g)(s)=gs.
-\]
+<div class="kalax-display-math">\theta(g)(s)=gs.</div>
 
 ### Cayley 定理
 
-任意群 \(G\) 都同构于某个置换群。若 \(|G|=n\)，则
+任意群 <span class="kalax-inline-math">G</span> 都同构于某个置换群。若 <span class="kalax-inline-math">|G|=n</span>，则
 
-\[
-G\hookrightarrow S_n.
-\]
+<div class="kalax-display-math">G\hookrightarrow S_n.</div>
 
-**证明。** 取 \(G\) 对自身的左平移作用，得到同态
+**证明。** 取 <span class="kalax-inline-math">G</span> 对自身的左平移作用，得到同态
 
-\[
-G\to A(G).
-\]
+<div class="kalax-display-math">G\to A(G).</div>
 
-若 \(g_1\ne g_2\)，则 \(\theta(g_1)(e)=g_1\ne g_2=\theta(g_2)(e)\)，故该同态单射。
+若 <span class="kalax-inline-math">g_1\ne g_2</span>，则 <span class="kalax-inline-math">\theta(g_1)(e)=g_1\ne g_2=\theta(g_2)(e)</span>，故该同态单射。
 
 ### 自同构与内自同构
 
 记
 
-\[
-\operatorname{Aut}(G)=\{f:G\to G:f\text{ 是同构}\}.
-\]
+<div class="kalax-display-math">\operatorname{Aut}(G)=\{f:G\to G:f\text{ 是同构}\}.</div>
 
 共轭作用给出同态
 
-\[
-G\to \operatorname{Aut}(G),\qquad
-g\mapsto \bigl(h\mapsto ghg^{-1}\bigr).
-\]
+<div class="kalax-display-math">G\to \operatorname{Aut}(G),\qquad
+g\mapsto \bigl(h\mapsto ghg^{-1}\bigr).</div>
 
 其核为中心：
 
-\[
-\ker=Z(G).
-\]
+<div class="kalax-display-math">\ker=Z(G).</div>
 
 因此
 
-\[
-G/Z(G)\cong \operatorname{Inn}(G)\le \operatorname{Aut}(G).
-\]
+<div class="kalax-display-math">G/Z(G)\cong \operatorname{Inn}(G)\le \operatorname{Aut}(G).</div>
 
 ## 3. Sylow 定理
 
-### 引理：有限 \(p\)-群作用的固定点
+### 引理：有限 <span class="kalax-inline-math">p</span>-群作用的固定点
 
-设 \(H\) 为 \(p\)-群，\(H\curvearrowright S\)，且 \(S\) 有限。令
+设 <span class="kalax-inline-math">H</span> 为 <span class="kalax-inline-math">p</span>-群，<span class="kalax-inline-math">H\curvearrowright S</span>，且 <span class="kalax-inline-math">S</span> 有限。令
 
-\[
-S_0=\{x\in S:hx=x\text{ for all }h\in H\}.
-\]
+<div class="kalax-display-math">S_0=\{x\in S:hx=x\text{ for all }h\in H\}.</div>
 
 则
 
-\[
-|S_0|\equiv |S|\pmod p.
-\]
+<div class="kalax-display-math">|S_0|\equiv |S|\pmod p.</div>
 
-**理由。** \(S\) 分解为若干轨道。轨道大小为
+**理由。** <span class="kalax-inline-math">S</span> 分解为若干轨道。轨道大小为
 
-\[
-|\mathcal O_x|=[H:H_x].
-\]
+<div class="kalax-display-math">|\mathcal O_x|=[H:H_x].</div>
 
-若轨道不是单点，则其大小被 \(p\) 整除。
+若轨道不是单点，则其大小被 <span class="kalax-inline-math">p</span> 整除。
 
 ### Cauchy 定理
 
-若 \(G\) 为有限群，素数 \(p\) 满足 \(p\mid |G|\)，则存在 \(a\in G\)，使得
+若 <span class="kalax-inline-math">G</span> 为有限群，素数 <span class="kalax-inline-math">p</span> 满足 <span class="kalax-inline-math">p\mid |G|</span>，则存在 <span class="kalax-inline-math">a\in G</span>，使得
 
-\[
-|a|=p.
-\]
+<div class="kalax-display-math">|a|=p.</div>
 
 证明可考虑集合
 
-\[
-S=\{(a_1,\dots,a_p)\in G^p:a_1a_2\cdots a_p=e\},
-\]
+<div class="kalax-display-math">S=\{(a_1,\dots,a_p)\in G^p:a_1a_2\cdots a_p=e\},</div>
 
-并令 \(\mathbb Z/p\mathbb Z\) 通过循环移位作用在 \(S\) 上。固定点给出阶为 \(p\) 的元素。
+并令 <span class="kalax-inline-math">\mathbb Z/p\mathbb Z</span> 通过循环移位作用在 <span class="kalax-inline-math">S</span> 上。固定点给出阶为 <span class="kalax-inline-math">p</span> 的元素。
 
-### 定义：\(p\)-群与 Sylow \(p\)-子群
+### 定义：<span class="kalax-inline-math">p</span>-群与 Sylow <span class="kalax-inline-math">p</span>-子群
 
-若有限群 \(G\) 满足
+若有限群 <span class="kalax-inline-math">G</span> 满足
 
-\[
-|G|=p^n
-\]
+<div class="kalax-display-math">|G|=p^n</div>
 
-则称 \(G\) 为 \(p\)-群。
+则称 <span class="kalax-inline-math">G</span> 为 <span class="kalax-inline-math">p</span>-群。
 
-若 \(|G|=p^n m\)，其中 \((p,m)=1\)，则 \(G\) 的阶为 \(p^n\) 的子群称为 **Sylow \(p\)-子群**。
+若 <span class="kalax-inline-math">|G|=p^n m</span>，其中 <span class="kalax-inline-math">(p,m)=1</span>，则 <span class="kalax-inline-math">G</span> 的阶为 <span class="kalax-inline-math">p^n</span> 的子群称为 **Sylow <span class="kalax-inline-math">p</span>-子群**。
 
-### \(p\)-群的中心
+### <span class="kalax-inline-math">p</span>-群的中心
 
-若 \(G\) 是有限 \(p\)-群，则
+若 <span class="kalax-inline-math">G</span> 是有限 <span class="kalax-inline-math">p</span>-群，则
 
-\[
-|Z(G)|>1.
-\]
+<div class="kalax-display-math">|Z(G)|&gt;1.</div>
 
-**证明。** 令 \(G\) 对自身作共轭作用。类方程为
+**证明。** 令 <span class="kalax-inline-math">G</span> 对自身作共轭作用。类方程为
 
-\[
-|G|=|Z(G)|+\sum_i |\operatorname{Cl}(x_i)|.
-\]
+<div class="kalax-display-math">|G|=|Z(G)|+\sum_i |\operatorname{Cl}(x_i)|.</div>
 
-非中心元素的共轭类大小都被 \(p\) 整除，且 \(p\mid |G|\)，故 \(p\mid |Z(G)|\)。由于 \(e\in Z(G)\)，得 \(|Z(G)|>1\)。
+非中心元素的共轭类大小都被 <span class="kalax-inline-math">p</span> 整除，且 <span class="kalax-inline-math">p\mid |G|</span>，故 <span class="kalax-inline-math">p\mid |Z(G)|</span>。由于 <span class="kalax-inline-math">e\in Z(G)</span>，得 <span class="kalax-inline-math">|Z(G)|&gt;1</span>。
 
 ### 正规化子引理
 
-若 \(G\) 为有限群，\(H<G\) 为 \(p\)-子群，则
+若 <span class="kalax-inline-math">G</span> 为有限群，<span class="kalax-inline-math">H&lt;G</span> 为 <span class="kalax-inline-math">p</span>-子群，则
 
-\[
-N_G(H)\ne H.
-\]
+<div class="kalax-display-math">N_G(H)\ne H.</div>
 
 更精确地，在合适假设下
 
-\[
-[N_G(H):H]\equiv [G:H]\pmod p.
-\]
+<div class="kalax-display-math">[N_G(H):H]\equiv [G:H]\pmod p.</div>
 
-因此若 \(p\mid [G:H]\)，则 \(N_G(H)\) 严格大于 \(H\)。
+因此若 <span class="kalax-inline-math">p\mid [G:H]</span>，则 <span class="kalax-inline-math">N_G(H)</span> 严格大于 <span class="kalax-inline-math">H</span>。
 
 ### 第一 Sylow 定理
 
 设
 
-\[
-|G|=p^n m,\qquad (p,m)=1.
-\]
+<div class="kalax-display-math">|G|=p^n m,\qquad (p,m)=1.</div>
 
-则 \(G\) 含有阶为 \(p^i\) 的子群，对所有 \(0\le i\le n\) 成立。特别地，\(G\) 含有 Sylow \(p\)-子群。
+则 <span class="kalax-inline-math">G</span> 含有阶为 <span class="kalax-inline-math">p^i</span> 的子群，对所有 <span class="kalax-inline-math">0\le i\le n</span> 成立。特别地，<span class="kalax-inline-math">G</span> 含有 Sylow <span class="kalax-inline-math">p</span>-子群。
 
 并且可构造链
 
-\[
-H_1\triangleleft H_2\triangleleft\cdots\triangleleft H_n,
-\qquad |H_i|=p^i.
-\]
+<div class="kalax-display-math">H_1\triangleleft H_2\triangleleft\cdots\triangleleft H_n,
+\qquad |H_i|=p^i.</div>
 
 ### 第二 Sylow 定理
 
-设 \(|G|=p^n m\)，\((p,m)=1\)。
+设 <span class="kalax-inline-math">|G|=p^n m</span>，<span class="kalax-inline-math">(p,m)=1</span>。
 
-1. 任意 Sylow \(p\)-子群的共轭仍是 Sylow \(p\)-子群；
-2. 任意两个 Sylow \(p\)-子群彼此共轭；
-3. 若 Sylow \(p\)-子群唯一，则它在 \(G\) 中正规。
+1. 任意 Sylow <span class="kalax-inline-math">p</span>-子群的共轭仍是 Sylow <span class="kalax-inline-math">p</span>-子群；
+2. 任意两个 Sylow <span class="kalax-inline-math">p</span>-子群彼此共轭；
+3. 若 Sylow <span class="kalax-inline-math">p</span>-子群唯一，则它在 <span class="kalax-inline-math">G</span> 中正规。
 
 ### 第三 Sylow 定理
 
-设 \(n_p\) 为 \(G\) 的 Sylow \(p\)-子群个数。若
+设 <span class="kalax-inline-math">n_p</span> 为 <span class="kalax-inline-math">G</span> 的 Sylow <span class="kalax-inline-math">p</span>-子群个数。若
 
-\[
-|G|=p^n m,\qquad (p,m)=1,
-\]
+<div class="kalax-display-math">|G|=p^n m,\qquad (p,m)=1,</div>
 
 则
 
-\[
-n_p\mid m,\qquad n_p\equiv 1\pmod p.
-\]
+<div class="kalax-display-math">n_p\mid m,\qquad n_p\equiv 1\pmod p.</div>
 
 ### 例：阶为 28 的群
 
-若 \(|G|=28=2^2\cdot 7\)，则 Sylow \(7\)-子群个数 \(n_7\) 满足
+若 <span class="kalax-inline-math">|G|=28=2^2\cdot 7</span>，则 Sylow <span class="kalax-inline-math">7</span>-子群个数 <span class="kalax-inline-math">n_7</span> 满足
 
-\[
-n_7\mid 4,\qquad n_7\equiv 1\pmod 7.
-\]
+<div class="kalax-display-math">n_7\mid 4,\qquad n_7\equiv 1\pmod 7.</div>
 
-故 \(n_7=1\)，所以 \(G\) 含有正规 Sylow \(7\)-子群。
+故 <span class="kalax-inline-math">n_7=1</span>，所以 <span class="kalax-inline-math">G</span> 含有正规 Sylow <span class="kalax-inline-math">7</span>-子群。
 
-### 例：\(S_4\) 的 Sylow \(3\)-子群
+### 例：<span class="kalax-inline-math">S_4</span> 的 Sylow <span class="kalax-inline-math">3</span>-子群
 
 因为
 
-\[
-|S_4|=24=2^3\cdot 3,
-\]
+<div class="kalax-display-math">|S_4|=24=2^3\cdot 3,</div>
 
-Sylow \(3\)-子群个数 \(n_3\) 满足
+Sylow <span class="kalax-inline-math">3</span>-子群个数 <span class="kalax-inline-math">n_3</span> 满足
 
-\[
-n_3\mid 8,\qquad n_3\equiv 1\pmod 3.
-\]
+<div class="kalax-display-math">n_3\mid 8,\qquad n_3\equiv 1\pmod 3.</div>
 
-故 \(n_3=1\) 或 \(4\)。事实上 \(S_4\) 中的 Sylow \(3\)-子群由 \(3\)-循环生成，共有四个：
+故 <span class="kalax-inline-math">n_3=1</span> 或 <span class="kalax-inline-math">4</span>。事实上 <span class="kalax-inline-math">S_4</span> 中的 Sylow <span class="kalax-inline-math">3</span>-子群由 <span class="kalax-inline-math">3</span>-循环生成，共有四个：
 
-\[
-\langle(123)\rangle,\quad
+<div class="kalax-display-math">\langle(123)\rangle,\quad
 \langle(124)\rangle,\quad
 \langle(134)\rangle,\quad
-\langle(234)\rangle.
-\]
+\langle(234)\rangle.</div>
 
 ## 4. 环的基本概念与同态
 
 ### 环的定义
 
-环是一个非空集合 \(R\)，配备两个二元运算 \(+\) 与 \(\cdot\)，满足：
+环是一个非空集合 <span class="kalax-inline-math">R</span>，配备两个二元运算 <span class="kalax-inline-math">+</span> 与 <span class="kalax-inline-math">\cdot</span>，满足：
 
-1. \((R,+)\) 是交换群，其单位元记作 \(0_R\)；
+1. <span class="kalax-inline-math">(R,+)</span> 是交换群，其单位元记作 <span class="kalax-inline-math">0_R</span>；
 2. 乘法满足结合律：
 
-   \[
-(ab)c=a(bc);
-\]
+   <div class="kalax-display-math">(ab)c=a(bc);</div>
 
 3. 乘法对加法满足左右分配律：
 
-   \[
-a(b+c)=ab+ac,
+   <div class="kalax-display-math">a(b+c)=ab+ac,
    \qquad
-   (a+b)c=ac+bc;
-\]
+   (a+b)c=ac+bc;</div>
 
-4. 若存在元素 \(1_R\in R\) 使得
+4. 若存在元素 <span class="kalax-inline-math">1_R\in R</span> 使得
 
-   \[
-1_Ra=a1_R=a,
-\]
+   <div class="kalax-display-math">1_Ra=a1_R=a,</div>
 
-   则称 \(R\) 为有单位环，\(1_R\) 称为乘法单位元。
+   则称 <span class="kalax-inline-math">R</span> 为有单位环，<span class="kalax-inline-math">1_R</span> 称为乘法单位元。
 
-若乘法交换，即 \(ab=ba\) 对任意 \(a,b\in R\) 成立，则称 \(R\) 为交换环。
+若乘法交换，即 <span class="kalax-inline-math">ab=ba</span> 对任意 <span class="kalax-inline-math">a,b\in R</span> 成立，则称 <span class="kalax-inline-math">R</span> 为交换环。
 
 ### 基本例子
 
-1. \(\mathbb Z\) 是有单位交换环。
-2. 对任意环 \(R\)，多项式集合
+1. <span class="kalax-inline-math">\mathbb Z</span> 是有单位交换环。
+2. 对任意环 <span class="kalax-inline-math">R</span>，多项式集合
 
-   \[
-R[x]=\left\{\sum_{i=0}^n a_ix^i:a_i\in R\right\}
-\]
+   <div class="kalax-display-math">R[x]=\left\{\sum_{i=0}^n a_ix^i:a_i\in R\right\}</div>
 
    是环。
-3. 矩阵环 \(M_n(\mathbb C)\) 是有单位环，其单位元为 \(I_n\)，零元为零矩阵；当 \(n\ge 2\) 时它不是交换环。
-4. 一般线性群 \(GL_n(\mathbb C)\) 在矩阵乘法下是群，但不是环，因为它对加法不封闭。
+3. 矩阵环 <span class="kalax-inline-math">M_n(\mathbb C)</span> 是有单位环，其单位元为 <span class="kalax-inline-math">I_n</span>，零元为零矩阵；当 <span class="kalax-inline-math">n\ge 2</span> 时它不是交换环。
+4. 一般线性群 <span class="kalax-inline-math">GL_n(\mathbb C)</span> 在矩阵乘法下是群，但不是环，因为它对加法不封闭。
 
 ### 零因子与消去律
 
-设 \(R\) 为环。若存在非零元 \(b\in R\) 使得 \(ab=0\)，则称 \(a\) 为左零因子；若存在非零元 \(c\in R\) 使得 \(ca=0\)，则称 \(a\) 为右零因子。若两者都成立，则称 \(a\) 为零因子。
+设 <span class="kalax-inline-math">R</span> 为环。若存在非零元 <span class="kalax-inline-math">b\in R</span> 使得 <span class="kalax-inline-math">ab=0</span>，则称 <span class="kalax-inline-math">a</span> 为左零因子；若存在非零元 <span class="kalax-inline-math">c\in R</span> 使得 <span class="kalax-inline-math">ca=0</span>，则称 <span class="kalax-inline-math">a</span> 为右零因子。若两者都成立，则称 <span class="kalax-inline-math">a</span> 为零因子。
 
-若 \(R\) 中没有非零左零因子，则左消去律成立：
+若 <span class="kalax-inline-math">R</span> 中没有非零左零因子，则左消去律成立：
 
-\[
-ax=ay\Rightarrow x=y.
-\]
+<div class="kalax-display-math">ax=ay\Rightarrow x=y.</div>
 
 右消去律类似。
 
 ### 可逆元与单位
 
-元素 \(a\in R\) 称为左可逆，若存在 \(c\in R\) 使 \(ca=1\)；称为右可逆，若存在 \(b\in R\) 使 \(ab=1\)。若 \(a\) 同时左、右可逆，则称 \(a\) 可逆，或称 \(a\) 是单位。
+元素 <span class="kalax-inline-math">a\in R</span> 称为左可逆，若存在 <span class="kalax-inline-math">c\in R</span> 使 <span class="kalax-inline-math">ca=1</span>；称为右可逆，若存在 <span class="kalax-inline-math">b\in R</span> 使 <span class="kalax-inline-math">ab=1</span>。若 <span class="kalax-inline-math">a</span> 同时左、右可逆，则称 <span class="kalax-inline-math">a</span> 可逆，或称 <span class="kalax-inline-math">a</span> 是单位。
 
-若 \(a\) 可逆，则其左逆与右逆唯一且相同。记 \(a^{-1}\) 为 \(a\) 的逆元。
+若 <span class="kalax-inline-math">a</span> 可逆，则其左逆与右逆唯一且相同。记 <span class="kalax-inline-math">a^{-1}</span> 为 <span class="kalax-inline-math">a</span> 的逆元。
 
 ### 整环、除环与域
 
-1. 交换环 \(R\) 若没有非零零因子，则称为整环。
-2. 有单位环 \(R\) 若任意非零元都是单位，则称为除环。
+1. 交换环 <span class="kalax-inline-math">R</span> 若没有非零零因子，则称为整环。
+2. 有单位环 <span class="kalax-inline-math">R</span> 若任意非零元都是单位，则称为除环。
 3. 交换除环称为域。
 
-例：\(\mathbb Z\) 是整环；\(\mathbb Z/n\mathbb Z\) 是整环当且仅当 \(n\) 为素数；此时 \(\mathbb Z/n\mathbb Z\) 是有限域，常记作 \(\mathbb F_p\)。
+例：<span class="kalax-inline-math">\mathbb Z</span> 是整环；<span class="kalax-inline-math">\mathbb Z/n\mathbb Z</span> 是整环当且仅当 <span class="kalax-inline-math">n</span> 为素数；此时 <span class="kalax-inline-math">\mathbb Z/n\mathbb Z</span> 是有限域，常记作 <span class="kalax-inline-math">\mathbb F_p</span>。
 
 ### 四元数
 
 实四元数环
 
-\[
-\mathbb H=\{a_0+a_1i+a_2j+a_3k:a_i\in\mathbb R\}
-\]
+<div class="kalax-display-math">\mathbb H=\{a_0+a_1i+a_2j+a_3k:a_i\in\mathbb R\}</div>
 
 按坐标加法，并由关系
 
-\[
-i^2=j^2=k^2=-1,
+<div class="kalax-display-math">i^2=j^2=k^2=-1,
 \qquad
 ij=k,
 \quad jk=i,
-\quad ki=j,
-\]
+\quad ki=j,</div>
 
 以及
 
-\[
-ji=-k,
+<div class="kalax-display-math">ji=-k,
 \quad kj=-i,
-\quad ik=-j
-\]
+\quad ik=-j</div>
 
 定义乘法。它是非交换除环。若
 
-\[
-q=a_0+a_1i+a_2j+a_3k\ne 0,
-\]
+<div class="kalax-display-math">q=a_0+a_1i+a_2j+a_3k\ne 0,</div>
 
 则
 
-\[
-q^{-1}=\frac{a_0-a_1i-a_2j-a_3k}{a_0^2+a_1^2+a_2^2+a_3^2}.
-\]
+<div class="kalax-display-math">q^{-1}=\frac{a_0-a_1i-a_2j-a_3k}{a_0^2+a_1^2+a_2^2+a_3^2}.</div>
 
 ### 函数环、矩阵环与群环
 
-若 \(A\) 为交换群，则
+若 <span class="kalax-inline-math">A</span> 为交换群，则
 
-\[
-\operatorname{End}(A)=\{f:A\to A:f\text{ 是群同态}\}
-\]
+<div class="kalax-display-math">\operatorname{End}(A)=\{f:A\to A:f\text{ 是群同态}\}</div>
 
 在逐点加法和复合乘法下成为环，乘法单位元为恒等映射。
 
-若 \(G\) 是群，\(R\) 是环，则群环定义为
+若 <span class="kalax-inline-math">G</span> 是群，<span class="kalax-inline-math">R</span> 是环，则群环定义为
 
-\[
-R[G]=\left\{\sum_{g\in G}r_g g:r_g\in R,
-\text{且仅有限多个 }r_g\ne 0\right\}.
-\]
+<div class="kalax-display-math">R[G]=\left\{\sum_{g\in G}r_g g:r_g\in R,
+\text{且仅有限多个 }r_g\ne 0\right\}.</div>
 
-加法逐项定义，乘法由 \(G\) 中乘法线性扩张得到。
+加法逐项定义，乘法由 <span class="kalax-inline-math">G</span> 中乘法线性扩张得到。
 
 ### 环同态
 
-设 \(R,S\) 为环。映射 \(f:R\to S\) 称为环同态，若
+设 <span class="kalax-inline-math">R,S</span> 为环。映射 <span class="kalax-inline-math">f:R\to S</span> 称为环同态，若
 
-\[
-f(a+b)=f(a)+f(b),
+<div class="kalax-display-math">f(a+b)=f(a)+f(b),
 \qquad
-f(ab)=f(a)f(b).
-\]
+f(ab)=f(a)f(b).</div>
 
-若要求保单位，则还需 \(f(1_R)=1_S\)。在某些教材中，环同态默认保单位；需要按语境判断。
+若要求保单位，则还需 <span class="kalax-inline-math">f(1_R)=1_S</span>。在某些教材中，环同态默认保单位；需要按语境判断。
 
 环同态的核与像为
 
-\[
-\ker f=f^{-1}(0_S),
+<div class="kalax-display-math">\ker f=f^{-1}(0_S),
 \qquad
-\operatorname{Im}f=f(R).
-\]
+\operatorname{Im}f=f(R).</div>
 
-其中 \(\ker f\) 是 \(R\) 的理想，\(\operatorname{Im}f\) 是 \(S\) 的子环。
+其中 <span class="kalax-inline-math">\ker f</span> 是 <span class="kalax-inline-math">R</span> 的理想，<span class="kalax-inline-math">\operatorname{Im}f</span> 是 <span class="kalax-inline-math">S</span> 的子环。
 
 例：自然投影
 
-\[
-\mathbb Z\to\mathbb Z/n\mathbb Z,
+<div class="kalax-display-math">\mathbb Z\to\mathbb Z/n\mathbb Z,
 \qquad
-m\mapsto \overline m
-\]
+m\mapsto \overline m</div>
 
-是环同态。映射 \(\mathbb Z\to 2\mathbb Z,\ n\mapsto 2n\) 是加法群同态，但不是环同态。
+是环同态。映射 <span class="kalax-inline-math">\mathbb Z\to 2\mathbb Z,\ n\mapsto 2n</span> 是加法群同态，但不是环同态。
 
 ### 环的特征
 
-设 \(R\) 为有单位环。若存在最小正整数 \(n\) 使得
+设 <span class="kalax-inline-math">R</span> 为有单位环。若存在最小正整数 <span class="kalax-inline-math">n</span> 使得
 
-\[
-n1_R=0,
-\]
+<div class="kalax-display-math">n1_R=0,</div>
 
-则称 \(R\) 的特征为 \(n\)，记作 \(\operatorname{char}R=n\)。若不存在这样的正整数，则称 \(R\) 的特征为 \(0\)。
+则称 <span class="kalax-inline-math">R</span> 的特征为 <span class="kalax-inline-math">n</span>，记作 <span class="kalax-inline-math">\operatorname{char}R=n</span>。若不存在这样的正整数，则称 <span class="kalax-inline-math">R</span> 的特征为 <span class="kalax-inline-math">0</span>。
 
-若 \(R\) 是整环且 \(\operatorname{char}R=n>0\)，则 \(n\) 必为素数。证明如下：若 \(n=ab\) 且 \(a,b>1\)，则
+若 <span class="kalax-inline-math">R</span> 是整环且 <span class="kalax-inline-math">\operatorname{char}R=n&gt;0</span>，则 <span class="kalax-inline-math">n</span> 必为素数。证明如下：若 <span class="kalax-inline-math">n=ab</span> 且 <span class="kalax-inline-math">a,b&gt;1</span>，则
 
-\[
-(a1_R)(b1_R)=n1_R=0,
-\]
+<div class="kalax-display-math">(a1_R)(b1_R)=n1_R=0,</div>
 
-而 \(a1_R,b1_R\ne0\)，这会产生零因子。
+而 <span class="kalax-inline-math">a1_R,b1_R\ne0</span>，这会产生零因子。
 
-**详细证明。** 先说明为什么 \(a1_R,b1_R\) 非零。因为 \(n\) 是使 \(n1_R=0\) 的最小正整数，而 \(1\le a,b<n\)，所以
+**详细证明。** 先说明为什么 <span class="kalax-inline-math">a1_R,b1_R</span> 非零。因为 <span class="kalax-inline-math">n</span> 是使 <span class="kalax-inline-math">n1_R=0</span> 的最小正整数，而 <span class="kalax-inline-math">1\le a,b&lt;n</span>，所以
 
-\[
-a1_R\ne0,\qquad b1_R\ne0.
-\]
+<div class="kalax-display-math">a1_R\ne0,\qquad b1_R\ne0.</div>
 
 但
 
-\[
-(a1_R)(b1_R)=ab1_R=n1_R=0.
-\]
+<div class="kalax-display-math">(a1_R)(b1_R)=ab1_R=n1_R=0.</div>
 
-这说明两个非零元乘积为零，和整环无零因子矛盾。因此 \(n\) 不能分解为两个大于 \(1\) 的整数，只能是素数。
+这说明两个非零元乘积为零，和整环无零因子矛盾。因此 <span class="kalax-inline-math">n</span> 不能分解为两个大于 <span class="kalax-inline-math">1</span> 的整数，只能是素数。
 
-反过来，若 \(F\) 是域且 \(\operatorname{char}F=n>0\)，同样可知 \(n\) 是素数；因为域一定是整环。
+反过来，若 <span class="kalax-inline-math">F</span> 是域且 <span class="kalax-inline-math">\operatorname{char}F=n&gt;0</span>，同样可知 <span class="kalax-inline-math">n</span> 是素数；因为域一定是整环。
 
 ## 5. 理想、主理想与商环基础
 
 ### 左理想、右理想与双边理想
 
-设 \(R\) 为环，\(I\subseteq R\)。若 \(I\) 对加法封闭，且对任意 \(r\in R\)、\(x\in I\) 都有
+设 <span class="kalax-inline-math">R</span> 为环，<span class="kalax-inline-math">I\subseteq R</span>。若 <span class="kalax-inline-math">I</span> 对加法封闭，且对任意 <span class="kalax-inline-math">r\in R</span>、<span class="kalax-inline-math">x\in I</span> 都有
 
-\[
-rx\in I,
-\]
+<div class="kalax-display-math">rx\in I,</div>
 
-则称 \(I\) 为左理想；若总有 \(xr\in I\)，则称 \(I\) 为右理想。若二者都成立，则称 \(I\) 为双边理想，通常简称理想。
+则称 <span class="kalax-inline-math">I</span> 为左理想；若总有 <span class="kalax-inline-math">xr\in I</span>，则称 <span class="kalax-inline-math">I</span> 为右理想。若二者都成立，则称 <span class="kalax-inline-math">I</span> 为双边理想，通常简称理想。
 
 在交换环中，左理想、右理想与双边理想相同。
 
 ### 核是理想，像是子环
 
-设 \(f:R\to S\) 是环同态。则
+设 <span class="kalax-inline-math">f:R\to S</span> 是环同态。则
 
-\[
-\ker f=\{r\in R:f(r)=0\}
-\]
+<div class="kalax-display-math">\ker f=\{r\in R:f(r)=0\}</div>
 
-是 \(R\) 的理想。
+是 <span class="kalax-inline-math">R</span> 的理想。
 
-**证明。** 先看加法。若 \(x,y\in\ker f\)，则
+**证明。** 先看加法。若 <span class="kalax-inline-math">x,y\in\ker f</span>，则
 
-\[
-f(x-y)=f(x)-f(y)=0-0=0,
-\]
+<div class="kalax-display-math">f(x-y)=f(x)-f(y)=0-0=0,</div>
 
-所以 \(x-y\in\ker f\)。因此 \(\ker f\) 是 \((R,+)\) 的子群。再看吸收性。若 \(r\in R\) 且 \(x\in\ker f\)，则
+所以 <span class="kalax-inline-math">x-y\in\ker f</span>。因此 <span class="kalax-inline-math">\ker f</span> 是 <span class="kalax-inline-math">(R,+)</span> 的子群。再看吸收性。若 <span class="kalax-inline-math">r\in R</span> 且 <span class="kalax-inline-math">x\in\ker f</span>，则
 
-\[
-f(rx)=f(r)f(x)=f(r)\cdot0=0,
-\]
+<div class="kalax-display-math">f(rx)=f(r)f(x)=f(r)\cdot0=0,</div>
 
-所以 \(rx\in\ker f\)。同理
+所以 <span class="kalax-inline-math">rx\in\ker f</span>。同理
 
-\[
-f(xr)=f(x)f(r)=0\cdot f(r)=0,
-\]
+<div class="kalax-display-math">f(xr)=f(x)f(r)=0\cdot f(r)=0,</div>
 
-所以 \(xr\in\ker f\)。故 \(\ker f\) 是双边理想。
+所以 <span class="kalax-inline-math">xr\in\ker f</span>。故 <span class="kalax-inline-math">\ker f</span> 是双边理想。
 
 另一方面，
 
-\[
-\operatorname{Im}f=f(R)
-\]
+<div class="kalax-display-math">\operatorname{Im}f=f(R)</div>
 
-是 \(S\) 的子环：若 \(a=f(x),b=f(y)\)，则
+是 <span class="kalax-inline-math">S</span> 的子环：若 <span class="kalax-inline-math">a=f(x),b=f(y)</span>，则
 
-\[
-a-b=f(x-y),\qquad ab=f(xy),
-\]
+<div class="kalax-display-math">a-b=f(x-y),\qquad ab=f(xy),</div>
 
-仍在像中。但 \(\operatorname{Im}f\) 一般不必是 \(S\) 的理想。例如包含映射 \(\mathbb Z\hookrightarrow \mathbb Q\) 的像是 \(\mathbb Z\)，它不是 \(\mathbb Q\) 的理想，因为
+仍在像中。但 <span class="kalax-inline-math">\operatorname{Im}f</span> 一般不必是 <span class="kalax-inline-math">S</span> 的理想。例如包含映射 <span class="kalax-inline-math">\mathbb Z\hookrightarrow \mathbb Q</span> 的像是 <span class="kalax-inline-math">\mathbb Z</span>，它不是 <span class="kalax-inline-math">\mathbb Q</span> 的理想，因为
 
-\[
-\frac12\cdot 1=\frac12\notin\mathbb Z.
-\]
+<div class="kalax-display-math">\frac12\cdot 1=\frac12\notin\mathbb Z.</div>
 
 ### 例
 
-1. \(n\mathbb Z\subseteq\mathbb Z\) 是理想。
+1. <span class="kalax-inline-math">n\mathbb Z\subseteq\mathbb Z</span> 是理想。
 2. 在矩阵环中，某些矩阵子集可以是左理想但不是右理想。
-3. 若 \(f:R\to S\) 是环同态，则 \(\ker f\) 是 \(R\) 的理想；但 \(\operatorname{Im}f\) 一般只是子环，不一定是 \(S\) 的理想。
-4. \(0=\{0_R\}\) 和 \(R\) 本身都是理想。真理想指不等于 \(R\) 的理想。
+3. 若 <span class="kalax-inline-math">f:R\to S</span> 是环同态，则 <span class="kalax-inline-math">\ker f</span> 是 <span class="kalax-inline-math">R</span> 的理想；但 <span class="kalax-inline-math">\operatorname{Im}f</span> 一般只是子环，不一定是 <span class="kalax-inline-math">S</span> 的理想。
+4. <span class="kalax-inline-math">0=\{0_R\}</span> 和 <span class="kalax-inline-math">R</span> 本身都是理想。真理想指不等于 <span class="kalax-inline-math">R</span> 的理想。
 
 ### 由集合生成的理想
 
-若 \(X\subseteq R\)，记 \((X)\) 为包含 \(X\) 的最小理想，即
+若 <span class="kalax-inline-math">X\subseteq R</span>，记 <span class="kalax-inline-math">(X)</span> 为包含 <span class="kalax-inline-math">X</span> 的最小理想，即
 
-\[
-(X)=\bigcap_{X\subseteq I\triangleleft R}I.
-\]
+<div class="kalax-display-math">(X)=\bigcap_{X\subseteq I\triangleleft R}I.</div>
 
 若 $X=\{x_1,
 \dots,x_n\}$，写作
 
-\[
-(x_1,
-\dots,x_n).
-\]
+<div class="kalax-display-math">(x_1,
+\dots,x_n).</div>
 
-若 \(X=\{x\}\)，则称 \((x)\) 为主理想。
+若 <span class="kalax-inline-math">X=\{x\}</span>，则称 <span class="kalax-inline-math">(x)</span> 为主理想。
 
 在交换环中，
 
-\[
-(a)=Ra=\{ra:r\in R\},
-\]
+<div class="kalax-display-math">(a)=Ra=\{ra:r\in R\},</div>
 
 且
 
-\[
-(x_1,\dots,x_n)=\left\{\sum_{i=1}^n r_ix_i:r_i\in R\right\}.
-\]
+<div class="kalax-display-math">(x_1,\dots,x_n)=\left\{\sum_{i=1}^n r_ix_i:r_i\in R\right\}.</div>
 
-**证明。** 记右侧集合为 \(J\)。显然 \(x_i\in J\)，所以任何包含 \(x_1,\dots,x_n\) 的理想都必须包含所有有限线性组合
+**证明。** 记右侧集合为 <span class="kalax-inline-math">J</span>。显然 <span class="kalax-inline-math">x_i\in J</span>，所以任何包含 <span class="kalax-inline-math">x_1,\dots,x_n</span> 的理想都必须包含所有有限线性组合
 
-\[
-\sum_{i=1}^n r_ix_i.
-\]
+<div class="kalax-display-math">\sum_{i=1}^n r_ix_i.</div>
 
-因此 \(J\) 包含在 \((x_1,\dots,x_n)\) 中。反过来，\(J\) 对加减封闭；若 \(s\in R\)，则
+因此 <span class="kalax-inline-math">J</span> 包含在 <span class="kalax-inline-math">(x_1,\dots,x_n)</span> 中。反过来，<span class="kalax-inline-math">J</span> 对加减封闭；若 <span class="kalax-inline-math">s\in R</span>，则
 
-\[
-s\sum_i r_ix_i=\sum_i (sr_i)x_i\in J,
-\]
+<div class="kalax-display-math">s\sum_i r_ix_i=\sum_i (sr_i)x_i\in J,</div>
 
-交换环中右乘也一样。因此 \(J\) 本身就是包含 \(x_1,\dots,x_n\) 的理想。由最小性，
+交换环中右乘也一样。因此 <span class="kalax-inline-math">J</span> 本身就是包含 <span class="kalax-inline-math">x_1,\dots,x_n</span> 的理想。由最小性，
 
-\[
-(x_1,\dots,x_n)=J.
-\]
+<div class="kalax-display-math">(x_1,\dots,x_n)=J.</div>
 
 ### 主理想整环
 
-整环 \(R\) 称为主理想整环（PID），若 \(R\) 的每个理想都是主理想。
+整环 <span class="kalax-inline-math">R</span> 称为主理想整环（PID），若 <span class="kalax-inline-math">R</span> 的每个理想都是主理想。
 
-例：\(\mathbb Z\) 是 PID；若 \(F\) 是域，则 \(F[x]\) 是 PID；但 \(\mathbb Z[x]\) 和 \(F[x,y]\) 一般不是 PID。
+例：<span class="kalax-inline-math">\mathbb Z</span> 是 PID；若 <span class="kalax-inline-math">F</span> 是域，则 <span class="kalax-inline-math">F[x]</span> 是 PID；但 <span class="kalax-inline-math">\mathbb Z[x]</span> 和 <span class="kalax-inline-math">F[x,y]</span> 一般不是 PID。
 
-例如在 \(F[x,y]\) 中，理想 \((x,y)\) 不是主理想。
+例如在 <span class="kalax-inline-math">F[x,y]</span> 中，理想 <span class="kalax-inline-math">(x,y)</span> 不是主理想。
 
 ### 理想的和与积
 
-设 \(A,B\subseteq R\) 为理想。定义
+设 <span class="kalax-inline-math">A,B\subseteq R</span> 为理想。定义
 
-\[
-A+B=\{a+b:a\in A,
-\ b\in B\},
-\]
+<div class="kalax-display-math">A+B=\{a+b:a\in A,
+\ b\in B\},</div>
 
 以及
 
-\[
-AB=\left\{\sum_{i=1}^n a_ib_i:a_i\in A,
-\ b_i\in B\right\}.
-\]
+<div class="kalax-display-math">AB=\left\{\sum_{i=1}^n a_ib_i:a_i\in A,
+\ b_i\in B\right\}.</div>
 
-若 \(A,B\) 是双边理想，则 \(A+B\) 与 \(AB\) 仍是双边理想。
+若 <span class="kalax-inline-math">A,B</span> 是双边理想，则 <span class="kalax-inline-math">A+B</span> 与 <span class="kalax-inline-math">AB</span> 仍是双边理想。
 
-对理想 \(A,B,C\)，有
+对理想 <span class="kalax-inline-math">A,B,C</span>，有
 
-\[
-(A+B)+C=A+(B+C),
+<div class="kalax-display-math">(A+B)+C=A+(B+C),
 \qquad
-(AB)C=A(BC),
-\]
+(AB)C=A(BC),</div>
 
 并且
 
-\[
-C(A+B)=CA+CB,
+<div class="kalax-display-math">C(A+B)=CA+CB,
 \qquad
-(A+B)C=AC+BC.
-\]
+(A+B)C=AC+BC.</div>
 
-**证明补充。** 以 \(AB\) 为例。若
+**证明补充。** 以 <span class="kalax-inline-math">AB</span> 为例。若
 
-\[
-x=\sum_i a_ib_i,\qquad y=\sum_j a'_jb'_j
-\]
+<div class="kalax-display-math">x=\sum_i a_ib_i,\qquad y=\sum_j a'_jb'_j</div>
 
-属于 \(AB\)，则
+属于 <span class="kalax-inline-math">AB</span>，则
 
-\[
-x+y=\sum_i a_ib_i+\sum_j a'_jb'_j\in AB,
-\]
+<div class="kalax-display-math">x+y=\sum_i a_ib_i+\sum_j a'_jb'_j\in AB,</div>
 
-且 \(-x=\sum_i (-a_i)b_i\in AB\)。若 \(r\in R\)，则
+且 <span class="kalax-inline-math">-x=\sum_i (-a_i)b_i\in AB</span>。若 <span class="kalax-inline-math">r\in R</span>，则
 
-\[
-rx=\sum_i (ra_i)b_i\in AB,
-\]
+<div class="kalax-display-math">rx=\sum_i (ra_i)b_i\in AB,</div>
 
-因为 \(A\) 是左理想；同时
+因为 <span class="kalax-inline-math">A</span> 是左理想；同时
 
-\[
-xr=\sum_i a_i(b_ir)\in AB,
-\]
+<div class="kalax-display-math">xr=\sum_i a_i(b_ir)\in AB,</div>
 
-因为 \(B\) 是右理想。所以 \(AB\) 是双边理想。\(A+B\) 的证明类似但更直接。
+因为 <span class="kalax-inline-math">B</span> 是右理想。所以 <span class="kalax-inline-math">AB</span> 是双边理想。<span class="kalax-inline-math">A+B</span> 的证明类似但更直接。
 
 ### 商环
 
-设 \(I\triangleleft R\) 为双边理想。商群 \(R/I\) 上定义乘法
+设 <span class="kalax-inline-math">I\triangleleft R</span> 为双边理想。商群 <span class="kalax-inline-math">R/I</span> 上定义乘法
 
-\[
-(a+I)(b+I)=ab+I.
-\]
+<div class="kalax-display-math">(a+I)(b+I)=ab+I.</div>
 
-该定义良好，并使 \(R/I\) 成为环，称为 \(R\) 关于 \(I\) 的商环。
+该定义良好，并使 <span class="kalax-inline-math">R/I</span> 成为环，称为 <span class="kalax-inline-math">R</span> 关于 <span class="kalax-inline-math">I</span> 的商环。
 
 **良定义证明。** 商环乘法最需要检查的是：如果换了代表元，结果不变。设
 
-\[
-a+I=a'+I,\qquad b+I=b'+I.
-\]
+<div class="kalax-display-math">a+I=a'+I,\qquad b+I=b'+I.</div>
 
 这等价于
 
-\[
-a-a'\in I,\qquad b-b'\in I.
-\]
+<div class="kalax-display-math">a-a'\in I,\qquad b-b'\in I.</div>
 
 要证
 
-\[
-ab+I=a'b'+I,
-\]
+<div class="kalax-display-math">ab+I=a'b'+I,</div>
 
-即证 \(ab-a'b'\in I\)。计算：
+即证 <span class="kalax-inline-math">ab-a'b'\in I</span>。计算：
 
-\[
-ab-a'b'
+<div class="kalax-display-math">ab-a'b'
 =ab-a'b+a'b-a'b'
-=(a-a')b+a'(b-b').
-\]
+=(a-a')b+a'(b-b').</div>
 
-因为 \(I\) 是双边理想，\((a-a')b\in I\)，且 \(a'(b-b')\in I\)，所以 \(ab-a'b'\in I\)。因此乘法定义良好。加法的良定义同理，由
+因为 <span class="kalax-inline-math">I</span> 是双边理想，<span class="kalax-inline-math">(a-a')b\in I</span>，且 <span class="kalax-inline-math">a'(b-b')\in I</span>，所以 <span class="kalax-inline-math">ab-a'b'\in I</span>。因此乘法定义良好。加法的良定义同理，由
 
-\[
-(a+b)-(a'+b')=(a-a')+(b-b')\in I
-\]
+<div class="kalax-display-math">(a+b)-(a'+b')=(a-a')+(b-b')\in I</div>
 
 得到。
 
-环公理从 \(R\) 中继承。例如结合律：
+环公理从 <span class="kalax-inline-math">R</span> 中继承。例如结合律：
 
-\[
-((a+I)(b+I))(c+I)=(ab)c+I=a(bc)+I=(a+I)((b+I)(c+I)).
-\]
+<div class="kalax-display-math">((a+I)(b+I))(c+I)=(ab)c+I=a(bc)+I=(a+I)((b+I)(c+I)).</div>
 
 分配律也类似。
 
 例：
 
-\[
-\mathbb Z/n\mathbb Z,
+<div class="kalax-display-math">\mathbb Z/n\mathbb Z,
 \qquad
 \mathbb C[x]/(x),
 \qquad
-\mathbb Z[x]/(x-1)
-\]
+\mathbb Z[x]/(x-1)</div>
 
 都是商环。
 
 有同构
 
-\[
-\mathbb C[x]/(x)\cong\mathbb C,
+<div class="kalax-display-math">\mathbb C[x]/(x)\cong\mathbb C,
 \qquad
-\mathbb Z[x]/(x-1)\cong\mathbb Z,
-\]
+\mathbb Z[x]/(x-1)\cong\mathbb Z,</div>
 
-其中同构由代入 \(x=0\) 或 \(x=1\) 给出。
+其中同构由代入 <span class="kalax-inline-math">x=0</span> 或 <span class="kalax-inline-math">x=1</span> 给出。
 
 ### 商映射与第一同构定理
 
-若 \(I\triangleleft R\)，自然投影
+若 <span class="kalax-inline-math">I\triangleleft R</span>，自然投影
 
-\[
-\pi:R\to R/I,
+<div class="kalax-display-math">\pi:R\to R/I,
 \qquad
-r\mapsto r+I
-\]
+r\mapsto r+I</div>
 
-是满环同态，且 \(\ker\pi=I\)。
+是满环同态，且 <span class="kalax-inline-math">\ker\pi=I</span>。
 
-若 \(f:R\to S\) 是环同态，则
+若 <span class="kalax-inline-math">f:R\to S</span> 是环同态，则
 
-\[
-R/\ker f\cong\operatorname{Im}f.
-\]
+<div class="kalax-display-math">R/\ker f\cong\operatorname{Im}f.</div>
 
 **证明。** 定义
 
-\[
-\overline f:R/\ker f\to\operatorname{Im}f,\qquad
-r+\ker f\mapsto f(r).
-\]
+<div class="kalax-display-math">\overline f:R/\ker f\to\operatorname{Im}f,\qquad
+r+\ker f\mapsto f(r).</div>
 
-若 \(r+\ker f=r'+\ker f\)，则 \(r-r'\in\ker f\)，所以
+若 <span class="kalax-inline-math">r+\ker f=r'+\ker f</span>，则 <span class="kalax-inline-math">r-r'\in\ker f</span>，所以
 
-\[
-f(r)-f(r')=f(r-r')=0,
-\]
+<div class="kalax-display-math">f(r)-f(r')=f(r-r')=0,</div>
 
-即 \(f(r)=f(r')\)，故 \(\overline f\) 良定义。它是环同态，因为
+即 <span class="kalax-inline-math">f(r)=f(r')</span>，故 <span class="kalax-inline-math">\overline f</span> 良定义。它是环同态，因为
 
-\[
-\overline f((r+\ker f)+(s+\ker f))=f(r+s)=f(r)+f(s),
-\]
+<div class="kalax-display-math">\overline f((r+\ker f)+(s+\ker f))=f(r+s)=f(r)+f(s),</div>
 
 且
 
-\[
-\overline f((r+\ker f)(s+\ker f))=f(rs)=f(r)f(s).
-\]
+<div class="kalax-display-math">\overline f((r+\ker f)(s+\ker f))=f(rs)=f(r)f(s).</div>
 
-它满到 \(\operatorname{Im}f\)。若 \(\overline f(r+\ker f)=0\)，则 \(f(r)=0\)，所以 \(r\in\ker f\)，即 \(r+\ker f=0\)。故 \(\overline f\) 单射，从而是同构。
+它满到 <span class="kalax-inline-math">\operatorname{Im}f</span>。若 <span class="kalax-inline-math">\overline f(r+\ker f)=0</span>，则 <span class="kalax-inline-math">f(r)=0</span>，所以 <span class="kalax-inline-math">r\in\ker f</span>，即 <span class="kalax-inline-math">r+\ker f=0</span>。故 <span class="kalax-inline-math">\overline f</span> 单射，从而是同构。
 
-更一般地，若 \(I\subseteq\ker f\)，则存在唯一同态
+更一般地，若 <span class="kalax-inline-math">I\subseteq\ker f</span>，则存在唯一同态
 
-\[
-\overline f:R/I\to S
-\]
+<div class="kalax-display-math">\overline f:R/I\to S</div>
 
 使得
 
-\[
-\overline f(r+I)=f(r).
-\]
+<div class="kalax-display-math">\overline f(r+I)=f(r).</div>
 
 ### 商环的同构定理
 
-若 \(I\subseteq J\) 是 \(R\) 的理想，则
+若 <span class="kalax-inline-math">I\subseteq J</span> 是 <span class="kalax-inline-math">R</span> 的理想，则
 
-\[
-(R/I)/(J/I)\cong R/J.
-\]
+<div class="kalax-display-math">(R/I)/(J/I)\cong R/J.</div>
 
 **证明。** 定义
 
-\[
-\psi:R/I\to R/J,\qquad r+I\mapsto r+J.
-\]
+<div class="kalax-display-math">\psi:R/I\to R/J,\qquad r+I\mapsto r+J.</div>
 
-先检查良定义。若 \(r+I=r'+I\)，则 \(r-r'\in I\)。由于 \(I\subseteq J\)，有 \(r-r'\in J\)，所以 \(r+J=r'+J\)。
+先检查良定义。若 <span class="kalax-inline-math">r+I=r'+I</span>，则 <span class="kalax-inline-math">r-r'\in I</span>。由于 <span class="kalax-inline-math">I\subseteq J</span>，有 <span class="kalax-inline-math">r-r'\in J</span>，所以 <span class="kalax-inline-math">r+J=r'+J</span>。
 
-显然 \(\psi\) 是满同态。它的核为
+显然 <span class="kalax-inline-math">\psi</span> 是满同态。它的核为
 
-\[
-\ker\psi
+<div class="kalax-display-math">\ker\psi
 =\{r+I:r+J=J\}
 =\{r+I:r\in J\}
-=J/I.
-\]
+=J/I.</div>
 
 由第一同构定理，
 
-\[
-(R/I)/(J/I)\cong R/J.
-\]
+<div class="kalax-display-math">(R/I)/(J/I)\cong R/J.</div>
 
-若 \(I,J\) 是理想，则
+若 <span class="kalax-inline-math">I,J</span> 是理想，则
 
-\[
-I/(I\cap J)\cong (I+J)/J.
-\]
+<div class="kalax-display-math">I/(I\cap J)\cong (I+J)/J.</div>
 
 **证明。** 定义
 
-\[
-\varphi:I\to (I+J)/J,\qquad x\mapsto x+J.
-\]
+<div class="kalax-display-math">\varphi:I\to (I+J)/J,\qquad x\mapsto x+J.</div>
 
-这是同态。其像为整个 \((I+J)/J\)：因为任意元素可写为
+这是同态。其像为整个 <span class="kalax-inline-math">(I+J)/J</span>：因为任意元素可写为
 
-\[
-i+j+J=i+J,
-\]
+<div class="kalax-display-math">i+j+J=i+J,</div>
 
-其中 \(i\in I,j\in J\)。其核为
+其中 <span class="kalax-inline-math">i\in I,j\in J</span>。其核为
 
-\[
-\ker\varphi
+<div class="kalax-display-math">\ker\varphi
 =\{x\in I:x+J=J\}
-=I\cap J.
-\]
+=I\cap J.</div>
 
 由第一同构定理，
 
-\[
-I/(I\cap J)\cong (I+J)/J.
-\]
+<div class="kalax-display-math">I/(I\cap J)\cong (I+J)/J.</div>
 
-若 \(I\triangleleft R\)，则 \(R/I\) 的理想与 \(R\) 中包含 \(I\) 的理想一一对应：
+若 <span class="kalax-inline-math">I\triangleleft R</span>，则 <span class="kalax-inline-math">R/I</span> 的理想与 <span class="kalax-inline-math">R</span> 中包含 <span class="kalax-inline-math">I</span> 的理想一一对应：
 
-\[
-\{J:J\triangleleft R,
+<div class="kalax-display-math">\{J:J\triangleleft R,
 \ I\subseteq J\}
 \longleftrightarrow
 \{\text{$R/I$ 的理想}\},
 \qquad
-J\longmapsto J/I.
-\]
+J\longmapsto J/I.</div>
 
-**证明补充。** 若 \(J\) 是 \(R\) 的理想且 \(I\subseteq J\)，则
+**证明补充。** 若 <span class="kalax-inline-math">J</span> 是 <span class="kalax-inline-math">R</span> 的理想且 <span class="kalax-inline-math">I\subseteq J</span>，则
 
-\[
-J/I=\{j+I:j\in J\}
-\]
+<div class="kalax-display-math">J/I=\{j+I:j\in J\}</div>
 
-是 \(R/I\) 的理想。因为若 \(j,j'\in J\)，则
+是 <span class="kalax-inline-math">R/I</span> 的理想。因为若 <span class="kalax-inline-math">j,j'\in J</span>，则
 
-\[
-(j+I)-(j'+I)=j-j'+I\in J/I,
-\]
+<div class="kalax-display-math">(j+I)-(j'+I)=j-j'+I\in J/I,</div>
 
-而对任意 \(r\in R\)，
+而对任意 <span class="kalax-inline-math">r\in R</span>，
 
-\[
-(r+I)(j+I)=rj+I\in J/I.
-\]
+<div class="kalax-display-math">(r+I)(j+I)=rj+I\in J/I.</div>
 
-反过来，若 \(\mathfrak a\) 是 \(R/I\) 的理想，令
+反过来，若 <span class="kalax-inline-math">\mathfrak a</span> 是 <span class="kalax-inline-math">R/I</span> 的理想，令
 
-\[
-J=\pi^{-1}(\mathfrak a)
-=\{r\in R:r+I\in\mathfrak a\},
-\]
+<div class="kalax-display-math">J=\pi^{-1}(\mathfrak a)
+=\{r\in R:r+I\in\mathfrak a\},</div>
 
-其中 \(\pi:R\to R/I\) 为自然投影。环同态的理想原像仍是理想，所以 \(J\) 是 \(R\) 的理想；并且 \(I\subseteq J\)，因为 \(i+I=0\in\mathfrak a\)。
+其中 <span class="kalax-inline-math">\pi:R\to R/I</span> 为自然投影。环同态的理想原像仍是理想，所以 <span class="kalax-inline-math">J</span> 是 <span class="kalax-inline-math">R</span> 的理想；并且 <span class="kalax-inline-math">I\subseteq J</span>，因为 <span class="kalax-inline-math">i+I=0\in\mathfrak a</span>。
 
 两种构造互为逆：
 
-\[
-\pi^{-1}(J/I)=J,
+<div class="kalax-display-math">\pi^{-1}(J/I)=J,
 \qquad
-\pi(\pi^{-1}(\mathfrak a))=\mathfrak a
-\]
+\pi(\pi^{-1}(\mathfrak a))=\mathfrak a</div>
 
-后一式用到 \(\pi\) 是满射。
+后一式用到 <span class="kalax-inline-math">\pi</span> 是满射。
 
 ## 6. 商环与理想对应
 
 ### 回忆：环同态与核
 
-若 \(f:R\to S\) 是环同态，则
+若 <span class="kalax-inline-math">f:R\to S</span> 是环同态，则
 
-\[
-R/\ker f \cong \operatorname{Im} f.
-\]
+<div class="kalax-display-math">R/\ker f \cong \operatorname{Im} f.</div>
 
-若 \(\ker f=R\)，则 \(f=0\)；若 \(\ker f=\{0\}\)，则 \(f\) 单射。
+若 <span class="kalax-inline-math">\ker f=R</span>，则 <span class="kalax-inline-math">f=0</span>；若 <span class="kalax-inline-math">\ker f=\{0\}</span>，则 <span class="kalax-inline-math">f</span> 单射。
 
 ### 理想对应定理
 
-设 \(I\subseteq R\) 为理想。则有双射
+设 <span class="kalax-inline-math">I\subseteq R</span> 为理想。则有双射
 
-\[
-\left\{\text{$R/I$ 的理想}\right\}
+<div class="kalax-display-math">\left\{\text{$R/I$ 的理想}\right\}
 \longleftrightarrow
-\left\{\text{$R$ 中包含 $I$ 的理想}\right\}.
-\]
+\left\{\text{$R$ 中包含 $I$ 的理想}\right\}.</div>
 
 具体地，
 
-\[
-J/I\subseteq R/I
+<div class="kalax-display-math">J/I\subseteq R/I
 \quad\leftrightarrow\quad
-J\subseteq R,\ I\subseteq J.
-\]
+J\subseteq R,\ I\subseteq J.</div>
 
-特别地，若 \(I\subseteq J\)，则
+特别地，若 <span class="kalax-inline-math">I\subseteq J</span>，则
 
-\[
-(R/I)/(J/I)\cong R/J.
-\]
+<div class="kalax-display-math">(R/I)/(J/I)\cong R/J.</div>
 
 **证明说明。** 这一结论由映射
 
-\[
-R/I\to R/J,\qquad r+I\mapsto r+J
-\]
+<div class="kalax-display-math">R/I\to R/J,\qquad r+I\mapsto r+J</div>
 
-诱导。它的核正是 \(J/I\)，所以由第一同构定理得到同构。
+诱导。它的核正是 <span class="kalax-inline-math">J/I</span>，所以由第一同构定理得到同构。
 
 ## 7. 素理想与极大理想
 
 ### 定义：素理想
 
-设 \(R\) 为交换环，\(P\subseteq R\) 为理想。若
+设 <span class="kalax-inline-math">R</span> 为交换环，<span class="kalax-inline-math">P\subseteq R</span> 为理想。若
 
-1. \(P\ne R\)；
-2. 对任意 \(x,y\in R\)，若 \(xy\in P\)，则 \(x\in P\) 或 \(y\in P\)，
+1. <span class="kalax-inline-math">P\ne R</span>；
+2. 对任意 <span class="kalax-inline-math">x,y\in R</span>，若 <span class="kalax-inline-math">xy\in P</span>，则 <span class="kalax-inline-math">x\in P</span> 或 <span class="kalax-inline-math">y\in P</span>，
 
-则称 \(P\) 是 \(R\) 的一个**素理想**。
+则称 <span class="kalax-inline-math">P</span> 是 <span class="kalax-inline-math">R</span> 的一个**素理想**。
 
 等价地，
 
-\[
-P \text{ 是素理想}
+<div class="kalax-display-math">P \text{ 是素理想}
 \iff
-R/P \text{ 是整环}.
-\]
+R/P \text{ 是整环}.</div>
 
 ### 例
 
-1. 在 \(R=\mathbb Z\) 中，\((p)\) 是素理想当且仅当 \(p\) 是素数；\((0)\) 也是素理想，因为 \(\mathbb Z\) 是整环。
-2. 在 \(R=\mathbb F_2[x]\) 中，\((x^2+1)\) 不是素理想，因为
+1. 在 <span class="kalax-inline-math">R=\mathbb Z</span> 中，<span class="kalax-inline-math">(p)</span> 是素理想当且仅当 <span class="kalax-inline-math">p</span> 是素数；<span class="kalax-inline-math">(0)</span> 也是素理想，因为 <span class="kalax-inline-math">\mathbb Z</span> 是整环。
+2. 在 <span class="kalax-inline-math">R=\mathbb F_2[x]</span> 中，<span class="kalax-inline-math">(x^2+1)</span> 不是素理想，因为
 
-   \[
-x^2+1=(x+1)^2
-\]
+   <div class="kalax-display-math">x^2+1=(x+1)^2</div>
    
 
-   在 \(\mathbb F_2[x]\) 中可约。
-3. 在 \(R=\mathbb C[x]/(x^2)\) 中，\((0)\) 不是素理想，因为 \([x]^2=0\)，但 \([x]\ne 0\)。
+   在 <span class="kalax-inline-math">\mathbb F_2[x]</span> 中可约。
+3. 在 <span class="kalax-inline-math">R=\mathbb C[x]/(x^2)</span> 中，<span class="kalax-inline-math">(0)</span> 不是素理想，因为 <span class="kalax-inline-math">[x]^2=0</span>，但 <span class="kalax-inline-math">[x]\ne 0</span>。
 
 ### 定理：素理想的乘积判别
 
-设 \(R\) 为交换环，\(P\subseteq R\) 为真理想。以下命题等价：
+设 <span class="kalax-inline-math">R</span> 为交换环，<span class="kalax-inline-math">P\subseteq R</span> 为真理想。以下命题等价：
 
-1. \(P\) 是素理想；
-2. 对任意理想 \(A,B\subseteq R\)，若 \(AB\subseteq P\)，则 \(A\subseteq P\) 或 \(B\subseteq P\)。
+1. <span class="kalax-inline-math">P</span> 是素理想；
+2. 对任意理想 <span class="kalax-inline-math">A,B\subseteq R</span>，若 <span class="kalax-inline-math">AB\subseteq P</span>，则 <span class="kalax-inline-math">A\subseteq P</span> 或 <span class="kalax-inline-math">B\subseteq P</span>。
 
 **证明。**
 
-若 \(P\) 是素理想，且 \(AB\subseteq P\)。若 \(A\nsubseteq P\) 且 \(B\nsubseteq P\)，取
+若 <span class="kalax-inline-math">P</span> 是素理想，且 <span class="kalax-inline-math">AB\subseteq P</span>。若 <span class="kalax-inline-math">A\nsubseteq P</span> 且 <span class="kalax-inline-math">B\nsubseteq P</span>，取
 
-\[
-a\in A\setminus P,\qquad b\in B\setminus P.
-\]
+<div class="kalax-display-math">a\in A\setminus P,\qquad b\in B\setminus P.</div>
 
-则 \(ab\in AB\subseteq P\)，与 \(P\) 为素理想矛盾。
+则 <span class="kalax-inline-math">ab\in AB\subseteq P</span>，与 <span class="kalax-inline-math">P</span> 为素理想矛盾。
 
-反过来，若对理想乘积有上述性质，取 \(a,b\in R\) 且 \(ab\in P\)，则
+反过来，若对理想乘积有上述性质，取 <span class="kalax-inline-math">a,b\in R</span> 且 <span class="kalax-inline-math">ab\in P</span>，则
 
-\[
-(a)(b)\subseteq P.
-\]
+<div class="kalax-display-math">(a)(b)\subseteq P.</div>
 
-于是 \((a)\subseteq P\) 或 \((b)\subseteq P\)，即 \(a\in P\) 或 \(b\in P\)。
+于是 <span class="kalax-inline-math">(a)\subseteq P</span> 或 <span class="kalax-inline-math">(b)\subseteq P</span>，即 <span class="kalax-inline-math">a\in P</span> 或 <span class="kalax-inline-math">b\in P</span>。
 
 ### 定理：商环刻画素理想
 
-设 \(R\) 为交换环，\(P\subseteq R\) 为真理想，则
+设 <span class="kalax-inline-math">R</span> 为交换环，<span class="kalax-inline-math">P\subseteq R</span> 为真理想，则
 
-\[
-P \text{ 是素理想}
+<div class="kalax-display-math">P \text{ 是素理想}
 \iff
-R/P \text{ 是整环}.
-\]
+R/P \text{ 是整环}.</div>
 
 **证明。**
 
-在 \(R/P\) 中，
+在 <span class="kalax-inline-math">R/P</span> 中，
 
-\[
-\overline{x}\,\overline{y}=0
+<div class="kalax-display-math">\overline{x}\,\overline{y}=0
 \iff
-xy\in P.
-\]
+xy\in P.</div>
 
-若 \(P\) 是素理想，则 \(xy\in P\) 推出 \(x\in P\) 或 \(y\in P\)，即 \(\overline{x}=0\) 或 \(\overline{y}=0\)，所以 \(R/P\) 无零因子。
+若 <span class="kalax-inline-math">P</span> 是素理想，则 <span class="kalax-inline-math">xy\in P</span> 推出 <span class="kalax-inline-math">x\in P</span> 或 <span class="kalax-inline-math">y\in P</span>，即 <span class="kalax-inline-math">\overline{x}=0</span> 或 <span class="kalax-inline-math">\overline{y}=0</span>，所以 <span class="kalax-inline-math">R/P</span> 无零因子。
 
-反过来，若 \(R/P\) 是整环，则由 \(\overline{x}\,\overline{y}=0\) 得 \(\overline{x}=0\) 或 \(\overline{y}=0\)，即 \(x\in P\) 或 \(y\in P\)。
+反过来，若 <span class="kalax-inline-math">R/P</span> 是整环，则由 <span class="kalax-inline-math">\overline{x}\,\overline{y}=0</span> 得 <span class="kalax-inline-math">\overline{x}=0</span> 或 <span class="kalax-inline-math">\overline{y}=0</span>，即 <span class="kalax-inline-math">x\in P</span> 或 <span class="kalax-inline-math">y\in P</span>。
 
 ### 定义：偏序集与 Zorn 引理
 
-设 \(A\) 为集合，关系 \(\leq\) 若满足：
+设 <span class="kalax-inline-math">A</span> 为集合，关系 <span class="kalax-inline-math">\leq</span> 若满足：
 
-1. 自反性：\(a\leq a\)；
-2. 传递性：\(a\leq b,\ b\leq c\Rightarrow a\leq c\)；
-3. 反对称性：\(a\leq b,\ b\leq a\Rightarrow a=b\)，
+1. 自反性：<span class="kalax-inline-math">a\leq a</span>；
+2. 传递性：<span class="kalax-inline-math">a\leq b,\ b\leq c\Rightarrow a\leq c</span>；
+3. 反对称性：<span class="kalax-inline-math">a\leq b,\ b\leq a\Rightarrow a=b</span>，
 
-则称 \((A,\leq)\) 为一个**偏序集**。若 \(a\leq b\) 或 \(b\leq a\)，称 \(a,b\) 可比较。
+则称 <span class="kalax-inline-math">(A,\leq)</span> 为一个**偏序集**。若 <span class="kalax-inline-math">a\leq b</span> 或 <span class="kalax-inline-math">b\leq a</span>，称 <span class="kalax-inline-math">a,b</span> 可比较。
 
-若 \(B\subseteq A\)，元素 \(u\in A\) 满足对任意 \(b\in B\) 都有 \(b\leq u\)，则称 \(u\) 为 \(B\) 的上界。
+若 <span class="kalax-inline-math">B\subseteq A</span>，元素 <span class="kalax-inline-math">u\in A</span> 满足对任意 <span class="kalax-inline-math">b\in B</span> 都有 <span class="kalax-inline-math">b\leq u</span>，则称 <span class="kalax-inline-math">u</span> 为 <span class="kalax-inline-math">B</span> 的上界。
 
-**Zorn 引理。** 设 \((A,\leq)\) 是非空偏序集。若 \(A\) 中每条链都有上界，则 \(A\) 含有极大元。
+**Zorn 引理。** 设 <span class="kalax-inline-math">(A,\leq)</span> 是非空偏序集。若 <span class="kalax-inline-math">A</span> 中每条链都有上界，则 <span class="kalax-inline-math">A</span> 含有极大元。
 
 ### 定理：极大理想存在
 
-设 \(R\) 为有单位的交换环，且 \(R\ne 0\)。则 \(R\) 至少有一个极大理想。更强地，任意真理想都包含在某个极大理想中。
+设 <span class="kalax-inline-math">R</span> 为有单位的交换环，且 <span class="kalax-inline-math">R\ne 0</span>。则 <span class="kalax-inline-math">R</span> 至少有一个极大理想。更强地，任意真理想都包含在某个极大理想中。
 
 **证明。**
 
-给定真理想 \(I\subsetneq R\)。令
+给定真理想 <span class="kalax-inline-math">I\subsetneq R</span>。令
 
-\[
-\mathcal A=\{J\subseteq R:J\text{ 是理想且 } I\subseteq J\subsetneq R\}.
-\]
+<div class="kalax-display-math">\mathcal A=\{J\subseteq R:J\text{ 是理想且 } I\subseteq J\subsetneq R\}.</div>
 
-按包含关系排序。若 \(\mathcal C=\{C_i\}\) 是一条链，令
+按包含关系排序。若 <span class="kalax-inline-math">\mathcal C=\{C_i\}</span> 是一条链，令
 
-\[
-M=\bigcup_i C_i.
-\]
+<div class="kalax-display-math">M=\bigcup_i C_i.</div>
 
-则 \(M\) 是理想，并且 \(I\subseteq M\)。若 \(M=R\)，则 \(1\in M\)，于是 \(1\in C_i\) 对某个 \(i\) 成立，矛盾。因此 \(M\in\mathcal A\)。由 Zorn 引理，\(\mathcal A\) 有极大元，即包含 \(I\) 的极大理想。
+则 <span class="kalax-inline-math">M</span> 是理想，并且 <span class="kalax-inline-math">I\subseteq M</span>。若 <span class="kalax-inline-math">M=R</span>，则 <span class="kalax-inline-math">1\in M</span>，于是 <span class="kalax-inline-math">1\in C_i</span> 对某个 <span class="kalax-inline-math">i</span> 成立，矛盾。因此 <span class="kalax-inline-math">M\in\mathcal A</span>。由 Zorn 引理，<span class="kalax-inline-math">\mathcal A</span> 有极大元，即包含 <span class="kalax-inline-math">I</span> 的极大理想。
 
 ### 定义：极大理想
 
-设 \(R\) 为环，\(M\subseteq R\) 为理想。若
+设 <span class="kalax-inline-math">R</span> 为环，<span class="kalax-inline-math">M\subseteq R</span> 为理想。若
 
-1. \(M\ne R\)；
-2. 对任意理想 \(I\)，若 \(M\subseteq I\subseteq R\)，则 \(I=M\) 或 \(I=R\)，
+1. <span class="kalax-inline-math">M\ne R</span>；
+2. 对任意理想 <span class="kalax-inline-math">I</span>，若 <span class="kalax-inline-math">M\subseteq I\subseteq R</span>，则 <span class="kalax-inline-math">I=M</span> 或 <span class="kalax-inline-math">I=R</span>，
 
-则称 \(M\) 为**极大理想**。
+则称 <span class="kalax-inline-math">M</span> 为**极大理想**。
 
 ### 定理：极大理想的商环刻画
 
-设 \(R\) 为有单位交换环，\(M\subseteq R\) 为真理想。则
+设 <span class="kalax-inline-math">R</span> 为有单位交换环，<span class="kalax-inline-math">M\subseteq R</span> 为真理想。则
 
-\[
-M \text{ 是极大理想}
+<div class="kalax-display-math">M \text{ 是极大理想}
 \iff
-R/M \text{ 是域}.
-\]
+R/M \text{ 是域}.</div>
 
 **证明。**
 
-若 \(M\) 极大。取非零元 \(\overline a\in R/M\)，则 \(a\notin M\)。由极大性，
+若 <span class="kalax-inline-math">M</span> 极大。取非零元 <span class="kalax-inline-math">\overline a\in R/M</span>，则 <span class="kalax-inline-math">a\notin M</span>。由极大性，
 
-\[
-M+(a)=R.
-\]
+<div class="kalax-display-math">M+(a)=R.</div>
 
-于是存在 \(m\in M,\ r\in R\)，使得
+于是存在 <span class="kalax-inline-math">m\in M,\ r\in R</span>，使得
 
-\[
-m+ra=1.
-\]
+<div class="kalax-display-math">m+ra=1.</div>
 
-故 \(\overline r\,\overline a=\overline 1\)，所以 \(\overline a\) 可逆。
+故 <span class="kalax-inline-math">\overline r\,\overline a=\overline 1</span>，所以 <span class="kalax-inline-math">\overline a</span> 可逆。
 
-反过来，若 \(R/M\) 是域，设 \(M\subsetneq N\subseteq R\) 为理想。取 \(x\in N\setminus M\)，则 \(\overline x\ne 0\)。由于 \(R/M\) 是域，存在 \(\overline y\) 使
+反过来，若 <span class="kalax-inline-math">R/M</span> 是域，设 <span class="kalax-inline-math">M\subsetneq N\subseteq R</span> 为理想。取 <span class="kalax-inline-math">x\in N\setminus M</span>，则 <span class="kalax-inline-math">\overline x\ne 0</span>。由于 <span class="kalax-inline-math">R/M</span> 是域，存在 <span class="kalax-inline-math">\overline y</span> 使
 
-\[
-\overline x\,\overline y=\overline 1.
-\]
+<div class="kalax-display-math">\overline x\,\overline y=\overline 1.</div>
 
-即 \(xy+m=1\) 对某个 \(m\in M\) 成立。因 \(xy\in N\) 且 \(m\in N\)，得 \(1\in N\)，故 \(N=R\)。
+即 <span class="kalax-inline-math">xy+m=1</span> 对某个 <span class="kalax-inline-math">m\in M</span> 成立。因 <span class="kalax-inline-math">xy\in N</span> 且 <span class="kalax-inline-math">m\in N</span>，得 <span class="kalax-inline-math">1\in N</span>，故 <span class="kalax-inline-math">N=R</span>。
 
 ### 推论：极大理想是素理想
 
-若 \(R\) 为交换环，\(M\) 是极大理想，则 \(M\) 是素理想。
+若 <span class="kalax-inline-math">R</span> 为交换环，<span class="kalax-inline-math">M</span> 是极大理想，则 <span class="kalax-inline-math">M</span> 是素理想。
 
-**理由。** \(R/M\) 是域，域一定是整环，因此 \(M\) 是素理想。
+**理由。** <span class="kalax-inline-math">R/M</span> 是域，域一定是整环，因此 <span class="kalax-inline-math">M</span> 是素理想。
 
 ### 定理：域的等价刻画
 
-设 \(R\) 为非零交换环。以下命题等价：
+设 <span class="kalax-inline-math">R</span> 为非零交换环。以下命题等价：
 
-1. \(R\) 是域；
-2. \(R\) 没有非平凡真理想；
-3. \((0)\) 是极大理想；
-4. 任意非零环同态 \(f:R\to S\) 都是单射。
+1. <span class="kalax-inline-math">R</span> 是域；
+2. <span class="kalax-inline-math">R</span> 没有非平凡真理想；
+3. <span class="kalax-inline-math">(0)</span> 是极大理想；
+4. 任意非零环同态 <span class="kalax-inline-math">f:R\to S</span> 都是单射。
 
-**说明。** 若 \(R\) 是域，则任何非零理想含有非零元 \(a\)，而 \(a\) 可逆，所以 \(1=a^{-1}a\) 属于该理想。
+**说明。** 若 <span class="kalax-inline-math">R</span> 是域，则任何非零理想含有非零元 <span class="kalax-inline-math">a</span>，而 <span class="kalax-inline-math">a</span> 可逆，所以 <span class="kalax-inline-math">1=a^{-1}a</span> 属于该理想。
 
 ## 8. 有限直积与中国剩余定理
 
 ### 定理：环的直积
 
-设 \(\{R_i\}_{i\in I}\) 是一族环，则
+设 <span class="kalax-inline-math">\{R_i\}_{i\in I}</span> 是一族环，则
 
-\[
-\prod_{i\in I} R_i
-\]
+<div class="kalax-display-math">\prod_{i\in I} R_i</div>
 
 在逐点加法和乘法下仍为环。
 
 ### 理想的直积
 
-设 \(R=R_1\times\cdots\times R_n\)。若 \(I_i\subseteq R_i\) 是理想，则
+设 <span class="kalax-inline-math">R=R_1\times\cdots\times R_n</span>。若 <span class="kalax-inline-math">I_i\subseteq R_i</span> 是理想，则
 
-\[
-I_1\times\cdots\times I_n
-\]
+<div class="kalax-display-math">I_1\times\cdots\times I_n</div>
 
-是 \(R\) 的理想。反过来，\(R\) 的任意理想 \(I\) 都可写成
+是 <span class="kalax-inline-math">R</span> 的理想。反过来，<span class="kalax-inline-math">R</span> 的任意理想 <span class="kalax-inline-math">I</span> 都可写成
 
-\[
-I=I_1\times\cdots\times I_n,
-\]
+<div class="kalax-display-math">I=I_1\times\cdots\times I_n,</div>
 
 其中
 
-\[
-I_i=\pi_i(I)\subseteq R_i.
-\]
+<div class="kalax-display-math">I_i=\pi_i(I)\subseteq R_i.</div>
 
-证明关键是：若 \(x=(x_1,\dots,x_n)\in I\)，则通过乘以标准幂等元
+证明关键是：若 <span class="kalax-inline-math">x=(x_1,\dots,x_n)\in I</span>，则通过乘以标准幂等元
 
-\[
-e_i=(0,\dots,0,1,0,\dots,0)
-\]
+<div class="kalax-display-math">e_i=(0,\dots,0,1,0,\dots,0)</div>
 
-可得 \((0,\dots,x_i,\dots,0)\in I\)，从而 \(I\) 由各坐标部分生成。
+可得 <span class="kalax-inline-math">(0,\dots,x_i,\dots,0)\in I</span>，从而 <span class="kalax-inline-math">I</span> 由各坐标部分生成。
 
-**详细证明。** 先证明 \(I_1\times\cdots\times I_n\) 是理想。若
+**详细证明。** 先证明 <span class="kalax-inline-math">I_1\times\cdots\times I_n</span> 是理想。若
 
-\[
-x=(x_1,\dots,x_n),\qquad y=(y_1,\dots,y_n)
-\]
+<div class="kalax-display-math">x=(x_1,\dots,x_n),\qquad y=(y_1,\dots,y_n)</div>
 
-属于 \(I_1\times\cdots\times I_n\)，则每个 \(x_i-y_i\in I_i\)，所以 \(x-y\in I_1\times\cdots\times I_n\)。若
+属于 <span class="kalax-inline-math">I_1\times\cdots\times I_n</span>，则每个 <span class="kalax-inline-math">x_i-y_i\in I_i</span>，所以 <span class="kalax-inline-math">x-y\in I_1\times\cdots\times I_n</span>。若
 
-\[
-r=(r_1,\dots,r_n)\in R_1\times\cdots\times R_n,
-\]
+<div class="kalax-display-math">r=(r_1,\dots,r_n)\in R_1\times\cdots\times R_n,</div>
 
 则
 
-\[
-rx=(r_1x_1,\dots,r_nx_n)\in I_1\times\cdots\times I_n,
-\]
+<div class="kalax-display-math">rx=(r_1x_1,\dots,r_nx_n)\in I_1\times\cdots\times I_n,</div>
 
-因为每个 \(I_i\) 是 \(R_i\) 的理想。
+因为每个 <span class="kalax-inline-math">I_i</span> 是 <span class="kalax-inline-math">R_i</span> 的理想。
 
-反过来，设 \(I\triangleleft R_1\times\cdots\times R_n\)。令
+反过来，设 <span class="kalax-inline-math">I\triangleleft R_1\times\cdots\times R_n</span>。令
 
-\[
-I_i=\pi_i(I)=\{x_i:\exists (x_1,\dots,x_n)\in I\}.
-\]
+<div class="kalax-display-math">I_i=\pi_i(I)=\{x_i:\exists (x_1,\dots,x_n)\in I\}.</div>
 
-容易验证 \(I_i\) 是 \(R_i\) 的理想。显然 \(I\subseteq I_1\times\cdots\times I_n\)。为了证明反向包含，取任意
+容易验证 <span class="kalax-inline-math">I_i</span> 是 <span class="kalax-inline-math">R_i</span> 的理想。显然 <span class="kalax-inline-math">I\subseteq I_1\times\cdots\times I_n</span>。为了证明反向包含，取任意
 
-\[
-(a_1,\dots,a_n)\in I_1\times\cdots\times I_n.
-\]
+<div class="kalax-display-math">(a_1,\dots,a_n)\in I_1\times\cdots\times I_n.</div>
 
-对每个 \(i\)，由 \(a_i\in I_i\)，存在 \(u^{(i)}\in I\)，其第 \(i\) 个坐标为 \(a_i\)。用标准幂等元
+对每个 <span class="kalax-inline-math">i</span>，由 <span class="kalax-inline-math">a_i\in I_i</span>，存在 <span class="kalax-inline-math">u^{(i)}\in I</span>，其第 <span class="kalax-inline-math">i</span> 个坐标为 <span class="kalax-inline-math">a_i</span>。用标准幂等元
 
-\[
-e_i=(0,\dots,0,1,0,\dots,0)
-\]
+<div class="kalax-display-math">e_i=(0,\dots,0,1,0,\dots,0)</div>
 
 相乘得
 
-\[
-e_i u^{(i)}=(0,\dots,0,a_i,0,\dots,0)\in I.
-\]
+<div class="kalax-display-math">e_i u^{(i)}=(0,\dots,0,a_i,0,\dots,0)\in I.</div>
 
 将这些元素相加，得到
 
-\[
-(a_1,\dots,a_n)\in I.
-\]
+<div class="kalax-display-math">(a_1,\dots,a_n)\in I.</div>
 
 所以
 
-\[
-I=I_1\times\cdots\times I_n.
-\]
+<div class="kalax-display-math">I=I_1\times\cdots\times I_n.</div>
 
-### 例：\(\mathbb Z\times\mathbb Z\) 中的素理想
+### 例：<span class="kalax-inline-math">\mathbb Z\times\mathbb Z</span> 中的素理想
 
-在 \(R=\mathbb Z\times\mathbb Z\) 中，理想形如 \((a)\times(b)\)。商环为
+在 <span class="kalax-inline-math">R=\mathbb Z\times\mathbb Z</span> 中，理想形如 <span class="kalax-inline-math">(a)\times(b)</span>。商环为
 
-\[
-R/\bigl((a)\times(b)\bigr)
+<div class="kalax-display-math">R/\bigl((a)\times(b)\bigr)
 \cong
-\mathbb Z/(a)\times\mathbb Z/(b).
-\]
+\mathbb Z/(a)\times\mathbb Z/(b).</div>
 
 该商环为整环时，只能其中一个因子为零环，另一个为整环。因此素理想形如
 
-\[
-(p)\times \mathbb Z
+<div class="kalax-display-math">(p)\times \mathbb Z
 \quad\text{或}\quad
-\mathbb Z\times(p),
-\]
+\mathbb Z\times(p),</div>
 
-其中 \(p=0\) 或 \(p\) 为素数。
+其中 <span class="kalax-inline-math">p=0</span> 或 <span class="kalax-inline-math">p</span> 为素数。
 
 ### 定理：中国剩余定理的存在唯一形式
 
-设 \(A_1,\dots,A_n\subseteq R\) 为理想，且两两互素：
+设 <span class="kalax-inline-math">A_1,\dots,A_n\subseteq R</span> 为理想，且两两互素：
 
-\[
-A_i+A_j=R,\qquad i\ne j.
-\]
+<div class="kalax-display-math">A_i+A_j=R,\qquad i\ne j.</div>
 
-则对任意 \(b_1,\dots,b_n\in R\)，存在 \(b\in R\)，使得
+则对任意 <span class="kalax-inline-math">b_1,\dots,b_n\in R</span>，存在 <span class="kalax-inline-math">b\in R</span>，使得
 
-\[
-b\equiv b_i\pmod {A_i},\qquad i=1,\dots,n.
-\]
+<div class="kalax-display-math">b\equiv b_i\pmod {A_i},\qquad i=1,\dots,n.</div>
 
-并且这样的 \(b\) 模
+并且这样的 <span class="kalax-inline-math">b</span> 模
 
-\[
-\bigcap_{i=1}^n A_i
-\]
+<div class="kalax-display-math">\bigcap_{i=1}^n A_i</div>
 
 唯一。
 
-**证明。** 先处理 \(n=2\)。若 \(A_1+A_2=R\)，则存在
+**证明。** 先处理 <span class="kalax-inline-math">n=2</span>。若 <span class="kalax-inline-math">A_1+A_2=R</span>，则存在
 
-\[
-u\in A_1,\qquad v\in A_2
-\]
+<div class="kalax-display-math">u\in A_1,\qquad v\in A_2</div>
 
 使得
 
-\[
-u+v=1.
-\]
+<div class="kalax-display-math">u+v=1.</div>
 
-给定 \(b_1,b_2\in R\)，令
+给定 <span class="kalax-inline-math">b_1,b_2\in R</span>，令
 
-\[
-b=b_1v+b_2u.
-\]
+<div class="kalax-display-math">b=b_1v+b_2u.</div>
 
-因为 \(u\in A_1\)，且 \(v=1-u\equiv1\pmod{A_1}\)，所以
+因为 <span class="kalax-inline-math">u\in A_1</span>，且 <span class="kalax-inline-math">v=1-u\equiv1\pmod{A_1}</span>，所以
 
-\[
-b=b_1v+b_2u\equiv b_1\pmod{A_1}.
-\]
+<div class="kalax-display-math">b=b_1v+b_2u\equiv b_1\pmod{A_1}.</div>
 
-同理，\(v\in A_2\) 且 \(u=1-v\equiv1\pmod{A_2}\)，所以
+同理，<span class="kalax-inline-math">v\in A_2</span> 且 <span class="kalax-inline-math">u=1-v\equiv1\pmod{A_2}</span>，所以
 
-\[
-b\equiv b_2\pmod{A_2}.
-\]
+<div class="kalax-display-math">b\equiv b_2\pmod{A_2}.</div>
 
-一般的 \(n\) 情形可归纳。也可显式构造：对每个 \(i\)，由两两互素可得
+一般的 <span class="kalax-inline-math">n</span> 情形可归纳。也可显式构造：对每个 <span class="kalax-inline-math">i</span>，由两两互素可得
 
-\[
-A_i+\bigcap_{j\ne i}A_j=R.
-\]
+<div class="kalax-display-math">A_i+\bigcap_{j\ne i}A_j=R.</div>
 
 于是取
 
-\[
-e_i\in\bigcap_{j\ne i}A_j,\qquad e_i\equiv1\pmod{A_i}.
-\]
+<div class="kalax-display-math">e_i\in\bigcap_{j\ne i}A_j,\qquad e_i\equiv1\pmod{A_i}.</div>
 
 令
 
-\[
-b=\sum_{i=1}^n b_i e_i.
-\]
+<div class="kalax-display-math">b=\sum_{i=1}^n b_i e_i.</div>
 
-模 \(A_k\) 时，除 \(i=k\) 项外，其他 \(e_i\in A_k\)，而 \(e_k\equiv1\pmod{A_k}\)，所以
+模 <span class="kalax-inline-math">A_k</span> 时，除 <span class="kalax-inline-math">i=k</span> 项外，其他 <span class="kalax-inline-math">e_i\in A_k</span>，而 <span class="kalax-inline-math">e_k\equiv1\pmod{A_k}</span>，所以
 
-\[
-b\equiv b_k\pmod{A_k}.
-\]
+<div class="kalax-display-math">b\equiv b_k\pmod{A_k}.</div>
 
-唯一性：若 \(b,b'\) 都满足这些同余，则对所有 \(i\)，
+唯一性：若 <span class="kalax-inline-math">b,b'</span> 都满足这些同余，则对所有 <span class="kalax-inline-math">i</span>，
 
-\[
-b-b'\in A_i.
-\]
+<div class="kalax-display-math">b-b'\in A_i.</div>
 
 故
 
-\[
-b-b'\in\bigcap_i A_i.
-\]
+<div class="kalax-display-math">b-b'\in\bigcap_i A_i.</div>
 
-也就是说 \(b\) 模 \(\bigcap_iA_i\) 唯一。
+也就是说 <span class="kalax-inline-math">b</span> 模 <span class="kalax-inline-math">\bigcap_iA_i</span> 唯一。
 
 ### 中国剩余定理的商环形式
 
-若 \(A_1,\dots,A_n\) 两两互素，则自然同态
+若 <span class="kalax-inline-math">A_1,\dots,A_n</span> 两两互素，则自然同态
 
-\[
-\varphi:R\longrightarrow \prod_{i=1}^n R/A_i,\qquad
-x\longmapsto (x+A_1,\dots,x+A_n)
-\]
+<div class="kalax-display-math">\varphi:R\longrightarrow \prod_{i=1}^n R/A_i,\qquad
+x\longmapsto (x+A_1,\dots,x+A_n)</div>
 
 诱导同构
 
-\[
-R/\bigcap_{i=1}^n A_i
+<div class="kalax-display-math">R/\bigcap_{i=1}^n A_i
 \cong
-\prod_{i=1}^n R/A_i.
-\]
+\prod_{i=1}^n R/A_i.</div>
 
 **证明。** 自然同态
 
-\[
-\varphi:R\to\prod_i R/A_i,\qquad
-x\mapsto (x+A_1,\dots,x+A_n)
-\]
+<div class="kalax-display-math">\varphi:R\to\prod_i R/A_i,\qquad
+x\mapsto (x+A_1,\dots,x+A_n)</div>
 
 的核为
 
-\[
-\ker\varphi=\bigcap_i A_i.
-\]
+<div class="kalax-display-math">\ker\varphi=\bigcap_i A_i.</div>
 
-由中国剩余定理的存在性，\(\varphi\) 是满射：任意给定
+由中国剩余定理的存在性，<span class="kalax-inline-math">\varphi</span> 是满射：任意给定
 
-\[
-(b_1+A_1,\dots,b_n+A_n)
-\]
+<div class="kalax-display-math">(b_1+A_1,\dots,b_n+A_n)</div>
 
-都可找到 \(b\in R\)，使 \(b\equiv b_i\pmod{A_i}\)，所以 \(\varphi(b)\) 正是该元素。由第一同构定理，
+都可找到 <span class="kalax-inline-math">b\in R</span>，使 <span class="kalax-inline-math">b\equiv b_i\pmod{A_i}</span>，所以 <span class="kalax-inline-math">\varphi(b)</span> 正是该元素。由第一同构定理，
 
-\[
-R/\ker\varphi\cong \operatorname{Im}\varphi
-=\prod_iR/A_i.
-\]
+<div class="kalax-display-math">R/\ker\varphi\cong \operatorname{Im}\varphi
+=\prod_iR/A_i.</div>
 
 ### 例
 
-求整数 \(b\) 使
+求整数 <span class="kalax-inline-math">b</span> 使
 
-\[
-b\equiv 2\pmod 5,\qquad b\equiv 3\pmod 6.
-\]
+<div class="kalax-display-math">b\equiv 2\pmod 5,\qquad b\equiv 3\pmod 6.</div>
 
-由于 \((5,6)=1\)，解模 \(30\) 唯一。可取
+由于 <span class="kalax-inline-math">(5,6)=1</span>，解模 <span class="kalax-inline-math">30</span> 唯一。可取
 
-\[
-b\equiv 27\pmod {30}.
-\]
+<div class="kalax-display-math">b\equiv 27\pmod {30}.</div>
 
 ## 9. 交换环中的因子分解
 
 ### 定义：整除与相伴
 
-设 \(R\) 为交换环，\(a,b\in R\)。
+设 <span class="kalax-inline-math">R</span> 为交换环，<span class="kalax-inline-math">a,b\in R</span>。
 
-1. 若存在 \(x\in R\) 使 \(ax=b\)，则称 \(a\) 整除 \(b\)，记作 \(a\mid b\)。
-2. 若 \(a\mid b\) 且 \(b\mid a\)，则称 \(a,b\) **相伴**，记作 \(a\sim b\)。
+1. 若存在 <span class="kalax-inline-math">x\in R</span> 使 <span class="kalax-inline-math">ax=b</span>，则称 <span class="kalax-inline-math">a</span> 整除 <span class="kalax-inline-math">b</span>，记作 <span class="kalax-inline-math">a\mid b</span>。
+2. 若 <span class="kalax-inline-math">a\mid b</span> 且 <span class="kalax-inline-math">b\mid a</span>，则称 <span class="kalax-inline-math">a,b</span> **相伴**，记作 <span class="kalax-inline-math">a\sim b</span>。
 
 在有单位整环中，
 
-\[
-a\sim b
+<div class="kalax-display-math">a\sim b
 \iff
 (a)=(b)
 \iff
-a=ub\text{ for some }u\in R^\times.
-\]
+a=ub\text{ for some }u\in R^\times.</div>
 
-**证明。** 若 \(a\sim b\)，则 \(a\mid b\) 且 \(b\mid a\)。由 \(a\mid b\) 得 \(b=ra\)，所以 \((b)\subseteq(a)\)；由 \(b\mid a\) 得 \(a=sb\)，所以 \((a)\subseteq(b)\)，故 \((a)=(b)\)。
+**证明。** 若 <span class="kalax-inline-math">a\sim b</span>，则 <span class="kalax-inline-math">a\mid b</span> 且 <span class="kalax-inline-math">b\mid a</span>。由 <span class="kalax-inline-math">a\mid b</span> 得 <span class="kalax-inline-math">b=ra</span>，所以 <span class="kalax-inline-math">(b)\subseteq(a)</span>；由 <span class="kalax-inline-math">b\mid a</span> 得 <span class="kalax-inline-math">a=sb</span>，所以 <span class="kalax-inline-math">(a)\subseteq(b)</span>，故 <span class="kalax-inline-math">(a)=(b)</span>。
 
-若 \((a)=(b)\)，则 \(a\in(b)\) 且 \(b\in(a)\)，所以存在 \(r,s\in R\) 使
+若 <span class="kalax-inline-math">(a)=(b)</span>，则 <span class="kalax-inline-math">a\in(b)</span> 且 <span class="kalax-inline-math">b\in(a)</span>，所以存在 <span class="kalax-inline-math">r,s\in R</span> 使
 
-\[
-a=rb,\qquad b=sa.
-\]
+<div class="kalax-display-math">a=rb,\qquad b=sa.</div>
 
 代入得
 
-\[
-a=rsa.
-\]
+<div class="kalax-display-math">a=rsa.</div>
 
-若 \(a\ne0\)，因 \(R\) 是整环可消去 \(a\)，得到 \(rs=1\)，所以 \(r\) 是单位，\(a=rb\)。若 \(a=0\)，则 \((a)=(b)\) 推出 \(b=0\)，结论也成立。
+若 <span class="kalax-inline-math">a\ne0</span>，因 <span class="kalax-inline-math">R</span> 是整环可消去 <span class="kalax-inline-math">a</span>，得到 <span class="kalax-inline-math">rs=1</span>，所以 <span class="kalax-inline-math">r</span> 是单位，<span class="kalax-inline-math">a=rb</span>。若 <span class="kalax-inline-math">a=0</span>，则 <span class="kalax-inline-math">(a)=(b)</span> 推出 <span class="kalax-inline-math">b=0</span>，结论也成立。
 
-若 \(a=ub\) 且 \(u\) 是单位，则 \(a\mid b\) 与 \(b\mid a\) 都成立。
+若 <span class="kalax-inline-math">a=ub</span> 且 <span class="kalax-inline-math">u</span> 是单位，则 <span class="kalax-inline-math">a\mid b</span> 与 <span class="kalax-inline-math">b\mid a</span> 都成立。
 
 ### 定义：不可约元、素元、可约元
 
-设 \(R\) 为整环。
+设 <span class="kalax-inline-math">R</span> 为整环。
 
-1. 非零非单位元 \(c\in R\) 称为**不可约元**，若 \(c=ab\) 推出 \(a\) 或 \(b\) 是单位。
-2. 非零非单位元 \(p\in R\) 称为**素元**，若
+1. 非零非单位元 <span class="kalax-inline-math">c\in R</span> 称为**不可约元**，若 <span class="kalax-inline-math">c=ab</span> 推出 <span class="kalax-inline-math">a</span> 或 <span class="kalax-inline-math">b</span> 是单位。
+2. 非零非单位元 <span class="kalax-inline-math">p\in R</span> 称为**素元**，若
 
-   \[
-p\mid ab\Rightarrow p\mid a\text{ 或 }p\mid b.
-\]
+   <div class="kalax-display-math">p\mid ab\Rightarrow p\mid a\text{ 或 }p\mid b.</div>
 
-3. 非零非单位元 \(c\) 称为**可约元**，若 \(c=ab\)，其中 \(a,b\) 都不是单位。
+3. 非零非单位元 <span class="kalax-inline-math">c</span> 称为**可约元**，若 <span class="kalax-inline-math">c=ab</span>，其中 <span class="kalax-inline-math">a,b</span> 都不是单位。
 
 ### 例
 
-1. 在 \(\mathbb Z\) 中，不可约元等价于素元。
-2. 在 \(\mathbb Z/6\mathbb Z\) 中，\(\overline 2\) 是素元的直观判别会失效，因为环有零因子；因此素元概念通常放在整环中使用。
+1. 在 <span class="kalax-inline-math">\mathbb Z</span> 中，不可约元等价于素元。
+2. 在 <span class="kalax-inline-math">\mathbb Z/6\mathbb Z</span> 中，<span class="kalax-inline-math">\overline 2</span> 是素元的直观判别会失效，因为环有零因子；因此素元概念通常放在整环中使用。
 3. 在
 
-   \[
-R=\mathbb Z[\sqrt{-3}]
+   <div class="kalax-display-math">R=\mathbb Z[\sqrt{-3}]
    =
-   \{a+b\sqrt{-3}:a,b\in\mathbb Z\}
-\]
+   \{a+b\sqrt{-3}:a,b\in\mathbb Z\}</div>
 
-   中，\(1+\sqrt{-3}\) 可为不可约元，但不是素元。因为
+   中，<span class="kalax-inline-math">1+\sqrt{-3}</span> 可为不可约元，但不是素元。因为
 
-   \[
-1+\sqrt{-3}\mid 4=(1+\sqrt{-3})(1-\sqrt{-3}),
-\]
+   <div class="kalax-display-math">1+\sqrt{-3}\mid 4=(1+\sqrt{-3})(1-\sqrt{-3}),</div>
 
-   但它不整除 \(2\)。
+   但它不整除 <span class="kalax-inline-math">2</span>。
 
 ### 定理：素元与素理想
 
-设 \(R\) 为整环，\(x\in R\) 非零非单位。则
+设 <span class="kalax-inline-math">R</span> 为整环，<span class="kalax-inline-math">x\in R</span> 非零非单位。则
 
-\[
-x \text{ 是素元}
+<div class="kalax-display-math">x \text{ 是素元}
 \iff
-(x) \text{ 是素理想}.
-\]
+(x) \text{ 是素理想}.</div>
 
-**证明。** 设 \(x\) 是素元。若 \(ab\in(x)\)，则 \(x\mid ab\)。由素元定义，\(x\mid a\) 或 \(x\mid b\)，即 \(a\in(x)\) 或 \(b\in(x)\)。又因为 \(x\) 非单位，所以 \((x)\ne R\)，故 \((x)\) 是素理想。
+**证明。** 设 <span class="kalax-inline-math">x</span> 是素元。若 <span class="kalax-inline-math">ab\in(x)</span>，则 <span class="kalax-inline-math">x\mid ab</span>。由素元定义，<span class="kalax-inline-math">x\mid a</span> 或 <span class="kalax-inline-math">x\mid b</span>，即 <span class="kalax-inline-math">a\in(x)</span> 或 <span class="kalax-inline-math">b\in(x)</span>。又因为 <span class="kalax-inline-math">x</span> 非单位，所以 <span class="kalax-inline-math">(x)\ne R</span>，故 <span class="kalax-inline-math">(x)</span> 是素理想。
 
-反过来，设 \((x)\) 是素理想。若 \(x\mid ab\)，则 \(ab\in(x)\)。由素理想定义，\(a\in(x)\) 或 \(b\in(x)\)，即 \(x\mid a\) 或 \(x\mid b\)。所以 \(x\) 是素元。
+反过来，设 <span class="kalax-inline-math">(x)</span> 是素理想。若 <span class="kalax-inline-math">x\mid ab</span>，则 <span class="kalax-inline-math">ab\in(x)</span>。由素理想定义，<span class="kalax-inline-math">a\in(x)</span> 或 <span class="kalax-inline-math">b\in(x)</span>，即 <span class="kalax-inline-math">x\mid a</span> 或 <span class="kalax-inline-math">x\mid b</span>。所以 <span class="kalax-inline-math">x</span> 是素元。
 
 ### 定理：不可约元与主理想的极大性
 
-设 \(R\) 为整环，\(x\in R\) 非零非单位。若主理想 \((x)\) 在所有真主理想中极大，则 \(x\) 不可约。
+设 <span class="kalax-inline-math">R</span> 为整环，<span class="kalax-inline-math">x\in R</span> 非零非单位。若主理想 <span class="kalax-inline-math">(x)</span> 在所有真主理想中极大，则 <span class="kalax-inline-math">x</span> 不可约。
 
-若 \(R\) 是 PID，则反过来也成立。因此在 PID 中，
+若 <span class="kalax-inline-math">R</span> 是 PID，则反过来也成立。因此在 PID 中，
 
-\[
-x\text{ 不可约}
+<div class="kalax-display-math">x\text{ 不可约}
 \iff
-(x)\text{ 是真主理想中的极大元}.
-\]
+(x)\text{ 是真主理想中的极大元}.</div>
 
 进一步，在 PID 中不可约元都是素元。
 
-**证明。** 先证一般方向。若 \((x)\) 在所有真主理想中极大，且
+**证明。** 先证一般方向。若 <span class="kalax-inline-math">(x)</span> 在所有真主理想中极大，且
 
-\[
-x=ab.
-\]
+<div class="kalax-display-math">x=ab.</div>
 
-则 \((x)\subseteq(a)\)，因为 \(x=ab\in(a)\)。若 \(a\) 不是单位，则 \((a)\ne R\)；由极大性，\((a)=(x)\)。于是 \(a=ux\) 对某个 \(u\in R\) 成立。代入 \(x=ab\) 得
+则 <span class="kalax-inline-math">(x)\subseteq(a)</span>，因为 <span class="kalax-inline-math">x=ab\in(a)</span>。若 <span class="kalax-inline-math">a</span> 不是单位，则 <span class="kalax-inline-math">(a)\ne R</span>；由极大性，<span class="kalax-inline-math">(a)=(x)</span>。于是 <span class="kalax-inline-math">a=ux</span> 对某个 <span class="kalax-inline-math">u\in R</span> 成立。代入 <span class="kalax-inline-math">x=ab</span> 得
 
-\[
-x=uxb.
-\]
+<div class="kalax-display-math">x=uxb.</div>
 
-由于 \(R\) 是整环且 \(x\ne0\)，消去 \(x\) 得 \(1=ub\)，所以 \(b\) 是单位。因此 \(x\) 不可约。
+由于 <span class="kalax-inline-math">R</span> 是整环且 <span class="kalax-inline-math">x\ne0</span>，消去 <span class="kalax-inline-math">x</span> 得 <span class="kalax-inline-math">1=ub</span>，所以 <span class="kalax-inline-math">b</span> 是单位。因此 <span class="kalax-inline-math">x</span> 不可约。
 
-现在设 \(R\) 是 PID 且 \(x\) 不可约。若
+现在设 <span class="kalax-inline-math">R</span> 是 PID 且 <span class="kalax-inline-math">x</span> 不可约。若
 
-\[
-(x)\subseteq(a)\subsetneq R,
-\]
+<div class="kalax-display-math">(x)\subseteq(a)\subsetneq R,</div>
 
-则 \(x=ab\) 对某个 \(b\in R\) 成立。因为 \(x\) 不可约，\(a\) 或 \(b\) 是单位。若 \(a\) 是单位，则 \((a)=R\)，与 \((a)\subsetneq R\) 矛盾；故 \(b\) 是单位，于是 \((a)=(x)\)。因此 \((x)\) 在真主理想中极大。
+则 <span class="kalax-inline-math">x=ab</span> 对某个 <span class="kalax-inline-math">b\in R</span> 成立。因为 <span class="kalax-inline-math">x</span> 不可约，<span class="kalax-inline-math">a</span> 或 <span class="kalax-inline-math">b</span> 是单位。若 <span class="kalax-inline-math">a</span> 是单位，则 <span class="kalax-inline-math">(a)=R</span>，与 <span class="kalax-inline-math">(a)\subsetneq R</span> 矛盾；故 <span class="kalax-inline-math">b</span> 是单位，于是 <span class="kalax-inline-math">(a)=(x)</span>。因此 <span class="kalax-inline-math">(x)</span> 在真主理想中极大。
 
-最后说明 PID 中不可约元是素元。若 \(x\) 不可约，则 \((x)\) 在真理想中极大；PID 中所有理想都是主理想，所以 \((x)\) 是极大理想。极大理想是素理想，因此由上一条定理，\(x\) 是素元。
+最后说明 PID 中不可约元是素元。若 <span class="kalax-inline-math">x</span> 不可约，则 <span class="kalax-inline-math">(x)</span> 在真理想中极大；PID 中所有理想都是主理想，所以 <span class="kalax-inline-math">(x)</span> 是极大理想。极大理想是素理想，因此由上一条定理，<span class="kalax-inline-math">x</span> 是素元。
 
 ### 定义：唯一分解整环
 
-整环 \(R\) 称为**唯一分解整环**（UFD），若任意非零非单位元 \(x\in R\) 都可写成
+整环 <span class="kalax-inline-math">R</span> 称为**唯一分解整环**（UFD），若任意非零非单位元 <span class="kalax-inline-math">x\in R</span> 都可写成
 
-\[
-x=p_1p_2\cdots p_n,
-\]
+<div class="kalax-display-math">x=p_1p_2\cdots p_n,</div>
 
-其中 \(p_i\) 为不可约元；并且若
+其中 <span class="kalax-inline-math">p_i</span> 为不可约元；并且若
 
-\[
-x=q_1q_2\cdots q_m
-\]
+<div class="kalax-display-math">x=q_1q_2\cdots q_m</div>
 
-也是不可约分解，则 \(m=n\)，且在重排后 \(p_i\sim q_i\)。
+也是不可约分解，则 <span class="kalax-inline-math">m=n</span>，且在重排后 <span class="kalax-inline-math">p_i\sim q_i</span>。
 
 ### 例
 
-\[
-\mathbb Z,\quad \mathbb C[x],\quad \mathbb F[x]
-\]
+<div class="kalax-display-math">\mathbb Z,\quad \mathbb C[x],\quad \mathbb F[x]</div>
 
-都是 UFD。\(\mathbb Z[\sqrt{-3}]\) 不是 UFD。
+都是 UFD。<span class="kalax-inline-math">\mathbb Z[\sqrt{-3}]</span> 不是 UFD。
 
 ### 引理：PID 中主理想升链稳定
 
-若 \(R\) 是 PID，且
+若 <span class="kalax-inline-math">R</span> 是 PID，且
 
-\[
-(a_1)\subseteq(a_2)\subseteq\cdots
-\]
+<div class="kalax-display-math">(a_1)\subseteq(a_2)\subseteq\cdots</div>
 
-是一条主理想升链，则存在 \(n\)，使得对所有 \(i\ge n\)，
+是一条主理想升链，则存在 <span class="kalax-inline-math">n</span>，使得对所有 <span class="kalax-inline-math">i\ge n</span>，
 
-\[
-(a_i)=(a_n).
-\]
+<div class="kalax-display-math">(a_i)=(a_n).</div>
 
 **证明。** 令
 
-\[
-A=\bigcup_i (a_i).
-\]
+<div class="kalax-display-math">A=\bigcup_i (a_i).</div>
 
-则 \(A\) 是理想。因 \(R\) 是 PID，存在 \(a\in R\) 使 \(A=(a)\)。于是 \(a\in(a_n)\) 对某个 \(n\) 成立，从而
+则 <span class="kalax-inline-math">A</span> 是理想。因 <span class="kalax-inline-math">R</span> 是 PID，存在 <span class="kalax-inline-math">a\in R</span> 使 <span class="kalax-inline-math">A=(a)</span>。于是 <span class="kalax-inline-math">a\in(a_n)</span> 对某个 <span class="kalax-inline-math">n</span> 成立，从而
 
-\[
-A=(a)\subseteq(a_n)\subseteq A.
-\]
+<div class="kalax-display-math">A=(a)\subseteq(a_n)\subseteq A.</div>
 
-故 \((a_i)=(a_n)\) 对 \(i\ge n\) 成立。
+故 <span class="kalax-inline-math">(a_i)=(a_n)</span> 对 <span class="kalax-inline-math">i\ge n</span> 成立。
 
 ### 定理：PID 是 UFD
 
-若 \(R\) 是 PID，则 \(R\) 是 UFD。
+若 <span class="kalax-inline-math">R</span> 是 PID，则 <span class="kalax-inline-math">R</span> 是 UFD。
 
 **详细证明。**
 
-1. **存在性。** 若 \(x\) 不可约则结束。若 \(x=ab\) 且 \(a,b\) 都非单位，则继续分解。若该过程不停止，会得到严格升链
+1. **存在性。** 若 <span class="kalax-inline-math">x</span> 不可约则结束。若 <span class="kalax-inline-math">x=ab</span> 且 <span class="kalax-inline-math">a,b</span> 都非单位，则继续分解。若该过程不停止，会得到严格升链
 
-   \[
-(x)\subsetneq(a_1)\subsetneq(a_2)\subsetneq\cdots,
-\]
+   <div class="kalax-display-math">(x)\subsetneq(a_1)\subsetneq(a_2)\subsetneq\cdots,</div>
 
    与升链稳定引理矛盾。
 
-   更具体地，取非零非单位元 \(x\)。若 \(x\) 不可约，已经得到分解。若可约，则
+   更具体地，取非零非单位元 <span class="kalax-inline-math">x</span>。若 <span class="kalax-inline-math">x</span> 不可约，已经得到分解。若可约，则
 
-   \[
-x=a_1b_1
-\]
+   <div class="kalax-display-math">x=a_1b_1</div>
 
-   且 \(a_1,b_1\) 都非单位。若 \(a_1,b_1\) 都能分解成不可约元，则 \(x\) 也能分解。否则选一个仍可约的因子，例如 \(a_1\)，继续写
+   且 <span class="kalax-inline-math">a_1,b_1</span> 都非单位。若 <span class="kalax-inline-math">a_1,b_1</span> 都能分解成不可约元，则 <span class="kalax-inline-math">x</span> 也能分解。否则选一个仍可约的因子，例如 <span class="kalax-inline-math">a_1</span>，继续写
 
-   \[
-a_1=a_2b_2.
-\]
+   <div class="kalax-display-math">a_1=a_2b_2.</div>
 
-   因为 \(b_2\) 非单位，所以
+   因为 <span class="kalax-inline-math">b_2</span> 非单位，所以
 
-   \[
-(a_1)\subsetneq(a_2).
-\]
+   <div class="kalax-display-math">(a_1)\subsetneq(a_2).</div>
 
    若这个过程无限继续，就得到严格升链
 
-   \[
-(x)\subsetneq(a_1)\subsetneq(a_2)\subsetneq\cdots,
-\]
+   <div class="kalax-display-math">(x)\subsetneq(a_1)\subsetneq(a_2)\subsetneq\cdots,</div>
 
    这和 PID 中主理想升链稳定矛盾。所以分解过程必须停止，存在不可约分解。
 
 2. **唯一性。** 在 PID 中不可约元为素元。若
 
-   \[
-p_1\cdots p_m=q_1\cdots q_n
-\]
+   <div class="kalax-display-math">p_1\cdots p_m=q_1\cdots q_n</div>
 
-   是两种不可约分解，则 \(p_1\) 整除右边乘积。因为 \(p_1\) 是素元，\(p_1\) 整除某个 \(q_j\)。重排后设 \(p_1\mid q_1\)。由于 \(q_1\) 不可约，且 \(p_1\) 非单位，得
+   是两种不可约分解，则 <span class="kalax-inline-math">p_1</span> 整除右边乘积。因为 <span class="kalax-inline-math">p_1</span> 是素元，<span class="kalax-inline-math">p_1</span> 整除某个 <span class="kalax-inline-math">q_j</span>。重排后设 <span class="kalax-inline-math">p_1\mid q_1</span>。由于 <span class="kalax-inline-math">q_1</span> 不可约，且 <span class="kalax-inline-math">p_1</span> 非单位，得
 
-   \[
-q_1=u p_1
-\]
+   <div class="kalax-display-math">q_1=u p_1</div>
 
-   对某个单位 \(u\) 成立，即 \(q_1\sim p_1\)。将等式中的 \(p_1\) 消去，得到
+   对某个单位 <span class="kalax-inline-math">u</span> 成立，即 <span class="kalax-inline-math">q_1\sim p_1</span>。将等式中的 <span class="kalax-inline-math">p_1</span> 消去，得到
 
-   \[
-p_2\cdots p_m=(u q_2)\cdots q_n
-\]
+   <div class="kalax-display-math">p_2\cdots p_m=(u q_2)\cdots q_n</div>
 
-   或等价地继续比较剩余因子。对因子个数归纳，得到 \(m=n\)，且重排后 \(p_i\sim q_i\)。
+   或等价地继续比较剩余因子。对因子个数归纳，得到 <span class="kalax-inline-math">m=n</span>，且重排后 <span class="kalax-inline-math">p_i\sim q_i</span>。
 
 ## 10. Euclidean Domain 与最大公因子
 
 ### 定义：Euclidean Domain
 
-整环 \(R\) 称为**欧几里得整环**，若存在函数
+整环 <span class="kalax-inline-math">R</span> 称为**欧几里得整环**，若存在函数
 
-\[
-N:R\setminus\{0\}\to\mathbb Z_{\ge 0}
-\]
+<div class="kalax-display-math">N:R\setminus\{0\}\to\mathbb Z_{\ge 0}</div>
 
-使得对任意 \(a,b\in R\)，\(b\ne 0\)，存在 \(q,r\in R\) 满足
+使得对任意 <span class="kalax-inline-math">a,b\in R</span>，<span class="kalax-inline-math">b\ne 0</span>，存在 <span class="kalax-inline-math">q,r\in R</span> 满足
 
-\[
-a=qb+r,\qquad r=0\text{ 或 }N(r)<N(b).
-\]
+<div class="kalax-display-math">a=qb+r,\qquad r=0\text{ 或 }N(r)&lt;N(b).</div>
 
-其中 \(q,r\) 分别称为商和余数。
+其中 <span class="kalax-inline-math">q,r</span> 分别称为商和余数。
 
 ### 例
 
-1. \(\mathbb Z\) 是欧几里得整环，取 \(N(n)=|n|\)。
+1. <span class="kalax-inline-math">\mathbb Z</span> 是欧几里得整环，取 <span class="kalax-inline-math">N(n)=|n|</span>。
 2. Gaussian integers
 
-   \[
-\mathbb Z[i]=\{a+bi:a,b\in\mathbb Z\}
-\]
+   <div class="kalax-display-math">\mathbb Z[i]=\{a+bi:a,b\in\mathbb Z\}</div>
 
    是欧几里得整环，可取
 
-   \[
-N(a+bi)=a^2+b^2.
-\]
+   <div class="kalax-display-math">N(a+bi)=a^2+b^2.</div>
 
 ### 定理：欧几里得整环是 PID
 
-若 \(R\) 是欧几里得整环，则 \(R\) 是 PID。
+若 <span class="kalax-inline-math">R</span> 是欧几里得整环，则 <span class="kalax-inline-math">R</span> 是 PID。
 
 **证明。**
 
-令 \(I\subseteq R\) 为非零理想。取 \(a\in I\)，使得 \(N(a)\) 在 \(I\setminus\{0\}\) 中最小。任取 \(b\in I\)，由带余除法
+令 <span class="kalax-inline-math">I\subseteq R</span> 为非零理想。取 <span class="kalax-inline-math">a\in I</span>，使得 <span class="kalax-inline-math">N(a)</span> 在 <span class="kalax-inline-math">I\setminus\{0\}</span> 中最小。任取 <span class="kalax-inline-math">b\in I</span>，由带余除法
 
-\[
-b=qa+r,\qquad r=0\text{ 或 }N(r)<N(a).
-\]
+<div class="kalax-display-math">b=qa+r,\qquad r=0\text{ 或 }N(r)&lt;N(a).</div>
 
-因为 \(r=b-qa\in I\)，由 \(N(a)\) 的极小性得 \(r=0\)。故 \(b\in(a)\)，所以 \(I=(a)\)。
+因为 <span class="kalax-inline-math">r=b-qa\in I</span>，由 <span class="kalax-inline-math">N(a)</span> 的极小性得 <span class="kalax-inline-math">r=0</span>。故 <span class="kalax-inline-math">b\in(a)</span>，所以 <span class="kalax-inline-math">I=(a)</span>。
 
 ### 最大公因子
 
-设 \(R\) 为交换环，\(X\subseteq R\)。若 \(d\in R\) 满足：
+设 <span class="kalax-inline-math">R</span> 为交换环，<span class="kalax-inline-math">X\subseteq R</span>。若 <span class="kalax-inline-math">d\in R</span> 满足：
 
-1. \(d\mid x\) 对所有 \(x\in X\) 成立；
-2. 若 \(c\mid x\) 对所有 \(x\in X\) 成立，则 \(c\mid d\)，
+1. <span class="kalax-inline-math">d\mid x</span> 对所有 <span class="kalax-inline-math">x\in X</span> 成立；
+2. 若 <span class="kalax-inline-math">c\mid x</span> 对所有 <span class="kalax-inline-math">x\in X</span> 成立，则 <span class="kalax-inline-math">c\mid d</span>，
 
-则称 \(d\) 为 \(X\) 的一个**最大公因子**，记作 \(\gcd(X)\)。在一般环中最大公因子不一定存在。
+则称 <span class="kalax-inline-math">d</span> 为 <span class="kalax-inline-math">X</span> 的一个**最大公因子**，记作 <span class="kalax-inline-math">\gcd(X)</span>。在一般环中最大公因子不一定存在。
 
-若 \(R\) 是 PID，则任意有限集合 \(\{a_1,\dots,a_n\}\) 的最大公因子存在，并且可写成线性组合：
+若 <span class="kalax-inline-math">R</span> 是 PID，则任意有限集合 <span class="kalax-inline-math">\{a_1,\dots,a_n\}</span> 的最大公因子存在，并且可写成线性组合：
 
-\[
-d=r_1a_1+\cdots+r_na_n.
-\]
+<div class="kalax-display-math">d=r_1a_1+\cdots+r_na_n.</div>
 
-若 \(R\) 是 UFD，则最大公因子也存在：把各 \(a_i\) 分解成不可约元的乘积，取各不可约元指数的最小值即可。
+若 <span class="kalax-inline-math">R</span> 是 UFD，则最大公因子也存在：把各 <span class="kalax-inline-math">a_i</span> 分解成不可约元的乘积，取各不可约元指数的最小值即可。
 
 ## 11. 分式域
 
 ### 分式域的构造
 
-设 \(R\) 是整环。考虑集合
+设 <span class="kalax-inline-math">R</span> 是整环。考虑集合
 
-\[
-R\times(R\setminus\{0\}).
-\]
+<div class="kalax-display-math">R\times(R\setminus\{0\}).</div>
 
 定义等价关系
 
-\[
-(r,s)\sim(r',s')
+<div class="kalax-display-math">(r,s)\sim(r',s')
 \iff
-rs'=r's.
-\]
+rs'=r's.</div>
 
-记 \((r,s)\) 的等价类为
+记 <span class="kalax-inline-math">(r,s)</span> 的等价类为
 
-\[
-\frac r s.
-\]
+<div class="kalax-display-math">\frac r s.</div>
 
-所有等价类构成 \(R\) 的**分式域**，记作 \(\operatorname{Frac}(R)\)。
+所有等价类构成 <span class="kalax-inline-math">R</span> 的**分式域**，记作 <span class="kalax-inline-math">\operatorname{Frac}(R)</span>。
 
 加法与乘法定义为
 
-\[
-\frac a b+\frac c d=\frac{ad+bc}{bd},
+<div class="kalax-display-math">\frac a b+\frac c d=\frac{ad+bc}{bd},
 \qquad
-\frac a b\cdot \frac c d=\frac{ac}{bd}.
-\]
+\frac a b\cdot \frac c d=\frac{ac}{bd}.</div>
 
 ### 定理
 
-若 \(R\) 是整环，则 \(\operatorname{Frac}(R)\) 是域，并且 \(R\) 可自然嵌入其中：
+若 <span class="kalax-inline-math">R</span> 是整环，则 <span class="kalax-inline-math">\operatorname{Frac}(R)</span> 是域，并且 <span class="kalax-inline-math">R</span> 可自然嵌入其中：
 
-\[
-R\hookrightarrow \operatorname{Frac}(R),\qquad
-r\mapsto \frac r1.
-\]
+<div class="kalax-display-math">R\hookrightarrow \operatorname{Frac}(R),\qquad
+r\mapsto \frac r1.</div>
 
-**证明。** 先验证 \(\sim\) 是等价关系。自反性和对称性直接成立。若
+**证明。** 先验证 <span class="kalax-inline-math">\sim</span> 是等价关系。自反性和对称性直接成立。若
 
-\[
-(r,s)\sim(r',s'),\qquad (r',s')\sim(r'',s''),
-\]
+<div class="kalax-display-math">(r,s)\sim(r',s'),\qquad (r',s')\sim(r'',s''),</div>
 
 则
 
-\[
-rs'=r's,\qquad r's''=r''s'.
-\]
+<div class="kalax-display-math">rs'=r's,\qquad r's''=r''s'.</div>
 
-两式分别乘以 \(s''\) 和 \(s\)，得到
+两式分别乘以 <span class="kalax-inline-math">s''</span> 和 <span class="kalax-inline-math">s</span>，得到
 
-\[
-rs's''=r'ss'',\qquad r'ss''=r''s's.
-\]
+<div class="kalax-display-math">rs's''=r'ss'',\qquad r'ss''=r''s's.</div>
 
-所以 \(rs's''=r''s's\)。由于 \(s'\ne0\) 且 \(R\) 是整环，可消去 \(s'\)，得
+所以 <span class="kalax-inline-math">rs's''=r''s's</span>。由于 <span class="kalax-inline-math">s'\ne0</span> 且 <span class="kalax-inline-math">R</span> 是整环，可消去 <span class="kalax-inline-math">s'</span>，得
 
-\[
-rs''=r''s.
-\]
+<div class="kalax-display-math">rs''=r''s.</div>
 
-因此 \((r,s)\sim(r'',s'')\)。
+因此 <span class="kalax-inline-math">(r,s)\sim(r'',s'')</span>。
 
 再验证运算良定义。若
 
-\[
-\frac a b=\frac {a'}{b'},\qquad
-\frac c d=\frac {c'}{d'},
-\]
+<div class="kalax-display-math">\frac a b=\frac {a'}{b'},\qquad
+\frac c d=\frac {c'}{d'},</div>
 
-即 \(ab'=a'b\) 且 \(cd'=c'd\)，则
+即 <span class="kalax-inline-math">ab'=a'b</span> 且 <span class="kalax-inline-math">cd'=c'd</span>，则
 
-\[
-(ad+bc)b'd'
+<div class="kalax-display-math">(ad+bc)b'd'
 =adb'd'+bcb'd'
 =a'bd d'+bb'c'd
-=(a'd'+b'c')bd.
-\]
+=(a'd'+b'c')bd.</div>
 
 所以
 
-\[
-\frac{ad+bc}{bd}
+<div class="kalax-display-math">\frac{ad+bc}{bd}
 =
-\frac{a'd'+b'c'}{b'd'}.
-\]
+\frac{a'd'+b'c'}{b'd'}.</div>
 
 乘法良定义类似：
 
-\[
-acb'd'=a'c'bd.
-\]
+<div class="kalax-display-math">acb'd'=a'c'bd.</div>
 
-域公理中的结合律、交换律和分配律都由 \(R\) 中相应性质推出。若 \(\frac a b\ne0\)，则 \(a\ne0\)，故
+域公理中的结合律、交换律和分配律都由 <span class="kalax-inline-math">R</span> 中相应性质推出。若 <span class="kalax-inline-math">\frac a b\ne0</span>，则 <span class="kalax-inline-math">a\ne0</span>，故
 
-\[
-\left(\frac a b\right)^{-1}=\frac b a.
-\]
+<div class="kalax-display-math">\left(\frac a b\right)^{-1}=\frac b a.</div>
 
-因此 \(\operatorname{Frac}(R)\) 是域。映射 \(r\mapsto r/1\) 是环同态；若 \(r/1=0/1\)，则 \(r=0\)，故该映射单射。
+因此 <span class="kalax-inline-math">\operatorname{Frac}(R)</span> 是域。映射 <span class="kalax-inline-math">r\mapsto r/1</span> 是环同态；若 <span class="kalax-inline-math">r/1=0/1</span>，则 <span class="kalax-inline-math">r=0</span>，故该映射单射。
 
 ### 例
 
-\[
-\operatorname{Frac}(\mathbb Z)=\mathbb Q,
+<div class="kalax-display-math">\operatorname{Frac}(\mathbb Z)=\mathbb Q,
 \qquad
-\operatorname{Frac}(\mathbb Z[i])=\mathbb Q(i).
-\]
+\operatorname{Frac}(\mathbb Z[i])=\mathbb Q(i).</div>
 
 ## 12. 多项式环与形式幂级数
 
 ### 多项式环
 
-设 \(R\) 为环，
+设 <span class="kalax-inline-math">R</span> 为环，
 
-\[
-R[x]=\left\{\sum_{i=0}^n a_ix^i:a_i\in R,\ n\ge 0\right\}.
-\]
+<div class="kalax-display-math">R[x]=\left\{\sum_{i=0}^n a_ix^i:a_i\in R,\ n\ge 0\right\}.</div>
 
 若
 
-\[
-f=\sum_{i=0}^n a_ix^i,\qquad a_n\ne 0,
-\]
+<div class="kalax-display-math">f=\sum_{i=0}^n a_ix^i,\qquad a_n\ne 0,</div>
 
-则 \(a_n\) 称为首项系数，\(a_0\) 称为常数项，\(n\) 称为次数，记作 \(\deg f=n\)。
+则 <span class="kalax-inline-math">a_n</span> 称为首项系数，<span class="kalax-inline-math">a_0</span> 称为常数项，<span class="kalax-inline-math">n</span> 称为次数，记作 <span class="kalax-inline-math">\deg f=n</span>。
 
-若 \(R\) 为交换环，则 \(R[x]\) 也是交换环。
+若 <span class="kalax-inline-math">R</span> 为交换环，则 <span class="kalax-inline-math">R[x]</span> 也是交换环。
 
 多元多项式环可迭代定义：
 
-\[
-R[x_1,\dots,x_n]\cong R[x_1,\dots,x_{n-1}][x_n].
-\]
+<div class="kalax-display-math">R[x_1,\dots,x_n]\cong R[x_1,\dots,x_{n-1}][x_n].</div>
 
 ### 代入同态
 
-设 \(\varphi:R\to S\) 是环同态，且 \(s_1,\dots,s_n\in S\) 与 \(\varphi(R)\) 中元素可交换，则存在唯一环同态
+设 <span class="kalax-inline-math">\varphi:R\to S</span> 是环同态，且 <span class="kalax-inline-math">s_1,\dots,s_n\in S</span> 与 <span class="kalax-inline-math">\varphi(R)</span> 中元素可交换，则存在唯一环同态
 
-\[
-\overline\varphi:R[x_1,\dots,x_n]\to S
-\]
+<div class="kalax-display-math">\overline\varphi:R[x_1,\dots,x_n]\to S</div>
 
 满足
 
-\[
-\overline\varphi|_R=\varphi,\qquad
-\overline\varphi(x_i)=s_i.
-\]
+<div class="kalax-display-math">\overline\varphi|_R=\varphi,\qquad
+\overline\varphi(x_i)=s_i.</div>
 
 **证明。** 对多项式
 
-\[
-f=\sum a_{k_1,\dots,k_n}x_1^{k_1}\cdots x_n^{k_n}
-\]
+<div class="kalax-display-math">f=\sum a_{k_1,\dots,k_n}x_1^{k_1}\cdots x_n^{k_n}</div>
 
 定义
 
-\[
-\overline\varphi(f)
+<div class="kalax-display-math">\overline\varphi(f)
 =
-\sum \varphi(a_{k_1,\dots,k_n})s_1^{k_1}\cdots s_n^{k_n}.
-\]
+\sum \varphi(a_{k_1,\dots,k_n})s_1^{k_1}\cdots s_n^{k_n}.</div>
 
-多项式只有有限多项，所以该和有意义。\(s_i\) 与 \(\varphi(R)\) 中元素可交换，保证乘法展开时不因换序出错。逐项检查可得
+多项式只有有限多项，所以该和有意义。<span class="kalax-inline-math">s_i</span> 与 <span class="kalax-inline-math">\varphi(R)</span> 中元素可交换，保证乘法展开时不因换序出错。逐项检查可得
 
-\[
-\overline\varphi(f+g)=\overline\varphi(f)+\overline\varphi(g),
+<div class="kalax-display-math">\overline\varphi(f+g)=\overline\varphi(f)+\overline\varphi(g),
 \qquad
-\overline\varphi(fg)=\overline\varphi(f)\overline\varphi(g).
-\]
+\overline\varphi(fg)=\overline\varphi(f)\overline\varphi(g).</div>
 
-唯一性来自多项式环由 \(R\) 和 \(x_1,\dots,x_n\) 生成：同态在 \(R\) 和各 \(x_i\) 上的值确定后，所有单项式和有限和的值都被迫确定。
+唯一性来自多项式环由 <span class="kalax-inline-math">R</span> 和 <span class="kalax-inline-math">x_1,\dots,x_n</span> 生成：同态在 <span class="kalax-inline-math">R</span> 和各 <span class="kalax-inline-math">x_i</span> 上的值确定后，所有单项式和有限和的值都被迫确定。
 
 ### 形式幂级数
 
 形式幂级数环定义为
 
-\[
-Rx
+<div class="kalax-display-math">Rx
 =
-\left\{\sum_{i=0}^{\infty}a_ix^i:a_i\in R\right\}.
-\]
+\left\{\sum_{i=0}^{\infty}a_ix^i:a_i\in R\right\}.</div>
 
 命题：
 
 1. 若
 
-   \[
-f=\sum_{i=0}^{\infty}a_ix^i\in Rx,
-\]
+   <div class="kalax-display-math">f=\sum_{i=0}^{\infty}a_ix^i\in Rx,</div>
 
    则
 
-   \[
-f\in Rx^\times
+   <div class="kalax-display-math">f\in Rx^\times
    \iff
-   a_0\in R^\times.
-\]
+   a_0\in R^\times.</div>
 
-2. 若 \(a_0\) 在 \(R\) 中不可约，则 \(f\) 在 \(Rx\) 中不可约。
+2. 若 <span class="kalax-inline-math">a_0</span> 在 <span class="kalax-inline-math">R</span> 中不可约，则 <span class="kalax-inline-math">f</span> 在 <span class="kalax-inline-math">Rx</span> 中不可约。
 
-注意：\(a_0\) 不是单位并不必然推出 \(f\) 不可约；例如 \(1+x\) 在 \(\mathbb Zx\) 中是单位。
+注意：<span class="kalax-inline-math">a_0</span> 不是单位并不必然推出 <span class="kalax-inline-math">f</span> 不可约；例如 <span class="kalax-inline-math">1+x</span> 在 <span class="kalax-inline-math">\mathbb Zx</span> 中是单位。
 
 **证明。**
 
-1. 若 \(f\) 是单位，存在
+1. 若 <span class="kalax-inline-math">f</span> 是单位，存在
 
-   \[
-g=\sum_{i=0}^{\infty}b_ix^i
-\]
+   <div class="kalax-display-math">g=\sum_{i=0}^{\infty}b_ix^i</div>
 
-   使 \(fg=1\)。比较常数项得
+   使 <span class="kalax-inline-math">fg=1</span>。比较常数项得
 
-   \[
-a_0b_0=1,
-\]
+   <div class="kalax-display-math">a_0b_0=1,</div>
 
-   所以 \(a_0\) 是单位。
+   所以 <span class="kalax-inline-math">a_0</span> 是单位。
 
-   反过来，若 \(a_0\) 是单位，递归构造逆元。令 \(b_0=a_0^{-1}\)。要使
+   反过来，若 <span class="kalax-inline-math">a_0</span> 是单位，递归构造逆元。令 <span class="kalax-inline-math">b_0=a_0^{-1}</span>。要使
 
-   \[
-\left(\sum a_ix^i\right)\left(\sum b_ix^i\right)=1,
-\]
+   <div class="kalax-display-math">\left(\sum a_ix^i\right)\left(\sum b_ix^i\right)=1,</div>
 
-   对每个 \(n\ge1\)，\(x^n\) 的系数必须为 \(0\)：
+   对每个 <span class="kalax-inline-math">n\ge1</span>，<span class="kalax-inline-math">x^n</span> 的系数必须为 <span class="kalax-inline-math">0</span>：
 
-   \[
-a_0b_n+a_1b_{n-1}+\cdots+a_nb_0=0.
-\]
+   <div class="kalax-display-math">a_0b_n+a_1b_{n-1}+\cdots+a_nb_0=0.</div>
 
-   因 \(a_0\) 可逆，可解出
+   因 <span class="kalax-inline-math">a_0</span> 可逆，可解出
 
-   \[
-b_n=-a_0^{-1}(a_1b_{n-1}+\cdots+a_nb_0).
-\]
+   <div class="kalax-display-math">b_n=-a_0^{-1}(a_1b_{n-1}+\cdots+a_nb_0).</div>
 
-   于是得到 \(f^{-1}=g\)。
+   于是得到 <span class="kalax-inline-math">f^{-1}=g</span>。
 
-2. 若 \(a_0\) 不可约且 \(f=gh\)，比较常数项得
+2. 若 <span class="kalax-inline-math">a_0</span> 不可约且 <span class="kalax-inline-math">f=gh</span>，比较常数项得
 
-   \[
-a_0=g(0)h(0).
-\]
+   <div class="kalax-display-math">a_0=g(0)h(0).</div>
 
-   因 \(a_0\) 不可约，\(g(0)\) 或 \(h(0)\) 是单位。由上一条，对应的形式幂级数 \(g\) 或 \(h\) 是单位。所以 \(f\) 不可约。
+   因 <span class="kalax-inline-math">a_0</span> 不可约，<span class="kalax-inline-math">g(0)</span> 或 <span class="kalax-inline-math">h(0)</span> 是单位。由上一条，对应的形式幂级数 <span class="kalax-inline-math">g</span> 或 <span class="kalax-inline-math">h</span> 是单位。所以 <span class="kalax-inline-math">f</span> 不可约。
 
 ## 13. 多项式环中的因子分解
 
 ### 单项式与次数
 
-在多元多项式环 \(R[x_1,\dots,x_n]\) 中，单项式形如
+在多元多项式环 <span class="kalax-inline-math">R[x_1,\dots,x_n]</span> 中，单项式形如
 
-\[
-x_1^{k_1}\cdots x_n^{k_n}.
-\]
+<div class="kalax-display-math">x_1^{k_1}\cdots x_n^{k_n}.</div>
 
 总次数定义为
 
-\[
-k_1+\cdots+k_n.
-\]
+<div class="kalax-display-math">k_1+\cdots+k_n.</div>
 
-零多项式次数约定为 \(-\infty\)；非零常数次数为 \(0\)。
+零多项式次数约定为 <span class="kalax-inline-math">-\infty</span>；非零常数次数为 <span class="kalax-inline-math">0</span>。
 
-若 \(R\) 是整环，则 \(R[x_1,\dots,x_n]\) 也是整环，并且
+若 <span class="kalax-inline-math">R</span> 是整环，则 <span class="kalax-inline-math">R[x_1,\dots,x_n]</span> 也是整环，并且
 
-\[
-\deg(fg)=\deg f+\deg g.
-\]
+<div class="kalax-display-math">\deg(fg)=\deg f+\deg g.</div>
 
 ### 一元多项式的带余除法
 
-设 \(R\) 为交换环，\(g\in R[x]\) 的首项系数为单位。则对任意 \(f\in R[x]\)，存在唯一 \(q,r\in R[x]\)，使得
+设 <span class="kalax-inline-math">R</span> 为交换环，<span class="kalax-inline-math">g\in R[x]</span> 的首项系数为单位。则对任意 <span class="kalax-inline-math">f\in R[x]</span>，存在唯一 <span class="kalax-inline-math">q,r\in R[x]</span>，使得
 
-\[
-f=qg+r,\qquad \deg r<\deg g.
-\]
+<div class="kalax-display-math">f=qg+r,\qquad \deg r&lt;\deg g.</div>
 
 **证明。** 设
 
-\[
-g=b_mx^m+\cdots+b_0,\qquad b_m\in R^\times.
-\]
+<div class="kalax-display-math">g=b_mx^m+\cdots+b_0,\qquad b_m\in R^\times.</div>
 
-若 \(\deg f<m\)，取 \(q=0,r=f\)。若
+若 <span class="kalax-inline-math">\deg f&lt;m</span>，取 <span class="kalax-inline-math">q=0,r=f</span>。若
 
-\[
-f=a_nx^n+\cdots,\qquad n\ge m,
-\]
+<div class="kalax-display-math">f=a_nx^n+\cdots,\qquad n\ge m,</div>
 
 则用
 
-\[
-a_nb_m^{-1}x^{n-m}g
-\]
+<div class="kalax-display-math">a_nb_m^{-1}x^{n-m}g</div>
 
-消去 \(f\) 的最高次项。令
+消去 <span class="kalax-inline-math">f</span> 的最高次项。令
 
-\[
-f_1=f-a_nb_m^{-1}x^{n-m}g.
-\]
+<div class="kalax-display-math">f_1=f-a_nb_m^{-1}x^{n-m}g.</div>
 
-则 \(\deg f_1<\deg f\)。不断重复，次数每步下降，有限步后得到
+则 <span class="kalax-inline-math">\deg f_1&lt;\deg f</span>。不断重复，次数每步下降，有限步后得到
 
-\[
-f=qg+r,\qquad \deg r<\deg g.
-\]
+<div class="kalax-display-math">f=qg+r,\qquad \deg r&lt;\deg g.</div>
 
 唯一性：若
 
-\[
-f=qg+r=q'g+r',
-\qquad \deg r,\deg r'<\deg g,
-\]
+<div class="kalax-display-math">f=qg+r=q'g+r',
+\qquad \deg r,\deg r'&lt;\deg g,</div>
 
 则
 
-\[
-(q-q')g=r'-r.
-\]
+<div class="kalax-display-math">(q-q')g=r'-r.</div>
 
-若 \(q\ne q'\)，因为 \(g\) 的首项系数是单位，左边次数至少为 \(\deg g\)；但右边次数小于 \(\deg g\)，矛盾。所以 \(q=q'\)，进而 \(r=r'\)。
+若 <span class="kalax-inline-math">q\ne q'</span>，因为 <span class="kalax-inline-math">g</span> 的首项系数是单位，左边次数至少为 <span class="kalax-inline-math">\deg g</span>；但右边次数小于 <span class="kalax-inline-math">\deg g</span>，矛盾。所以 <span class="kalax-inline-math">q=q'</span>，进而 <span class="kalax-inline-math">r=r'</span>。
 
-特别地，若 \(F\) 是域，则 \(F[x]\) 是欧几里得整环，因此是 PID。
+特别地，若 <span class="kalax-inline-math">F</span> 是域，则 <span class="kalax-inline-math">F[x]</span> 是欧几里得整环，因此是 PID。
 
 ### 推论
 
-若 \(F\) 是域，则
+若 <span class="kalax-inline-math">F</span> 是域，则
 
-\[
-F[x]^\times=F^\times.
-\]
+<div class="kalax-display-math">F[x]^\times=F^\times.</div>
 
-即 \(F[x]\) 的单位正是非零常数多项式。
+即 <span class="kalax-inline-math">F[x]</span> 的单位正是非零常数多项式。
 
-但 \(F[x,y]\) 不是 PID，例如 \((x,y)\) 不是主理想。因此 \(F[x,y]\) 不是欧几里得整环。不过
+但 <span class="kalax-inline-math">F[x,y]</span> 不是 PID，例如 <span class="kalax-inline-math">(x,y)</span> 不是主理想。因此 <span class="kalax-inline-math">F[x,y]</span> 不是欧几里得整环。不过
 
-\[
-F[x_1,\dots,x_n]
-\]
+<div class="kalax-display-math">F[x_1,\dots,x_n]</div>
 
 仍然是 UFD。
 
 ### 根与因式定理
 
-设 \(f\in R[x]\)，\(c\in R\)。若 \(f(c)=0\)，则称 \(c\) 为 \(f\) 在 \(R\) 中的根。
+设 <span class="kalax-inline-math">f\in R[x]</span>，<span class="kalax-inline-math">c\in R</span>。若 <span class="kalax-inline-math">f(c)=0</span>，则称 <span class="kalax-inline-math">c</span> 为 <span class="kalax-inline-math">f</span> 在 <span class="kalax-inline-math">R</span> 中的根。
 
-若 \(R\) 为交换环，则
+若 <span class="kalax-inline-math">R</span> 为交换环，则
 
-\[
-f(c)=0
+<div class="kalax-display-math">f(c)=0
 \iff
-x-c\mid f(x).
-\]
+x-c\mid f(x).</div>
 
-**证明。** 用 \(x-c\) 除 \(f\)，存在 \(q\in R[x]\) 和常数 \(r\in R\)，使得
+**证明。** 用 <span class="kalax-inline-math">x-c</span> 除 <span class="kalax-inline-math">f</span>，存在 <span class="kalax-inline-math">q\in R[x]</span> 和常数 <span class="kalax-inline-math">r\in R</span>，使得
 
-\[
-f(x)=q(x)(x-c)+r.
-\]
+<div class="kalax-display-math">f(x)=q(x)(x-c)+r.</div>
 
-代入 \(x=c\) 得
+代入 <span class="kalax-inline-math">x=c</span> 得
 
-\[
-f(c)=r.
-\]
+<div class="kalax-display-math">f(c)=r.</div>
 
-因此 \(f(c)=0\) 当且仅当 \(r=0\)，即当且仅当 \(x-c\) 整除 \(f\)。
+因此 <span class="kalax-inline-math">f(c)=0</span> 当且仅当 <span class="kalax-inline-math">r=0</span>，即当且仅当 <span class="kalax-inline-math">x-c</span> 整除 <span class="kalax-inline-math">f</span>。
 
 ### 根的个数
 
-若 \(D\) 是整环，\(f\in D[x]\) 且 \(\deg f=n\)，则 \(f\) 在 \(D\) 中至多有 \(n\) 个根。
+若 <span class="kalax-inline-math">D</span> 是整环，<span class="kalax-inline-math">f\in D[x]</span> 且 <span class="kalax-inline-math">\deg f=n</span>，则 <span class="kalax-inline-math">f</span> 在 <span class="kalax-inline-math">D</span> 中至多有 <span class="kalax-inline-math">n</span> 个根。
 
-**证明。** 对次数 \(n\) 归纳。若 \(n=0\)，非零常数多项式没有根。设结论对次数小于 \(n\) 的多项式成立。若 \(f\) 没有根，结论显然；若 \(c\) 是一个根，则由因式定理
+**证明。** 对次数 <span class="kalax-inline-math">n</span> 归纳。若 <span class="kalax-inline-math">n=0</span>，非零常数多项式没有根。设结论对次数小于 <span class="kalax-inline-math">n</span> 的多项式成立。若 <span class="kalax-inline-math">f</span> 没有根，结论显然；若 <span class="kalax-inline-math">c</span> 是一个根，则由因式定理
 
-\[
-f=(x-c)g,\qquad \deg g=n-1.
-\]
+<div class="kalax-display-math">f=(x-c)g,\qquad \deg g=n-1.</div>
 
-若 \(c'\ne c\) 也是 \(f\) 的根，则
+若 <span class="kalax-inline-math">c'\ne c</span> 也是 <span class="kalax-inline-math">f</span> 的根，则
 
-\[
-0=f(c')=(c'-c)g(c').
-\]
+<div class="kalax-display-math">0=f(c')=(c'-c)g(c').</div>
 
-因 \(D\) 是整环且 \(c'-c\ne0\)，得 \(g(c')=0\)。所以除 \(c\) 外，\(f\) 的其他根都是 \(g\) 的根。由归纳假设，\(g\) 至多有 \(n-1\) 个根，因此 \(f\) 至多有 \(n\) 个根。
+因 <span class="kalax-inline-math">D</span> 是整环且 <span class="kalax-inline-math">c'-c\ne0</span>，得 <span class="kalax-inline-math">g(c')=0</span>。所以除 <span class="kalax-inline-math">c</span> 外，<span class="kalax-inline-math">f</span> 的其他根都是 <span class="kalax-inline-math">g</span> 的根。由归纳假设，<span class="kalax-inline-math">g</span> 至多有 <span class="kalax-inline-math">n-1</span> 个根，因此 <span class="kalax-inline-math">f</span> 至多有 <span class="kalax-inline-math">n</span> 个根。
 
 ### 多重根与导数
 
-设 \(D\) 为整环，\(f\in D[x]\)。若
+设 <span class="kalax-inline-math">D</span> 为整环，<span class="kalax-inline-math">f\in D[x]</span>。若
 
-\[
-f(x)=(x-c)^m g(x),\qquad g(c)\ne 0,
-\]
+<div class="kalax-display-math">f(x)=(x-c)^m g(x),\qquad g(c)\ne 0,</div>
 
-则称 \(m\) 为根 \(c\) 的重数。\(m=1\) 时称单根，\(m>1\) 时称重根。
+则称 <span class="kalax-inline-math">m</span> 为根 <span class="kalax-inline-math">c</span> 的重数。<span class="kalax-inline-math">m=1</span> 时称单根，<span class="kalax-inline-math">m&gt;1</span> 时称重根。
 
 形式导数定义为
 
-\[
-\left(\sum_{i=0}^n a_ix^i\right)'
+<div class="kalax-display-math">\left(\sum_{i=0}^n a_ix^i\right)'
 =
-\sum_{i=1}^n ia_ix^{i-1}.
-\]
+\sum_{i=1}^n ia_ix^{i-1}.</div>
 
-若 \(D\) 是整环，则
+若 <span class="kalax-inline-math">D</span> 是整环，则
 
-\[
-c \text{ 是 } f \text{ 的重根}
+<div class="kalax-display-math">c \text{ 是 } f \text{ 的重根}
 \iff
-f(c)=0\text{ 且 } f'(c)=0.
-\]
+f(c)=0\text{ 且 } f'(c)=0.</div>
 
-**证明。** 若 \(c\) 是重根，则
+**证明。** 若 <span class="kalax-inline-math">c</span> 是重根，则
 
-\[
-f=(x-c)^m g,\qquad m\ge2,\quad g(c)\ne0.
-\]
+<div class="kalax-display-math">f=(x-c)^m g,\qquad m\ge2,\quad g(c)\ne0.</div>
 
 求导得
 
-\[
-f'=m(x-c)^{m-1}g+(x-c)^m g',
-\]
+<div class="kalax-display-math">f'=m(x-c)^{m-1}g+(x-c)^m g',</div>
 
-所以 \(f(c)=0\) 且 \(f'(c)=0\)。
+所以 <span class="kalax-inline-math">f(c)=0</span> 且 <span class="kalax-inline-math">f'(c)=0</span>。
 
-反过来，若 \(f(c)=0\)，则由因式定理
+反过来，若 <span class="kalax-inline-math">f(c)=0</span>，则由因式定理
 
-\[
-f=(x-c)g.
-\]
+<div class="kalax-display-math">f=(x-c)g.</div>
 
 求导得
 
-\[
-f'=g+(x-c)g'.
-\]
+<div class="kalax-display-math">f'=g+(x-c)g'.</div>
 
-代入 \(x=c\)，得到
+代入 <span class="kalax-inline-math">x=c</span>，得到
 
-\[
-f'(c)=g(c).
-\]
+<div class="kalax-display-math">f'(c)=g(c).</div>
 
-若 \(f'(c)=0\)，则 \(g(c)=0\)。再次用因式定理，\(x-c\mid g\)，所以
+若 <span class="kalax-inline-math">f'(c)=0</span>，则 <span class="kalax-inline-math">g(c)=0</span>。再次用因式定理，<span class="kalax-inline-math">x-c\mid g</span>，所以
 
-\[
-(x-c)^2\mid f,
-\]
+<div class="kalax-display-math">(x-c)^2\mid f,</div>
 
-即 \(c\) 是重根。
+即 <span class="kalax-inline-math">c</span> 是重根。
 
-若 \(D\) 是域，则 \(f\) 无重根等价于 \(f\) 与 \(f'\) 互素：
+若 <span class="kalax-inline-math">D</span> 是域，则 <span class="kalax-inline-math">f</span> 无重根等价于 <span class="kalax-inline-math">f</span> 与 <span class="kalax-inline-math">f'</span> 互素：
 
-\[
-\gcd(f,f')=1.
-\]
+<div class="kalax-display-math">\gcd(f,f')=1.</div>
 
-例：在 \(\mathbb Q[x]\) 中，\(f(x)=x^2+1\) 的导数为 \(2x\)，故无重根。
+例：在 <span class="kalax-inline-math">\mathbb Q[x]</span> 中，<span class="kalax-inline-math">f(x)=x^2+1</span> 的导数为 <span class="kalax-inline-math">2x</span>，故无重根。
 
 ### 有理根判别
 
-设 \(D\) 是 UFD，\(F=\operatorname{Frac}(D)\)。若
+设 <span class="kalax-inline-math">D</span> 是 UFD，<span class="kalax-inline-math">F=\operatorname{Frac}(D)</span>。若
 
-\[
-f(x)=a_nx^n+\cdots+a_0\in D[x]
-\]
+<div class="kalax-display-math">f(x)=a_nx^n+\cdots+a_0\in D[x]</div>
 
-且 \(c/d\in F\) 是 \(f\) 的根，其中 \(\gcd(c,d)=1\)，则
+且 <span class="kalax-inline-math">c/d\in F</span> 是 <span class="kalax-inline-math">f</span> 的根，其中 <span class="kalax-inline-math">\gcd(c,d)=1</span>，则
 
-\[
-c\mid a_0,\qquad d\mid a_n.
-\]
+<div class="kalax-display-math">c\mid a_0,\qquad d\mid a_n.</div>
 
-**证明。** 因 \(f(c/d)=0\)，乘以 \(d^n\) 得
+**证明。** 因 <span class="kalax-inline-math">f(c/d)=0</span>，乘以 <span class="kalax-inline-math">d^n</span> 得
 
-\[
-a_nc^n+a_{n-1}c^{n-1}d+\cdots+a_1cd^{n-1}+a_0d^n=0.
-\]
+<div class="kalax-display-math">a_nc^n+a_{n-1}c^{n-1}d+\cdots+a_1cd^{n-1}+a_0d^n=0.</div>
 
 把第一项移到另一边：
 
-\[
-a_nc^n=-d(a_{n-1}c^{n-1}+\cdots+a_0d^{n-1}).
-\]
+<div class="kalax-display-math">a_nc^n=-d(a_{n-1}c^{n-1}+\cdots+a_0d^{n-1}).</div>
 
-所以 \(d\mid a_nc^n\)。由于 \(\gcd(c,d)=1\)，在 UFD 中 \(d\) 与 \(c^n\) 也互素，因此
+所以 <span class="kalax-inline-math">d\mid a_nc^n</span>。由于 <span class="kalax-inline-math">\gcd(c,d)=1</span>，在 UFD 中 <span class="kalax-inline-math">d</span> 与 <span class="kalax-inline-math">c^n</span> 也互素，因此
 
-\[
-d\mid a_n.
-\]
+<div class="kalax-display-math">d\mid a_n.</div>
 
 同理，把最后一项移到另一边：
 
-\[
-a_0d^n=-c(a_nc^{n-1}+a_{n-1}c^{n-2}d+\cdots+a_1d^{n-1}),
-\]
+<div class="kalax-display-math">a_0d^n=-c(a_nc^{n-1}+a_{n-1}c^{n-2}d+\cdots+a_1d^{n-1}),</div>
 
-可得 \(c\mid a_0d^n\)。又 \(\gcd(c,d)=1\)，所以
+可得 <span class="kalax-inline-math">c\mid a_0d^n</span>。又 <span class="kalax-inline-math">\gcd(c,d)=1</span>，所以
 
-\[
-c\mid a_0.
-\]
+<div class="kalax-display-math">c\mid a_0.</div>
 
 ### 例
 
 对
 
-\[
-f(x)=x^4+3x^3-6x^2-11x-6\in\mathbb Z[x],
-\]
+<div class="kalax-display-math">f(x)=x^4+3x^3-6x^2-11x-6\in\mathbb Z[x],</div>
 
 有理根只能从
 
-\[
-\pm1,\ \pm2,\ \pm3,\ \pm6
-\]
+<div class="kalax-display-math">\pm1,\ \pm2,\ \pm3,\ \pm6</div>
 
 中寻找。
 
@@ -2411,608 +1839,453 @@ f(x)=x^4+3x^3-6x^2-11x-6\in\mathbb Z[x],
 
 ### 内容与本原多项式
 
-设 \(D\) 是 UFD，
+设 <span class="kalax-inline-math">D</span> 是 UFD，
 
-\[
-f(x)=\sum_{i=0}^n a_ix^i\in D[x].
-\]
+<div class="kalax-display-math">f(x)=\sum_{i=0}^n a_ix^i\in D[x].</div>
 
-系数 \(a_0,\dots,a_n\) 的最大公因子称为 \(f\) 的**内容**，记作 \(c(f)\)。若 \(c(f)\) 是单位，则称 \(f\) 为**本原多项式**。
+系数 <span class="kalax-inline-math">a_0,\dots,a_n</span> 的最大公因子称为 <span class="kalax-inline-math">f</span> 的**内容**，记作 <span class="kalax-inline-math">c(f)</span>。若 <span class="kalax-inline-math">c(f)</span> 是单位，则称 <span class="kalax-inline-math">f</span> 为**本原多项式**。
 
 ### Gauss 引理
 
-若 \(D\) 是 UFD，\(f,g\in D[x]\)，则
+若 <span class="kalax-inline-math">D</span> 是 UFD，<span class="kalax-inline-math">f,g\in D[x]</span>，则
 
-\[
-c(fg)\sim c(f)c(g).
-\]
+<div class="kalax-display-math">c(fg)\sim c(f)c(g).</div>
 
 特别地，本原多项式的乘积仍是本原多项式。
 
-**证明。** 先证本原多项式乘积仍本原。设 \(f,g\) 本原。若 \(fg\) 不是本原，则存在素元 \(p\in D\) 整除 \(fg\) 的每个系数。
+**证明。** 先证本原多项式乘积仍本原。设 <span class="kalax-inline-math">f,g</span> 本原。若 <span class="kalax-inline-math">fg</span> 不是本原，则存在素元 <span class="kalax-inline-math">p\in D</span> 整除 <span class="kalax-inline-math">fg</span> 的每个系数。
 
 在商环
 
-\[
-\overline D=D/(p)
-\]
+<div class="kalax-display-math">\overline D=D/(p)</div>
 
-中，因为 \((p)\) 是素理想，\(\overline D\) 是整环。把 \(f,g\) 的系数模 \(p\)，得到
+中，因为 <span class="kalax-inline-math">(p)</span> 是素理想，<span class="kalax-inline-math">\overline D</span> 是整环。把 <span class="kalax-inline-math">f,g</span> 的系数模 <span class="kalax-inline-math">p</span>，得到
 
-\[
-\overline f,\overline g\in \overline D[x].
-\]
+<div class="kalax-display-math">\overline f,\overline g\in \overline D[x].</div>
 
-\(p\) 整除 \(fg\) 的每个系数等价于
+<span class="kalax-inline-math">p</span> 整除 <span class="kalax-inline-math">fg</span> 的每个系数等价于
 
-\[
-\overline f\,\overline g=0.
-\]
+<div class="kalax-display-math">\overline f\,\overline g=0.</div>
 
-由于 \(\overline D\) 是整环，\(\overline D[x]\) 也是整环，所以
+由于 <span class="kalax-inline-math">\overline D</span> 是整环，<span class="kalax-inline-math">\overline D[x]</span> 也是整环，所以
 
-\[
-\overline f=0\quad\text{或}\quad \overline g=0.
-\]
+<div class="kalax-display-math">\overline f=0\quad\text{或}\quad \overline g=0.</div>
 
-这意味着 \(p\) 整除 \(f\) 或 \(g\) 的每个系数，矛盾于 \(f,g\) 本原。因此 \(fg\) 本原。
+这意味着 <span class="kalax-inline-math">p</span> 整除 <span class="kalax-inline-math">f</span> 或 <span class="kalax-inline-math">g</span> 的每个系数，矛盾于 <span class="kalax-inline-math">f,g</span> 本原。因此 <span class="kalax-inline-math">fg</span> 本原。
 
 一般情形中，写
 
-\[
-f=c(f)f_1,\qquad g=c(g)g_1,
-\]
+<div class="kalax-display-math">f=c(f)f_1,\qquad g=c(g)g_1,</div>
 
-其中 \(f_1,g_1\) 本原。则
+其中 <span class="kalax-inline-math">f_1,g_1</span> 本原。则
 
-\[
-fg=c(f)c(g)f_1g_1.
-\]
+<div class="kalax-display-math">fg=c(f)c(g)f_1g_1.</div>
 
-由刚才所证，\(f_1g_1\) 本原，所以
+由刚才所证，<span class="kalax-inline-math">f_1g_1</span> 本原，所以
 
-\[
-c(fg)\sim c(f)c(g).
-\]
+<div class="kalax-display-math">c(fg)\sim c(f)c(g).</div>
 
 ### Gauss 引理的推论
 
-设 \(D\) 是 UFD，\(F=\operatorname{Frac}(D)\)。若 \(f,g\in D[x]\) 均为本原多项式，则
+设 <span class="kalax-inline-math">D</span> 是 UFD，<span class="kalax-inline-math">F=\operatorname{Frac}(D)</span>。若 <span class="kalax-inline-math">f,g\in D[x]</span> 均为本原多项式，则
 
-\[
-f\sim g\text{ in }D[x]
+<div class="kalax-display-math">f\sim g\text{ in }D[x]
 \iff
-f\sim g\text{ in }F[x].
-\]
+f\sim g\text{ in }F[x].</div>
 
-若 \(f\in D[x]\) 为本原多项式，则
+若 <span class="kalax-inline-math">f\in D[x]</span> 为本原多项式，则
 
-\[
-f\text{ 在 }D[x]\text{ 中不可约}
+<div class="kalax-display-math">f\text{ 在 }D[x]\text{ 中不可约}
 \iff
-f\text{ 在 }F[x]\text{ 中不可约}.
-\]
+f\text{ 在 }F[x]\text{ 中不可约}.</div>
 
-**证明。** 若 \(f\) 在 \(D[x]\) 中可约，则当然在 \(F[x]\) 中可约。
+**证明。** 若 <span class="kalax-inline-math">f</span> 在 <span class="kalax-inline-math">D[x]</span> 中可约，则当然在 <span class="kalax-inline-math">F[x]</span> 中可约。
 
-反过来，若 \(f\) 在 \(F[x]\) 中可约，写
+反过来，若 <span class="kalax-inline-math">f</span> 在 <span class="kalax-inline-math">F[x]</span> 中可约，写
 
-\[
-f=gh,\qquad g,h\in F[x],
-\]
+<div class="kalax-display-math">f=gh,\qquad g,h\in F[x],</div>
 
-且 \(g,h\) 都不是单位。把 \(g,h\) 的系数通分，可写作
+且 <span class="kalax-inline-math">g,h</span> 都不是单位。把 <span class="kalax-inline-math">g,h</span> 的系数通分，可写作
 
-\[
-g=\frac a b g_1,\qquad h=\frac c d h_1,
-\]
+<div class="kalax-display-math">g=\frac a b g_1,\qquad h=\frac c d h_1,</div>
 
-其中 \(a,b,c,d\in D\)，\(g_1,h_1\in D[x]\) 本原。于是
+其中 <span class="kalax-inline-math">a,b,c,d\in D</span>，<span class="kalax-inline-math">g_1,h_1\in D[x]</span> 本原。于是
 
-\[
-f=\frac{ac}{bd}g_1h_1.
-\]
+<div class="kalax-display-math">f=\frac{ac}{bd}g_1h_1.</div>
 
-因为 \(f\) 本原，且 \(g_1h_1\) 本原，由内容比较可知标量 \(\frac{ac}{bd}\) 实际上是 \(D\) 中的单位。因此 \(f\) 在 \(D[x]\) 中也分解为两个非常数因子，矛盾于不可约。故 \(f\) 在 \(F[x]\) 中不可约。
+因为 <span class="kalax-inline-math">f</span> 本原，且 <span class="kalax-inline-math">g_1h_1</span> 本原，由内容比较可知标量 <span class="kalax-inline-math">\frac{ac}{bd}</span> 实际上是 <span class="kalax-inline-math">D</span> 中的单位。因此 <span class="kalax-inline-math">f</span> 在 <span class="kalax-inline-math">D[x]</span> 中也分解为两个非常数因子，矛盾于不可约。故 <span class="kalax-inline-math">f</span> 在 <span class="kalax-inline-math">F[x]</span> 中不可约。
 
-### 定理：\(D[x]\) 是 UFD
+### 定理：<span class="kalax-inline-math">D[x]</span> 是 UFD
 
-若 \(D\) 是 UFD，则 \(D[x]\) 也是 UFD。
+若 <span class="kalax-inline-math">D</span> 是 UFD，则 <span class="kalax-inline-math">D[x]</span> 也是 UFD。
 
 因此反复归纳可得：
 
-\[
-D[x_1,\dots,x_n]
-\]
+<div class="kalax-display-math">D[x_1,\dots,x_n]</div>
 
 也是 UFD。
 
-**证明。** 任取非零多项式 \(f\in D[x]\)，写
+**证明。** 任取非零多项式 <span class="kalax-inline-math">f\in D[x]</span>，写
 
-\[
-f=c(f)f_1,
-\]
+<div class="kalax-display-math">f=c(f)f_1,</div>
 
-其中 \(f_1\) 本原。因为 \(D\) 是 UFD，\(c(f)\) 可分解为 \(D\) 中不可约元的乘积。另一方面，\(F=\operatorname{Frac}(D)\) 是域，所以 \(F[x]\) 是 PID，因而是 UFD；于是 \(f_1\) 在 \(F[x]\) 中可分解为不可约多项式乘积。利用 Gauss 引理的推论，可把这些不可约因子取成本原的 \(D[x]\) 中多项式，并且它们在 \(D[x]\) 中仍不可约。这样得到 \(f\) 在 \(D[x]\) 中的不可约分解。
+其中 <span class="kalax-inline-math">f_1</span> 本原。因为 <span class="kalax-inline-math">D</span> 是 UFD，<span class="kalax-inline-math">c(f)</span> 可分解为 <span class="kalax-inline-math">D</span> 中不可约元的乘积。另一方面，<span class="kalax-inline-math">F=\operatorname{Frac}(D)</span> 是域，所以 <span class="kalax-inline-math">F[x]</span> 是 PID，因而是 UFD；于是 <span class="kalax-inline-math">f_1</span> 在 <span class="kalax-inline-math">F[x]</span> 中可分解为不可约多项式乘积。利用 Gauss 引理的推论，可把这些不可约因子取成本原的 <span class="kalax-inline-math">D[x]</span> 中多项式，并且它们在 <span class="kalax-inline-math">D[x]</span> 中仍不可约。这样得到 <span class="kalax-inline-math">f</span> 在 <span class="kalax-inline-math">D[x]</span> 中的不可约分解。
 
-唯一性也由 \(F[x]\) 中唯一性和内容唯一性推出：若 \(D[x]\) 中有两种分解，把它们看作 \(F[x]\) 中分解，因子在 \(F[x]\) 中相伴；再用本原性把相伴常数限制回 \(D\) 的单位。
+唯一性也由 <span class="kalax-inline-math">F[x]</span> 中唯一性和内容唯一性推出：若 <span class="kalax-inline-math">D[x]</span> 中有两种分解，把它们看作 <span class="kalax-inline-math">F[x]</span> 中分解，因子在 <span class="kalax-inline-math">F[x]</span> 中相伴；再用本原性把相伴常数限制回 <span class="kalax-inline-math">D</span> 的单位。
 
 ### Eisenstein 判别法
 
-设 \(D\) 是 UFD，\(F=\operatorname{Frac}(D)\)，
+设 <span class="kalax-inline-math">D</span> 是 UFD，<span class="kalax-inline-math">F=\operatorname{Frac}(D)</span>，
 
-\[
-f(x)=a_nx^n+\cdots+a_0\in D[x],
-\qquad \deg f\ge 1.
-\]
+<div class="kalax-display-math">f(x)=a_nx^n+\cdots+a_0\in D[x],
+\qquad \deg f\ge 1.</div>
 
-若存在素元 \(p\in D\) 满足：
+若存在素元 <span class="kalax-inline-math">p\in D</span> 满足：
 
-1. \(p\nmid a_n\)；
-2. \(p\mid a_i\) 对所有 \(0\le i\le n-1\) 成立；
-3. \(p^2\nmid a_0\)，
+1. <span class="kalax-inline-math">p\nmid a_n</span>；
+2. <span class="kalax-inline-math">p\mid a_i</span> 对所有 <span class="kalax-inline-math">0\le i\le n-1</span> 成立；
+3. <span class="kalax-inline-math">p^2\nmid a_0</span>，
 
-则 \(f\) 在 \(F[x]\) 中不可约。若 \(f\) 本原，则 \(f\) 在 \(D[x]\) 中也不可约。
+则 <span class="kalax-inline-math">f</span> 在 <span class="kalax-inline-math">F[x]</span> 中不可约。若 <span class="kalax-inline-math">f</span> 本原，则 <span class="kalax-inline-math">f</span> 在 <span class="kalax-inline-math">D[x]</span> 中也不可约。
 
-**证明。** 只需证明本原情形在 \(D[x]\) 中不可约。若
+**证明。** 只需证明本原情形在 <span class="kalax-inline-math">D[x]</span> 中不可约。若
 
-\[
-f=gh,\qquad g,h\in D[x],
-\]
+<div class="kalax-display-math">f=gh,\qquad g,h\in D[x],</div>
 
-且 \(g,h\) 都非常数。写
+且 <span class="kalax-inline-math">g,h</span> 都非常数。写
 
-\[
-g=b_rx^r+\cdots+b_0,\qquad
-h=c_sx^s+\cdots+c_0.
-\]
+<div class="kalax-display-math">g=b_rx^r+\cdots+b_0,\qquad
+h=c_sx^s+\cdots+c_0.</div>
 
-由 \(p\mid a_0\) 且 \(p^2\nmid a_0\)，可知 \(a_0=b_0c_0\) 中恰有一个因子被 \(p\) 整除。不妨设
+由 <span class="kalax-inline-math">p\mid a_0</span> 且 <span class="kalax-inline-math">p^2\nmid a_0</span>，可知 <span class="kalax-inline-math">a_0=b_0c_0</span> 中恰有一个因子被 <span class="kalax-inline-math">p</span> 整除。不妨设
 
-\[
-p\mid b_0,\qquad p\nmid c_0.
-\]
+<div class="kalax-display-math">p\mid b_0,\qquad p\nmid c_0.</div>
 
-因为 \(p\nmid a_n=b_rc_s\)，所以 \(p\nmid b_r\)。于是存在最小的 \(k\)，使得
+因为 <span class="kalax-inline-math">p\nmid a_n=b_rc_s</span>，所以 <span class="kalax-inline-math">p\nmid b_r</span>。于是存在最小的 <span class="kalax-inline-math">k</span>，使得
 
-\[
-p\nmid b_k.
-\]
+<div class="kalax-display-math">p\nmid b_k.</div>
 
-注意 \(k\ge1\)。考察 \(x^k\) 的系数：
+注意 <span class="kalax-inline-math">k\ge1</span>。考察 <span class="kalax-inline-math">x^k</span> 的系数：
 
-\[
-a_k=b_kc_0+b_{k-1}c_1+\cdots+b_0c_k.
-\]
+<div class="kalax-display-math">a_k=b_kc_0+b_{k-1}c_1+\cdots+b_0c_k.</div>
 
-当 \(i<k\) 时，\(p\mid b_i\)，所以除第一项外其余项都被 \(p\) 整除。又条件给出 \(p\mid a_k\)，因此
+当 <span class="kalax-inline-math">i&lt;k</span> 时，<span class="kalax-inline-math">p\mid b_i</span>，所以除第一项外其余项都被 <span class="kalax-inline-math">p</span> 整除。又条件给出 <span class="kalax-inline-math">p\mid a_k</span>，因此
 
-\[
-p\mid b_kc_0.
-\]
+<div class="kalax-display-math">p\mid b_kc_0.</div>
 
-但 \(p\nmid b_k\) 且 \(p\nmid c_0\)，与 \(p\) 为素元矛盾。因此 \(f\) 不可约。
+但 <span class="kalax-inline-math">p\nmid b_k</span> 且 <span class="kalax-inline-math">p\nmid c_0</span>，与 <span class="kalax-inline-math">p</span> 为素元矛盾。因此 <span class="kalax-inline-math">f</span> 不可约。
 
-若 \(f\) 不一定本原，则先取本原部分；若本原部分在 \(F[x]\) 中不可约，则 \(f\) 在 \(F[x]\) 中不可约。若 \(f\) 本原，再由 Gauss 引理得到它在 \(D[x]\) 中也不可约。
+若 <span class="kalax-inline-math">f</span> 不一定本原，则先取本原部分；若本原部分在 <span class="kalax-inline-math">F[x]</span> 中不可约，则 <span class="kalax-inline-math">f</span> 在 <span class="kalax-inline-math">F[x]</span> 中不可约。若 <span class="kalax-inline-math">f</span> 本原，再由 Gauss 引理得到它在 <span class="kalax-inline-math">D[x]</span> 中也不可约。
 
 ### 例
 
 令
 
-\[
-f(x)=2x^3-6x^2+9x-15\in\mathbb Z[x].
-\]
+<div class="kalax-display-math">f(x)=2x^3-6x^2+9x-15\in\mathbb Z[x].</div>
 
-取 \(p=3\)，有 \(3\nmid 2\)，\(3\mid -6,9,-15\)，且 \(9\nmid -15\)。故 \(f\) 在 \(\mathbb Q[x]\) 中不可约。
+取 <span class="kalax-inline-math">p=3</span>，有 <span class="kalax-inline-math">3\nmid 2</span>，<span class="kalax-inline-math">3\mid -6,9,-15</span>，且 <span class="kalax-inline-math">9\nmid -15</span>。故 <span class="kalax-inline-math">f</span> 在 <span class="kalax-inline-math">\mathbb Q[x]</span> 中不可约。
 
 ## 15. 模
 
 ### 定义：左模
 
-设 \(R\) 为环，\(A\) 为交换群。若有映射
+设 <span class="kalax-inline-math">R</span> 为环，<span class="kalax-inline-math">A</span> 为交换群。若有映射
 
-\[
-R\times A\to A,\qquad (r,a)\mapsto ra
-\]
+<div class="kalax-display-math">R\times A\to A,\qquad (r,a)\mapsto ra</div>
 
 满足：
 
-1. \(r(a+b)=ra+rb\)；
-2. \((r+s)a=ra+sa\)；
-3. \((rs)a=r(sa)\)；
-4. \(1a=a\)，
+1. <span class="kalax-inline-math">r(a+b)=ra+rb</span>；
+2. <span class="kalax-inline-math">(r+s)a=ra+sa</span>；
+3. <span class="kalax-inline-math">(rs)a=r(sa)</span>；
+4. <span class="kalax-inline-math">1a=a</span>，
 
-则称 \(A\) 为一个左 \(R\)-模。
+则称 <span class="kalax-inline-math">A</span> 为一个左 <span class="kalax-inline-math">R</span>-模。
 
 ### 例
 
-1. 当 \(R=\mathbb Z\) 时，\(\mathbb Z\)-模恰好是交换群。
-2. 若 \(R=k\) 是域，则 \(k\)-模就是 \(k\) 上的向量空间。
-3. 若 \(f:R\to S\) 是环同态，则 \(S\) 可看作 \(R\)-模，标量作用为
+1. 当 <span class="kalax-inline-math">R=\mathbb Z</span> 时，<span class="kalax-inline-math">\mathbb Z</span>-模恰好是交换群。
+2. 若 <span class="kalax-inline-math">R=k</span> 是域，则 <span class="kalax-inline-math">k</span>-模就是 <span class="kalax-inline-math">k</span> 上的向量空间。
+3. 若 <span class="kalax-inline-math">f:R\to S</span> 是环同态，则 <span class="kalax-inline-math">S</span> 可看作 <span class="kalax-inline-math">R</span>-模，标量作用为
 
-   \[
-r\cdot s=f(r)s.
-\]
+   <div class="kalax-display-math">r\cdot s=f(r)s.</div>
 
-4. 左理想正是 \(R\) 的左 \(R\)-子模。
+4. 左理想正是 <span class="kalax-inline-math">R</span> 的左 <span class="kalax-inline-math">R</span>-子模。
 
 ### 零模
 
-对任意 \(a\in A\) 和 \(r\in R\)，
+对任意 <span class="kalax-inline-math">a\in A</span> 和 <span class="kalax-inline-math">r\in R</span>，
 
-\[
-0_Ra=0_A,\qquad r0_A=0_A.
-\]
+<div class="kalax-display-math">0_Ra=0_A,\qquad r0_A=0_A.</div>
 
-通常记零子模为 \(0\) 或 \(\{0\}\)。
+通常记零子模为 <span class="kalax-inline-math">0</span> 或 <span class="kalax-inline-math">\{0\}</span>。
 
-**证明。** 因为 \(0_R=0_R+0_R\)，所以
+**证明。** 因为 <span class="kalax-inline-math">0_R=0_R+0_R</span>，所以
 
-\[
-0_Ra=(0_R+0_R)a=0_Ra+0_Ra.
-\]
+<div class="kalax-display-math">0_Ra=(0_R+0_R)a=0_Ra+0_Ra.</div>
 
-在交换群 \(A\) 中两边加上 \(-(0_Ra)\)，得 \(0_Ra=0_A\)。同理，因为 \(0_A=0_A+0_A\)，
+在交换群 <span class="kalax-inline-math">A</span> 中两边加上 <span class="kalax-inline-math">-(0_Ra)</span>，得 <span class="kalax-inline-math">0_Ra=0_A</span>。同理，因为 <span class="kalax-inline-math">0_A=0_A+0_A</span>，
 
-\[
-r0_A=r(0_A+0_A)=r0_A+r0_A,
-\]
+<div class="kalax-display-math">r0_A=r(0_A+0_A)=r0_A+r0_A,</div>
 
-所以 \(r0_A=0_A\)。
+所以 <span class="kalax-inline-math">r0_A=0_A</span>。
 
 ### 模同态
 
-设 \(A,B\) 为 \(R\)-模。映射 \(f:A\to B\) 称为 \(R\)-模同态，若
+设 <span class="kalax-inline-math">A,B</span> 为 <span class="kalax-inline-math">R</span>-模。映射 <span class="kalax-inline-math">f:A\to B</span> 称为 <span class="kalax-inline-math">R</span>-模同态，若
 
-1. \(f(x+y)=f(x)+f(y)\)；
-2. \(f(ra)=rf(a)\)。
+1. <span class="kalax-inline-math">f(x+y)=f(x)+f(y)</span>；
+2. <span class="kalax-inline-math">f(ra)=rf(a)</span>。
 
 即
 
-\[
-f(rx+sy)=rf(x)+sf(y).
-\]
+<div class="kalax-display-math">f(rx+sy)=rf(x)+sf(y).</div>
 
 单同态、满同态、同构按通常方式定义。
 
 ### 核与像
 
-若 \(f:A\to B\) 是 \(R\)-模同态，则
+若 <span class="kalax-inline-math">f:A\to B</span> 是 <span class="kalax-inline-math">R</span>-模同态，则
 
-\[
-\ker f=\{a\in A:f(a)=0\}
-\]
+<div class="kalax-display-math">\ker f=\{a\in A:f(a)=0\}</div>
 
-是 \(A\) 的子模，
+是 <span class="kalax-inline-math">A</span> 的子模，
 
-\[
-\operatorname{Im}f=f(A)
-\]
+<div class="kalax-display-math">\operatorname{Im}f=f(A)</div>
 
-是 \(B\) 的子模。
+是 <span class="kalax-inline-math">B</span> 的子模。
 
-**证明。** 对核，若 \(x,y\in\ker f\)，则
+**证明。** 对核，若 <span class="kalax-inline-math">x,y\in\ker f</span>，则
 
-\[
-f(x-y)=f(x)-f(y)=0-0=0,
-\]
+<div class="kalax-display-math">f(x-y)=f(x)-f(y)=0-0=0,</div>
 
-所以 \(x-y\in\ker f\)。若 \(r\in R\)，则
+所以 <span class="kalax-inline-math">x-y\in\ker f</span>。若 <span class="kalax-inline-math">r\in R</span>，则
 
-\[
-f(rx)=rf(x)=r0=0,
-\]
+<div class="kalax-display-math">f(rx)=rf(x)=r0=0,</div>
 
-所以 \(rx\in\ker f\)。故 \(\ker f\) 是子模。
+所以 <span class="kalax-inline-math">rx\in\ker f</span>。故 <span class="kalax-inline-math">\ker f</span> 是子模。
 
-对像，若 \(u=f(x),v=f(y)\)，则
+对像，若 <span class="kalax-inline-math">u=f(x),v=f(y)</span>，则
 
-\[
-u-v=f(x)-f(y)=f(x-y)\in\operatorname{Im}f.
-\]
+<div class="kalax-display-math">u-v=f(x)-f(y)=f(x-y)\in\operatorname{Im}f.</div>
 
-若 \(r\in R\)，则
+若 <span class="kalax-inline-math">r\in R</span>，则
 
-\[
-ru=r f(x)=f(rx)\in\operatorname{Im}f.
-\]
+<div class="kalax-display-math">ru=r f(x)=f(rx)\in\operatorname{Im}f.</div>
 
-故 \(\operatorname{Im}f\) 是子模。
+故 <span class="kalax-inline-math">\operatorname{Im}f</span> 是子模。
 
 ### 生成子模
 
-若 \(X\subseteq A\)，则由 \(X\) 生成的子模记作
+若 <span class="kalax-inline-math">X\subseteq A</span>，则由 <span class="kalax-inline-math">X</span> 生成的子模记作
 
-\[
-\langle X\rangle.
-\]
+<div class="kalax-display-math">\langle X\rangle.</div>
 
-若 \(X=\{a_1,\dots,a_n\}\)，则
+若 <span class="kalax-inline-math">X=\{a_1,\dots,a_n\}</span>，则
 
-\[
-\langle a_1,\dots,a_n\rangle
+<div class="kalax-display-math">\langle a_1,\dots,a_n\rangle
 =
-\left\{\sum_{i=1}^n r_ia_i:r_i\in R\right\}.
-\]
+\left\{\sum_{i=1}^n r_ia_i:r_i\in R\right\}.</div>
 
 特别地，
 
-\[
-\langle a\rangle=Ra=\{ra:r\in R\}.
-\]
+<div class="kalax-display-math">\langle a\rangle=Ra=\{ra:r\in R\}.</div>
 
 **证明。** 有限线性组合集合
 
-\[
-L=\left\{\sum_{i=1}^n r_ia_i:r_i\in R\right\}
-\]
+<div class="kalax-display-math">L=\left\{\sum_{i=1}^n r_ia_i:r_i\in R\right\}</div>
 
-显然包含 \(a_1,\dots,a_n\)，并且对加减与 \(R\) 的标量乘法封闭，因此是子模。任何包含 \(a_1,\dots,a_n\) 的子模都必须包含所有这样的线性组合，所以 \(L\) 正是由这些元素生成的最小子模。
+显然包含 <span class="kalax-inline-math">a_1,\dots,a_n</span>，并且对加减与 <span class="kalax-inline-math">R</span> 的标量乘法封闭，因此是子模。任何包含 <span class="kalax-inline-math">a_1,\dots,a_n</span> 的子模都必须包含所有这样的线性组合，所以 <span class="kalax-inline-math">L</span> 正是由这些元素生成的最小子模。
 
 ### 商模与第一同构定理
 
-若 \(N\subseteq M\) 是子 \(R\)-模，则
+若 <span class="kalax-inline-math">N\subseteq M</span> 是子 <span class="kalax-inline-math">R</span>-模，则
 
-\[
-M/N
-\]
+<div class="kalax-display-math">M/N</div>
 
 在
 
-\[
-r(m+N)=rm+N
-\]
+<div class="kalax-display-math">r(m+N)=rm+N</div>
 
-下成为 \(R\)-模，称为商模。
+下成为 <span class="kalax-inline-math">R</span>-模，称为商模。
 
-**良定义证明。** 商群 \(M/N\) 已经有加法。需要检查标量乘法不依赖代表元。若
+**良定义证明。** 商群 <span class="kalax-inline-math">M/N</span> 已经有加法。需要检查标量乘法不依赖代表元。若
 
-\[
-m+N=m'+N,
-\]
+<div class="kalax-display-math">m+N=m'+N,</div>
 
-则 \(m-m'\in N\)。因为 \(N\) 是子模，
+则 <span class="kalax-inline-math">m-m'\in N</span>。因为 <span class="kalax-inline-math">N</span> 是子模，
 
-\[
-r(m-m')=rm-rm'\in N,
-\]
+<div class="kalax-display-math">r(m-m')=rm-rm'\in N,</div>
 
 所以
 
-\[
-rm+N=rm'+N.
-\]
+<div class="kalax-display-math">rm+N=rm'+N.</div>
 
-故 \(r(m+N)=rm+N\) 良定义。
+故 <span class="kalax-inline-math">r(m+N)=rm+N</span> 良定义。
 
-模公理从 \(M\) 中继承。例如
+模公理从 <span class="kalax-inline-math">M</span> 中继承。例如
 
-\[
-(r+s)(m+N)=(r+s)m+N=rm+sm+N
-=r(m+N)+s(m+N).
-\]
+<div class="kalax-display-math">(r+s)(m+N)=(r+s)m+N=rm+sm+N
+=r(m+N)+s(m+N).</div>
 
-若 \(f:A\to B\) 是 \(R\)-模同态，则
+若 <span class="kalax-inline-math">f:A\to B</span> 是 <span class="kalax-inline-math">R</span>-模同态，则
 
-\[
-A/\ker f\cong \operatorname{Im}f.
-\]
+<div class="kalax-display-math">A/\ker f\cong \operatorname{Im}f.</div>
 
 **证明。** 定义
 
-\[
-\overline f:A/\ker f\to\operatorname{Im}f,\qquad
-a+\ker f\mapsto f(a).
-\]
+<div class="kalax-display-math">\overline f:A/\ker f\to\operatorname{Im}f,\qquad
+a+\ker f\mapsto f(a).</div>
 
-先看良定义。若 \(a+\ker f=a'+\ker f\)，则 \(a-a'\in\ker f\)，所以
+先看良定义。若 <span class="kalax-inline-math">a+\ker f=a'+\ker f</span>，则 <span class="kalax-inline-math">a-a'\in\ker f</span>，所以
 
-\[
-f(a)-f(a')=f(a-a')=0,
-\]
+<div class="kalax-display-math">f(a)-f(a')=f(a-a')=0,</div>
 
-即 \(f(a)=f(a')\)。映射 \(\overline f\) 显然是 \(R\)-模同态，并且满射到 \(\operatorname{Im}f\)。若
+即 <span class="kalax-inline-math">f(a)=f(a')</span>。映射 <span class="kalax-inline-math">\overline f</span> 显然是 <span class="kalax-inline-math">R</span>-模同态，并且满射到 <span class="kalax-inline-math">\operatorname{Im}f</span>。若
 
-\[
-\overline f(a+\ker f)=0,
-\]
+<div class="kalax-display-math">\overline f(a+\ker f)=0,</div>
 
-则 \(f(a)=0\)，即 \(a\in\ker f\)，所以 \(a+\ker f=0\)。故 \(\overline f\) 单射，从而是同构。
+则 <span class="kalax-inline-math">f(a)=0</span>，即 <span class="kalax-inline-math">a\in\ker f</span>，所以 <span class="kalax-inline-math">a+\ker f=0</span>。故 <span class="kalax-inline-math">\overline f</span> 单射，从而是同构。
 
 ### 第二、第三同构定理
 
-若 \(B,C\subseteq A\) 是子模，则
+若 <span class="kalax-inline-math">B,C\subseteq A</span> 是子模，则
 
-\[
-B/(B\cap C)\cong (B+C)/C.
-\]
+<div class="kalax-display-math">B/(B\cap C)\cong (B+C)/C.</div>
 
 **证明。** 定义
 
-\[
-\phi:B\to (B+C)/C,\qquad b\mapsto b+C.
-\]
+<div class="kalax-display-math">\phi:B\to (B+C)/C,\qquad b\mapsto b+C.</div>
 
-这是 \(R\)-模同态。它是满射，因为任意 \((b+c)+C\) 都等于 \(b+C\)。其核为
+这是 <span class="kalax-inline-math">R</span>-模同态。它是满射，因为任意 <span class="kalax-inline-math">(b+c)+C</span> 都等于 <span class="kalax-inline-math">b+C</span>。其核为
 
-\[
-\ker\phi
+<div class="kalax-display-math">\ker\phi
 =\{b\in B:b+C=C\}
-=B\cap C.
-\]
+=B\cap C.</div>
 
 由第一同构定理，
 
-\[
-B/(B\cap C)\cong (B+C)/C.
-\]
+<div class="kalax-display-math">B/(B\cap C)\cong (B+C)/C.</div>
 
-若 \(B\subseteq C\subseteq A\)，则
+若 <span class="kalax-inline-math">B\subseteq C\subseteq A</span>，则
 
-\[
-(A/B)/(C/B)\cong A/C.
-\]
+<div class="kalax-display-math">(A/B)/(C/B)\cong A/C.</div>
 
 **证明。** 定义
 
-\[
-\psi:A/B\to A/C,\qquad a+B\mapsto a+C.
-\]
+<div class="kalax-display-math">\psi:A/B\to A/C,\qquad a+B\mapsto a+C.</div>
 
-若 \(a+B=a'+B\)，则 \(a-a'\in B\subseteq C\)，所以 \(a+C=a'+C\)，故良定义。\(\psi\) 是满同态。其核为
+若 <span class="kalax-inline-math">a+B=a'+B</span>，则 <span class="kalax-inline-math">a-a'\in B\subseteq C</span>，所以 <span class="kalax-inline-math">a+C=a'+C</span>，故良定义。<span class="kalax-inline-math">\psi</span> 是满同态。其核为
 
-\[
-\ker\psi
+<div class="kalax-display-math">\ker\psi
 =\{a+B:a+C=C\}
 =\{a+B:a\in C\}
-=C/B.
-\]
+=C/B.</div>
 
 由第一同构定理，
 
-\[
-(A/B)/(C/B)\cong A/C.
-\]
+<div class="kalax-display-math">(A/B)/(C/B)\cong A/C.</div>
 
 ### 正合列
 
 模同态列
 
-\[
-A\xrightarrow{f}B\xrightarrow{g}C
-\]
+<div class="kalax-display-math">A\xrightarrow{f}B\xrightarrow{g}C</div>
 
-称在 \(B\) 处正合，若
+称在 <span class="kalax-inline-math">B</span> 处正合，若
 
-\[
-\operatorname{Im}f=\ker g.
-\]
+<div class="kalax-display-math">\operatorname{Im}f=\ker g.</div>
 
 短正合列是形如
 
-\[
-0\longrightarrow A\xrightarrow{f}B\xrightarrow{g}C\longrightarrow 0
-\]
+<div class="kalax-display-math">0\longrightarrow A\xrightarrow{f}B\xrightarrow{g}C\longrightarrow 0</div>
 
-的正合列。此时 \(f\) 单射，\(g\) 满射，并且
+的正合列。此时 <span class="kalax-inline-math">f</span> 单射，<span class="kalax-inline-math">g</span> 满射，并且
 
-\[
-B/\operatorname{Im}f\cong C.
-\]
+<div class="kalax-display-math">B/\operatorname{Im}f\cong C.</div>
 
 **解释。** 在短正合列
 
-\[
-0\to A\xrightarrow{f}B\xrightarrow{g}C\to0
-\]
+<div class="kalax-display-math">0\to A\xrightarrow{f}B\xrightarrow{g}C\to0</div>
 
 中，左端正合表示
 
-\[
-\ker f=\operatorname{Im}(0\to A)=0,
-\]
+<div class="kalax-display-math">\ker f=\operatorname{Im}(0\to A)=0,</div>
 
-所以 \(f\) 单射。右端正合表示
+所以 <span class="kalax-inline-math">f</span> 单射。右端正合表示
 
-\[
-\operatorname{Im}g=\ker(C\to0)=C,
-\]
+<div class="kalax-display-math">\operatorname{Im}g=\ker(C\to0)=C,</div>
 
-所以 \(g\) 满射。中间正合表示
+所以 <span class="kalax-inline-math">g</span> 满射。中间正合表示
 
-\[
-\operatorname{Im}f=\ker g.
-\]
+<div class="kalax-display-math">\operatorname{Im}f=\ker g.</div>
 
 于是由第一同构定理，
 
-\[
-B/\operatorname{Im}f
+<div class="kalax-display-math">B/\operatorname{Im}f
 =B/\ker g
 \cong\operatorname{Im}g
-=C.
-\]
+=C.</div>
 
 ### 短五引理
 
 考虑交换图
 
-\[
-\begin{array}{ccccccccc}
-0&\longrightarrow&A&\xrightarrow{f}&B&\xrightarrow{g}&C&\longrightarrow&0\\
-&&\downarrow\alpha&&\downarrow\beta&&\downarrow\gamma&&\\
-0&\longrightarrow&A'&\xrightarrow{f'}&B'&\xrightarrow{g'}&C'&\longrightarrow&0
-\end{array}
-\]
+<div class="kalax-display-math">\begin{array}{ccccccccc}
+0&amp;\longrightarrow&amp;A&amp;\xrightarrow{f}&amp;B&amp;\xrightarrow{g}&amp;C&amp;\longrightarrow&amp;0\\
+&amp;&amp;\downarrow\alpha&amp;&amp;\downarrow\beta&amp;&amp;\downarrow\gamma&amp;&amp;\\
+0&amp;\longrightarrow&amp;A'&amp;\xrightarrow{f'}&amp;B'&amp;\xrightarrow{g'}&amp;C'&amp;\longrightarrow&amp;0
+\end{array}</div>
 
 若两行短正合，则：
 
-1. 若 \(\alpha,\gamma\) 单射，则 \(\beta\) 单射；
-2. 若 \(\alpha,\gamma\) 满射，则 \(\beta\) 满射；
-3. 若 \(\alpha,\gamma\) 是同构，则 \(\beta\) 是同构。
+1. 若 <span class="kalax-inline-math">\alpha,\gamma</span> 单射，则 <span class="kalax-inline-math">\beta</span> 单射；
+2. 若 <span class="kalax-inline-math">\alpha,\gamma</span> 满射，则 <span class="kalax-inline-math">\beta</span> 满射；
+3. 若 <span class="kalax-inline-math">\alpha,\gamma</span> 是同构，则 <span class="kalax-inline-math">\beta</span> 是同构。
 
 **证明。** 这是一次典型的 diagram chasing。
 
-1. 先证单射部分。设 \(b\in B\) 且 \(\beta(b)=0\)。要证 \(b=0\)。由交换性，
+1. 先证单射部分。设 <span class="kalax-inline-math">b\in B</span> 且 <span class="kalax-inline-math">\beta(b)=0</span>。要证 <span class="kalax-inline-math">b=0</span>。由交换性，
 
-   \[
-\gamma(g(b))=g'(\beta(b))=g'(0)=0.
-\]
+   <div class="kalax-display-math">\gamma(g(b))=g'(\beta(b))=g'(0)=0.</div>
 
-   因 \(\gamma\) 单射，得 \(g(b)=0\)。上排正合给出
+   因 <span class="kalax-inline-math">\gamma</span> 单射，得 <span class="kalax-inline-math">g(b)=0</span>。上排正合给出
 
-   \[
-b\in\ker g=\operatorname{Im}f,
-\]
+   <div class="kalax-display-math">b\in\ker g=\operatorname{Im}f,</div>
 
-   所以存在 \(a\in A\) 使 \(f(a)=b\)。再用交换性：
+   所以存在 <span class="kalax-inline-math">a\in A</span> 使 <span class="kalax-inline-math">f(a)=b</span>。再用交换性：
 
-   \[
-f'(\alpha(a))=\beta(f(a))=\beta(b)=0.
-\]
+   <div class="kalax-display-math">f'(\alpha(a))=\beta(f(a))=\beta(b)=0.</div>
 
-   下排中 \(f'\) 单射，因此 \(\alpha(a)=0\)。又 \(\alpha\) 单射，得 \(a=0\)，所以
+   下排中 <span class="kalax-inline-math">f'</span> 单射，因此 <span class="kalax-inline-math">\alpha(a)=0</span>。又 <span class="kalax-inline-math">\alpha</span> 单射，得 <span class="kalax-inline-math">a=0</span>，所以
 
-   \[
-b=f(a)=0.
-\]
+   <div class="kalax-display-math">b=f(a)=0.</div>
 
-   故 \(\beta\) 单射。
+   故 <span class="kalax-inline-math">\beta</span> 单射。
 
-2. 再证满射部分。任取 \(b'\in B'\)。令
+2. 再证满射部分。任取 <span class="kalax-inline-math">b'\in B'</span>。令
 
-   \[
-c'=g'(b')\in C'.
-\]
+   <div class="kalax-display-math">c'=g'(b')\in C'.</div>
 
-   因 \(\gamma\) 满射，存在 \(c\in C\) 使 \(\gamma(c)=c'\)。上排中 \(g\) 满射，所以存在 \(b\in B\) 使
+   因 <span class="kalax-inline-math">\gamma</span> 满射，存在 <span class="kalax-inline-math">c\in C</span> 使 <span class="kalax-inline-math">\gamma(c)=c'</span>。上排中 <span class="kalax-inline-math">g</span> 满射，所以存在 <span class="kalax-inline-math">b\in B</span> 使
 
-   \[
-g(b)=c.
-\]
+   <div class="kalax-display-math">g(b)=c.</div>
 
    于是
 
-   \[
-g'(\beta(b))=\gamma(g(b))=\gamma(c)=c'=g'(b').
-\]
+   <div class="kalax-display-math">g'(\beta(b))=\gamma(g(b))=\gamma(c)=c'=g'(b').</div>
 
    因此
 
-   \[
-b'-\beta(b)\in\ker g'=\operatorname{Im}f'.
-\]
+   <div class="kalax-display-math">b'-\beta(b)\in\ker g'=\operatorname{Im}f'.</div>
 
-   存在 \(a'\in A'\) 使
+   存在 <span class="kalax-inline-math">a'\in A'</span> 使
 
-   \[
-f'(a')=b'-\beta(b).
-\]
+   <div class="kalax-display-math">f'(a')=b'-\beta(b).</div>
 
-   因 \(\alpha\) 满射，存在 \(a\in A\) 使 \(\alpha(a)=a'\)。于是
+   因 <span class="kalax-inline-math">\alpha</span> 满射，存在 <span class="kalax-inline-math">a\in A</span> 使 <span class="kalax-inline-math">\alpha(a)=a'</span>。于是
 
-   \[
-\beta(b+f(a))
+   <div class="kalax-display-math">\beta(b+f(a))
    =
    \beta(b)+\beta(f(a))
    =
@@ -3020,12 +2293,11 @@ f'(a')=b'-\beta(b).
    =
    \beta(b)+f'(a')
    =
-   b'.
-\]
+   b'.</div>
 
-   故 \(\beta\) 满射。
+   故 <span class="kalax-inline-math">\beta</span> 满射。
 
-3. 若 \(\alpha,\gamma\) 都是同构，则它们既单又满，由前两步知 \(\beta\) 既单又满，因此是同构。
+3. 若 <span class="kalax-inline-math">\alpha,\gamma</span> 都是同构，则它们既单又满，由前两步知 <span class="kalax-inline-math">\beta</span> 既单又满，因此是同构。
 
 ## 16. 域扩张
 
@@ -3033,41 +2305,31 @@ f'(a')=b'-\beta(b).
 
 二次方程
 
-\[
-ax^2+bx+c=0
-\]
+<div class="kalax-display-math">ax^2+bx+c=0</div>
 
 有通用求根公式；三次、四次方程也有根式公式。但五次及以上一般没有根式公式。这推动我们研究域扩张与多项式方程的根。
 
 ### 定义：域扩张
 
-若 \(K\subseteq F\) 且 \(K,F\) 都是域，并且 \(K\) 的运算与 \(F\) 中继承的运算一致，则称 \(F\) 是 \(K\) 的一个**域扩张**，记作
+若 <span class="kalax-inline-math">K\subseteq F</span> 且 <span class="kalax-inline-math">K,F</span> 都是域，并且 <span class="kalax-inline-math">K</span> 的运算与 <span class="kalax-inline-math">F</span> 中继承的运算一致，则称 <span class="kalax-inline-math">F</span> 是 <span class="kalax-inline-math">K</span> 的一个**域扩张**，记作
 
-\[
-F/K.
-\]
+<div class="kalax-display-math">F/K.</div>
 
-此时 \(F\) 自然是 \(K\) 上的向量空间。其维数称为扩张次数，记作
+此时 <span class="kalax-inline-math">F</span> 自然是 <span class="kalax-inline-math">K</span> 上的向量空间。其维数称为扩张次数，记作
 
-\[
-[F:K]=\dim_K F.
-\]
+<div class="kalax-display-math">[F:K]=\dim_K F.</div>
 
-若 \([F:K]<\infty\)，称 \(F/K\) 为有限扩张。
+若 <span class="kalax-inline-math">[F:K]&lt;\infty</span>，称 <span class="kalax-inline-math">F/K</span> 为有限扩张。
 
 ### 例
 
-1. \(\mathbb C/\mathbb R\) 是次数为 \(2\) 的扩张：
+1. <span class="kalax-inline-math">\mathbb C/\mathbb R</span> 是次数为 <span class="kalax-inline-math">2</span> 的扩张：
 
-   \[
-[\mathbb C:\mathbb R]=2.
-\]
+   <div class="kalax-display-math">[\mathbb C:\mathbb R]=2.</div>
 
-2. \(\mathbb R/\mathbb Q\) 不是有限扩张：
+2. <span class="kalax-inline-math">\mathbb R/\mathbb Q</span> 不是有限扩张：
 
-   \[
-[\mathbb R:\mathbb Q]=\infty.
-\]
+   <div class="kalax-display-math">[\mathbb R:\mathbb Q]=\infty.</div>
 
 ### 备注
 

@@ -13,8 +13,7 @@ tags:
   - "Abstract algebra"
   - "未命名 1"
 description: "1. Let G be a group and A a normal abelian subgroup. Show that G/A operates on A by conjugation and obtain a homomorphism G/A to AutA . Proof: forall "
-mathjax: true
 ---
->1. Let \(G\) be a group and \(A\) a normal abelian subgroup. Show that \(G/A\) operates on \(A\) by conjugation and obtain a homomorphism \(G/A\to AutA\) .
+>1. Let <span class="kalax-inline-math">G</span> be a group and <span class="kalax-inline-math">A</span> a normal abelian subgroup. Show that <span class="kalax-inline-math">G/A</span> operates on <span class="kalax-inline-math">A</span> by conjugation and obtain a homomorphism <span class="kalax-inline-math">G/A\to AutA</span> .
 >Proof:
->\(\forall gA \in G/A\) , define \(f:G/A\to AutA\) by$gA(a)
+><span class="kalax-inline-math">\forall gA \in G/A</span> , define <span class="kalax-inline-math">f:G/A\to AutA</span> by$gA(a)

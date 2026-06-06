@@ -21,163 +21,123 @@ mathjax: true
 
 ## 习题 7.2.19
 
-设 \(\mathcal A\in \operatorname{End}(V)\) 为正规变换。证明：
+设 <span class="kalax-inline-math">\mathcal A\in \operatorname{End}(V)</span> 为正规变换。证明：
 
-\[
-\operatorname{Im}(\mathcal A)=\operatorname{Im}(\mathcal A^*).
-\]
+<div class="kalax-display-math">\operatorname{Im}(\mathcal A)=\operatorname{Im}(\mathcal A^*).</div>
 
-因为 \(\mathcal A\) 是正规变换，所以
+因为 <span class="kalax-inline-math">\mathcal A</span> 是正规变换，所以
 
-\[
-\mathcal A\mathcal A^*=\mathcal A^*\mathcal A.
-\]
+<div class="kalax-display-math">\mathcal A\mathcal A^*=\mathcal A^*\mathcal A.</div>
 
-对任意 \(x\in V\)，有
+对任意 <span class="kalax-inline-math">x\in V</span>，有
 
-\[
-\|\mathcal A x\|^2
+<div class="kalax-display-math">\|\mathcal A x\|^2
 =\langle \mathcal A x,\mathcal A x\rangle
-=\langle \mathcal A^*\mathcal A x,x\rangle,
-\]
+=\langle \mathcal A^*\mathcal A x,x\rangle,</div>
 
 而
 
-\[
-\|\mathcal A^*x\|^2
+<div class="kalax-display-math">\|\mathcal A^*x\|^2
 =\langle \mathcal A^*x,\mathcal A^*x\rangle
-=\langle \mathcal A\mathcal A^*x,x\rangle.
-\]
+=\langle \mathcal A\mathcal A^*x,x\rangle.</div>
 
 由正规性可得
 
-\[
-\|\mathcal A x\|^2=\|\mathcal A^*x\|^2.
-\]
+<div class="kalax-display-math">\|\mathcal A x\|^2=\|\mathcal A^*x\|^2.</div>
 
 因此
 
-\[
-\mathcal A x=0
+<div class="kalax-display-math">\mathcal A x=0
 \iff
-\mathcal A^*x=0.
-\]
+\mathcal A^*x=0.</div>
 
 所以
 
-\[
-\ker \mathcal A=\ker \mathcal A^*.
-\]
+<div class="kalax-display-math">\ker \mathcal A=\ker \mathcal A^*.</div>
 
 又因为有限维内积空间中有
 
-\[
-\operatorname{Im}(\mathcal A)
+<div class="kalax-display-math">\operatorname{Im}(\mathcal A)
 =
-(\ker \mathcal A^*)^\perp,
-\]
+(\ker \mathcal A^*)^\perp,</div>
 
 以及
 
-\[
-\operatorname{Im}(\mathcal A^*)
+<div class="kalax-display-math">\operatorname{Im}(\mathcal A^*)
 =
-(\ker \mathcal A)^\perp.
-\]
+(\ker \mathcal A)^\perp.</div>
 
 于是
 
-\[
-\operatorname{Im}(\mathcal A)
+<div class="kalax-display-math">\operatorname{Im}(\mathcal A)
 =
 (\ker \mathcal A^*)^\perp
 =
 (\ker \mathcal A)^\perp
 =
-\operatorname{Im}(\mathcal A^*).
-\]
+\operatorname{Im}(\mathcal A^*).</div>
 
 所以
 
-\[
-\boxed{\operatorname{Im}(\mathcal A)=\operatorname{Im}(\mathcal A^*)}.
-\]
+<div class="kalax-display-math">\boxed{\operatorname{Im}(\mathcal A)=\operatorname{Im}(\mathcal A^*)}.</div>
 
 ---
 
 ## 习题 7.2.21
 
-设 \(A\in M_n(\mathbb R)\) 为对称矩阵。对于每个 \(i\in[1,n]\)，记 \(c_i\) 为 \(A\) 的所有 \(i\) 阶主子式之和。
+设 <span class="kalax-inline-math">A\in M_n(\mathbb R)</span> 为对称矩阵。对于每个 <span class="kalax-inline-math">i\in[1,n]</span>，记 <span class="kalax-inline-math">c_i</span> 为 <span class="kalax-inline-math">A</span> 的所有 <span class="kalax-inline-math">i</span> 阶主子式之和。
 
-证明：如果 \(c_i\ge 0\) 对每个 \(i\in[1,n]\) 成立，那么 \(A\) 是半正定的。如果再有 \(c_n>0\)，则 \(A\) 是正定的。
+证明：如果 <span class="kalax-inline-math">c_i\ge 0</span> 对每个 <span class="kalax-inline-math">i\in[1,n]</span> 成立，那么 <span class="kalax-inline-math">A</span> 是半正定的。如果再有 <span class="kalax-inline-math">c_n&gt;0</span>，则 <span class="kalax-inline-math">A</span> 是正定的。
 
-因为 \(A\) 是实对称矩阵，所以存在正交矩阵 \(Q\)，使得
+因为 <span class="kalax-inline-math">A</span> 是实对称矩阵，所以存在正交矩阵 <span class="kalax-inline-math">Q</span>，使得
 
-\[
-Q^TAQ=\operatorname{diag}(\lambda_1,\dots,\lambda_n),
-\]
+<div class="kalax-display-math">Q^TAQ=\operatorname{diag}(\lambda_1,\dots,\lambda_n),</div>
 
-其中 \(\lambda_1,\dots,\lambda_n\in\mathbb R\)。
+其中 <span class="kalax-inline-math">\lambda_1,\dots,\lambda_n\in\mathbb R</span>。
 
-矩阵 \(A\) 的特征多项式为
+矩阵 <span class="kalax-inline-math">A</span> 的特征多项式为
 
-\[
-p_A(t)=\det(tI-A)
-=t^n-c_1t^{n-1}+c_2t^{n-2}-\cdots+(-1)^nc_n.
-\]
+<div class="kalax-display-math">p_A(t)=\det(tI-A)
+=t^n-c_1t^{n-1}+c_2t^{n-2}-\cdots+(-1)^nc_n.</div>
 
-反设 \(A\) 有负特征值。设该负特征值为 \(-s\)，其中 \(s>0\)。因为 \(-s\) 是特征值，所以
+反设 <span class="kalax-inline-math">A</span> 有负特征值。设该负特征值为 <span class="kalax-inline-math">-s</span>，其中 <span class="kalax-inline-math">s&gt;0</span>。因为 <span class="kalax-inline-math">-s</span> 是特征值，所以
 
-\[
-p_A(-s)=0.
-\]
+<div class="kalax-display-math">p_A(-s)=0.</div>
 
 但是
 
-\[
-p_A(-s)
+<div class="kalax-display-math">p_A(-s)
 =
 (-1)^n
 \left(
 s^n+c_1s^{n-1}+c_2s^{n-2}+\cdots+c_n
-\right).
-\]
+\right).</div>
 
 由于
 
-\[
-s>0,\qquad c_i\ge 0,
-\]
+<div class="kalax-display-math">s&gt;0,\qquad c_i\ge 0,</div>
 
-所以上式括号中的数严格大于 \(0\)，因此
+所以上式括号中的数严格大于 <span class="kalax-inline-math">0</span>，因此
 
-\[
-p_A(-s)\neq 0.
-\]
+<div class="kalax-display-math">p_A(-s)\neq 0.</div>
 
-这与 \(p_A(-s)=0\) 矛盾。
+这与 <span class="kalax-inline-math">p_A(-s)=0</span> 矛盾。
 
-所以 \(A\) 没有负特征值，即
+所以 <span class="kalax-inline-math">A</span> 没有负特征值，即
 
-\[
-\lambda_i\ge 0,\qquad i=1,\dots,n.
-\]
+<div class="kalax-display-math">\lambda_i\ge 0,\qquad i=1,\dots,n.</div>
 
-因此 \(A\) 是半正定矩阵。
+因此 <span class="kalax-inline-math">A</span> 是半正定矩阵。
 
 如果进一步有
 
-\[
-c_n>0,
-\]
+<div class="kalax-display-math">c_n&gt;0,</div>
 
 注意到
 
-\[
-c_n=\det A=\lambda_1\lambda_2\cdots\lambda_n.
-\]
+<div class="kalax-display-math">c_n=\det A=\lambda_1\lambda_2\cdots\lambda_n.</div>
 
-而所有 \(\lambda_i\ge 0\)，且它们的乘积大于 \(0\)，所以每个 \(\lambda_i\) 都大于 \(0\)。因此 \(A\) 是正定矩阵。
+而所有 <span class="kalax-inline-math">\lambda_i\ge 0</span>，且它们的乘积大于 <span class="kalax-inline-math">0</span>，所以每个 <span class="kalax-inline-math">\lambda_i</span> 都大于 <span class="kalax-inline-math">0</span>。因此 <span class="kalax-inline-math">A</span> 是正定矩阵。
 
 综上，结论成立。
 
@@ -185,261 +145,201 @@ c_n=\det A=\lambda_1\lambda_2\cdots\lambda_n.
 
 ## 习题 7.2.22
 
-设 \(A,B\in M_n(\mathbb R)\) 均为对称矩阵，其中 \(A\) 正定。证明：存在可逆矩阵 \(P\in M_n(\mathbb R)\)，使得
+设 <span class="kalax-inline-math">A,B\in M_n(\mathbb R)</span> 均为对称矩阵，其中 <span class="kalax-inline-math">A</span> 正定。证明：存在可逆矩阵 <span class="kalax-inline-math">P\in M_n(\mathbb R)</span>，使得
 
-\[
-P^TAP
-\]
+<div class="kalax-display-math">P^TAP</div>
 
 和
 
-\[
-P^TBP
-\]
+<div class="kalax-display-math">P^TBP</div>
 
 同时为对角矩阵。
 
-因为 \(A\) 正定，所以存在可逆矩阵 \(S\)，使得
+因为 <span class="kalax-inline-math">A</span> 正定，所以存在可逆矩阵 <span class="kalax-inline-math">S</span>，使得
 
-\[
-S^TAS=I.
-\]
+<div class="kalax-display-math">S^TAS=I.</div>
 
 令
 
-\[
-C=S^TBS.
-\]
+<div class="kalax-display-math">C=S^TBS.</div>
 
-因为 \(B\) 是对称矩阵，所以
+因为 <span class="kalax-inline-math">B</span> 是对称矩阵，所以
 
-\[
-C^T=(S^TBS)^T=S^TB^TS=S^TBS=C.
-\]
+<div class="kalax-display-math">C^T=(S^TBS)^T=S^TB^TS=S^TBS=C.</div>
 
-因此 \(C\) 也是实对称矩阵。
+因此 <span class="kalax-inline-math">C</span> 也是实对称矩阵。
 
-由实对称矩阵正交对角化定理，存在正交矩阵 \(Q\)，使得
+由实对称矩阵正交对角化定理，存在正交矩阵 <span class="kalax-inline-math">Q</span>，使得
 
-\[
-Q^TCQ=D,
-\]
+<div class="kalax-display-math">Q^TCQ=D,</div>
 
-其中 \(D\) 是对角矩阵。
+其中 <span class="kalax-inline-math">D</span> 是对角矩阵。
 
 令
 
-\[
-P=SQ.
-\]
+<div class="kalax-display-math">P=SQ.</div>
 
 则
 
-\[
-P^TAP
+<div class="kalax-display-math">P^TAP
 =
 Q^TS^TASQ
 =
 Q^TIQ
 =
-I,
-\]
+I,</div>
 
 是对角矩阵。
 
 同时
 
-\[
-P^TBP
+<div class="kalax-display-math">P^TBP
 =
 Q^TS^TBSQ
 =
 Q^TCQ
 =
-D,
-\]
+D,</div>
 
 也是对角矩阵。
 
-因此存在可逆矩阵 \(P\)，使得 \(P^TAP\) 和 \(P^TBP\) 同时为对角矩阵。
+因此存在可逆矩阵 <span class="kalax-inline-math">P</span>，使得 <span class="kalax-inline-math">P^TAP</span> 和 <span class="kalax-inline-math">P^TBP</span> 同时为对角矩阵。
 
 ---
 
 ## 习题 7.2.24
 
-设 \(b,c\in\mathbb R\) 且
+设 <span class="kalax-inline-math">b,c\in\mathbb R</span> 且
 
-\[
-b^2-4c<0.
-\]
+<div class="kalax-display-math">b^2-4c&lt;0.</div>
 
-举例说明：存在一个线性变换 \(\mathcal A\in\operatorname{End}(V)\)，使得
+举例说明：存在一个线性变换 <span class="kalax-inline-math">\mathcal A\in\operatorname{End}(V)</span>，使得
 
-\[
-\mathcal A^2+b\mathcal A+cI
-\]
+<div class="kalax-display-math">\mathcal A^2+b\mathcal A+cI</div>
 
 不可逆。
 
 因为
 
-\[
-b^2-4c<0,
-\]
+<div class="kalax-display-math">b^2-4c&lt;0,</div>
 
 所以多项式
 
-\[
-x^2+bx+c
-\]
+<div class="kalax-display-math">x^2+bx+c</div>
 
 在实数范围内没有根，但在复数范围内有一对共轭复根
 
-\[
-\alpha\pm i\beta,
-\]
+<div class="kalax-display-math">\alpha\pm i\beta,</div>
 
 其中
 
-\[
-\alpha=-\frac b2,\qquad
-\beta=\frac{\sqrt{4c-b^2}}2\neq 0.
-\]
+<div class="kalax-display-math">\alpha=-\frac b2,\qquad
+\beta=\frac{\sqrt{4c-b^2}}2\neq 0.</div>
 
-取 \(V=\mathbb R^2\)，定义线性变换 \(\mathcal A\) 在标准基下的矩阵为
+取 <span class="kalax-inline-math">V=\mathbb R^2</span>，定义线性变换 <span class="kalax-inline-math">\mathcal A</span> 在标准基下的矩阵为
 
-\[
-A=
+<div class="kalax-display-math">A=
 \begin{pmatrix}
-\alpha & -\beta\\
-\beta & \alpha
-\end{pmatrix}.
-\]
+\alpha &amp; -\beta\\
+\beta &amp; \alpha
+\end{pmatrix}.</div>
 
-该矩阵对应复平面中“乘以复数 \(\alpha+i\beta\)”的线性变换。
+该矩阵对应复平面中“乘以复数 <span class="kalax-inline-math">\alpha+i\beta</span>”的线性变换。
 
-由于 \(\alpha+i\beta\) 是方程
+由于 <span class="kalax-inline-math">\alpha+i\beta</span> 是方程
 
-\[
-x^2+bx+c=0
-\]
+<div class="kalax-display-math">x^2+bx+c=0</div>
 
 的根，所以对应的实矩阵满足
 
-\[
-A^2+bA+cI=0.
-\]
+<div class="kalax-display-math">A^2+bA+cI=0.</div>
 
 因此
 
-\[
-\mathcal A^2+b\mathcal A+cI
-\]
+<div class="kalax-display-math">\mathcal A^2+b\mathcal A+cI</div>
 
 是零变换。
 
 零变换不可逆，所以这就给出了所需例子。
 
-这也说明，如果不假设 \(\mathcal A\) 自伴，那么结论不再成立。
+这也说明，如果不假设 <span class="kalax-inline-math">\mathcal A</span> 自伴，那么结论不再成立。
 
 ---
 
 ## 习题 7.2.25
 
-设 \(\mathcal A,\mathcal B\) 是 \(n\) 维内积空间 \(V\) 上的两个自伴算子。证明下列陈述等价：
+设 <span class="kalax-inline-math">\mathcal A,\mathcal B</span> 是 <span class="kalax-inline-math">n</span> 维内积空间 <span class="kalax-inline-math">V</span> 上的两个自伴算子。证明下列陈述等价：
 
-1. 存在 \(V\) 的一组规范正交基 \(\mathcal E\)，使得 \(M_\mathcal E(\mathcal A)\) 和 \(M_\mathcal E(\mathcal B)\) 同时为对角矩阵；
-2. \(\mathcal A\) 和 \(\mathcal B\) 可交换，即
+1. 存在 <span class="kalax-inline-math">V</span> 的一组规范正交基 <span class="kalax-inline-math">\mathcal E</span>，使得 <span class="kalax-inline-math">M_\mathcal E(\mathcal A)</span> 和 <span class="kalax-inline-math">M_\mathcal E(\mathcal B)</span> 同时为对角矩阵；
+2. <span class="kalax-inline-math">\mathcal A</span> 和 <span class="kalax-inline-math">\mathcal B</span> 可交换，即
 
-\[
-\mathcal A\mathcal B=\mathcal B\mathcal A.
-\]
+<div class="kalax-display-math">\mathcal A\mathcal B=\mathcal B\mathcal A.</div>
 
-### 证明 \(1\Rightarrow 2\)
+### 证明 <span class="kalax-inline-math">1\Rightarrow 2</span>
 
-若存在一组规范正交基 \(\mathcal E\)，使得
+若存在一组规范正交基 <span class="kalax-inline-math">\mathcal E</span>，使得
 
-\[
-M_\mathcal E(\mathcal A)
-\]
+<div class="kalax-display-math">M_\mathcal E(\mathcal A)</div>
 
 和
 
-\[
-M_\mathcal E(\mathcal B)
-\]
+<div class="kalax-display-math">M_\mathcal E(\mathcal B)</div>
 
 同时为对角矩阵。
 
 因为对角矩阵之间一定可交换，所以
 
-\[
-M_\mathcal E(\mathcal A)M_\mathcal E(\mathcal B)
+<div class="kalax-display-math">M_\mathcal E(\mathcal A)M_\mathcal E(\mathcal B)
 =
-M_\mathcal E(\mathcal B)M_\mathcal E(\mathcal A).
-\]
+M_\mathcal E(\mathcal B)M_\mathcal E(\mathcal A).</div>
 
 因此
 
-\[
-\mathcal A\mathcal B=\mathcal B\mathcal A.
-\]
+<div class="kalax-display-math">\mathcal A\mathcal B=\mathcal B\mathcal A.</div>
 
-### 证明 \(2\Rightarrow 1\)
+### 证明 <span class="kalax-inline-math">2\Rightarrow 1</span>
 
-因为 \(\mathcal A\) 是自伴算子，所以 \(V\) 可以正交分解为 \(\mathcal A\) 的特征子空间直和：
+因为 <span class="kalax-inline-math">\mathcal A</span> 是自伴算子，所以 <span class="kalax-inline-math">V</span> 可以正交分解为 <span class="kalax-inline-math">\mathcal A</span> 的特征子空间直和：
 
-\[
-V=\bigoplus_\lambda V_\lambda,
-\]
+<div class="kalax-display-math">V=\bigoplus_\lambda V_\lambda,</div>
 
 其中
 
-\[
-V_\lambda=\ker(\mathcal A-\lambda I).
-\]
+<div class="kalax-display-math">V_\lambda=\ker(\mathcal A-\lambda I).</div>
 
-下面证明每个 \(V_\lambda\) 在 \(\mathcal B\) 下不变。
+下面证明每个 <span class="kalax-inline-math">V_\lambda</span> 在 <span class="kalax-inline-math">\mathcal B</span> 下不变。
 
-任取 \(v\in V_\lambda\)，则
+任取 <span class="kalax-inline-math">v\in V_\lambda</span>，则
 
-\[
-\mathcal Av=\lambda v.
-\]
+<div class="kalax-display-math">\mathcal Av=\lambda v.</div>
 
 又因为
 
-\[
-\mathcal A\mathcal B=\mathcal B\mathcal A,
-\]
+<div class="kalax-display-math">\mathcal A\mathcal B=\mathcal B\mathcal A,</div>
 
 所以
 
-\[
-\mathcal A(\mathcal Bv)
+<div class="kalax-display-math">\mathcal A(\mathcal Bv)
 =
 \mathcal B(\mathcal Av)
 =
 \mathcal B(\lambda v)
 =
-\lambda\mathcal Bv.
-\]
+\lambda\mathcal Bv.</div>
 
 因此
 
-\[
-\mathcal Bv\in V_\lambda.
-\]
+<div class="kalax-display-math">\mathcal Bv\in V_\lambda.</div>
 
-所以 \(\mathcal B\) 保持 \(\mathcal A\) 的每个特征子空间不变。
+所以 <span class="kalax-inline-math">\mathcal B</span> 保持 <span class="kalax-inline-math">\mathcal A</span> 的每个特征子空间不变。
 
-由于 \(\mathcal B\) 也是自伴算子，所以 \(\mathcal B\) 在每个 \(V_\lambda\) 上的限制仍然是自伴算子。于是可以在每个 \(V_\lambda\) 中选取一组规范正交基，使得 \(\mathcal B\) 在该子空间上对角化。
+由于 <span class="kalax-inline-math">\mathcal B</span> 也是自伴算子，所以 <span class="kalax-inline-math">\mathcal B</span> 在每个 <span class="kalax-inline-math">V_\lambda</span> 上的限制仍然是自伴算子。于是可以在每个 <span class="kalax-inline-math">V_\lambda</span> 中选取一组规范正交基，使得 <span class="kalax-inline-math">\mathcal B</span> 在该子空间上对角化。
 
-把所有这些规范正交基合并起来，就得到 \(V\) 的一组规范正交基。
+把所有这些规范正交基合并起来，就得到 <span class="kalax-inline-math">V</span> 的一组规范正交基。
 
-在这组基下，\(\mathcal A\) 在每个 \(V_\lambda\) 上都是数乘 \(\lambda I\)，因此 \(\mathcal A\) 是对角的；而 \(\mathcal B\) 也被构造为对角的。
+在这组基下，<span class="kalax-inline-math">\mathcal A</span> 在每个 <span class="kalax-inline-math">V_\lambda</span> 上都是数乘 <span class="kalax-inline-math">\lambda I</span>，因此 <span class="kalax-inline-math">\mathcal A</span> 是对角的；而 <span class="kalax-inline-math">\mathcal B</span> 也被构造为对角的。
 
-所以 \(\mathcal A\) 和 \(\mathcal B\) 可以同时正交对角化。
+所以 <span class="kalax-inline-math">\mathcal A</span> 和 <span class="kalax-inline-math">\mathcal B</span> 可以同时正交对角化。
 
 因此两条陈述等价。
 
@@ -447,53 +347,37 @@ V_\lambda=\ker(\mathcal A-\lambda I).
 
 ## 习题 7.2.27
 
-设 \(A\) 为 \(n\) 阶实正规矩阵。假设 \(\lambda\in\mathbb C\) 是 \(A\) 的一个复特征值，列向量 \(\alpha\in\mathbb C^n\) 满足
+设 <span class="kalax-inline-math">A</span> 为 <span class="kalax-inline-math">n</span> 阶实正规矩阵。假设 <span class="kalax-inline-math">\lambda\in\mathbb C</span> 是 <span class="kalax-inline-math">A</span> 的一个复特征值，列向量 <span class="kalax-inline-math">\alpha\in\mathbb C^n</span> 满足
 
-\[
-A\alpha=\lambda\alpha.
-\]
+<div class="kalax-display-math">A\alpha=\lambda\alpha.</div>
 
 证明：
 
-\[
-A^T\alpha=\overline{\lambda}\alpha.
-\]
+<div class="kalax-display-math">A^T\alpha=\overline{\lambda}\alpha.</div>
 
-因为 \(A\) 是实正规矩阵，所以
+因为 <span class="kalax-inline-math">A</span> 是实正规矩阵，所以
 
-\[
-AA^T=A^TA.
-\]
+<div class="kalax-display-math">AA^T=A^TA.</div>
 
-把 \(A\) 看作复空间 \(\mathbb C^n\) 上的矩阵，则它仍然是正规矩阵，并且它的伴随矩阵为
+把 <span class="kalax-inline-math">A</span> 看作复空间 <span class="kalax-inline-math">\mathbb C^n</span> 上的矩阵，则它仍然是正规矩阵，并且它的伴随矩阵为
 
-\[
-A^*=A^T.
-\]
+<div class="kalax-display-math">A^*=A^T.</div>
 
 由正规矩阵的性质可知：如果
 
-\[
-A\alpha=\lambda\alpha,
-\]
+<div class="kalax-display-math">A\alpha=\lambda\alpha,</div>
 
 那么
 
-\[
-A^*\alpha=\overline{\lambda}\alpha.
-\]
+<div class="kalax-display-math">A^*\alpha=\overline{\lambda}\alpha.</div>
 
 又因为这里
 
-\[
-A^*=A^T,
-\]
+<div class="kalax-display-math">A^*=A^T,</div>
 
 所以
 
-\[
-A^T\alpha=\overline{\lambda}\alpha.
-\]
+<div class="kalax-display-math">A^T\alpha=\overline{\lambda}\alpha.</div>
 
 证毕。
 
@@ -501,340 +385,254 @@ A^T\alpha=\overline{\lambda}\alpha.
 
 ## 习题 7.2.28
 
-设 \(\mathcal A\in \operatorname{End}(V)\) 是正规变换，且最小多项式为
+设 <span class="kalax-inline-math">\mathcal A\in \operatorname{End}(V)</span> 是正规变换，且最小多项式为
 
-\[
-g(X)=(X-a)^2+b^2,
-\]
+<div class="kalax-display-math">g(X)=(X-a)^2+b^2,</div>
 
-其中 \(a,b\in\mathbb R\)，\(b\neq 0\)。
+其中 <span class="kalax-inline-math">a,b\in\mathbb R</span>，<span class="kalax-inline-math">b\neq 0</span>。
 
 证明：
 
-\[
-\mathcal A
-\]
+<div class="kalax-display-math">\mathcal A</div>
 
 可逆，且
 
-\[
-\mathcal A^*=(a^2+b^2)\mathcal A^{-1}.
-\]
+<div class="kalax-display-math">\mathcal A^*=(a^2+b^2)\mathcal A^{-1}.</div>
 
 由最小多项式可知
 
-\[
-(\mathcal A-aI)^2+b^2I=0.
-\]
+<div class="kalax-display-math">(\mathcal A-aI)^2+b^2I=0.</div>
 
 展开得
 
-\[
-\mathcal A^2-2a\mathcal A+(a^2+b^2)I=0.
-\]
+<div class="kalax-display-math">\mathcal A^2-2a\mathcal A+(a^2+b^2)I=0.</div>
 
 于是
 
-\[
-\mathcal A(2aI-\mathcal A)=(a^2+b^2)I.
-\]
+<div class="kalax-display-math">\mathcal A(2aI-\mathcal A)=(a^2+b^2)I.</div>
 
 因为
 
-\[
-a^2+b^2>0,
-\]
+<div class="kalax-display-math">a^2+b^2&gt;0,</div>
 
-所以 \(\mathcal A\) 可逆，并且
+所以 <span class="kalax-inline-math">\mathcal A</span> 可逆，并且
 
-\[
-\mathcal A^{-1}
+<div class="kalax-display-math">\mathcal A^{-1}
 =
-\frac{1}{a^2+b^2}(2aI-\mathcal A).
-\]
+\frac{1}{a^2+b^2}(2aI-\mathcal A).</div>
 
 因此
 
-\[
-(a^2+b^2)\mathcal A^{-1}=2aI-\mathcal A.
-\]
+<div class="kalax-display-math">(a^2+b^2)\mathcal A^{-1}=2aI-\mathcal A.</div>
 
 下面证明
 
-\[
-\mathcal A^*=2aI-\mathcal A.
-\]
+<div class="kalax-display-math">\mathcal A^*=2aI-\mathcal A.</div>
 
 令
 
-\[
-\mathcal B=\mathcal A-aI.
-\]
+<div class="kalax-display-math">\mathcal B=\mathcal A-aI.</div>
 
-因为 \(\mathcal A\) 正规，所以 \(\mathcal B\) 也是正规变换。并且
+因为 <span class="kalax-inline-math">\mathcal A</span> 正规，所以 <span class="kalax-inline-math">\mathcal B</span> 也是正规变换。并且
 
-\[
-\mathcal B^2=-b^2I.
-\]
+<div class="kalax-display-math">\mathcal B^2=-b^2I.</div>
 
-因此 \(\mathcal B\) 的特征值只能是
+因此 <span class="kalax-inline-math">\mathcal B</span> 的特征值只能是
 
-\[
-ib
-\]
+<div class="kalax-display-math">ib</div>
 
 或
 
-\[
--ib.
-\]
+<div class="kalax-display-math">-ib.</div>
 
-由于正规变换可以酉对角化，所以在一组规范正交基下，\(\mathcal B\) 的矩阵为对角矩阵，对角线上只可能出现 \(ib\) 或 \(-ib\)。
+由于正规变换可以酉对角化，所以在一组规范正交基下，<span class="kalax-inline-math">\mathcal B</span> 的矩阵为对角矩阵，对角线上只可能出现 <span class="kalax-inline-math">ib</span> 或 <span class="kalax-inline-math">-ib</span>。
 
-于是 \(\mathcal B^*\) 的特征值是这些特征值的共轭，即 \(-ib\) 或 \(ib\)。
+于是 <span class="kalax-inline-math">\mathcal B^*</span> 的特征值是这些特征值的共轭，即 <span class="kalax-inline-math">-ib</span> 或 <span class="kalax-inline-math">ib</span>。
 
 因此
 
-\[
-\mathcal B^*=-\mathcal B.
-\]
+<div class="kalax-display-math">\mathcal B^*=-\mathcal B.</div>
 
 也就是说
 
-\[
-(\mathcal A-aI)^*=-(\mathcal A-aI).
-\]
+<div class="kalax-display-math">(\mathcal A-aI)^*=-(\mathcal A-aI).</div>
 
 展开得
 
-\[
-\mathcal A^*-aI=-\mathcal A+aI.
-\]
+<div class="kalax-display-math">\mathcal A^*-aI=-\mathcal A+aI.</div>
 
 所以
 
-\[
-\mathcal A^*=2aI-\mathcal A.
-\]
+<div class="kalax-display-math">\mathcal A^*=2aI-\mathcal A.</div>
 
 结合前面得到的
 
-\[
-2aI-\mathcal A=(a^2+b^2)\mathcal A^{-1},
-\]
+<div class="kalax-display-math">2aI-\mathcal A=(a^2+b^2)\mathcal A^{-1},</div>
 
 可得
 
-\[
-\boxed{\mathcal A^*=(a^2+b^2)\mathcal A^{-1}}.
-\]
+<div class="kalax-display-math">\boxed{\mathcal A^*=(a^2+b^2)\mathcal A^{-1}}.</div>
 
 ---
 
 ## 习题 7.2.30
 
-设 \(C[-\pi,\pi]\) 是闭区间 \([-\pi,\pi]\) 上所有实值连续函数构成的空间，在其上定义内积：
+设 <span class="kalax-inline-math">C[-\pi,\pi]</span> 是闭区间 <span class="kalax-inline-math">[-\pi,\pi]</span> 上所有实值连续函数构成的空间，在其上定义内积：
 
-\[
-\langle f,g\rangle
+<div class="kalax-display-math">\langle f,g\rangle
 =
-\int_{-\pi}^{\pi}f(x)g(x)\,dx.
-\]
+\int_{-\pi}^{\pi}f(x)g(x)\,dx.</div>
 
 取
 
-\[
-V=\operatorname{span}
-(1,\cos x,\cos 2x,\cos 3x,\sin x,\sin 2x,\sin 3x).
-\]
+<div class="kalax-display-math">V=\operatorname{span}
+(1,\cos x,\cos 2x,\cos 3x,\sin x,\sin 2x,\sin 3x).</div>
 
-### 1. 证明：对于任意 \(f\in V\)，其导函数 \(f'\) 也属于 \(V\)
+### 1. 证明：对于任意 <span class="kalax-inline-math">f\in V</span>，其导函数 <span class="kalax-inline-math">f'</span> 也属于 <span class="kalax-inline-math">V</span>
 
-任取 \(f\in V\)，则 \(f\) 可以写成
+任取 <span class="kalax-inline-math">f\in V</span>，则 <span class="kalax-inline-math">f</span> 可以写成
 
-\[
-f(x)
+<div class="kalax-display-math">f(x)
 =
 a_0+a_1\cos x+a_2\cos 2x+a_3\cos 3x
-+b_1\sin x+b_2\sin 2x+b_3\sin 3x.
-\]
++b_1\sin x+b_2\sin 2x+b_3\sin 3x.</div>
 
 求导得
 
-\[
-f'(x)
+<div class="kalax-display-math">f'(x)
 =
 -a_1\sin x-2a_2\sin 2x-3a_3\sin 3x
-+b_1\cos x+2b_2\cos 2x+3b_3\cos 3x.
-\]
++b_1\cos x+2b_2\cos 2x+3b_3\cos 3x.</div>
 
-显然 \(f'(x)\) 仍然是
+显然 <span class="kalax-inline-math">f'(x)</span> 仍然是
 
-\[
-1,\cos x,\cos 2x,\cos 3x,\sin x,\sin 2x,\sin 3x
-\]
+<div class="kalax-display-math">1,\cos x,\cos 2x,\cos 3x,\sin x,\sin 2x,\sin 3x</div>
 
 的线性组合。
 
 因此
 
-\[
-f'\in V.
-\]
+<div class="kalax-display-math">f'\in V.</div>
 
-### 2. 定义 \(\mathcal A:V\to V,\ f\mapsto f'\)，证明 \(\mathcal A\) 是斜对称变换
+### 2. 定义 <span class="kalax-inline-math">\mathcal A:V\to V,\ f\mapsto f'</span>，证明 <span class="kalax-inline-math">\mathcal A</span> 是斜对称变换
 
-要证明 \(\mathcal A\) 是斜对称变换，即证明对任意 \(f,g\in V\)，有
+要证明 <span class="kalax-inline-math">\mathcal A</span> 是斜对称变换，即证明对任意 <span class="kalax-inline-math">f,g\in V</span>，有
 
-\[
-\langle \mathcal Af,g\rangle
+<div class="kalax-display-math">\langle \mathcal Af,g\rangle
 =
--\langle f,\mathcal Ag\rangle.
-\]
+-\langle f,\mathcal Ag\rangle.</div>
 
 也就是证明
 
-\[
-\langle f',g\rangle
+<div class="kalax-display-math">\langle f',g\rangle
 =
--\langle f,g'\rangle.
-\]
+-\langle f,g'\rangle.</div>
 
 由分部积分公式，
 
-\[
-\int_{-\pi}^{\pi}f'(x)g(x)\,dx
+<div class="kalax-display-math">\int_{-\pi}^{\pi}f'(x)g(x)\,dx
 =
 f(x)g(x)\bigg|_{-\pi}^{\pi}
 -
-\int_{-\pi}^{\pi}f(x)g'(x)\,dx.
-\]
+\int_{-\pi}^{\pi}f(x)g'(x)\,dx.</div>
 
-因为 \(f,g\in V\) 都是由 \(1,\sin kx,\cos kx\) 线性组合而成，所以它们满足
+因为 <span class="kalax-inline-math">f,g\in V</span> 都是由 <span class="kalax-inline-math">1,\sin kx,\cos kx</span> 线性组合而成，所以它们满足
 
-\[
-f(\pi)=f(-\pi),
+<div class="kalax-display-math">f(\pi)=f(-\pi),
 \qquad
-g(\pi)=g(-\pi).
-\]
+g(\pi)=g(-\pi).</div>
 
 因此
 
-\[
-f(x)g(x)\bigg|_{-\pi}^{\pi}=0.
-\]
+<div class="kalax-display-math">f(x)g(x)\bigg|_{-\pi}^{\pi}=0.</div>
 
 所以
 
-\[
-\int_{-\pi}^{\pi}f'(x)g(x)\,dx
+<div class="kalax-display-math">\int_{-\pi}^{\pi}f'(x)g(x)\,dx
 =
--\int_{-\pi}^{\pi}f(x)g'(x)\,dx.
-\]
+-\int_{-\pi}^{\pi}f(x)g'(x)\,dx.</div>
 
 即
 
-\[
-\langle \mathcal Af,g\rangle
+<div class="kalax-display-math">\langle \mathcal Af,g\rangle
 =
--\langle f,\mathcal Ag\rangle.
-\]
+-\langle f,\mathcal Ag\rangle.</div>
 
-所以 \(\mathcal A\) 是斜对称变换。
+所以 <span class="kalax-inline-math">\mathcal A</span> 是斜对称变换。
 
-### 3. 求 \(V\) 的一组规范正交基，使得 \(M_\mathcal E(\mathcal A)\) 具有正交相似标准形
+### 3. 求 <span class="kalax-inline-math">V</span> 的一组规范正交基，使得 <span class="kalax-inline-math">M_\mathcal E(\mathcal A)</span> 具有正交相似标准形
 
 注意到
 
-\[
-\int_{-\pi}^{\pi}1^2\,dx=2\pi,
-\]
+<div class="kalax-display-math">\int_{-\pi}^{\pi}1^2\,dx=2\pi,</div>
 
-并且对于 \(k=1,2,3\)，
+并且对于 <span class="kalax-inline-math">k=1,2,3</span>，
 
-\[
-\int_{-\pi}^{\pi}\cos^2 kx\,dx=\pi,
+<div class="kalax-display-math">\int_{-\pi}^{\pi}\cos^2 kx\,dx=\pi,
 \qquad
-\int_{-\pi}^{\pi}\sin^2 kx\,dx=\pi.
-\]
+\int_{-\pi}^{\pi}\sin^2 kx\,dx=\pi.</div>
 
-同时，不同频率之间正交，\(\sin\) 与 \(\cos\) 之间也正交。
+同时，不同频率之间正交，<span class="kalax-inline-math">\sin</span> 与 <span class="kalax-inline-math">\cos</span> 之间也正交。
 
 所以取
 
-\[
-e_0=\frac{1}{\sqrt{2\pi}},
-\]
+<div class="kalax-display-math">e_0=\frac{1}{\sqrt{2\pi}},</div>
 
 以及
 
-\[
-c_k=\frac{\cos kx}{\sqrt{\pi}},
+<div class="kalax-display-math">c_k=\frac{\cos kx}{\sqrt{\pi}},
 \qquad
 s_k=\frac{\sin kx}{\sqrt{\pi}},
-\qquad k=1,2,3.
-\]
+\qquad k=1,2,3.</div>
 
 令
 
-\[
-\mathcal E=(e_0,c_1,s_1,c_2,s_2,c_3,s_3).
-\]
+<div class="kalax-display-math">\mathcal E=(e_0,c_1,s_1,c_2,s_2,c_3,s_3).</div>
 
-则 \(\mathcal E\) 是 \(V\) 的一组规范正交基。
+则 <span class="kalax-inline-math">\mathcal E</span> 是 <span class="kalax-inline-math">V</span> 的一组规范正交基。
 
 因为
 
-\[
-\mathcal A(e_0)=0,
-\]
+<div class="kalax-display-math">\mathcal A(e_0)=0,</div>
 
-\[
-\mathcal A(c_k)=-ks_k,
-\]
+<div class="kalax-display-math">\mathcal A(c_k)=-ks_k,</div>
 
-\[
-\mathcal A(s_k)=kc_k.
-\]
+<div class="kalax-display-math">\mathcal A(s_k)=kc_k.</div>
 
-所以在基 \(\mathcal E\) 下，\(\mathcal A\) 的矩阵为
+所以在基 <span class="kalax-inline-math">\mathcal E</span> 下，<span class="kalax-inline-math">\mathcal A</span> 的矩阵为
 
-\[
-M_\mathcal E(\mathcal A)
+<div class="kalax-display-math">M_\mathcal E(\mathcal A)
 =
 \begin{pmatrix}
-0&0&0&0&0&0&0\\
-0&0&1&0&0&0&0\\
-0&-1&0&0&0&0&0\\
-0&0&0&0&2&0&0\\
-0&0&0&-2&0&0&0\\
-0&0&0&0&0&0&3\\
-0&0&0&0&0&-3&0
-\end{pmatrix}.
-\]
+0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0\\
+0&amp;0&amp;1&amp;0&amp;0&amp;0&amp;0\\
+0&amp;-1&amp;0&amp;0&amp;0&amp;0&amp;0\\
+0&amp;0&amp;0&amp;0&amp;2&amp;0&amp;0\\
+0&amp;0&amp;0&amp;-2&amp;0&amp;0&amp;0\\
+0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;3\\
+0&amp;0&amp;0&amp;0&amp;0&amp;-3&amp;0
+\end{pmatrix}.</div>
 
 即
 
-\[
-M_\mathcal E(\mathcal A)
+<div class="kalax-display-math">M_\mathcal E(\mathcal A)
 =
 0
 \oplus
 \begin{pmatrix}
-0&1\\
--1&0
+0&amp;1\\
+-1&amp;0
 \end{pmatrix}
 \oplus
 \begin{pmatrix}
-0&2\\
--2&0
+0&amp;2\\
+-2&amp;0
 \end{pmatrix}
 \oplus
 \begin{pmatrix}
-0&3\\
--3&0
-\end{pmatrix}.
-\]
+0&amp;3\\
+-3&amp;0
+\end{pmatrix}.</div>
 
 这就是斜对称矩阵的正交相似标准形。
 
@@ -842,152 +640,117 @@ M_\mathcal E(\mathcal A)
 
 ## 习题 7.2.31
 
-设 \(A,B\in M_n(\mathbb R)\)，其中 \(A\) 正定。证明：
+设 <span class="kalax-inline-math">A,B\in M_n(\mathbb R)</span>，其中 <span class="kalax-inline-math">A</span> 正定。证明：
 
-1. 对任意正整数 \(k\)，矩阵 \(A^k\) 也正定；
-2. 如果存在正整数 \(r\)，使得 \(B\) 与 \(A^r\) 可交换，则 \(B\) 与 \(A\) 也可交换。
+1. 对任意正整数 <span class="kalax-inline-math">k</span>，矩阵 <span class="kalax-inline-math">A^k</span> 也正定；
+2. 如果存在正整数 <span class="kalax-inline-math">r</span>，使得 <span class="kalax-inline-math">B</span> 与 <span class="kalax-inline-math">A^r</span> 可交换，则 <span class="kalax-inline-math">B</span> 与 <span class="kalax-inline-math">A</span> 也可交换。
 
-### 1. 证明 \(A^k\) 正定
+### 1. 证明 <span class="kalax-inline-math">A^k</span> 正定
 
-因为 \(A\) 正定，所以 \(A\) 是实对称矩阵，且所有特征值都为正。
+因为 <span class="kalax-inline-math">A</span> 正定，所以 <span class="kalax-inline-math">A</span> 是实对称矩阵，且所有特征值都为正。
 
-由谱定理，存在正交矩阵 \(Q\)，使得
+由谱定理，存在正交矩阵 <span class="kalax-inline-math">Q</span>，使得
 
-\[
-A=QDQ^T,
-\]
+<div class="kalax-display-math">A=QDQ^T,</div>
 
 其中
 
-\[
-D=\operatorname{diag}(\lambda_1,\dots,\lambda_n),
+<div class="kalax-display-math">D=\operatorname{diag}(\lambda_1,\dots,\lambda_n),
 \qquad
-\lambda_i>0.
-\]
+\lambda_i&gt;0.</div>
 
 于是
 
-\[
-A^k=QD^kQ^T,
-\]
+<div class="kalax-display-math">A^k=QD^kQ^T,</div>
 
 其中
 
-\[
-D^k=\operatorname{diag}(\lambda_1^k,\dots,\lambda_n^k).
-\]
+<div class="kalax-display-math">D^k=\operatorname{diag}(\lambda_1^k,\dots,\lambda_n^k).</div>
 
 因为
 
-\[
-\lambda_i>0,
-\]
+<div class="kalax-display-math">\lambda_i&gt;0,</div>
 
 所以
 
-\[
-\lambda_i^k>0.
-\]
+<div class="kalax-display-math">\lambda_i^k&gt;0.</div>
 
-因此 \(A^k\) 的所有特征值仍然为正，所以 \(A^k\) 正定。
+因此 <span class="kalax-inline-math">A^k</span> 的所有特征值仍然为正，所以 <span class="kalax-inline-math">A^k</span> 正定。
 
-### 2. 证明若 \(B\) 与 \(A^r\) 可交换，则 \(B\) 与 \(A\) 可交换
+### 2. 证明若 <span class="kalax-inline-math">B</span> 与 <span class="kalax-inline-math">A^r</span> 可交换，则 <span class="kalax-inline-math">B</span> 与 <span class="kalax-inline-math">A</span> 可交换
 
 仍设
 
-\[
-A=QDQ^T,
-\]
+<div class="kalax-display-math">A=QDQ^T,</div>
 
 其中
 
-\[
-D=\operatorname{diag}(\lambda_1,\dots,\lambda_n),
+<div class="kalax-display-math">D=\operatorname{diag}(\lambda_1,\dots,\lambda_n),
 \qquad
-\lambda_i>0.
-\]
+\lambda_i&gt;0.</div>
 
 于是
 
-\[
-A^r=QD^rQ^T,
-\]
+<div class="kalax-display-math">A^r=QD^rQ^T,</div>
 
 其中
 
-\[
-D^r=\operatorname{diag}(\lambda_1^r,\dots,\lambda_n^r).
-\]
+<div class="kalax-display-math">D^r=\operatorname{diag}(\lambda_1^r,\dots,\lambda_n^r).</div>
 
 由于函数
 
-\[
-x\mapsto x^r
-\]
+<div class="kalax-display-math">x\mapsto x^r</div>
 
 在正实数范围内严格单调，所以
 
-\[
-\lambda_i^r=\lambda_j^r
+<div class="kalax-display-math">\lambda_i^r=\lambda_j^r
 \iff
-\lambda_i=\lambda_j.
-\]
+\lambda_i=\lambda_j.</div>
 
-这说明 \(A\) 与 \(A^r\) 有相同的特征子空间分解。
+这说明 <span class="kalax-inline-math">A</span> 与 <span class="kalax-inline-math">A^r</span> 有相同的特征子空间分解。
 
 若
 
-\[
-BA^r=A^rB,
-\]
+<div class="kalax-display-math">BA^r=A^rB,</div>
 
-则 \(B\) 保持 \(A^r\) 的每个特征子空间不变。
+则 <span class="kalax-inline-math">B</span> 保持 <span class="kalax-inline-math">A^r</span> 的每个特征子空间不变。
 
-由于 \(A\) 与 \(A^r\) 的特征子空间相同，所以 \(B\) 也保持 \(A\) 的每个特征子空间不变。
+由于 <span class="kalax-inline-math">A</span> 与 <span class="kalax-inline-math">A^r</span> 的特征子空间相同，所以 <span class="kalax-inline-math">B</span> 也保持 <span class="kalax-inline-math">A</span> 的每个特征子空间不变。
 
-而在 \(A\) 的每个特征子空间上，\(A\) 都只是数乘变换。因此在每个特征子空间上，\(A\) 与 \(B\) 可交换。
+而在 <span class="kalax-inline-math">A</span> 的每个特征子空间上，<span class="kalax-inline-math">A</span> 都只是数乘变换。因此在每个特征子空间上，<span class="kalax-inline-math">A</span> 与 <span class="kalax-inline-math">B</span> 可交换。
 
 所以在整个空间上有
 
-\[
-BA=AB.
-\]
+<div class="kalax-display-math">BA=AB.</div>
 
-即 \(B\) 与 \(A\) 可交换。
+即 <span class="kalax-inline-math">B</span> 与 <span class="kalax-inline-math">A</span> 可交换。
 
 ---
 
 ## 习题 7.2.32
 
-设 \(U\) 和 \(V\) 分别为 \(n\) 维和 \(m\) 维内积空间，
+设 <span class="kalax-inline-math">U</span> 和 <span class="kalax-inline-math">V</span> 分别为 <span class="kalax-inline-math">n</span> 维和 <span class="kalax-inline-math">m</span> 维内积空间，
 
-\[
-W=\operatorname{Hom}(U,V).
-\]
+<div class="kalax-display-math">W=\operatorname{Hom}(U,V).</div>
 
-取定 \(U\) 的一组规范正交基
+取定 <span class="kalax-inline-math">U</span> 的一组规范正交基
 
-\[
-\varepsilon_1,\dots,\varepsilon_n.
-\]
+<div class="kalax-display-math">\varepsilon_1,\dots,\varepsilon_n.</div>
 
 ### 1. 证明映射
 
-\[
-\langle f,g\rangle_W
+<div class="kalax-display-math">\langle f,g\rangle_W
 =
 \sum_{i=1}^n
-\langle f(\varepsilon_i),g(\varepsilon_i)\rangle_V
-\]
+\langle f(\varepsilon_i),g(\varepsilon_i)\rangle_V</div>
 
-是 \(W\) 上的一个内积。
+是 <span class="kalax-inline-math">W</span> 上的一个内积。
 
-首先，线性性来自于 \(V\) 上内积的线性性。
+首先，线性性来自于 <span class="kalax-inline-math">V</span> 上内积的线性性。
 
 对称性如下：
 
-\[
-\langle f,g\rangle_W
+<div class="kalax-display-math">\langle f,g\rangle_W
 =
 \sum_{i=1}^n
 \langle f(\varepsilon_i),g(\varepsilon_i)\rangle_V
@@ -995,134 +758,104 @@ W=\operatorname{Hom}(U,V).
 \sum_{i=1}^n
 \langle g(\varepsilon_i),f(\varepsilon_i)\rangle_V
 =
-\langle g,f\rangle_W.
-\]
+\langle g,f\rangle_W.</div>
 
 正定性如下：
 
-\[
-\langle f,f\rangle_W
+<div class="kalax-display-math">\langle f,f\rangle_W
 =
 \sum_{i=1}^n
 \langle f(\varepsilon_i),f(\varepsilon_i)\rangle_V
 =
 \sum_{i=1}^n
 \|f(\varepsilon_i)\|^2
-\ge 0.
-\]
+\ge 0.</div>
 
 若
 
-\[
-\langle f,f\rangle_W=0,
-\]
+<div class="kalax-display-math">\langle f,f\rangle_W=0,</div>
 
 则
 
-\[
-\sum_{i=1}^n\|f(\varepsilon_i)\|^2=0.
-\]
+<div class="kalax-display-math">\sum_{i=1}^n\|f(\varepsilon_i)\|^2=0.</div>
 
-由于每一项都非负，所以每一项都为 \(0\)。因此
+由于每一项都非负，所以每一项都为 <span class="kalax-inline-math">0</span>。因此
 
-\[
-f(\varepsilon_i)=0,\qquad i=1,\dots,n.
-\]
+<div class="kalax-display-math">f(\varepsilon_i)=0,\qquad i=1,\dots,n.</div>
 
-因为 \(\varepsilon_1,\dots,\varepsilon_n\) 是 \(U\) 的一组基，所以
+因为 <span class="kalax-inline-math">\varepsilon_1,\dots,\varepsilon_n</span> 是 <span class="kalax-inline-math">U</span> 的一组基，所以
 
-\[
-f=0.
-\]
+<div class="kalax-display-math">f=0.</div>
 
-因此该映射是 \(W\) 上的一个内积。
+因此该映射是 <span class="kalax-inline-math">W</span> 上的一个内积。
 
 ### 2. 定义
 
-\[
-T(\mathcal A):W\to W,
-\]
+<div class="kalax-display-math">T(\mathcal A):W\to W,</div>
 
 其中
 
-\[
-T(\mathcal A)(f):x\mapsto f(\mathcal A x).
-\]
+<div class="kalax-display-math">T(\mathcal A)(f):x\mapsto f(\mathcal A x).</div>
 
-证明 \(T(\mathcal A)\) 是 \(W\) 上的线性变换。
+证明 <span class="kalax-inline-math">T(\mathcal A)</span> 是 <span class="kalax-inline-math">W</span> 上的线性变换。
 
-任取 \(f,g\in W\)，\(\lambda\in\mathbb R\)。对任意 \(x\in U\)，有
+任取 <span class="kalax-inline-math">f,g\in W</span>，<span class="kalax-inline-math">\lambda\in\mathbb R</span>。对任意 <span class="kalax-inline-math">x\in U</span>，有
 
-\[
-T(\mathcal A)(f+\lambda g)(x)
+<div class="kalax-display-math">T(\mathcal A)(f+\lambda g)(x)
 =
 (f+\lambda g)(\mathcal A x)
 =
-f(\mathcal A x)+\lambda g(\mathcal A x).
-\]
+f(\mathcal A x)+\lambda g(\mathcal A x).</div>
 
 所以
 
-\[
-T(\mathcal A)(f+\lambda g)
+<div class="kalax-display-math">T(\mathcal A)(f+\lambda g)
 =
-T(\mathcal A)(f)+\lambda T(\mathcal A)(g).
-\]
+T(\mathcal A)(f)+\lambda T(\mathcal A)(g).</div>
 
-因此 \(T(\mathcal A)\) 是线性变换。
+因此 <span class="kalax-inline-math">T(\mathcal A)</span> 是线性变换。
 
-### 3. 证明 \(T(\mathcal A)\) 是 \(W\) 上的正交变换，当且仅当 \(\mathcal A\) 是 \(U\) 上的正交变换
+### 3. 证明 <span class="kalax-inline-math">T(\mathcal A)</span> 是 <span class="kalax-inline-math">W</span> 上的正交变换，当且仅当 <span class="kalax-inline-math">\mathcal A</span> 是 <span class="kalax-inline-math">U</span> 上的正交变换
 
 先证充分性。
 
-若 \(\mathcal A\) 是 \(U\) 上的正交变换，则
+若 <span class="kalax-inline-math">\mathcal A</span> 是 <span class="kalax-inline-math">U</span> 上的正交变换，则
 
-\[
-\mathcal A\varepsilon_1,\dots,\mathcal A\varepsilon_n
-\]
+<div class="kalax-display-math">\mathcal A\varepsilon_1,\dots,\mathcal A\varepsilon_n</div>
 
-也是 \(U\) 的一组规范正交基。
+也是 <span class="kalax-inline-math">U</span> 的一组规范正交基。
 
 于是
 
-\[
-\langle T(\mathcal A)f,T(\mathcal A)g\rangle_W
+<div class="kalax-display-math">\langle T(\mathcal A)f,T(\mathcal A)g\rangle_W
 =
 \sum_{i=1}^n
-\langle f(\mathcal A\varepsilon_i),g(\mathcal A\varepsilon_i)\rangle_V.
-\]
+\langle f(\mathcal A\varepsilon_i),g(\mathcal A\varepsilon_i)\rangle_V.</div>
 
-由于 \(\mathcal A\varepsilon_1,\dots,\mathcal A\varepsilon_n\) 也是一组规范正交基，所以上式等于
+由于 <span class="kalax-inline-math">\mathcal A\varepsilon_1,\dots,\mathcal A\varepsilon_n</span> 也是一组规范正交基，所以上式等于
 
-\[
-\sum_{i=1}^n
+<div class="kalax-display-math">\sum_{i=1}^n
 \langle f(\varepsilon_i),g(\varepsilon_i)\rangle_V
 =
-\langle f,g\rangle_W.
-\]
+\langle f,g\rangle_W.</div>
 
-因此 \(T(\mathcal A)\) 保持内积，所以 \(T(\mathcal A)\) 是正交变换。
+因此 <span class="kalax-inline-math">T(\mathcal A)</span> 保持内积，所以 <span class="kalax-inline-math">T(\mathcal A)</span> 是正交变换。
 
 再证必要性。
 
-若 \(T(\mathcal A)\) 是 \(W\) 上的正交变换，则它保持 \(W\) 上的范数。
+若 <span class="kalax-inline-math">T(\mathcal A)</span> 是 <span class="kalax-inline-math">W</span> 上的正交变换，则它保持 <span class="kalax-inline-math">W</span> 上的范数。
 
-任取 \(u\in U\)，固定一个单位向量 \(v_0\in V\)，定义线性映射
+任取 <span class="kalax-inline-math">u\in U</span>，固定一个单位向量 <span class="kalax-inline-math">v_0\in V</span>，定义线性映射
 
-\[
-f_u:U\to V
-\]
+<div class="kalax-display-math">f_u:U\to V</div>
 
 为
 
-\[
-f_u(x)=\langle x,u\rangle_U v_0.
-\]
+<div class="kalax-display-math">f_u(x)=\langle x,u\rangle_U v_0.</div>
 
 则
 
-\[
-\|f_u\|_W^2
+<div class="kalax-display-math">\|f_u\|_W^2
 =
 \sum_{i=1}^n
 \|f_u(\varepsilon_i)\|^2
@@ -1130,53 +863,42 @@ f_u(x)=\langle x,u\rangle_U v_0.
 \sum_{i=1}^n
 |\langle \varepsilon_i,u\rangle|^2
 =
-\|u\|^2.
-\]
+\|u\|^2.</div>
 
 另一方面，
 
-\[
-T(\mathcal A)(f_u)(x)
+<div class="kalax-display-math">T(\mathcal A)(f_u)(x)
 =
 f_u(\mathcal A x)
 =
 \langle \mathcal A x,u\rangle_U v_0
 =
-\langle x,\mathcal A^*u\rangle_U v_0.
-\]
+\langle x,\mathcal A^*u\rangle_U v_0.</div>
 
 所以
 
-\[
-T(\mathcal A)(f_u)=f_{\mathcal A^*u}.
-\]
+<div class="kalax-display-math">T(\mathcal A)(f_u)=f_{\mathcal A^*u}.</div>
 
-由于 \(T(\mathcal A)\) 保持范数，有
+由于 <span class="kalax-inline-math">T(\mathcal A)</span> 保持范数，有
 
-\[
-\|f_u\|_W
+<div class="kalax-display-math">\|f_u\|_W
 =
-\|T(\mathcal A)(f_u)\|_W.
-\]
+\|T(\mathcal A)(f_u)\|_W.</div>
 
 于是
 
-\[
-\|u\|
+<div class="kalax-display-math">\|u\|
 =
-\|\mathcal A^*u\|.
-\]
+\|\mathcal A^*u\|.</div>
 
-这对任意 \(u\in U\) 都成立，所以 \(\mathcal A^*\) 保持范数，因此 \(\mathcal A^*\) 是正交变换。
+这对任意 <span class="kalax-inline-math">u\in U</span> 都成立，所以 <span class="kalax-inline-math">\mathcal A^*</span> 保持范数，因此 <span class="kalax-inline-math">\mathcal A^*</span> 是正交变换。
 
-于是 \(\mathcal A\) 也是正交变换。
+于是 <span class="kalax-inline-math">\mathcal A</span> 也是正交变换。
 
 综上，
 
-\[
-\boxed{
+<div class="kalax-display-math">\boxed{
 T(\mathcal A)\text{ 是正交变换}
 \iff
 \mathcal A\text{ 是正交变换}
-}.
-\]
+}.</div>
