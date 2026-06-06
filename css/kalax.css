@@ -374,10 +374,15 @@ a,
   line-height: 1.75;
 }
 
-.math-display {
+.math-display,
+.kalax-display-math {
   overflow-x: auto;
   margin: 1.2rem 0;
   padding: 0.4rem 0;
+}
+
+.kalax-inline-math {
+  white-space: nowrap;
 }
 
 .word-bank table,
