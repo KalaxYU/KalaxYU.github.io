@@ -13,7 +13,7 @@ comments: false
 <div class="module-grid">
 <a class="module-card" style="--module-accent: #2b7a78" href="/math/">
 <span class="module-icon"><i class="fas fa-square-root-variable"></i></span>
-<span class="module-count">6 notes</span>
+<span class="module-count">8 notes</span>
 <strong>数学</strong>
 <span>Mathematics</span>
 <p>线性代数、抽象代数、数学符号、证明题和作业整理。</p>
@@ -50,12 +50,12 @@ comments: false
 
 ## 最近更新
 
+- [Huxley on Reading a Piece of Chalk](/notes/英语-toefl-reading-2026-05-28-huxley-piece-of-chalk-3e5b7e72/) · 英语
+- [抽代笔记整理](/notes/数学-abstract-algebra-抽代笔记整理-bbb68550/) · 数学
+- [抽代笔记整理](/notes/数学-abstract-algebra-抽代笔记整理.backup-20260605-前置补充前-46a75360/) · 数学
+- [动词  Verbe](/notes/法语-fraçais-词汇-动词-verbe-c410b998/) · 法语
 - [Darwin on the Struggle for Existence](/notes/英语-toefl-reading-2026-05-27-darwin-struggle-for-existence-3c3ba9dd/) · 英语
 - [Le marché du samedi](/notes/法语-fraçais-阅读-2026-05-30-marche-samedi-4d868dde/) · 法语
-- [Huxley on Reading a Piece of Chalk](/notes/英语-toefl-reading-2026-05-28-huxley-piece-of-chalk-3e5b7e72/) · 英语
 - [John Muir on the Economy of Forests](/notes/英语-toefl-reading-2026-05-29-muir-forest-economy-6183680e/) · 英语
 - [Python 总目录](/notes/cs-python-index-0ffafc34/) · CS
-- [类型注解与数据模型](/notes/cs-python-10_type_hints_datamodel-977490f0/) · CS
-- [测试、调试与日志](/notes/cs-python-11_testing_debugging_logging-e4d36020/) · CS
-- [代码质量与项目结构](/notes/cs-python-12_code_quality_project_structure-e0da07ef/) · CS
 </div>

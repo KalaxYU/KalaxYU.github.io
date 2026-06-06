@@ -12,13 +12,13 @@ comments: false
 <p><a class="text-link" href="/french-reading/">进入 French Reading A1-A2 阅读</a></p>
 
 <div class="note-list">
+<a class="note-row" href="/notes/法语-fraçais-词汇-动词-verbe-c410b998/">
+<strong>动词  Verbe</strong>
+<span>Francisez 初学者的必备的１００个动词 常见法语动词变位（吐血整理，建议收藏） - 知乎 人称 appeler faire prendre porter avoir être aller trouver partir visiter -------------- --------------</span>
+</a>
 <a class="note-row" href="/notes/法语-fraçais-阅读-2026-05-30-marche-samedi-4d868dde/">
 <strong>Le marché du samedi</strong>
 <span>Le marché du samedi Blog permalink: https://kalax524.com/lectures-francaises/2026-05-30-marche-samedi/ Niveau A1-A2. Texte original court pour lecture</span>
-</a>
-<a class="note-row" href="/notes/法语-fraçais-词汇-动词-verbe-c410b998/">
-<strong>动词  Verbe</strong>
-<span>Francisez 初学者的必备的１００个动词 常见法语动词变位（吐血整理，建议收藏） - 知乎 人称 appeler faire prendre porter avoir être aller trouver -------------- ----------------- -----------</span>
 </a>
 <a class="note-row" href="/notes/法语-fraçais-语法-祈使句-6fef4d3c/">
 <strong>1. 祈使句只有三个人称</strong>

@@ -80,16 +80,24 @@ function renderNoteFromPost(postPath) {
 }
 
 function writeGeneratedNote(targetPath, content) {
-  if (fs.existsSync(targetPath)) {
-    const current = fs.readFileSync(targetPath, 'utf8').replace(/^\uFEFF/, '');
-    if (!current.includes(GENERATED_MARKER)) return 'skipped';
-    if (current.replace(/\r\n/g, '\n') === content.replace(/\r\n/g, '\n')) return 'unchanged';
-    fs.writeFileSync(targetPath, content, 'utf8');
-    return 'updated';
-  }
+  try {
+    if (fs.existsSync(targetPath)) {
+      const current = fs.readFileSync(targetPath, 'utf8').replace(/^\uFEFF/, '');
+      if (!current.includes(GENERATED_MARKER)) return 'skipped';
+      if (current.replace(/\r\n/g, '\n') === content.replace(/\r\n/g, '\n')) return 'unchanged';
+      fs.writeFileSync(targetPath, content, 'utf8');
+      return 'updated';
+    }
 
-  fs.writeFileSync(targetPath, content, 'utf8');
-  return 'created';
+    fs.writeFileSync(targetPath, content, 'utf8');
+    return 'created';
+  } catch (error) {
+    if (error && (error.code === 'EPERM' || error.code === 'EACCES')) {
+      console.warn(`Skipped locked French reading note: ${targetPath}`);
+      return 'skipped';
+    }
+    throw error;
+  }
 }
 
 function listPostFiles(files) {

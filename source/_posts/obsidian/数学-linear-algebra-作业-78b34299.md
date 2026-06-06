@@ -10,7 +10,7 @@ tags:
   - "obsidian"
   - "数学"
   - "Linear Algebra"
-description: "高等代数 II 第十次作业解答 题号：7.2.19，7.2.21，7.2.22，7.2.24，7.2.25，7.2.27，7.2.28，7.2.30，7.2.31，7.2.32 --- 习题 7.2.19 设 {% mathjax '{\"conversion\":{\"display\":false}}'"
+description: "高等代数 II 第十次作业解答 题号：7.2.19，7.2.21，7.2.22，7.2.24，7.2.25，7.2.27，7.2.28，7.2.30，7.2.31，7.2.32 --- 习题 7.2.19 设 mathcal A in operatorname{End}(V) 为正规变换。证明： o"
 mathjax: true
 ---
 # 高等代数 II 第十次作业解答
@@ -21,73 +21,73 @@ mathjax: true
 
 ## 习题 7.2.19
 
-设 {% mathjax '{"conversion":{"display":false}}' %}\mathcal A\in \operatorname{End}(V){% endmathjax %} 为正规变换。证明：
+设 \(\mathcal A\in \operatorname{End}(V)\) 为正规变换。证明：
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \operatorname{Im}(\mathcal A)=\operatorname{Im}(\mathcal A^*).
-{% endmathjax %}
+\]
 
-因为 {% mathjax '{"conversion":{"display":false}}' %}\mathcal A{% endmathjax %} 是正规变换，所以
+因为 \(\mathcal A\) 是正规变换，所以
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \mathcal A\mathcal A^*=\mathcal A^*\mathcal A.
-{% endmathjax %}
+\]
 
-对任意 {% mathjax '{"conversion":{"display":false}}' %}x\in V{% endmathjax %}，有
+对任意 \(x\in V\)，有
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \|\mathcal A x\|^2
 =\langle \mathcal A x,\mathcal A x\rangle
 =\langle \mathcal A^*\mathcal A x,x\rangle,
-{% endmathjax %}
+\]
 
 而
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \|\mathcal A^*x\|^2
 =\langle \mathcal A^*x,\mathcal A^*x\rangle
 =\langle \mathcal A\mathcal A^*x,x\rangle.
-{% endmathjax %}
+\]
 
 由正规性可得
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \|\mathcal A x\|^2=\|\mathcal A^*x\|^2.
-{% endmathjax %}
+\]
 
 因此
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \mathcal A x=0
 \iff
 \mathcal A^*x=0.
-{% endmathjax %}
+\]
 
 所以
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \ker \mathcal A=\ker \mathcal A^*.
-{% endmathjax %}
+\]
 
 又因为有限维内积空间中有
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \operatorname{Im}(\mathcal A)
 =
 (\ker \mathcal A^*)^\perp,
-{% endmathjax %}
+\]
 
 以及
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \operatorname{Im}(\mathcal A^*)
 =
 (\ker \mathcal A)^\perp.
-{% endmathjax %}
+\]
 
 于是
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \operatorname{Im}(\mathcal A)
 =
 (\ker \mathcal A^*)^\perp
@@ -95,89 +95,89 @@ mathjax: true
 (\ker \mathcal A)^\perp
 =
 \operatorname{Im}(\mathcal A^*).
-{% endmathjax %}
+\]
 
 所以
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \boxed{\operatorname{Im}(\mathcal A)=\operatorname{Im}(\mathcal A^*)}.
-{% endmathjax %}
+\]
 
 ---
 
 ## 习题 7.2.21
 
-设 {% mathjax '{"conversion":{"display":false}}' %}A\in M_n(\mathbb R){% endmathjax %} 为对称矩阵。对于每个 {% mathjax '{"conversion":{"display":false}}' %}i\in[1,n]{% endmathjax %}，记 {% mathjax '{"conversion":{"display":false}}' %}c_i{% endmathjax %} 为 {% mathjax '{"conversion":{"display":false}}' %}A{% endmathjax %} 的所有 {% mathjax '{"conversion":{"display":false}}' %}i{% endmathjax %} 阶主子式之和。
+设 \(A\in M_n(\mathbb R)\) 为对称矩阵。对于每个 \(i\in[1,n]\)，记 \(c_i\) 为 \(A\) 的所有 \(i\) 阶主子式之和。
 
-证明：如果 {% mathjax '{"conversion":{"display":false}}' %}c_i\ge 0{% endmathjax %} 对每个 {% mathjax '{"conversion":{"display":false}}' %}i\in[1,n]{% endmathjax %} 成立，那么 {% mathjax '{"conversion":{"display":false}}' %}A{% endmathjax %} 是半正定的。如果再有 {% mathjax '{"conversion":{"display":false}}' %}c_n>0{% endmathjax %}，则 {% mathjax '{"conversion":{"display":false}}' %}A{% endmathjax %} 是正定的。
+证明：如果 \(c_i\ge 0\) 对每个 \(i\in[1,n]\) 成立，那么 \(A\) 是半正定的。如果再有 \(c_n>0\)，则 \(A\) 是正定的。
 
-因为 {% mathjax '{"conversion":{"display":false}}' %}A{% endmathjax %} 是实对称矩阵，所以存在正交矩阵 {% mathjax '{"conversion":{"display":false}}' %}Q{% endmathjax %}，使得
+因为 \(A\) 是实对称矩阵，所以存在正交矩阵 \(Q\)，使得
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 Q^TAQ=\operatorname{diag}(\lambda_1,\dots,\lambda_n),
-{% endmathjax %}
+\]
 
-其中 {% mathjax '{"conversion":{"display":false}}' %}\lambda_1,\dots,\lambda_n\in\mathbb R{% endmathjax %}。
+其中 \(\lambda_1,\dots,\lambda_n\in\mathbb R\)。
 
-矩阵 {% mathjax '{"conversion":{"display":false}}' %}A{% endmathjax %} 的特征多项式为
+矩阵 \(A\) 的特征多项式为
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 p_A(t)=\det(tI-A)
 =t^n-c_1t^{n-1}+c_2t^{n-2}-\cdots+(-1)^nc_n.
-{% endmathjax %}
+\]
 
-反设 {% mathjax '{"conversion":{"display":false}}' %}A{% endmathjax %} 有负特征值。设该负特征值为 {% mathjax '{"conversion":{"display":false}}' %}-s{% endmathjax %}，其中 {% mathjax '{"conversion":{"display":false}}' %}s>0{% endmathjax %}。因为 {% mathjax '{"conversion":{"display":false}}' %}-s{% endmathjax %} 是特征值，所以
+反设 \(A\) 有负特征值。设该负特征值为 \(-s\)，其中 \(s>0\)。因为 \(-s\) 是特征值，所以
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 p_A(-s)=0.
-{% endmathjax %}
+\]
 
 但是
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 p_A(-s)
 =
 (-1)^n
 \left(
 s^n+c_1s^{n-1}+c_2s^{n-2}+\cdots+c_n
 \right).
-{% endmathjax %}
+\]
 
 由于
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 s>0,\qquad c_i\ge 0,
-{% endmathjax %}
+\]
 
-所以上式括号中的数严格大于 {% mathjax '{"conversion":{"display":false}}' %}0{% endmathjax %}，因此
+所以上式括号中的数严格大于 \(0\)，因此
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 p_A(-s)\neq 0.
-{% endmathjax %}
+\]
 
-这与 {% mathjax '{"conversion":{"display":false}}' %}p_A(-s)=0{% endmathjax %} 矛盾。
+这与 \(p_A(-s)=0\) 矛盾。
 
-所以 {% mathjax '{"conversion":{"display":false}}' %}A{% endmathjax %} 没有负特征值，即
+所以 \(A\) 没有负特征值，即
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \lambda_i\ge 0,\qquad i=1,\dots,n.
-{% endmathjax %}
+\]
 
-因此 {% mathjax '{"conversion":{"display":false}}' %}A{% endmathjax %} 是半正定矩阵。
+因此 \(A\) 是半正定矩阵。
 
 如果进一步有
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 c_n>0,
-{% endmathjax %}
+\]
 
 注意到
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 c_n=\det A=\lambda_1\lambda_2\cdots\lambda_n.
-{% endmathjax %}
+\]
 
-而所有 {% mathjax '{"conversion":{"display":false}}' %}\lambda_i\ge 0{% endmathjax %}，且它们的乘积大于 {% mathjax '{"conversion":{"display":false}}' %}0{% endmathjax %}，所以每个 {% mathjax '{"conversion":{"display":false}}' %}\lambda_i{% endmathjax %} 都大于 {% mathjax '{"conversion":{"display":false}}' %}0{% endmathjax %}。因此 {% mathjax '{"conversion":{"display":false}}' %}A{% endmathjax %} 是正定矩阵。
+而所有 \(\lambda_i\ge 0\)，且它们的乘积大于 \(0\)，所以每个 \(\lambda_i\) 都大于 \(0\)。因此 \(A\) 是正定矩阵。
 
 综上，结论成立。
 
@@ -185,57 +185,57 @@ c_n=\det A=\lambda_1\lambda_2\cdots\lambda_n.
 
 ## 习题 7.2.22
 
-设 {% mathjax '{"conversion":{"display":false}}' %}A,B\in M_n(\mathbb R){% endmathjax %} 均为对称矩阵，其中 {% mathjax '{"conversion":{"display":false}}' %}A{% endmathjax %} 正定。证明：存在可逆矩阵 {% mathjax '{"conversion":{"display":false}}' %}P\in M_n(\mathbb R){% endmathjax %}，使得
+设 \(A,B\in M_n(\mathbb R)\) 均为对称矩阵，其中 \(A\) 正定。证明：存在可逆矩阵 \(P\in M_n(\mathbb R)\)，使得
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 P^TAP
-{% endmathjax %}
+\]
 
 和
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 P^TBP
-{% endmathjax %}
+\]
 
 同时为对角矩阵。
 
-因为 {% mathjax '{"conversion":{"display":false}}' %}A{% endmathjax %} 正定，所以存在可逆矩阵 {% mathjax '{"conversion":{"display":false}}' %}S{% endmathjax %}，使得
+因为 \(A\) 正定，所以存在可逆矩阵 \(S\)，使得
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 S^TAS=I.
-{% endmathjax %}
+\]
 
 令
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 C=S^TBS.
-{% endmathjax %}
+\]
 
-因为 {% mathjax '{"conversion":{"display":false}}' %}B{% endmathjax %} 是对称矩阵，所以
+因为 \(B\) 是对称矩阵，所以
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 C^T=(S^TBS)^T=S^TB^TS=S^TBS=C.
-{% endmathjax %}
+\]
 
-因此 {% mathjax '{"conversion":{"display":false}}' %}C{% endmathjax %} 也是实对称矩阵。
+因此 \(C\) 也是实对称矩阵。
 
-由实对称矩阵正交对角化定理，存在正交矩阵 {% mathjax '{"conversion":{"display":false}}' %}Q{% endmathjax %}，使得
+由实对称矩阵正交对角化定理，存在正交矩阵 \(Q\)，使得
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 Q^TCQ=D,
-{% endmathjax %}
+\]
 
-其中 {% mathjax '{"conversion":{"display":false}}' %}D{% endmathjax %} 是对角矩阵。
+其中 \(D\) 是对角矩阵。
 
 令
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 P=SQ.
-{% endmathjax %}
+\]
 
 则
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 P^TAP
 =
 Q^TS^TASQ
@@ -243,13 +243,13 @@ Q^TS^TASQ
 Q^TIQ
 =
 I,
-{% endmathjax %}
+\]
 
 是对角矩阵。
 
 同时
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 P^TBP
 =
 Q^TS^TBSQ
@@ -257,165 +257,165 @@ Q^TS^TBSQ
 Q^TCQ
 =
 D,
-{% endmathjax %}
+\]
 
 也是对角矩阵。
 
-因此存在可逆矩阵 {% mathjax '{"conversion":{"display":false}}' %}P{% endmathjax %}，使得 {% mathjax '{"conversion":{"display":false}}' %}P^TAP{% endmathjax %} 和 {% mathjax '{"conversion":{"display":false}}' %}P^TBP{% endmathjax %} 同时为对角矩阵。
+因此存在可逆矩阵 \(P\)，使得 \(P^TAP\) 和 \(P^TBP\) 同时为对角矩阵。
 
 ---
 
 ## 习题 7.2.24
 
-设 {% mathjax '{"conversion":{"display":false}}' %}b,c\in\mathbb R{% endmathjax %} 且
+设 \(b,c\in\mathbb R\) 且
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 b^2-4c<0.
-{% endmathjax %}
+\]
 
-举例说明：存在一个线性变换 {% mathjax '{"conversion":{"display":false}}' %}\mathcal A\in\operatorname{End}(V){% endmathjax %}，使得
+举例说明：存在一个线性变换 \(\mathcal A\in\operatorname{End}(V)\)，使得
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \mathcal A^2+b\mathcal A+cI
-{% endmathjax %}
+\]
 
 不可逆。
 
 因为
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 b^2-4c<0,
-{% endmathjax %}
+\]
 
 所以多项式
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 x^2+bx+c
-{% endmathjax %}
+\]
 
 在实数范围内没有根，但在复数范围内有一对共轭复根
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \alpha\pm i\beta,
-{% endmathjax %}
+\]
 
 其中
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \alpha=-\frac b2,\qquad
 \beta=\frac{\sqrt{4c-b^2}}2\neq 0.
-{% endmathjax %}
+\]
 
-取 {% mathjax '{"conversion":{"display":false}}' %}V=\mathbb R^2{% endmathjax %}，定义线性变换 {% mathjax '{"conversion":{"display":false}}' %}\mathcal A{% endmathjax %} 在标准基下的矩阵为
+取 \(V=\mathbb R^2\)，定义线性变换 \(\mathcal A\) 在标准基下的矩阵为
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 A=
 \begin{pmatrix}
 \alpha & -\beta\\
 \beta & \alpha
 \end{pmatrix}.
-{% endmathjax %}
+\]
 
-该矩阵对应复平面中“乘以复数 {% mathjax '{"conversion":{"display":false}}' %}\alpha+i\beta{% endmathjax %}”的线性变换。
+该矩阵对应复平面中“乘以复数 \(\alpha+i\beta\)”的线性变换。
 
-由于 {% mathjax '{"conversion":{"display":false}}' %}\alpha+i\beta{% endmathjax %} 是方程
+由于 \(\alpha+i\beta\) 是方程
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 x^2+bx+c=0
-{% endmathjax %}
+\]
 
 的根，所以对应的实矩阵满足
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 A^2+bA+cI=0.
-{% endmathjax %}
+\]
 
 因此
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \mathcal A^2+b\mathcal A+cI
-{% endmathjax %}
+\]
 
 是零变换。
 
 零变换不可逆，所以这就给出了所需例子。
 
-这也说明，如果不假设 {% mathjax '{"conversion":{"display":false}}' %}\mathcal A{% endmathjax %} 自伴，那么结论不再成立。
+这也说明，如果不假设 \(\mathcal A\) 自伴，那么结论不再成立。
 
 ---
 
 ## 习题 7.2.25
 
-设 {% mathjax '{"conversion":{"display":false}}' %}\mathcal A,\mathcal B{% endmathjax %} 是 {% mathjax '{"conversion":{"display":false}}' %}n{% endmathjax %} 维内积空间 {% mathjax '{"conversion":{"display":false}}' %}V{% endmathjax %} 上的两个自伴算子。证明下列陈述等价：
+设 \(\mathcal A,\mathcal B\) 是 \(n\) 维内积空间 \(V\) 上的两个自伴算子。证明下列陈述等价：
 
-1. 存在 {% mathjax '{"conversion":{"display":false}}' %}V{% endmathjax %} 的一组规范正交基 {% mathjax '{"conversion":{"display":false}}' %}\mathcal E{% endmathjax %}，使得 {% mathjax '{"conversion":{"display":false}}' %}M_\mathcal E(\mathcal A){% endmathjax %} 和 {% mathjax '{"conversion":{"display":false}}' %}M_\mathcal E(\mathcal B){% endmathjax %} 同时为对角矩阵；
-2. {% mathjax '{"conversion":{"display":false}}' %}\mathcal A{% endmathjax %} 和 {% mathjax '{"conversion":{"display":false}}' %}\mathcal B{% endmathjax %} 可交换，即
+1. 存在 \(V\) 的一组规范正交基 \(\mathcal E\)，使得 \(M_\mathcal E(\mathcal A)\) 和 \(M_\mathcal E(\mathcal B)\) 同时为对角矩阵；
+2. \(\mathcal A\) 和 \(\mathcal B\) 可交换，即
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \mathcal A\mathcal B=\mathcal B\mathcal A.
-{% endmathjax %}
+\]
 
-### 证明 {% mathjax '{"conversion":{"display":false}}' %}1\Rightarrow 2{% endmathjax %}
+### 证明 \(1\Rightarrow 2\)
 
-若存在一组规范正交基 {% mathjax '{"conversion":{"display":false}}' %}\mathcal E{% endmathjax %}，使得
+若存在一组规范正交基 \(\mathcal E\)，使得
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 M_\mathcal E(\mathcal A)
-{% endmathjax %}
+\]
 
 和
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 M_\mathcal E(\mathcal B)
-{% endmathjax %}
+\]
 
 同时为对角矩阵。
 
 因为对角矩阵之间一定可交换，所以
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 M_\mathcal E(\mathcal A)M_\mathcal E(\mathcal B)
 =
 M_\mathcal E(\mathcal B)M_\mathcal E(\mathcal A).
-{% endmathjax %}
+\]
 
 因此
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \mathcal A\mathcal B=\mathcal B\mathcal A.
-{% endmathjax %}
+\]
 
-### 证明 {% mathjax '{"conversion":{"display":false}}' %}2\Rightarrow 1{% endmathjax %}
+### 证明 \(2\Rightarrow 1\)
 
-因为 {% mathjax '{"conversion":{"display":false}}' %}\mathcal A{% endmathjax %} 是自伴算子，所以 {% mathjax '{"conversion":{"display":false}}' %}V{% endmathjax %} 可以正交分解为 {% mathjax '{"conversion":{"display":false}}' %}\mathcal A{% endmathjax %} 的特征子空间直和：
+因为 \(\mathcal A\) 是自伴算子，所以 \(V\) 可以正交分解为 \(\mathcal A\) 的特征子空间直和：
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 V=\bigoplus_\lambda V_\lambda,
-{% endmathjax %}
+\]
 
 其中
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 V_\lambda=\ker(\mathcal A-\lambda I).
-{% endmathjax %}
+\]
 
-下面证明每个 {% mathjax '{"conversion":{"display":false}}' %}V_\lambda{% endmathjax %} 在 {% mathjax '{"conversion":{"display":false}}' %}\mathcal B{% endmathjax %} 下不变。
+下面证明每个 \(V_\lambda\) 在 \(\mathcal B\) 下不变。
 
-任取 {% mathjax '{"conversion":{"display":false}}' %}v\in V_\lambda{% endmathjax %}，则
+任取 \(v\in V_\lambda\)，则
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \mathcal Av=\lambda v.
-{% endmathjax %}
+\]
 
 又因为
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \mathcal A\mathcal B=\mathcal B\mathcal A,
-{% endmathjax %}
+\]
 
 所以
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \mathcal A(\mathcal Bv)
 =
 \mathcal B(\mathcal Av)
@@ -423,23 +423,23 @@ V_\lambda=\ker(\mathcal A-\lambda I).
 \mathcal B(\lambda v)
 =
 \lambda\mathcal Bv.
-{% endmathjax %}
+\]
 
 因此
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \mathcal Bv\in V_\lambda.
-{% endmathjax %}
+\]
 
-所以 {% mathjax '{"conversion":{"display":false}}' %}\mathcal B{% endmathjax %} 保持 {% mathjax '{"conversion":{"display":false}}' %}\mathcal A{% endmathjax %} 的每个特征子空间不变。
+所以 \(\mathcal B\) 保持 \(\mathcal A\) 的每个特征子空间不变。
 
-由于 {% mathjax '{"conversion":{"display":false}}' %}\mathcal B{% endmathjax %} 也是自伴算子，所以 {% mathjax '{"conversion":{"display":false}}' %}\mathcal B{% endmathjax %} 在每个 {% mathjax '{"conversion":{"display":false}}' %}V_\lambda{% endmathjax %} 上的限制仍然是自伴算子。于是可以在每个 {% mathjax '{"conversion":{"display":false}}' %}V_\lambda{% endmathjax %} 中选取一组规范正交基，使得 {% mathjax '{"conversion":{"display":false}}' %}\mathcal B{% endmathjax %} 在该子空间上对角化。
+由于 \(\mathcal B\) 也是自伴算子，所以 \(\mathcal B\) 在每个 \(V_\lambda\) 上的限制仍然是自伴算子。于是可以在每个 \(V_\lambda\) 中选取一组规范正交基，使得 \(\mathcal B\) 在该子空间上对角化。
 
-把所有这些规范正交基合并起来，就得到 {% mathjax '{"conversion":{"display":false}}' %}V{% endmathjax %} 的一组规范正交基。
+把所有这些规范正交基合并起来，就得到 \(V\) 的一组规范正交基。
 
-在这组基下，{% mathjax '{"conversion":{"display":false}}' %}\mathcal A{% endmathjax %} 在每个 {% mathjax '{"conversion":{"display":false}}' %}V_\lambda{% endmathjax %} 上都是数乘 {% mathjax '{"conversion":{"display":false}}' %}\lambda I{% endmathjax %}，因此 {% mathjax '{"conversion":{"display":false}}' %}\mathcal A{% endmathjax %} 是对角的；而 {% mathjax '{"conversion":{"display":false}}' %}\mathcal B{% endmathjax %} 也被构造为对角的。
+在这组基下，\(\mathcal A\) 在每个 \(V_\lambda\) 上都是数乘 \(\lambda I\)，因此 \(\mathcal A\) 是对角的；而 \(\mathcal B\) 也被构造为对角的。
 
-所以 {% mathjax '{"conversion":{"display":false}}' %}\mathcal A{% endmathjax %} 和 {% mathjax '{"conversion":{"display":false}}' %}\mathcal B{% endmathjax %} 可以同时正交对角化。
+所以 \(\mathcal A\) 和 \(\mathcal B\) 可以同时正交对角化。
 
 因此两条陈述等价。
 
@@ -447,53 +447,53 @@ V_\lambda=\ker(\mathcal A-\lambda I).
 
 ## 习题 7.2.27
 
-设 {% mathjax '{"conversion":{"display":false}}' %}A{% endmathjax %} 为 {% mathjax '{"conversion":{"display":false}}' %}n{% endmathjax %} 阶实正规矩阵。假设 {% mathjax '{"conversion":{"display":false}}' %}\lambda\in\mathbb C{% endmathjax %} 是 {% mathjax '{"conversion":{"display":false}}' %}A{% endmathjax %} 的一个复特征值，列向量 {% mathjax '{"conversion":{"display":false}}' %}\alpha\in\mathbb C^n{% endmathjax %} 满足
+设 \(A\) 为 \(n\) 阶实正规矩阵。假设 \(\lambda\in\mathbb C\) 是 \(A\) 的一个复特征值，列向量 \(\alpha\in\mathbb C^n\) 满足
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 A\alpha=\lambda\alpha.
-{% endmathjax %}
+\]
 
 证明：
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 A^T\alpha=\overline{\lambda}\alpha.
-{% endmathjax %}
+\]
 
-因为 {% mathjax '{"conversion":{"display":false}}' %}A{% endmathjax %} 是实正规矩阵，所以
+因为 \(A\) 是实正规矩阵，所以
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 AA^T=A^TA.
-{% endmathjax %}
+\]
 
-把 {% mathjax '{"conversion":{"display":false}}' %}A{% endmathjax %} 看作复空间 {% mathjax '{"conversion":{"display":false}}' %}\mathbb C^n{% endmathjax %} 上的矩阵，则它仍然是正规矩阵，并且它的伴随矩阵为
+把 \(A\) 看作复空间 \(\mathbb C^n\) 上的矩阵，则它仍然是正规矩阵，并且它的伴随矩阵为
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 A^*=A^T.
-{% endmathjax %}
+\]
 
 由正规矩阵的性质可知：如果
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 A\alpha=\lambda\alpha,
-{% endmathjax %}
+\]
 
 那么
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 A^*\alpha=\overline{\lambda}\alpha.
-{% endmathjax %}
+\]
 
 又因为这里
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 A^*=A^T,
-{% endmathjax %}
+\]
 
 所以
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 A^T\alpha=\overline{\lambda}\alpha.
-{% endmathjax %}
+\]
 
 证毕。
 
@@ -501,305 +501,305 @@ A^T\alpha=\overline{\lambda}\alpha.
 
 ## 习题 7.2.28
 
-设 {% mathjax '{"conversion":{"display":false}}' %}\mathcal A\in \operatorname{End}(V){% endmathjax %} 是正规变换，且最小多项式为
+设 \(\mathcal A\in \operatorname{End}(V)\) 是正规变换，且最小多项式为
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 g(X)=(X-a)^2+b^2,
-{% endmathjax %}
+\]
 
-其中 {% mathjax '{"conversion":{"display":false}}' %}a,b\in\mathbb R{% endmathjax %}，{% mathjax '{"conversion":{"display":false}}' %}b\neq 0{% endmathjax %}。
+其中 \(a,b\in\mathbb R\)，\(b\neq 0\)。
 
 证明：
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \mathcal A
-{% endmathjax %}
+\]
 
 可逆，且
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \mathcal A^*=(a^2+b^2)\mathcal A^{-1}.
-{% endmathjax %}
+\]
 
 由最小多项式可知
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 (\mathcal A-aI)^2+b^2I=0.
-{% endmathjax %}
+\]
 
 展开得
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \mathcal A^2-2a\mathcal A+(a^2+b^2)I=0.
-{% endmathjax %}
+\]
 
 于是
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \mathcal A(2aI-\mathcal A)=(a^2+b^2)I.
-{% endmathjax %}
+\]
 
 因为
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 a^2+b^2>0,
-{% endmathjax %}
+\]
 
-所以 {% mathjax '{"conversion":{"display":false}}' %}\mathcal A{% endmathjax %} 可逆，并且
+所以 \(\mathcal A\) 可逆，并且
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \mathcal A^{-1}
 =
 \frac{1}{a^2+b^2}(2aI-\mathcal A).
-{% endmathjax %}
+\]
 
 因此
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 (a^2+b^2)\mathcal A^{-1}=2aI-\mathcal A.
-{% endmathjax %}
+\]
 
 下面证明
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \mathcal A^*=2aI-\mathcal A.
-{% endmathjax %}
+\]
 
 令
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \mathcal B=\mathcal A-aI.
-{% endmathjax %}
+\]
 
-因为 {% mathjax '{"conversion":{"display":false}}' %}\mathcal A{% endmathjax %} 正规，所以 {% mathjax '{"conversion":{"display":false}}' %}\mathcal B{% endmathjax %} 也是正规变换。并且
+因为 \(\mathcal A\) 正规，所以 \(\mathcal B\) 也是正规变换。并且
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \mathcal B^2=-b^2I.
-{% endmathjax %}
+\]
 
-因此 {% mathjax '{"conversion":{"display":false}}' %}\mathcal B{% endmathjax %} 的特征值只能是
+因此 \(\mathcal B\) 的特征值只能是
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 ib
-{% endmathjax %}
+\]
 
 或
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 -ib.
-{% endmathjax %}
+\]
 
-由于正规变换可以酉对角化，所以在一组规范正交基下，{% mathjax '{"conversion":{"display":false}}' %}\mathcal B{% endmathjax %} 的矩阵为对角矩阵，对角线上只可能出现 {% mathjax '{"conversion":{"display":false}}' %}ib{% endmathjax %} 或 {% mathjax '{"conversion":{"display":false}}' %}-ib{% endmathjax %}。
+由于正规变换可以酉对角化，所以在一组规范正交基下，\(\mathcal B\) 的矩阵为对角矩阵，对角线上只可能出现 \(ib\) 或 \(-ib\)。
 
-于是 {% mathjax '{"conversion":{"display":false}}' %}\mathcal B^*{% endmathjax %} 的特征值是这些特征值的共轭，即 {% mathjax '{"conversion":{"display":false}}' %}-ib{% endmathjax %} 或 {% mathjax '{"conversion":{"display":false}}' %}ib{% endmathjax %}。
+于是 \(\mathcal B^*\) 的特征值是这些特征值的共轭，即 \(-ib\) 或 \(ib\)。
 
 因此
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \mathcal B^*=-\mathcal B.
-{% endmathjax %}
+\]
 
 也就是说
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 (\mathcal A-aI)^*=-(\mathcal A-aI).
-{% endmathjax %}
+\]
 
 展开得
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \mathcal A^*-aI=-\mathcal A+aI.
-{% endmathjax %}
+\]
 
 所以
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \mathcal A^*=2aI-\mathcal A.
-{% endmathjax %}
+\]
 
 结合前面得到的
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 2aI-\mathcal A=(a^2+b^2)\mathcal A^{-1},
-{% endmathjax %}
+\]
 
 可得
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \boxed{\mathcal A^*=(a^2+b^2)\mathcal A^{-1}}.
-{% endmathjax %}
+\]
 
 ---
 
 ## 习题 7.2.30
 
-设 {% mathjax '{"conversion":{"display":false}}' %}C[-\pi,\pi]{% endmathjax %} 是闭区间 {% mathjax '{"conversion":{"display":false}}' %}[-\pi,\pi]{% endmathjax %} 上所有实值连续函数构成的空间，在其上定义内积：
+设 \(C[-\pi,\pi]\) 是闭区间 \([-\pi,\pi]\) 上所有实值连续函数构成的空间，在其上定义内积：
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \langle f,g\rangle
 =
 \int_{-\pi}^{\pi}f(x)g(x)\,dx.
-{% endmathjax %}
+\]
 
 取
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 V=\operatorname{span}
 (1,\cos x,\cos 2x,\cos 3x,\sin x,\sin 2x,\sin 3x).
-{% endmathjax %}
+\]
 
-### 1. 证明：对于任意 {% mathjax '{"conversion":{"display":false}}' %}f\in V{% endmathjax %}，其导函数 {% mathjax '{"conversion":{"display":false}}' %}f'{% endmathjax %} 也属于 {% mathjax '{"conversion":{"display":false}}' %}V{% endmathjax %}
+### 1. 证明：对于任意 \(f\in V\)，其导函数 \(f'\) 也属于 \(V\)
 
-任取 {% mathjax '{"conversion":{"display":false}}' %}f\in V{% endmathjax %}，则 {% mathjax '{"conversion":{"display":false}}' %}f{% endmathjax %} 可以写成
+任取 \(f\in V\)，则 \(f\) 可以写成
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 f(x)
 =
 a_0+a_1\cos x+a_2\cos 2x+a_3\cos 3x
 +b_1\sin x+b_2\sin 2x+b_3\sin 3x.
-{% endmathjax %}
+\]
 
 求导得
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 f'(x)
 =
 -a_1\sin x-2a_2\sin 2x-3a_3\sin 3x
 +b_1\cos x+2b_2\cos 2x+3b_3\cos 3x.
-{% endmathjax %}
+\]
 
-显然 {% mathjax '{"conversion":{"display":false}}' %}f'(x){% endmathjax %} 仍然是
+显然 \(f'(x)\) 仍然是
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 1,\cos x,\cos 2x,\cos 3x,\sin x,\sin 2x,\sin 3x
-{% endmathjax %}
+\]
 
 的线性组合。
 
 因此
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 f'\in V.
-{% endmathjax %}
+\]
 
-### 2. 定义 {% mathjax '{"conversion":{"display":false}}' %}\mathcal A:V\to V,\ f\mapsto f'{% endmathjax %}，证明 {% mathjax '{"conversion":{"display":false}}' %}\mathcal A{% endmathjax %} 是斜对称变换
+### 2. 定义 \(\mathcal A:V\to V,\ f\mapsto f'\)，证明 \(\mathcal A\) 是斜对称变换
 
-要证明 {% mathjax '{"conversion":{"display":false}}' %}\mathcal A{% endmathjax %} 是斜对称变换，即证明对任意 {% mathjax '{"conversion":{"display":false}}' %}f,g\in V{% endmathjax %}，有
+要证明 \(\mathcal A\) 是斜对称变换，即证明对任意 \(f,g\in V\)，有
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \langle \mathcal Af,g\rangle
 =
 -\langle f,\mathcal Ag\rangle.
-{% endmathjax %}
+\]
 
 也就是证明
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \langle f',g\rangle
 =
 -\langle f,g'\rangle.
-{% endmathjax %}
+\]
 
 由分部积分公式，
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \int_{-\pi}^{\pi}f'(x)g(x)\,dx
 =
 f(x)g(x)\bigg|_{-\pi}^{\pi}
 -
 \int_{-\pi}^{\pi}f(x)g'(x)\,dx.
-{% endmathjax %}
+\]
 
-因为 {% mathjax '{"conversion":{"display":false}}' %}f,g\in V{% endmathjax %} 都是由 {% mathjax '{"conversion":{"display":false}}' %}1,\sin kx,\cos kx{% endmathjax %} 线性组合而成，所以它们满足
+因为 \(f,g\in V\) 都是由 \(1,\sin kx,\cos kx\) 线性组合而成，所以它们满足
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 f(\pi)=f(-\pi),
 \qquad
 g(\pi)=g(-\pi).
-{% endmathjax %}
+\]
 
 因此
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 f(x)g(x)\bigg|_{-\pi}^{\pi}=0.
-{% endmathjax %}
+\]
 
 所以
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \int_{-\pi}^{\pi}f'(x)g(x)\,dx
 =
 -\int_{-\pi}^{\pi}f(x)g'(x)\,dx.
-{% endmathjax %}
+\]
 
 即
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \langle \mathcal Af,g\rangle
 =
 -\langle f,\mathcal Ag\rangle.
-{% endmathjax %}
+\]
 
-所以 {% mathjax '{"conversion":{"display":false}}' %}\mathcal A{% endmathjax %} 是斜对称变换。
+所以 \(\mathcal A\) 是斜对称变换。
 
-### 3. 求 {% mathjax '{"conversion":{"display":false}}' %}V{% endmathjax %} 的一组规范正交基，使得 {% mathjax '{"conversion":{"display":false}}' %}M_\mathcal E(\mathcal A){% endmathjax %} 具有正交相似标准形
+### 3. 求 \(V\) 的一组规范正交基，使得 \(M_\mathcal E(\mathcal A)\) 具有正交相似标准形
 
 注意到
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \int_{-\pi}^{\pi}1^2\,dx=2\pi,
-{% endmathjax %}
+\]
 
-并且对于 {% mathjax '{"conversion":{"display":false}}' %}k=1,2,3{% endmathjax %}，
+并且对于 \(k=1,2,3\)，
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \int_{-\pi}^{\pi}\cos^2 kx\,dx=\pi,
 \qquad
 \int_{-\pi}^{\pi}\sin^2 kx\,dx=\pi.
-{% endmathjax %}
+\]
 
-同时，不同频率之间正交，{% mathjax '{"conversion":{"display":false}}' %}\sin{% endmathjax %} 与 {% mathjax '{"conversion":{"display":false}}' %}\cos{% endmathjax %} 之间也正交。
+同时，不同频率之间正交，\(\sin\) 与 \(\cos\) 之间也正交。
 
 所以取
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 e_0=\frac{1}{\sqrt{2\pi}},
-{% endmathjax %}
+\]
 
 以及
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 c_k=\frac{\cos kx}{\sqrt{\pi}},
 \qquad
 s_k=\frac{\sin kx}{\sqrt{\pi}},
 \qquad k=1,2,3.
-{% endmathjax %}
+\]
 
 令
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \mathcal E=(e_0,c_1,s_1,c_2,s_2,c_3,s_3).
-{% endmathjax %}
+\]
 
-则 {% mathjax '{"conversion":{"display":false}}' %}\mathcal E{% endmathjax %} 是 {% mathjax '{"conversion":{"display":false}}' %}V{% endmathjax %} 的一组规范正交基。
+则 \(\mathcal E\) 是 \(V\) 的一组规范正交基。
 
 因为
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \mathcal A(e_0)=0,
-{% endmathjax %}
+\]
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \mathcal A(c_k)=-ks_k,
-{% endmathjax %}
+\]
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \mathcal A(s_k)=kc_k.
-{% endmathjax %}
+\]
 
-所以在基 {% mathjax '{"conversion":{"display":false}}' %}\mathcal E{% endmathjax %} 下，{% mathjax '{"conversion":{"display":false}}' %}\mathcal A{% endmathjax %} 的矩阵为
+所以在基 \(\mathcal E\) 下，\(\mathcal A\) 的矩阵为
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 M_\mathcal E(\mathcal A)
 =
 \begin{pmatrix}
@@ -811,11 +811,11 @@ M_\mathcal E(\mathcal A)
 0&0&0&0&0&0&3\\
 0&0&0&0&0&-3&0
 \end{pmatrix}.
-{% endmathjax %}
+\]
 
 即
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 M_\mathcal E(\mathcal A)
 =
 0
@@ -834,7 +834,7 @@ M_\mathcal E(\mathcal A)
 0&3\\
 -3&0
 \end{pmatrix}.
-{% endmathjax %}
+\]
 
 这就是斜对称矩阵的正交相似标准形。
 
@@ -842,151 +842,151 @@ M_\mathcal E(\mathcal A)
 
 ## 习题 7.2.31
 
-设 {% mathjax '{"conversion":{"display":false}}' %}A,B\in M_n(\mathbb R){% endmathjax %}，其中 {% mathjax '{"conversion":{"display":false}}' %}A{% endmathjax %} 正定。证明：
+设 \(A,B\in M_n(\mathbb R)\)，其中 \(A\) 正定。证明：
 
-1. 对任意正整数 {% mathjax '{"conversion":{"display":false}}' %}k{% endmathjax %}，矩阵 {% mathjax '{"conversion":{"display":false}}' %}A^k{% endmathjax %} 也正定；
-2. 如果存在正整数 {% mathjax '{"conversion":{"display":false}}' %}r{% endmathjax %}，使得 {% mathjax '{"conversion":{"display":false}}' %}B{% endmathjax %} 与 {% mathjax '{"conversion":{"display":false}}' %}A^r{% endmathjax %} 可交换，则 {% mathjax '{"conversion":{"display":false}}' %}B{% endmathjax %} 与 {% mathjax '{"conversion":{"display":false}}' %}A{% endmathjax %} 也可交换。
+1. 对任意正整数 \(k\)，矩阵 \(A^k\) 也正定；
+2. 如果存在正整数 \(r\)，使得 \(B\) 与 \(A^r\) 可交换，则 \(B\) 与 \(A\) 也可交换。
 
-### 1. 证明 {% mathjax '{"conversion":{"display":false}}' %}A^k{% endmathjax %} 正定
+### 1. 证明 \(A^k\) 正定
 
-因为 {% mathjax '{"conversion":{"display":false}}' %}A{% endmathjax %} 正定，所以 {% mathjax '{"conversion":{"display":false}}' %}A{% endmathjax %} 是实对称矩阵，且所有特征值都为正。
+因为 \(A\) 正定，所以 \(A\) 是实对称矩阵，且所有特征值都为正。
 
-由谱定理，存在正交矩阵 {% mathjax '{"conversion":{"display":false}}' %}Q{% endmathjax %}，使得
+由谱定理，存在正交矩阵 \(Q\)，使得
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 A=QDQ^T,
-{% endmathjax %}
+\]
 
 其中
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 D=\operatorname{diag}(\lambda_1,\dots,\lambda_n),
 \qquad
 \lambda_i>0.
-{% endmathjax %}
+\]
 
 于是
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 A^k=QD^kQ^T,
-{% endmathjax %}
+\]
 
 其中
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 D^k=\operatorname{diag}(\lambda_1^k,\dots,\lambda_n^k).
-{% endmathjax %}
+\]
 
 因为
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \lambda_i>0,
-{% endmathjax %}
+\]
 
 所以
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \lambda_i^k>0.
-{% endmathjax %}
+\]
 
-因此 {% mathjax '{"conversion":{"display":false}}' %}A^k{% endmathjax %} 的所有特征值仍然为正，所以 {% mathjax '{"conversion":{"display":false}}' %}A^k{% endmathjax %} 正定。
+因此 \(A^k\) 的所有特征值仍然为正，所以 \(A^k\) 正定。
 
-### 2. 证明若 {% mathjax '{"conversion":{"display":false}}' %}B{% endmathjax %} 与 {% mathjax '{"conversion":{"display":false}}' %}A^r{% endmathjax %} 可交换，则 {% mathjax '{"conversion":{"display":false}}' %}B{% endmathjax %} 与 {% mathjax '{"conversion":{"display":false}}' %}A{% endmathjax %} 可交换
+### 2. 证明若 \(B\) 与 \(A^r\) 可交换，则 \(B\) 与 \(A\) 可交换
 
 仍设
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 A=QDQ^T,
-{% endmathjax %}
+\]
 
 其中
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 D=\operatorname{diag}(\lambda_1,\dots,\lambda_n),
 \qquad
 \lambda_i>0.
-{% endmathjax %}
+\]
 
 于是
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 A^r=QD^rQ^T,
-{% endmathjax %}
+\]
 
 其中
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 D^r=\operatorname{diag}(\lambda_1^r,\dots,\lambda_n^r).
-{% endmathjax %}
+\]
 
 由于函数
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 x\mapsto x^r
-{% endmathjax %}
+\]
 
 在正实数范围内严格单调，所以
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \lambda_i^r=\lambda_j^r
 \iff
 \lambda_i=\lambda_j.
-{% endmathjax %}
+\]
 
-这说明 {% mathjax '{"conversion":{"display":false}}' %}A{% endmathjax %} 与 {% mathjax '{"conversion":{"display":false}}' %}A^r{% endmathjax %} 有相同的特征子空间分解。
+这说明 \(A\) 与 \(A^r\) 有相同的特征子空间分解。
 
 若
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 BA^r=A^rB,
-{% endmathjax %}
+\]
 
-则 {% mathjax '{"conversion":{"display":false}}' %}B{% endmathjax %} 保持 {% mathjax '{"conversion":{"display":false}}' %}A^r{% endmathjax %} 的每个特征子空间不变。
+则 \(B\) 保持 \(A^r\) 的每个特征子空间不变。
 
-由于 {% mathjax '{"conversion":{"display":false}}' %}A{% endmathjax %} 与 {% mathjax '{"conversion":{"display":false}}' %}A^r{% endmathjax %} 的特征子空间相同，所以 {% mathjax '{"conversion":{"display":false}}' %}B{% endmathjax %} 也保持 {% mathjax '{"conversion":{"display":false}}' %}A{% endmathjax %} 的每个特征子空间不变。
+由于 \(A\) 与 \(A^r\) 的特征子空间相同，所以 \(B\) 也保持 \(A\) 的每个特征子空间不变。
 
-而在 {% mathjax '{"conversion":{"display":false}}' %}A{% endmathjax %} 的每个特征子空间上，{% mathjax '{"conversion":{"display":false}}' %}A{% endmathjax %} 都只是数乘变换。因此在每个特征子空间上，{% mathjax '{"conversion":{"display":false}}' %}A{% endmathjax %} 与 {% mathjax '{"conversion":{"display":false}}' %}B{% endmathjax %} 可交换。
+而在 \(A\) 的每个特征子空间上，\(A\) 都只是数乘变换。因此在每个特征子空间上，\(A\) 与 \(B\) 可交换。
 
 所以在整个空间上有
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 BA=AB.
-{% endmathjax %}
+\]
 
-即 {% mathjax '{"conversion":{"display":false}}' %}B{% endmathjax %} 与 {% mathjax '{"conversion":{"display":false}}' %}A{% endmathjax %} 可交换。
+即 \(B\) 与 \(A\) 可交换。
 
 ---
 
 ## 习题 7.2.32
 
-设 {% mathjax '{"conversion":{"display":false}}' %}U{% endmathjax %} 和 {% mathjax '{"conversion":{"display":false}}' %}V{% endmathjax %} 分别为 {% mathjax '{"conversion":{"display":false}}' %}n{% endmathjax %} 维和 {% mathjax '{"conversion":{"display":false}}' %}m{% endmathjax %} 维内积空间，
+设 \(U\) 和 \(V\) 分别为 \(n\) 维和 \(m\) 维内积空间，
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 W=\operatorname{Hom}(U,V).
-{% endmathjax %}
+\]
 
-取定 {% mathjax '{"conversion":{"display":false}}' %}U{% endmathjax %} 的一组规范正交基
+取定 \(U\) 的一组规范正交基
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \varepsilon_1,\dots,\varepsilon_n.
-{% endmathjax %}
+\]
 
 ### 1. 证明映射
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \langle f,g\rangle_W
 =
 \sum_{i=1}^n
 \langle f(\varepsilon_i),g(\varepsilon_i)\rangle_V
-{% endmathjax %}
+\]
 
-是 {% mathjax '{"conversion":{"display":false}}' %}W{% endmathjax %} 上的一个内积。
+是 \(W\) 上的一个内积。
 
-首先，线性性来自于 {% mathjax '{"conversion":{"display":false}}' %}V{% endmathjax %} 上内积的线性性。
+首先，线性性来自于 \(V\) 上内积的线性性。
 
 对称性如下：
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \langle f,g\rangle_W
 =
 \sum_{i=1}^n
@@ -996,11 +996,11 @@ W=\operatorname{Hom}(U,V).
 \langle g(\varepsilon_i),f(\varepsilon_i)\rangle_V
 =
 \langle g,f\rangle_W.
-{% endmathjax %}
+\]
 
 正定性如下：
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \langle f,f\rangle_W
 =
 \sum_{i=1}^n
@@ -1009,119 +1009,119 @@ W=\operatorname{Hom}(U,V).
 \sum_{i=1}^n
 \|f(\varepsilon_i)\|^2
 \ge 0.
-{% endmathjax %}
+\]
 
 若
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \langle f,f\rangle_W=0,
-{% endmathjax %}
+\]
 
 则
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \sum_{i=1}^n\|f(\varepsilon_i)\|^2=0.
-{% endmathjax %}
+\]
 
-由于每一项都非负，所以每一项都为 {% mathjax '{"conversion":{"display":false}}' %}0{% endmathjax %}。因此
+由于每一项都非负，所以每一项都为 \(0\)。因此
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 f(\varepsilon_i)=0,\qquad i=1,\dots,n.
-{% endmathjax %}
+\]
 
-因为 {% mathjax '{"conversion":{"display":false}}' %}\varepsilon_1,\dots,\varepsilon_n{% endmathjax %} 是 {% mathjax '{"conversion":{"display":false}}' %}U{% endmathjax %} 的一组基，所以
+因为 \(\varepsilon_1,\dots,\varepsilon_n\) 是 \(U\) 的一组基，所以
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 f=0.
-{% endmathjax %}
+\]
 
-因此该映射是 {% mathjax '{"conversion":{"display":false}}' %}W{% endmathjax %} 上的一个内积。
+因此该映射是 \(W\) 上的一个内积。
 
 ### 2. 定义
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 T(\mathcal A):W\to W,
-{% endmathjax %}
+\]
 
 其中
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 T(\mathcal A)(f):x\mapsto f(\mathcal A x).
-{% endmathjax %}
+\]
 
-证明 {% mathjax '{"conversion":{"display":false}}' %}T(\mathcal A){% endmathjax %} 是 {% mathjax '{"conversion":{"display":false}}' %}W{% endmathjax %} 上的线性变换。
+证明 \(T(\mathcal A)\) 是 \(W\) 上的线性变换。
 
-任取 {% mathjax '{"conversion":{"display":false}}' %}f,g\in W{% endmathjax %}，{% mathjax '{"conversion":{"display":false}}' %}\lambda\in\mathbb R{% endmathjax %}。对任意 {% mathjax '{"conversion":{"display":false}}' %}x\in U{% endmathjax %}，有
+任取 \(f,g\in W\)，\(\lambda\in\mathbb R\)。对任意 \(x\in U\)，有
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 T(\mathcal A)(f+\lambda g)(x)
 =
 (f+\lambda g)(\mathcal A x)
 =
 f(\mathcal A x)+\lambda g(\mathcal A x).
-{% endmathjax %}
+\]
 
 所以
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 T(\mathcal A)(f+\lambda g)
 =
 T(\mathcal A)(f)+\lambda T(\mathcal A)(g).
-{% endmathjax %}
+\]
 
-因此 {% mathjax '{"conversion":{"display":false}}' %}T(\mathcal A){% endmathjax %} 是线性变换。
+因此 \(T(\mathcal A)\) 是线性变换。
 
-### 3. 证明 {% mathjax '{"conversion":{"display":false}}' %}T(\mathcal A){% endmathjax %} 是 {% mathjax '{"conversion":{"display":false}}' %}W{% endmathjax %} 上的正交变换，当且仅当 {% mathjax '{"conversion":{"display":false}}' %}\mathcal A{% endmathjax %} 是 {% mathjax '{"conversion":{"display":false}}' %}U{% endmathjax %} 上的正交变换
+### 3. 证明 \(T(\mathcal A)\) 是 \(W\) 上的正交变换，当且仅当 \(\mathcal A\) 是 \(U\) 上的正交变换
 
 先证充分性。
 
-若 {% mathjax '{"conversion":{"display":false}}' %}\mathcal A{% endmathjax %} 是 {% mathjax '{"conversion":{"display":false}}' %}U{% endmathjax %} 上的正交变换，则
+若 \(\mathcal A\) 是 \(U\) 上的正交变换，则
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \mathcal A\varepsilon_1,\dots,\mathcal A\varepsilon_n
-{% endmathjax %}
+\]
 
-也是 {% mathjax '{"conversion":{"display":false}}' %}U{% endmathjax %} 的一组规范正交基。
+也是 \(U\) 的一组规范正交基。
 
 于是
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \langle T(\mathcal A)f,T(\mathcal A)g\rangle_W
 =
 \sum_{i=1}^n
 \langle f(\mathcal A\varepsilon_i),g(\mathcal A\varepsilon_i)\rangle_V.
-{% endmathjax %}
+\]
 
-由于 {% mathjax '{"conversion":{"display":false}}' %}\mathcal A\varepsilon_1,\dots,\mathcal A\varepsilon_n{% endmathjax %} 也是一组规范正交基，所以上式等于
+由于 \(\mathcal A\varepsilon_1,\dots,\mathcal A\varepsilon_n\) 也是一组规范正交基，所以上式等于
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \sum_{i=1}^n
 \langle f(\varepsilon_i),g(\varepsilon_i)\rangle_V
 =
 \langle f,g\rangle_W.
-{% endmathjax %}
+\]
 
-因此 {% mathjax '{"conversion":{"display":false}}' %}T(\mathcal A){% endmathjax %} 保持内积，所以 {% mathjax '{"conversion":{"display":false}}' %}T(\mathcal A){% endmathjax %} 是正交变换。
+因此 \(T(\mathcal A)\) 保持内积，所以 \(T(\mathcal A)\) 是正交变换。
 
 再证必要性。
 
-若 {% mathjax '{"conversion":{"display":false}}' %}T(\mathcal A){% endmathjax %} 是 {% mathjax '{"conversion":{"display":false}}' %}W{% endmathjax %} 上的正交变换，则它保持 {% mathjax '{"conversion":{"display":false}}' %}W{% endmathjax %} 上的范数。
+若 \(T(\mathcal A)\) 是 \(W\) 上的正交变换，则它保持 \(W\) 上的范数。
 
-任取 {% mathjax '{"conversion":{"display":false}}' %}u\in U{% endmathjax %}，固定一个单位向量 {% mathjax '{"conversion":{"display":false}}' %}v_0\in V{% endmathjax %}，定义线性映射
+任取 \(u\in U\)，固定一个单位向量 \(v_0\in V\)，定义线性映射
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 f_u:U\to V
-{% endmathjax %}
+\]
 
 为
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 f_u(x)=\langle x,u\rangle_U v_0.
-{% endmathjax %}
+\]
 
 则
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \|f_u\|_W^2
 =
 \sum_{i=1}^n
@@ -1131,11 +1131,11 @@ f_u(x)=\langle x,u\rangle_U v_0.
 |\langle \varepsilon_i,u\rangle|^2
 =
 \|u\|^2.
-{% endmathjax %}
+\]
 
 另一方面，
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 T(\mathcal A)(f_u)(x)
 =
 f_u(\mathcal A x)
@@ -1143,40 +1143,40 @@ f_u(\mathcal A x)
 \langle \mathcal A x,u\rangle_U v_0
 =
 \langle x,\mathcal A^*u\rangle_U v_0.
-{% endmathjax %}
+\]
 
 所以
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 T(\mathcal A)(f_u)=f_{\mathcal A^*u}.
-{% endmathjax %}
+\]
 
-由于 {% mathjax '{"conversion":{"display":false}}' %}T(\mathcal A){% endmathjax %} 保持范数，有
+由于 \(T(\mathcal A)\) 保持范数，有
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \|f_u\|_W
 =
 \|T(\mathcal A)(f_u)\|_W.
-{% endmathjax %}
+\]
 
 于是
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \|u\|
 =
 \|\mathcal A^*u\|.
-{% endmathjax %}
+\]
 
-这对任意 {% mathjax '{"conversion":{"display":false}}' %}u\in U{% endmathjax %} 都成立，所以 {% mathjax '{"conversion":{"display":false}}' %}\mathcal A^*{% endmathjax %} 保持范数，因此 {% mathjax '{"conversion":{"display":false}}' %}\mathcal A^*{% endmathjax %} 是正交变换。
+这对任意 \(u\in U\) 都成立，所以 \(\mathcal A^*\) 保持范数，因此 \(\mathcal A^*\) 是正交变换。
 
-于是 {% mathjax '{"conversion":{"display":false}}' %}\mathcal A{% endmathjax %} 也是正交变换。
+于是 \(\mathcal A\) 也是正交变换。
 
 综上，
 
-{% mathjax '{"conversion":{"display":true}}' %}
+\[
 \boxed{
 T(\mathcal A)\text{ 是正交变换}
 \iff
 \mathcal A\text{ 是正交变换}
 }.
-{% endmathjax %}
+\]

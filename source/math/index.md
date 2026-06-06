@@ -10,6 +10,14 @@ comments: false
 <p class="hub-intro">线性代数、抽象代数、数学符号、证明题和作业整理。</p>
 
 <div class="note-list">
+<a class="note-row" href="/notes/数学-abstract-algebra-抽代笔记整理-bbb68550/">
+<strong>抽代笔记整理</strong>
+<span>抽代笔记整理 说明：以下内容按两份 PDF 的内容整理，并把手写笔记中的定义、定理、例子与证明改写为较接近数学书的排版。明显划掉、重复或笔误的地方已按上下文修正。前置补充已并入正文，并按“群论基础与作用 - 环与理想 - 分解与多项式 - 模 - 域扩张”的顺序重排。 1. 群论前置补充 生成子群 </span>
+</a>
+<a class="note-row" href="/notes/数学-abstract-algebra-抽代笔记整理.backup-20260605-前置补充前-46a75360/">
+<strong>抽代笔记整理</strong>
+<span>抽代笔记整理 说明：以下内容按原 PDF 的出现顺序整理，并把手写笔记中的定义、定理、例子与证明改写为较接近数学书的排版。明显划掉、重复或笔误的地方已按上下文修正。 1. 素理想与极大理想 定义：素理想 设 R 为交换环， P subseteq R 为理想。若 1. P ne R ； 2. 对任意 </span>
+</a>
 <a class="note-row" href="/notes/数学-abstract-algebra-未命名-1-2.1-exercise-54527cc0/">
 <strong>2.1 Exercise</strong>
 <span>1. Let G be a group and A a normal abelian subgroup. Show that G/A operates on A by conjugation and obtain a homomorphism G/A to AutA . Proof: forall </span>

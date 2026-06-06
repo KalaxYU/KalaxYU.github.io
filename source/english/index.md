@@ -12,13 +12,13 @@ comments: false
 <p><a class="text-link" href="/english-reading/">进入 TOEFL Reading 精读专栏</a></p>
 
 <div class="note-list">
-<a class="note-row" href="/notes/英语-toefl-reading-2026-05-27-darwin-struggle-for-existence-3c3ba9dd/">
-<strong>Darwin on the Struggle for Existence</strong>
-<span>Darwin on the Struggle for Existence Blog permalink: https://kalax524.com/readings/2026-05-27-darwin-struggle-for-existence/ Source Charles Darwin, On</span>
-</a>
 <a class="note-row" href="/notes/英语-toefl-reading-2026-05-28-huxley-piece-of-chalk-3e5b7e72/">
 <strong>Huxley on Reading a Piece of Chalk</strong>
 <span>Huxley on Reading a Piece of Chalk Blog permalink: https://kalax524.com/readings/2026-05-28-huxley-piece-of-chalk/ Source Thomas Henry Huxley, "On a P</span>
+</a>
+<a class="note-row" href="/notes/英语-toefl-reading-2026-05-27-darwin-struggle-for-existence-3c3ba9dd/">
+<strong>Darwin on the Struggle for Existence</strong>
+<span>Darwin on the Struggle for Existence Blog permalink: https://kalax524.com/readings/2026-05-27-darwin-struggle-for-existence/ Source Charles Darwin, On</span>
 </a>
 <a class="note-row" href="/notes/英语-toefl-reading-2026-05-29-muir-forest-economy-6183680e/">
 <strong>John Muir on the Economy of Forests</strong>

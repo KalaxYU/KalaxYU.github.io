@@ -362,14 +362,14 @@ function normalizeMath(body) {
     const clean = content.trim();
     if (!clean) return '';
     const token = `@@KALAX_DISPLAY_MATH_${displays.length}@@`;
-    displays.push(`{% mathjax '{"conversion":{"display":true}}' %}\n${clean}\n{% endmathjax %}`);
+    displays.push(`\\[\n${clean}\n\\]`);
     return token;
   });
 
   next = next.replace(/(^|[^\\])\$([^$\n]+?)\$/g, (match, prefix, content) => {
     const clean = content.trim();
     if (!clean) return match;
-    return `${prefix}{% mathjax '{"conversion":{"display":false}}' %}${clean}{% endmathjax %}`;
+    return `${prefix}\\(${clean}\\)`;
   });
 
   return next.replace(/@@KALAX_DISPLAY_MATH_(\d+)@@/g, (match, index) => displays[Number(index)] || match);
@@ -433,7 +433,7 @@ function buildMaps(records) {
 function renderPost(record, body) {
   const categories = [record.module.cn, ...record.folders.filter(folder => folder !== record.module.cn)];
   const hasMath = /(\$\$|\\begin\{|\\\(|\\\[|\$[^$\n]+\$)/.test(body);
-  const description = excerpt(body) || `Obsidian note: ${record.title}`;
+  const description = record.description || `Obsidian note: ${record.title}`;
   return [
     '---',
     `title: ${yamlString(record.title)}`,

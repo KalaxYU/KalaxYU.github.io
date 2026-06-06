@@ -1,7 +1,7 @@
 ---
 title: "Huxley on Reading a Piece of Chalk"
-date: 2026-05-30 19:45:35
-updated: 2026-05-30 19:45:35
+date: 2026-06-06 21:51:24
+updated: 2026-06-06 21:51:24
 permalink: notes/英语-toefl-reading-2026-05-28-huxley-piece-of-chalk-3e5b7e72/
 categories:
   - "英语"

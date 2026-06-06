@@ -12,8 +12,9 @@ tags:
   - "数学"
   - "Abstract algebra"
   - "未命名 1"
-description: "1. Let {% mathjax '{\"conversion\":{\"display\":false}}' %}G{% endmathjax %} be a group and {% mathjax '{\"conversion\":{\"display\":false}}' %}A{% endmathjax"
+description: "1. Let G be a group and A a normal abelian subgroup. Show that G/A operates on A by conjugation and obtain a homomorphism G/A to AutA . Proof: forall "
+mathjax: true
 ---
->1. Let {% mathjax '{"conversion":{"display":false}}' %}G{% endmathjax %} be a group and {% mathjax '{"conversion":{"display":false}}' %}A{% endmathjax %} a normal abelian subgroup. Show that {% mathjax '{"conversion":{"display":false}}' %}G/A{% endmathjax %} operates on {% mathjax '{"conversion":{"display":false}}' %}A{% endmathjax %} by conjugation and obtain a homomorphism {% mathjax '{"conversion":{"display":false}}' %}G/A\to AutA{% endmathjax %} .
+>1. Let \(G\) be a group and \(A\) a normal abelian subgroup. Show that \(G/A\) operates on \(A\) by conjugation and obtain a homomorphism \(G/A\to AutA\) .
 >Proof:
->{% mathjax '{"conversion":{"display":false}}' %}\forall gA \in G/A{% endmathjax %} , define {% mathjax '{"conversion":{"display":false}}' %}f:G/A\to AutA{% endmathjax %} by$gA(a)
+>\(\forall gA \in G/A\) , define \(f:G/A\to AutA\) by$gA(a)
