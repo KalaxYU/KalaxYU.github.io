@@ -19,6 +19,9 @@ comments: false
 
 ## Readings
 
+- [John Burroughs on Birds and Patient Attention](/readings/2026-06-06-burroughs-birds-attention/)
+- [Gilbert White on Swallows and Observation](/readings/2026-06-05-gilbert-white-swallows-observation/)
+- [Darwin on Earthworms and Soil](/readings/2026-06-01-darwin-earthworms-soil/)
 - [John Muir on the Economy of Forests](/readings/2026-05-29-muir-forest-economy/)
 - [Huxley on Reading a Piece of Chalk](/readings/2026-05-28-huxley-piece-of-chalk/)
 - [Darwin on the Struggle for Existence](/readings/2026-05-27-darwin-struggle-for-existence/)

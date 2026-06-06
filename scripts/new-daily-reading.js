@@ -89,7 +89,7 @@ function updateIndex(dateText, reading) {
   const link = `- [${reading.title}](/readings/${dateText}-${reading.slug}/)`;
   const content = fs.readFileSync(INDEX_PAGE, 'utf8');
   if (content.includes(link)) return;
-  const updated = content.replace('## Readings\n\n', `## Readings\n\n${link}\n`);
+  const updated = content.replace(/## Readings\r?\n\r?\n/, match => `${match}${link}\n`);
   fs.writeFileSync(INDEX_PAGE, updated, 'utf8');
 }
 
