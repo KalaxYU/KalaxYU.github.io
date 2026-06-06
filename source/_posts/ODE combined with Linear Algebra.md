@@ -1,3 +1,8 @@
+---
+title: ODE combined with Linear Algebra
+date: 2025-11-26 00:00:00
+---
+
 ODE  combined with Linear Algebra
 
 
