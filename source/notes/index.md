@@ -50,7 +50,7 @@ comments: false
 
 ## 最近更新
 
-- [焦虑是结构性问题还是阶段性问题](/notes/daily-conclusions-3-关于职业规划倒退课程安排-02531105/) · 札记
+- [焦虑是结构性问题还是阶段性问题](/notes/daily-conclusions-3-关于职业规划推出课程安排-49c55c75/) · 札记
 - [Un message après le cours](/notes/法语-fraçais-阅读-2026-06-06-message-apres-cours-56cf2cc5/) · 法语
 - [Le petit jardin du balcon](/notes/法语-fraçais-阅读-2026-06-07-petit-jardin-balcon-85e3a6d3/) · 法语
 - [Le parapluie bleu](/notes/法语-fraçais-阅读-2026-06-08-parapluie-bleu-824799a3/) · 法语
