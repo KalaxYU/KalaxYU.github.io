@@ -12,7 +12,7 @@ comments: false
 <div class="note-list">
 <a class="note-row" href="/notes/daily-conclusions-3-关于职业规划推出课程安排-49c55c75/">
 <strong>焦虑是结构性问题还是阶段性问题</strong>
-<span>https://zhuanlan.zhihu.com/p/1990384749458519966 焦虑是结构性问题还是阶段性问题 但感觉不做一段时间很难判断自己的熟悉程度 学计算机吗</span>
+<span>https://zhuanlan.zhihu.com/p/1990384749458519966 焦虑是结构性问题还是阶段性问题 但感觉不做一段时间很难判断自己的熟悉程度 学计算机吗 打印四级准考证</span>
 </a>
 <a class="note-row" href="/notes/daily-conclusions-2-storm-376d51db/">
 <strong>说说我为什么想quit掉数学。</strong>
