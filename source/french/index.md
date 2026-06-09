@@ -12,6 +12,10 @@ comments: false
 <p><a class="text-link" href="/french-reading/">进入 French Reading A1-A2 阅读</a></p>
 
 <div class="note-list">
+<a class="note-row" href="/notes/法语-fraçais-阅读-2026-06-06-message-apres-cours-56cf2cc5/">
+<strong>Un message après le cours</strong>
+<span>Un message après le cours Blog permalink: https://kalax524.com/lectures-francaises/2026-06-06-message-apres-cours/ Niveau A1-A2. Texte original court </span>
+</a>
 <a class="note-row" href="/notes/法语-fraçais-阅读-2026-06-07-petit-jardin-balcon-85e3a6d3/">
 <strong>Le petit jardin du balcon</strong>
 <span>Le petit jardin du balcon Blog permalink: https://kalax524.com/lectures-francaises/2026-06-07-petit-jardin-balcon/ Niveau A1-A2. Texte original court </span>
@@ -31,10 +35,6 @@ comments: false
 <a class="note-row" href="/notes/法语-fraçais-阅读-2026-06-05-carnet-de-quartier-ab846838/">
 <strong>Le carnet de quartier</strong>
 <span>Le carnet de quartier Blog permalink: https://kalax524.com/lectures-francaises/2026-06-05-carnet-de-quartier/ Niveau A1-A2. Texte original court pour </span>
-</a>
-<a class="note-row" href="/notes/法语-fraçais-阅读-2026-06-06-message-apres-cours-56cf2cc5/">
-<strong>Un message après le cours</strong>
-<span>Un message après le cours Blog permalink: https://kalax524.com/lectures-francaises/2026-06-06-message-apres-cours/ Niveau A1-A2. Texte original court </span>
 </a>
 <a class="note-row" href="/notes/法语-fraçais-词汇-动词-verbe-c410b998/">
 <strong>动词  Verbe</strong>

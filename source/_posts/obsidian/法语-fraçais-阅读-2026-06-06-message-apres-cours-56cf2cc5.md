@@ -1,7 +1,7 @@
 ---
 title: "Un message après le cours"
-date: 2026-06-06 22:06:07
-updated: 2026-06-06 22:06:07
+date: 2026-06-09 16:03:02
+updated: 2026-06-09 16:03:02
 permalink: notes/法语-fraçais-阅读-2026-06-06-message-apres-cours-56cf2cc5/
 categories:
   - "法语"

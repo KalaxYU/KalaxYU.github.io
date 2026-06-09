@@ -41,7 +41,7 @@ comments: false
 </a>
 <a class="module-card" style="--module-accent: #c99a35" href="/journal/">
 <span class="module-icon"><i class="fas fa-compass"></i></span>
-<span class="module-count">1 note</span>
+<span class="module-count">2 notes</span>
 <strong>札记</strong>
 <span>Journal</span>
 <p>读书记录、日常札记、课程记录和未分类文本。</p>
@@ -50,12 +50,12 @@ comments: false
 
 ## 最近更新
 
+- [焦虑是结构性问题还是阶段性问题](/notes/daily-conclusions-3-关于职业规划倒退课程安排-02531105/) · 札记
+- [Un message après le cours](/notes/法语-fraçais-阅读-2026-06-06-message-apres-cours-56cf2cc5/) · 法语
 - [Le petit jardin du balcon](/notes/法语-fraçais-阅读-2026-06-07-petit-jardin-balcon-85e3a6d3/) · 法语
 - [Le parapluie bleu](/notes/法语-fraçais-阅读-2026-06-08-parapluie-bleu-824799a3/) · 法语
 - [Le banc du parc](/notes/法语-fraçais-阅读-2026-06-09-banc-du-parc-50faba16/) · 法语
 - [Tyndall on Glaciers and Slow Motion](/notes/英语-toefl-reading-2026-06-07-tyndall-glaciers-motion-36ce47b7/) · 英语
 - [Wallace on Islands and Distribution](/notes/英语-toefl-reading-2026-06-08-wallace-islands-distribution-313e990a/) · 英语
 - [Thoreau on Forest Succession](/notes/英语-toefl-reading-2026-06-09-thoreau-forest-succession-773374d3/) · 英语
-- [说说我为什么想quit掉数学。](/notes/daily-conclusions-2-storm-376d51db/) · 札记
-- [抽代笔记整理](/notes/数学-abstract-algebra-抽代笔记整理-bbb68550/) · 数学
 </div>
