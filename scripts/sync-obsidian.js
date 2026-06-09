@@ -605,7 +605,6 @@ function main() {
   assertInside(BLOG_ROOT, HOME_PAGE);
   assertInside(BLOG_ROOT, ASSETS_OUT);
 
-  fs.rmSync(POSTS_OUT, { recursive: true, force: true });
   fs.mkdirSync(POSTS_OUT, { recursive: true });
   fs.mkdirSync(path.dirname(NOTES_PAGE), { recursive: true });
   fs.mkdirSync(ASSETS_OUT, { recursive: true });

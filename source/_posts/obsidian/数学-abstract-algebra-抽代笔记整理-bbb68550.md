@@ -1,7 +1,7 @@
 ---
 title: "抽代笔记整理"
-date: 2026-06-05 23:17:36
-updated: 2026-06-05 23:17:36
+date: 2026-06-07 00:36:48
+updated: 2026-06-07 00:36:48
 permalink: notes/数学-abstract-algebra-抽代笔记整理-bbb68550/
 categories:
   - "数学"
@@ -342,6 +342,7 @@ g\mapsto \bigl(h\mapsto ghg^{-1}\bigr).</div>
 <div class="kalax-display-math">n_p\mid m,\qquad n_p\equiv 1\pmod p.</div>
 
 ### 例：阶为 28 的群
+
 
 若 <span class="kalax-inline-math">|G|=28=2^2\cdot 7</span>，则 Sylow <span class="kalax-inline-math">7</span>-子群个数 <span class="kalax-inline-math">n_7</span> 满足
 

@@ -9,5 +9,10 @@ comments: false
 <h2>Journal</h2>
 <p class="hub-intro">读书记录、日常札记、课程记录和未分类文本。</p>
 
-<p class="empty-note">札记：读书记录、日常记录、课程记录和未分类文本。</p>
+<div class="note-list">
+<a class="note-row" href="/notes/daily-conclusions-2-storm-376d51db/">
+<strong>说说我为什么想quit掉数学。</strong>
+<span>说说我为什么想quit掉数学。 第一个就是学数学不能带给我技能的提升，数学太理论了。 其实我很喜欢理论的学习以及把理论变成实践的可能性 现在更像是一种情绪的宣泄。 本质上我想掌握一门技术实现能力变现 1 金融课程 【真正的金融大师课-Perry Mehrling 油管101集金融课全在这！】http</span>
+</a>
+</div>
 </div>

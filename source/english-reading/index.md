@@ -17,6 +17,9 @@ comments: false
 
 ## Readings
 
+- [Thoreau on Forest Succession](/readings/2026-06-09-thoreau-forest-succession/)
+- [Wallace on Islands and Distribution](/readings/2026-06-08-wallace-islands-distribution/)
+- [Tyndall on Glaciers and Slow Motion](/readings/2026-06-07-tyndall-glaciers-motion/)
 - [John Burroughs on Birds and Patient Attention](/readings/2026-06-06-burroughs-birds-attention/)
 - [Gilbert White on Swallows and Observation](/readings/2026-06-05-gilbert-white-swallows-observation/)
 - [Darwin on Earthworms and Soil](/readings/2026-06-01-darwin-earthworms-soil/)

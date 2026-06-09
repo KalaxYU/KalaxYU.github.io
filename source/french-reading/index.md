@@ -12,4 +12,10 @@ comments: false
 
 ## Readings
 
+- [Le banc du parc](/lectures-francaises/2026-06-09-banc-du-parc/)
+- [Le parapluie bleu](/lectures-francaises/2026-06-08-parapluie-bleu/)
+- [Le petit jardin du balcon](/lectures-francaises/2026-06-07-petit-jardin-balcon/)
+- [Un message après le cours](/lectures-francaises/2026-06-06-message-apres-cours/)
+- [Le carnet de quartier](/lectures-francaises/2026-06-05-carnet-de-quartier/)
+- [Une matinée à la bibliothèque](/lectures-francaises/2026-06-01-matinee-bibliotheque/)
 - [Le marché du samedi](/lectures-francaises/2026-05-30-marche-samedi/)

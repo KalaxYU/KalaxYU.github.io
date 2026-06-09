@@ -12,6 +12,30 @@ comments: false
 <p><a class="text-link" href="/french-reading/">进入 French Reading A1-A2 阅读</a></p>
 
 <div class="note-list">
+<a class="note-row" href="/notes/法语-fraçais-阅读-2026-06-07-petit-jardin-balcon-85e3a6d3/">
+<strong>Le petit jardin du balcon</strong>
+<span>Le petit jardin du balcon Blog permalink: https://kalax524.com/lectures-francaises/2026-06-07-petit-jardin-balcon/ Niveau A1-A2. Texte original court </span>
+</a>
+<a class="note-row" href="/notes/法语-fraçais-阅读-2026-06-08-parapluie-bleu-824799a3/">
+<strong>Le parapluie bleu</strong>
+<span>Le parapluie bleu Blog permalink: https://kalax524.com/lectures-francaises/2026-06-08-parapluie-bleu/ Niveau A1-A2. Texte original court pour lecture </span>
+</a>
+<a class="note-row" href="/notes/法语-fraçais-阅读-2026-06-09-banc-du-parc-50faba16/">
+<strong>Le banc du parc</strong>
+<span>Le banc du parc Blog permalink: https://kalax524.com/lectures-francaises/2026-06-09-banc-du-parc/ Niveau A1-A2. Texte original court pour lecture quot</span>
+</a>
+<a class="note-row" href="/notes/法语-fraçais-阅读-2026-06-01-matinee-bibliotheque-751892db/">
+<strong>Une matinée à la bibliothèque</strong>
+<span>Une matinée à la bibliothèque Blog permalink: https://kalax524.com/lectures-francaises/2026-06-01-matinee-bibliotheque/ Niveau A1-A2. Texte original c</span>
+</a>
+<a class="note-row" href="/notes/法语-fraçais-阅读-2026-06-05-carnet-de-quartier-ab846838/">
+<strong>Le carnet de quartier</strong>
+<span>Le carnet de quartier Blog permalink: https://kalax524.com/lectures-francaises/2026-06-05-carnet-de-quartier/ Niveau A1-A2. Texte original court pour </span>
+</a>
+<a class="note-row" href="/notes/法语-fraçais-阅读-2026-06-06-message-apres-cours-56cf2cc5/">
+<strong>Un message après le cours</strong>
+<span>Un message après le cours Blog permalink: https://kalax524.com/lectures-francaises/2026-06-06-message-apres-cours/ Niveau A1-A2. Texte original court </span>
+</a>
 <a class="note-row" href="/notes/法语-fraçais-词汇-动词-verbe-c410b998/">
 <strong>动词  Verbe</strong>
 <span>Francisez 初学者的必备的１００个动词 常见法语动词变位（吐血整理，建议收藏） - 知乎 人称 appeler faire prendre porter avoir être aller trouver partir visiter -------------- --------------</span>

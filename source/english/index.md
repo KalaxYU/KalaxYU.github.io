@@ -12,6 +12,30 @@ comments: false
 <p><a class="text-link" href="/english-reading/">进入 TOEFL Reading 精读专栏</a></p>
 
 <div class="note-list">
+<a class="note-row" href="/notes/英语-toefl-reading-2026-06-07-tyndall-glaciers-motion-36ce47b7/">
+<strong>Tyndall on Glaciers and Slow Motion</strong>
+<span>Tyndall on Glaciers and Slow Motion Blog permalink: https://kalax524.com/readings/2026-06-07-tyndall-glaciers-motion/ Source John Tyndall, The Forms o</span>
+</a>
+<a class="note-row" href="/notes/英语-toefl-reading-2026-06-08-wallace-islands-distribution-313e990a/">
+<strong>Wallace on Islands and Distribution</strong>
+<span>Wallace on Islands and Distribution Blog permalink: https://kalax524.com/readings/2026-06-08-wallace-islands-distribution/ Source Alfred Russel Wallac</span>
+</a>
+<a class="note-row" href="/notes/英语-toefl-reading-2026-06-09-thoreau-forest-succession-773374d3/">
+<strong>Thoreau on Forest Succession</strong>
+<span>Thoreau on Forest Succession Blog permalink: https://kalax524.com/readings/2026-06-09-thoreau-forest-succession/ Source Henry David Thoreau, The Succe</span>
+</a>
+<a class="note-row" href="/notes/英语-toefl-reading-2026-06-01-darwin-earthworms-soil-0008cbbe/">
+<strong>Darwin on Earthworms and Soil</strong>
+<span>Darwin on Earthworms and Soil Blog permalink: https://kalax524.com/readings/2026-06-01-darwin-earthworms-soil/ Source Charles Darwin, The Formation of</span>
+</a>
+<a class="note-row" href="/notes/英语-toefl-reading-2026-06-05-gilbert-white-swallows-observation-8553e657/">
+<strong>Gilbert White on Swallows and Observation</strong>
+<span>Gilbert White on Swallows and Observation Blog permalink: https://kalax524.com/readings/2026-06-05-gilbert-white-swallows-observation/ Source Gilbert </span>
+</a>
+<a class="note-row" href="/notes/英语-toefl-reading-2026-06-06-burroughs-birds-attention-8c5e0b00/">
+<strong>John Burroughs on Birds and Patient Attention</strong>
+<span>John Burroughs on Birds and Patient Attention Blog permalink: https://kalax524.com/readings/2026-06-06-burroughs-birds-attention/ Source John Burrough</span>
+</a>
 <a class="note-row" href="/notes/英语-toefl-reading-2026-05-28-huxley-piece-of-chalk-3e5b7e72/">
 <strong>Huxley on Reading a Piece of Chalk</strong>
 <span>Huxley on Reading a Piece of Chalk Blog permalink: https://kalax524.com/readings/2026-05-28-huxley-piece-of-chalk/ Source Thomas Henry Huxley, "On a P</span>
