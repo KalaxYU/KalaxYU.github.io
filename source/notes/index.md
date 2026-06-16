@@ -13,7 +13,7 @@ comments: false
 <div class="module-grid">
 <a class="module-card" style="--module-accent: #2b7a78" href="/math/">
 <span class="module-icon"><i class="fas fa-square-root-variable"></i></span>
-<span class="module-count">9 notes</span>
+<span class="module-count">6 notes</span>
 <strong>数学</strong>
 <span>Mathematics</span>
 <p>线性代数、抽象代数、数学符号、证明题和作业整理。</p>
@@ -50,12 +50,12 @@ comments: false
 
 ## 最近更新
 
-- [Hungerford Algebra 第 II-IV 章定义、定理与性质整理](/notes/数学-hungerford-algebra-第ii-iv章定义定理性质摘录-f0fedfd6/) · 数学
-- [抽代笔记整理](/notes/数学-abstract-algebra-抽代笔记整理-bbb68550/) · 数学
-- [Hungerford Algebra 第 II-IV 章定义、定理与性质摘录](/notes/数学-hungerford-algebra-第ii-iv章定义定理性质摘录.ocr备份-1d5fddac/) · 数学
 - [课表](/notes/课表-98c6f493/) · 数学
+- [Hungerford Algebra 第 II-IV 章定义、定理与性质整理](/notes/数学-abstract-algebra-hungerford-algebra-第ii-iv章定义定理性质摘录-37956270/) · 数学
+- [抽代笔记整理](/notes/数学-abstract-algebra-抽代笔记整理-bbb68550/) · 数学
 - [Lecture1](/notes/cs-c++-lecture1-e6b92669/) · CS
 - [1.离散数学基础 图论有关部分](/notes/daily-conclusions-4-暑假打算开展的学习计划-19c45970/) · 札记
 - [焦虑是结构性问题还是阶段性问题](/notes/daily-conclusions-3-关于职业规划推出课程安排-49c55c75/) · 札记
 - [Un message après le cours](/notes/法语-fraçais-阅读-2026-06-06-message-apres-cours-56cf2cc5/) · 法语
+- [Le petit jardin du balcon](/notes/法语-fraçais-阅读-2026-06-07-petit-jardin-balcon-85e3a6d3/) · 法语
 </div>
