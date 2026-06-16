@@ -33,14 +33,14 @@ top_img: /img/bg.JPG
 </a>
 <a class="module-card" style="--module-accent: #7b5aa6" href="/cs/">
 <span class="module-icon"><i class="fas fa-code"></i></span>
-<span class="module-count">22 notes</span>
+<span class="module-count">23 notes</span>
 <strong>CS</strong>
 <span>Computer Science</span>
 <p>Python、算法、数据结构、系统、工具和项目记录。</p>
 </a>
 <a class="module-card" style="--module-accent: #c99a35" href="/journal/">
 <span class="module-icon"><i class="fas fa-compass"></i></span>
-<span class="module-count">2 notes</span>
+<span class="module-count">3 notes</span>
 <strong>札记</strong>
 <span>Journal</span>
 <p>读书记录、日常札记、课程记录和未分类文本。</p>

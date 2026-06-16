@@ -10,6 +10,10 @@ comments: false
 <p class="hub-intro">Python、算法、数据结构、系统、工具和项目记录。</p>
 
 <div class="note-list">
+<a class="note-row" href="/notes/cs-c++-lecture1-e6b92669/">
+<strong>Lecture1</strong>
+<span>C++ has been an object-oriented language from the beginning.</span>
+</a>
 <a class="note-row" href="/notes/cs-python-index-0ffafc34/">
 <strong>Python 总目录</strong>
 <span>Python 总目录 这个文件夹是一套「从零基础到能独立做项目」的 Python 知识地图。不要把它当成一次性读完的教材，而要当成 Obsidian 里的长期索引：先建立全局结构，再不断把代码、报错、项目经验补进去。 推荐学习顺序 1. 学习路线图 2. 基础语法与运行方式 3. 数据类型与容器 4</span>

@@ -34,14 +34,14 @@ comments: false
 </a>
 <a class="module-card" style="--module-accent: #7b5aa6" href="/cs/">
 <span class="module-icon"><i class="fas fa-code"></i></span>
-<span class="module-count">22 notes</span>
+<span class="module-count">23 notes</span>
 <strong>CS</strong>
 <span>Computer Science</span>
 <p>Python、算法、数据结构、系统、工具和项目记录。</p>
 </a>
 <a class="module-card" style="--module-accent: #c99a35" href="/journal/">
 <span class="module-icon"><i class="fas fa-compass"></i></span>
-<span class="module-count">2 notes</span>
+<span class="module-count">3 notes</span>
 <strong>札记</strong>
 <span>Journal</span>
 <p>读书记录、日常札记、课程记录和未分类文本。</p>
@@ -50,12 +50,12 @@ comments: false
 
 ## 最近更新
 
+- [Hungerford Algebra 第 II-IV 章定义、定理与性质整理](/notes/数学-hungerford-algebra-第ii-iv章定义定理性质摘录-f0fedfd6/) · 数学
+- [抽代笔记整理](/notes/数学-abstract-algebra-抽代笔记整理-bbb68550/) · 数学
+- [Hungerford Algebra 第 II-IV 章定义、定理与性质摘录](/notes/数学-hungerford-algebra-第ii-iv章定义定理性质摘录.ocr备份-1d5fddac/) · 数学
+- [课表](/notes/课表-98c6f493/) · 数学
+- [Lecture1](/notes/cs-c++-lecture1-e6b92669/) · CS
+- [1.离散数学基础 图论有关部分](/notes/daily-conclusions-4-暑假打算开展的学习计划-19c45970/) · 札记
 - [焦虑是结构性问题还是阶段性问题](/notes/daily-conclusions-3-关于职业规划推出课程安排-49c55c75/) · 札记
 - [Un message après le cours](/notes/法语-fraçais-阅读-2026-06-06-message-apres-cours-56cf2cc5/) · 法语
-- [Le petit jardin du balcon](/notes/法语-fraçais-阅读-2026-06-07-petit-jardin-balcon-85e3a6d3/) · 法语
-- [Le parapluie bleu](/notes/法语-fraçais-阅读-2026-06-08-parapluie-bleu-824799a3/) · 法语
-- [Le banc du parc](/notes/法语-fraçais-阅读-2026-06-09-banc-du-parc-50faba16/) · 法语
-- [Tyndall on Glaciers and Slow Motion](/notes/英语-toefl-reading-2026-06-07-tyndall-glaciers-motion-36ce47b7/) · 英语
-- [Wallace on Islands and Distribution](/notes/英语-toefl-reading-2026-06-08-wallace-islands-distribution-313e990a/) · 英语
-- [Thoreau on Forest Succession](/notes/英语-toefl-reading-2026-06-09-thoreau-forest-succession-773374d3/) · 英语
 </div>
