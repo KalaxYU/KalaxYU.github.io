@@ -12,6 +12,7 @@ comments: false
 
 ## Readings
 
+- [La petite réparation](/lectures-francaises/2026-06-17-petite-reparation/)
 - [Le banc du parc](/lectures-francaises/2026-06-09-banc-du-parc/)
 - [Le parapluie bleu](/lectures-francaises/2026-06-08-parapluie-bleu/)
 - [Le petit jardin du balcon](/lectures-francaises/2026-06-07-petit-jardin-balcon/)

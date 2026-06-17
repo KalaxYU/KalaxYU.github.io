@@ -12,6 +12,10 @@ comments: false
 <p><a class="text-link" href="/french-reading/">进入 French Reading A1-A2 阅读</a></p>
 
 <div class="note-list">
+<a class="note-row" href="/notes/法语-fraçais-阅读-2026-06-17-petite-reparation-59461221/">
+<strong>La petite réparation</strong>
+<span>La petite réparation Blog permalink: https://kalax524.com/lectures-francaises/2026-06-17-petite-reparation/ Niveau A1-A2. Texte original court pour le</span>
+</a>
 <a class="note-row" href="/notes/法语-fraçais-阅读-2026-06-06-message-apres-cours-56cf2cc5/">
 <strong>Un message après le cours</strong>
 <span>Un message après le cours Blog permalink: https://kalax524.com/lectures-francaises/2026-06-06-message-apres-cours/ Niveau A1-A2. Texte original court </span>
