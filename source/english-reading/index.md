@@ -17,6 +17,7 @@ comments: false
 
 ## Readings
 
+- [Faraday on the Candle as a Doorway to Science](/readings/2026-06-17-faraday-candle-natural-philosophy/)
 - [Thoreau on Forest Succession](/readings/2026-06-09-thoreau-forest-succession/)
 - [Wallace on Islands and Distribution](/readings/2026-06-08-wallace-islands-distribution/)
 - [Tyndall on Glaciers and Slow Motion](/readings/2026-06-07-tyndall-glaciers-motion/)

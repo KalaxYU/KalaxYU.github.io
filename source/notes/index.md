@@ -20,14 +20,14 @@ comments: false
 </a>
 <a class="module-card" style="--module-accent: #4666a5" href="/english/">
 <span class="module-icon"><i class="fas fa-feather-pointed"></i></span>
-<span class="module-count">10 notes + TOEFL</span>
+<span class="module-count">11 notes + TOEFL</span>
 <strong>英语</strong>
 <span>English</span>
 <p>TOEFL Reading、原版文本精读、词汇、长难句和写作表达。</p>
 </a>
 <a class="module-card" style="--module-accent: #d96c4f" href="/french/">
 <span class="module-icon"><i class="fas fa-language"></i></span>
-<span class="module-count">19 notes</span>
+<span class="module-count">20 notes</span>
 <strong>法语</strong>
 <span>French</span>
 <p>法语词汇、动词变位、介词、冠词、句式和练习。</p>
@@ -50,12 +50,12 @@ comments: false
 
 ## 最近更新
 
+- [La petite réparation](/notes/法语-fraçais-阅读-2026-06-17-petite-reparation-59461221/) · 法语
+- [Faraday on the Candle as a Doorway to Science](/notes/英语-toefl-reading-2026-06-17-faraday-candle-natural-philosophy-3d17ab27/) · 英语
 - [课表](/notes/课表-98c6f493/) · 数学
 - [Hungerford Algebra 第 II-IV 章定义、定理与性质整理](/notes/数学-abstract-algebra-hungerford-algebra-第ii-iv章定义定理性质摘录-37956270/) · 数学
 - [抽代笔记整理](/notes/数学-abstract-algebra-抽代笔记整理-bbb68550/) · 数学
 - [Lecture1](/notes/cs-c++-lecture1-e6b92669/) · CS
 - [1.离散数学基础 图论有关部分](/notes/daily-conclusions-4-暑假打算开展的学习计划-19c45970/) · 札记
 - [焦虑是结构性问题还是阶段性问题](/notes/daily-conclusions-3-关于职业规划推出课程安排-49c55c75/) · 札记
-- [Un message après le cours](/notes/法语-fraçais-阅读-2026-06-06-message-apres-cours-56cf2cc5/) · 法语
-- [Le petit jardin du balcon](/notes/法语-fraçais-阅读-2026-06-07-petit-jardin-balcon-85e3a6d3/) · 法语
 </div>

@@ -12,6 +12,10 @@ comments: false
 <p><a class="text-link" href="/english-reading/">进入 TOEFL Reading 精读专栏</a></p>
 
 <div class="note-list">
+<a class="note-row" href="/notes/英语-toefl-reading-2026-06-17-faraday-candle-natural-philosophy-3d17ab27/">
+<strong>Faraday on the Candle as a Doorway to Science</strong>
+<span>Faraday on the Candle as a Doorway to Science Blog permalink: https://kalax524.com/readings/2026-06-17-faraday-candle-natural-philosophy/ Source Micha</span>
+</a>
 <a class="note-row" href="/notes/英语-toefl-reading-2026-06-07-tyndall-glaciers-motion-36ce47b7/">
 <strong>Tyndall on Glaciers and Slow Motion</strong>
 <span>Tyndall on Glaciers and Slow Motion Blog permalink: https://kalax524.com/readings/2026-06-07-tyndall-glaciers-motion/ Source John Tyndall, The Forms o</span>
