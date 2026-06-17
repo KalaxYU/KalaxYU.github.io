@@ -50,6 +50,7 @@ comments: false
 
 ## 最近更新
 
+- [Abstract Algebra 作业](/notes/数学-abstract-algebra-作业-440112c0/) · 数学
 - [La petite réparation](/notes/法语-fraçais-阅读-2026-06-17-petite-reparation-59461221/) · 法语
 - [Faraday on the Candle as a Doorway to Science](/notes/英语-toefl-reading-2026-06-17-faraday-candle-natural-philosophy-3d17ab27/) · 英语
 - [课表](/notes/课表-98c6f493/) · 数学
@@ -57,5 +58,4 @@ comments: false
 - [抽代笔记整理](/notes/数学-abstract-algebra-抽代笔记整理-bbb68550/) · 数学
 - [Lecture1](/notes/cs-c++-lecture1-e6b92669/) · CS
 - [1.离散数学基础 图论有关部分](/notes/daily-conclusions-4-暑假打算开展的学习计划-19c45970/) · 札记
-- [焦虑是结构性问题还是阶段性问题](/notes/daily-conclusions-3-关于职业规划推出课程安排-49c55c75/) · 札记
 </div>

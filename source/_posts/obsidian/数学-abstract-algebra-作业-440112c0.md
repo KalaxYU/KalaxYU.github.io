@@ -1,7 +1,7 @@
 ---
 title: "Abstract Algebra 作业"
-date: 2026-06-07 00:13:28
-updated: 2026-06-07 00:13:28
+date: 2026-06-18 00:55:32
+updated: 2026-06-18 00:55:32
 permalink: notes/数学-abstract-algebra-作业-440112c0/
 categories:
   - "数学"
@@ -383,6 +383,7 @@ Then it is a subring of <span class="kalax-inline-math">\mathbb C</span>.
    <div class="kalax-display-math">\psi(x)=c^{-1}x-c^{-1}b.</div>
    Then
    <div class="kalax-display-math">\psi(\varphi(x))=\psi(cx+b)=c^{-1}(cx+b)-c^{-1}b=x,</div>
+   
    and
    <div class="kalax-display-math">\varphi(\psi(x))=\varphi(c^{-1}x-c^{-1}b)=c^{-1}(cx+b)-c^{-1}b=x.</div>
    Both maps fix <span class="kalax-inline-math">R</span>, so <span class="kalax-inline-math">\psi=\varphi^{-1}</span>. Hence <span class="kalax-inline-math">\varphi</span> is an automorphism.

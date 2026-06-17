@@ -10,6 +10,10 @@ comments: false
 <p class="hub-intro">线性代数、抽象代数、数学符号、证明题和作业整理。</p>
 
 <div class="note-list">
+<a class="note-row" href="/notes/数学-abstract-algebra-作业-440112c0/">
+<strong>Abstract Algebra 作业</strong>
+<span>Abstract Algebra 作业 HW7 题目 Recall in our course, all rings have identity elements. 1. A ring R such that a^2=a for all a in R is called a Boolean ring</span>
+</a>
 <a class="note-row" href="/notes/课表-98c6f493/">
 <strong>课表</strong>
 <span>时间 周一 周二 周三 周四 周五 ----- ---- -------- -------- -------- --- 1-2节 微观经济学 3-4节 概率论 Java 概率论（单周） 微观经济学（单） 5-6节 初等数论 拓扑学（双周） 初等数论（双周） 拓扑学 7-8节 数学分析 Java 数学</span>
@@ -21,10 +25,6 @@ comments: false
 <a class="note-row" href="/notes/数学-abstract-algebra-抽代笔记整理-bbb68550/">
 <strong>抽代笔记整理</strong>
 <span>抽代笔记整理 说明：以下内容按两份 PDF 的内容整理，并把手写笔记中的定义、定理、例子与证明改写为较接近数学书的排版。明显划掉、重复或笔误的地方已按上下文修正。前置补充已并入正文，并按“群论基础与作用 - 环与理想 - 分解与多项式 - 模 - 域扩张”的顺序重排。 1. 群论前置补充 生成子群 </span>
-</a>
-<a class="note-row" href="/notes/数学-abstract-algebra-作业-440112c0/">
-<strong>Abstract Algebra 作业</strong>
-<span>Abstract Algebra 作业 HW7 题目 Recall in our course, all rings have identity elements. 1. A ring R such that a^2=a for all a in R is called a Boolean ring</span>
 </a>
 <a class="note-row" href="/notes/数学-数学符号表-fd3bf914/">
 <strong>数学符号表</strong>
