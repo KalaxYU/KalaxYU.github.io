@@ -1,7 +1,7 @@
 ---
 title: "La petite réparation"
-date: 2026-06-17 16:21:30
-updated: 2026-06-17 16:21:30
+date: 2026-06-17 16:26:17
+updated: 2026-06-17 16:26:17
 permalink: notes/法语-fraçais-阅读-2026-06-17-petite-reparation-59461221/
 categories:
   - "法语"
