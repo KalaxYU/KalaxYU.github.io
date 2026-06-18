@@ -12,6 +12,10 @@ comments: false
 <p><a class="text-link" href="/english-reading/">进入 TOEFL Reading 精读专栏</a></p>
 
 <div class="note-list">
+<a class="note-row" href="/notes/英语-toefl-reading-2026-06-19-saunders-hymenoptera-nesting-d21e6f88/">
+<strong>Saunders on Hymenoptera and Nesting Habits</strong>
+<span>Saunders on Hymenoptera and Nesting Habits Blog permalink: https://kalax524.com/readings/2026-06-19-saunders-hymenoptera-nesting/ Source Edward Saunde</span>
+</a>
 <a class="note-row" href="/notes/英语-toefl-reading-2026-06-17-faraday-candle-natural-philosophy-3d17ab27/">
 <strong>Faraday on the Candle as a Doorway to Science</strong>
 <span>Faraday on the Candle as a Doorway to Science Blog permalink: https://kalax524.com/readings/2026-06-17-faraday-candle-natural-philosophy/ Source Micha</span>
