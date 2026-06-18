@@ -12,6 +12,7 @@ comments: false
 
 ## Readings
 
+- [Un carnet au café](/lectures-francaises/2026-06-19-matinee-bibliotheque/)
 - [La petite réparation](/lectures-francaises/2026-06-17-petite-reparation/)
 - [Le banc du parc](/lectures-francaises/2026-06-09-banc-du-parc/)
 - [Le parapluie bleu](/lectures-francaises/2026-06-08-parapluie-bleu/)
