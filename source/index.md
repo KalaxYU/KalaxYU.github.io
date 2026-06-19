@@ -12,7 +12,7 @@ top_img: /img/bg.JPG
 <div class="module-grid">
 <a class="module-card" style="--module-accent: #2b7a78" href="/math/">
 <span class="module-icon"><i class="fas fa-square-root-variable"></i></span>
-<span class="module-count">6 notes</span>
+<span class="module-count">8 notes</span>
 <strong>数学</strong>
 <span>Mathematics</span>
 <p>线性代数、抽象代数、数学符号、证明题和作业整理。</p>

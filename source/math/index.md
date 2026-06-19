@@ -10,6 +10,14 @@ comments: false
 <p class="hub-intro">线性代数、抽象代数、数学符号、证明题和作业整理。</p>
 
 <div class="note-list">
+<a class="note-row" href="/notes/数学-复分析手写笔记整理-c1253f65/">
+<strong>复分析手写笔记整理</strong>
+<span>复分析手写笔记整理 说明：本版是在 OCR 原稿基础上做的 逻辑校订版 。原始逐页 OCR 已备份为 复分析手写笔记整理 OCR原稿。以下内容不再逐页保留 OCR 错字，而是按数学主线重排、修正常见错误、补全必要证明步骤，并加入初学者提示。 0. 这份笔记在讲什么 这份笔记大致有两条主线： 1. 复</span>
+</a>
+<a class="note-row" href="/notes/数学-复分析手写笔记整理_ocr原稿-b12a93c3/">
+<strong>复分析手写笔记整理</strong>
+<span>复分析手写笔记整理 说明：以下内容按原图 IMG 2596.JPG 至 IMG 2639.JPG 的顺序识别整理，并按抽代笔记示例的 Markdown 风格排版。手写页中划掉内容以 ~~删除线~~ 保留；OCR 难以确认的笔迹已尽量按上下文保留。 1. 复数、序与基本拓扑 IMG 2596 Form</span>
+</a>
 <a class="note-row" href="/notes/数学-abstract-algebra-作业-440112c0/">
 <strong>Abstract Algebra 作业</strong>
 <span>Abstract Algebra 作业 HW7 题目 Recall in our course, all rings have identity elements. 1. A ring R such that a^2=a for all a in R is called a Boolean ring</span>

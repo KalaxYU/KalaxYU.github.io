@@ -13,7 +13,7 @@ comments: false
 <div class="module-grid">
 <a class="module-card" style="--module-accent: #2b7a78" href="/math/">
 <span class="module-icon"><i class="fas fa-square-root-variable"></i></span>
-<span class="module-count">6 notes</span>
+<span class="module-count">8 notes</span>
 <strong>数学</strong>
 <span>Mathematics</span>
 <p>线性代数、抽象代数、数学符号、证明题和作业整理。</p>
@@ -50,12 +50,12 @@ comments: false
 
 ## 最近更新
 
+- [复分析手写笔记整理](/notes/数学-复分析手写笔记整理-c1253f65/) · 数学
+- [复分析手写笔记整理](/notes/数学-复分析手写笔记整理_ocr原稿-b12a93c3/) · 数学
 - [Un carnet au café](/notes/法语-fraçais-阅读-2026-06-19-matinee-bibliotheque-ceb21e6c/) · 法语
 - [Saunders on Hymenoptera and Nesting Habits](/notes/英语-toefl-reading-2026-06-19-saunders-hymenoptera-nesting-d21e6f88/) · 英语
 - [Abstract Algebra 作业](/notes/数学-abstract-algebra-作业-440112c0/) · 数学
 - [La petite réparation](/notes/法语-fraçais-阅读-2026-06-17-petite-reparation-59461221/) · 法语
 - [Faraday on the Candle as a Doorway to Science](/notes/英语-toefl-reading-2026-06-17-faraday-candle-natural-philosophy-3d17ab27/) · 英语
 - [课表](/notes/课表-98c6f493/) · 数学
-- [Hungerford Algebra 第 II-IV 章定义、定理与性质整理](/notes/数学-abstract-algebra-hungerford-algebra-第ii-iv章定义定理性质摘录-37956270/) · 数学
-- [抽代笔记整理](/notes/数学-abstract-algebra-抽代笔记整理-bbb68550/) · 数学
 </div>
