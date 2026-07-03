@@ -10,6 +10,10 @@ comments: false
 <p class="hub-intro">线性代数、抽象代数、数学符号、证明题和作业整理。</p>
 
 <div class="note-list">
+<a class="note-row" href="/notes/课表-98c6f493/">
+<strong>课表</strong>
+<span>时间 周一 周二 周三 周四 周五 ----- ---- -------- -------- ---- --- 1-2节 3-4节 概率论 Java 概率论（单周） 5-6节 初等数论 拓扑学（双周） 初等数论（双周） 拓扑学 7-8节 数学分析 Java 数学分析 9-11节 计算金融（单周） 凸</span>
+</a>
 <a class="note-row" href="/notes/数学-离散数学-lecture1-量词-15121ae0/">
 <strong>Validity: universally-true statement</strong>
 <span>!Pasted image 20260701234809.png Validity: universally-true statement Statement !Pasted image 20260701175722.png</span>
@@ -25,10 +29,6 @@ comments: false
 <a class="note-row" href="/notes/数学-abstract-algebra-作业-440112c0/">
 <strong>Abstract Algebra 作业</strong>
 <span>Abstract Algebra 作业 HW7 题目 Recall in our course, all rings have identity elements. 1. A ring R such that a^2=a for all a in R is called a Boolean ring</span>
-</a>
-<a class="note-row" href="/notes/课表-98c6f493/">
-<strong>课表</strong>
-<span>时间 周一 周二 周三 周四 周五 ----- ---- -------- -------- -------- --- 1-2节 微观经济学 3-4节 概率论 Java 概率论（单周） 微观经济学（单） 5-6节 初等数论 拓扑学（双周） 初等数论（双周） 拓扑学 7-8节 数学分析 Java 数学</span>
 </a>
 <a class="note-row" href="/notes/数学-abstract-algebra-hungerford-algebra-第ii-iv章定义定理性质摘录-37956270/">
 <strong>Hungerford Algebra 第 II-IV 章定义、定理与性质整理</strong>

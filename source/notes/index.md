@@ -50,6 +50,7 @@ comments: false
 
 ## 最近更新
 
+- [课表](/notes/课表-98c6f493/) · 数学
 - [Maxwell on Molecules and Scientific Inference](/notes/英语-toefl-reading-2026-07-03-maxwell-molecules-scientific-inference-68b52ef9/) · 英语
 - [Un message après le cours](/notes/法语-fraçais-阅读-2026-07-03-message-apres-cours-3a42ce11/) · 法语
 - [Validity: universally-true statement](/notes/数学-离散数学-lecture1-量词-15121ae0/) · 数学
@@ -57,5 +58,4 @@ comments: false
 - [5](/notes/daily-conclusions-5-131f1757/) · 札记
 - [复分析手写笔记整理](/notes/数学-复变函数-复分析手写笔记整理_ocr原稿-5c932195/) · 数学
 - [复分析手写笔记整理](/notes/数学-复变函数-复分析手写笔记整理-b56bf656/) · 数学
-- [Un carnet au café](/notes/法语-fraçais-阅读-2026-06-19-matinee-bibliotheque-ceb21e6c/) · 法语
 </div>
