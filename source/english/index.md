@@ -12,6 +12,10 @@ comments: false
 <p><a class="text-link" href="/english-reading/">进入 TOEFL Reading 精读专栏</a></p>
 
 <div class="note-list">
+<a class="note-row" href="/notes/英语-toefl-reading-2026-07-03-maxwell-molecules-scientific-inference-68b52ef9/">
+<strong>Maxwell on Molecules and Scientific Inference</strong>
+<span>Maxwell on Molecules and Scientific Inference Blog permalink: https://kalax524.com/readings/2026-07-03-maxwell-molecules-scientific-inference/ Source </span>
+</a>
 <a class="note-row" href="/notes/英语-toefl-reading-2026-06-19-saunders-hymenoptera-nesting-d21e6f88/">
 <strong>Saunders on Hymenoptera and Nesting Habits</strong>
 <span>Saunders on Hymenoptera and Nesting Habits Blog permalink: https://kalax524.com/readings/2026-06-19-saunders-hymenoptera-nesting/ Source Edward Saunde</span>
