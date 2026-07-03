@@ -19,14 +19,14 @@ top_img: /img/bg.JPG
 </a>
 <a class="module-card" style="--module-accent: #4666a5" href="/english/">
 <span class="module-icon"><i class="fas fa-feather-pointed"></i></span>
-<span class="module-count">12 notes + TOEFL</span>
+<span class="module-count">13 notes + TOEFL</span>
 <strong>英语</strong>
 <span>English</span>
 <p>TOEFL Reading、原版文本精读、词汇、长难句和写作表达。</p>
 </a>
 <a class="module-card" style="--module-accent: #d96c4f" href="/french/">
 <span class="module-icon"><i class="fas fa-language"></i></span>
-<span class="module-count">21 notes</span>
+<span class="module-count">22 notes</span>
 <strong>法语</strong>
 <span>French</span>
 <p>法语词汇、动词变位、介词、冠词、句式和练习。</p>
@@ -40,7 +40,7 @@ top_img: /img/bg.JPG
 </a>
 <a class="module-card" style="--module-accent: #c99a35" href="/journal/">
 <span class="module-icon"><i class="fas fa-compass"></i></span>
-<span class="module-count">3 notes</span>
+<span class="module-count">5 notes</span>
 <strong>札记</strong>
 <span>Journal</span>
 <p>读书记录、日常札记、课程记录和未分类文本。</p>

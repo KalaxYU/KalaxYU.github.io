@@ -12,6 +12,10 @@ comments: false
 <p><a class="text-link" href="/french-reading/">进入 French Reading A1-A2 阅读</a></p>
 
 <div class="note-list">
+<a class="note-row" href="/notes/法语-fraçais-阅读-2026-07-03-message-apres-cours-3a42ce11/">
+<strong>Un message après le cours</strong>
+<span>Un message après le cours Blog permalink: https://kalax524.com/lectures-francaises/2026-07-03-message-apres-cours/ Niveau A1-A2. Texte original court </span>
+</a>
 <a class="note-row" href="/notes/法语-fraçais-阅读-2026-06-19-matinee-bibliotheque-ceb21e6c/">
 <strong>Un carnet au café</strong>
 <span>Un carnet au café Blog permalink: https://kalax524.com/lectures-francaises/2026-06-19-matinee-bibliotheque/ Niveau A1-A2. Texte original court pour le</span>

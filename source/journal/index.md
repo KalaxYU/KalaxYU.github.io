@@ -10,6 +10,14 @@ comments: false
 <p class="hub-intro">读书记录、日常札记、课程记录和未分类文本。</p>
 
 <div class="note-list">
+<a class="note-row" href="/notes/金融-霍华德《周期》-83bf4f4d/">
+<strong>马克·吐温：“历史不会重演细节，过程却会重复相似。“</strong>
+<span>马克·吐温：“历史不会重演细节，过程却会重复相似。“ 心理是影响周期的主要原因 !Pasted image 20260620140115.png 高收益债是什么？债券违约？</span>
+</a>
+<a class="note-row" href="/notes/daily-conclusions-5-131f1757/">
+<strong>5</strong>
+<span>在和胡博文，魏桢钊，朱家良相处的时候，我感到自己被治愈。我从聊天中得到了许多乐趣，感觉我是被爱着的，因为我在用我的方式表达对他们的爱。当我投入这些真诚而没有杂质的友谊，我体验到前所未有的满足感。 我喜欢和他们聊天，自在的畅聊，想到什么便说什么，尽情的表达亲昵之意而不被误会，便是如此多情，属于我的人格</span>
+</a>
 <a class="note-row" href="/notes/daily-conclusions-4-暑假打算开展的学习计划-19c45970/">
 <strong>1.离散数学基础 图论有关部分</strong>
 <span>从6.10开始有计划 挑选重点 1.离散数学基础 图论有关部分 https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010/pages/recitations/ 配合课程的problems 和notes</span>
