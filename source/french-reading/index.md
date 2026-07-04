@@ -12,6 +12,7 @@ comments: false
 
 ## Readings
 
+- [Le pique-nique sous les arbres](/lectures-francaises/2026-07-04-pique-nique-sous-les-arbres/)
 - [Un message après le cours](/lectures-francaises/2026-07-03-message-apres-cours/)
 - [Un carnet au café](/lectures-francaises/2026-06-19-matinee-bibliotheque/)
 - [La petite réparation](/lectures-francaises/2026-06-17-petite-reparation/)
