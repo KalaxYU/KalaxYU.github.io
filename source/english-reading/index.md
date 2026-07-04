@@ -17,6 +17,7 @@ comments: false
 
 ## Readings
 
+- [Herschel on Measurement and Scientific Progress](/readings/2026-07-04-herschel-measurement-scientific-progress/)
 - [Maxwell on Molecules and Scientific Inference](/readings/2026-07-03-maxwell-molecules-scientific-inference/)
 - [Saunders on Hymenoptera and Nesting Habits](/readings/2026-06-19-saunders-hymenoptera-nesting/)
 - [Faraday on the Candle as a Doorway to Science](/readings/2026-06-17-faraday-candle-natural-philosophy/)
