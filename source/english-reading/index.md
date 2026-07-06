@@ -17,6 +17,7 @@ comments: false
 
 ## Readings
 
+- [Somerville on Ocean Currents and Climate](/readings/2026-07-06-somerville-ocean-currents-climate/)
 - [Herschel on Measurement and Scientific Progress](/readings/2026-07-04-herschel-measurement-scientific-progress/)
 - [Maxwell on Molecules and Scientific Inference](/readings/2026-07-03-maxwell-molecules-scientific-inference/)
 - [Saunders on Hymenoptera and Nesting Habits](/readings/2026-06-19-saunders-hymenoptera-nesting/)
