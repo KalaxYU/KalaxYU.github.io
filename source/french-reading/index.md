@@ -12,6 +12,7 @@ comments: false
 
 ## Readings
 
+- [Le colis du voisin](/lectures-francaises/2026-07-06-message-apres-cours/)
 - [Le pique-nique sous les arbres](/lectures-francaises/2026-07-04-pique-nique-sous-les-arbres/)
 - [Un message après le cours](/lectures-francaises/2026-07-03-message-apres-cours/)
 - [Un carnet au café](/lectures-francaises/2026-06-19-matinee-bibliotheque/)
