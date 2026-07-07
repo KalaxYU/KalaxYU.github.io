@@ -12,6 +12,10 @@ comments: false
 <p><a class="text-link" href="/french-reading/">进入 French Reading A1-A2 阅读</a></p>
 
 <div class="note-list">
+<a class="note-row" href="/notes/法语-fraçais-阅读-2026-07-07-trajet-en-tram-d9a62b91/">
+<strong>Le trajet en tram</strong>
+<span>Le trajet en tram Blog permalink: https://kalax524.com/lectures-francaises/2026-07-07-trajet-en-tram/ Niveau A1-A2. Texte original court pour lecture </span>
+</a>
 <a class="note-row" href="/notes/法语-fraçais-阅读-2026-07-07-matinee-bibliotheque-7f4764d0/">
 <strong>Une matinée à la bibliothèque</strong>
 <span>Une matinée à la bibliothèque Blog permalink: https://kalax524.com/lectures-francaises/2026-07-07-matinee-bibliotheque/ Niveau A1-A2. Texte original c</span>
