@@ -11,6 +11,7 @@ menu:
   Notes: /notes/ || fas fa-book-open
   TOEFL Reading: /english-reading/ || fas fa-feather-alt
   French Reading: /french-reading/ || fas fa-book-reader
+  Food: /food/ || fas fa-utensils
   Articles: /articles/ || fas fa-layer-group
   Archives: /archives/ || fas fa-archive
   About: /about/ || fas fa-user-astronaut
@@ -99,7 +100,7 @@ aside:
     category: true
   card_author:
     enable: true
-    description: 数学 / 英语 / 法语 / CS
+    description: 数学 / 英语 / 法语 / CS / 美食
     button:
       enable: true
       icon: fab fa-github
@@ -107,7 +108,7 @@ aside:
       link: https://github.com/KalaxYU
   card_announcement:
     enable: true
-    content: 学科索引：数学、英语、法语、CS、札记；英语与法语每日阅读已启用。
+    content: 学科索引：数学、英语、法语、CS、美食、札记；英语与法语每日阅读已启用。
   card_recent_post:
     enable: true
     limit: 6

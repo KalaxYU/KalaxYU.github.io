@@ -73,6 +73,17 @@ const MODULES = [
     matcher: text => /(python|computer science|cs|algorithm|data structure|programming|code|计算机|算法|系统)/i.test(text)
   },
   {
+    key: 'food',
+    title: 'Food',
+    cn: '美食',
+    href: '/food/',
+    icon: 'fas fa-utensils',
+    accent: '#b5653c',
+    description: '做饭练习、食材处理、菜谱记录和厨房技巧。',
+    empty: '美食笔记：做饭练习、食材处理、菜谱记录和厨房技巧。',
+    matcher: text => /(美食|做饭|菜谱|食谱|料理|厨房|食材|切菜|烹饪|meal|recipe|cooking|kitchen|food)/i.test(text)
+  },
+  {
     key: 'journal',
     title: 'Journal',
     cn: '札记',
@@ -90,6 +101,7 @@ const FOLDER_MODULES = [
   { key: 'english', names: ['英语', 'english', 'toefl'] },
   { key: 'french', names: ['法语', '法语 français', '法语 fraçais', 'français', 'francais', 'fraçais', 'french'] },
   { key: 'cs', names: ['cs', 'computer science', 'python', 'programming'] },
+  { key: 'food', names: ['美食', 'food', 'cooking', 'recipe'] },
   { key: 'journal', names: ['daily conclusions', 'journal', '札记', '日记', 'daily'] }
 ];
 
@@ -254,6 +266,9 @@ function moduleFor(relativePath, title, body) {
   }
   if (/(python|computer science|cs|algorithm|data structure|programming|code|计算机|算法|系统)/i.test(haystack)) {
     return moduleByKey('cs');
+  }
+  if (/(美食|做饭|菜谱|食谱|料理|厨房|食材|切菜|烹饪|meal|recipe|cooking|kitchen|food)/i.test(haystack)) {
+    return moduleByKey('food');
   }
   return moduleByKey('journal');
 }
@@ -483,7 +498,7 @@ function renderIndex(records) {
     '',
     '<p class="hub-kicker">Knowledge Index</p>',
     '<h2>Notes by Subject</h2>',
-    '<p class="hub-intro">Obsidian 笔记按学科和用途索引，包含数学、英语、法语、CS 和札记。</p>',
+    '<p class="hub-intro">Obsidian 笔记按学科和用途索引，包含数学、英语、法语、CS、美食和札记。</p>',
     '',
     '<div class="module-grid">',
     ...MODULES.map(module => renderModuleCard(module, byModule.get(module.key) || [])),
@@ -535,7 +550,7 @@ function renderHome(records) {
     '<div class="home-lab">',
     '<p class="hub-kicker">Kalax524</p>',
     '<h2>Subject Index</h2>',
-    '<p class="hub-intro">数学、英语、法语、CS 和札记五个区域。每个区域收录对应的笔记、阅读和课程材料。</p>',
+    '<p class="hub-intro">数学、英语、法语、CS、美食和札记六个区域。每个区域收录对应的笔记、阅读和课程材料。</p>',
     '<div class="module-grid">',
     ...MODULES.map(module => renderModuleCard(module, byModule.get(module.key) || [])),
     '</div>',
