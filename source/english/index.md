@@ -12,6 +12,10 @@ comments: false
 <p><a class="text-link" href="/english-reading/">进入 TOEFL Reading 精读专栏</a></p>
 
 <div class="note-list">
+<a class="note-row" href="/notes/英语-toefl-reading-2026-07-07-lyell-rivers-geological-time-3a9df54f/">
+<strong>Lyell on Rivers and Geological Time</strong>
+<span>Lyell on Rivers and Geological Time Blog permalink: https://kalax524.com/readings/2026-07-07-lyell-rivers-geological-time/ Source Adapted from Charles</span>
+</a>
 <a class="note-row" href="/notes/英语-toefl-reading-2026-07-06-somerville-ocean-currents-climate-495af36c/">
 <strong>Somerville on Ocean Currents and Climate</strong>
 <span>Somerville on Ocean Currents and Climate Blog permalink: https://kalax524.com/readings/2026-07-06-somerville-ocean-currents-climate/ Source Mary Somer</span>
