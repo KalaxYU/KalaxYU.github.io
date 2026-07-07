@@ -12,7 +12,7 @@ comments: false
 
 ## Readings
 
-- [Une matinée à la bibliothèque](/lectures-francaises/2026-07-07-matinee-bibliotheque/)
+- [Le trajet en tram](/lectures-francaises/2026-07-07-trajet-en-tram/)
 - [Le colis du voisin](/lectures-francaises/2026-07-06-message-apres-cours/)
 - [Le pique-nique sous les arbres](/lectures-francaises/2026-07-04-pique-nique-sous-les-arbres/)
 - [Un message après le cours](/lectures-francaises/2026-07-03-message-apres-cours/)
