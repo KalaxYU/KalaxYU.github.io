@@ -41,7 +41,7 @@ comments: false
 </a>
 <a class="module-card" style="--module-accent: #b5653c" href="/food/">
 <span class="module-icon"><i class="fas fa-utensils"></i></span>
-<span class="module-count">2 notes</span>
+<span class="module-count">3 notes</span>
 <strong>美食</strong>
 <span>Food</span>
 <p>做饭练习、食材处理、菜谱记录和厨房技巧。</p>
@@ -57,6 +57,7 @@ comments: false
 
 ## 最近更新
 
+- [做饭Day5](/notes/美食-做饭day5-ae5a7eb3/) · 美食
 - [Darwin on Coral Reefs and Slow Change](/notes/英语-toefl-reading-2026-07-11-darwin-coral-reefs-slow-change-d97057a3/) · 英语
 - [Un cahier au bord du lac](/notes/法语-fraçais-阅读-2026-07-11-cahier-au-bord-du-lac-0be52c01/) · 法语
 - [税收](/notes/税收-b7a72692/) · 札记
@@ -64,5 +65,4 @@ comments: false
 - [学习内容](/notes/美食-做饭day1-a065fea8/) · 美食
 - [Le trajet en tram](/notes/法语-fraçais-阅读-2026-07-07-trajet-en-tram-d9a62b91/) · 法语
 - [Une matinée à la bibliothèque](/notes/法语-fraçais-阅读-2026-07-07-matinee-bibliotheque-7f4764d0/) · 法语
-- [Lyell on Rivers and Geological Time](/notes/英语-toefl-reading-2026-07-07-lyell-rivers-geological-time-3a9df54f/) · 英语
 </div>

@@ -10,6 +10,10 @@ comments: false
 <p class="hub-intro">做饭练习、食材处理、菜谱记录和厨房技巧。</p>
 
 <div class="note-list">
+<a class="note-row" href="/notes/美食-做饭day5-ae5a7eb3/">
+<strong>做饭Day5</strong>
+<span>[!NOTE] 黄瓜炒鸡蛋 鸡蛋：搅打的时候加入一点黑胡椒，先炒熟，拿出来 葱蒜：炒一会再放黄瓜 黄瓜：斜切然后躺着切 一起炒的时候加入味精和盐。 [!NOTE] 炝生菜 准备炝汁，所谓的勾芡的芡是淀粉。生菜是烫熟的😊 烫之前在一锅水里加点油，这样生菜看着就更绿了。生菜烫黄并不是因为不新鲜，而是因</span>
+</a>
 <a class="note-row" href="/notes/美食-做饭day2-d62fad81/">
 <strong>中午：滑蛋牛肉</strong>
 <span>中午：滑蛋牛肉 晚上：照烧鸡腿肉，清炒蔬菜，炒猪肚 [!NOTE] 牛肉 喂牛肉，加入盐，酱油，蚝油，鸡精。 [!NOTE] 鸡肉 腌制鸡肉 [!NOTE] 淘米 在盆中放2~3勺米，水槽开水，首次轻轻用手抓拌、搅弄，第2到4次加入水的同时晃动盆，之后倒掉水。 [!NOTE] 清炒蔬菜 清洗蔬菜，分</span>

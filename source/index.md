@@ -40,7 +40,7 @@ top_img: /img/bg.JPG
 </a>
 <a class="module-card" style="--module-accent: #b5653c" href="/food/">
 <span class="module-icon"><i class="fas fa-utensils"></i></span>
-<span class="module-count">2 notes</span>
+<span class="module-count">3 notes</span>
 <strong>美食</strong>
 <span>Food</span>
 <p>做饭练习、食材处理、菜谱记录和厨房技巧。</p>
