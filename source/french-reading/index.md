@@ -12,6 +12,7 @@ comments: false
 
 ## Readings
 
+- [Un cahier au bord du lac](/lectures-francaises/2026-07-11-cahier-au-bord-du-lac/)
 - [Le trajet en tram](/lectures-francaises/2026-07-07-trajet-en-tram/)
 - [Le colis du voisin](/lectures-francaises/2026-07-06-message-apres-cours/)
 - [Le pique-nique sous les arbres](/lectures-francaises/2026-07-04-pique-nique-sous-les-arbres/)
