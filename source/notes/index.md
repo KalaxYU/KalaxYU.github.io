@@ -41,14 +41,14 @@ comments: false
 </a>
 <a class="module-card" style="--module-accent: #b5653c" href="/food/">
 <span class="module-icon"><i class="fas fa-utensils"></i></span>
-<span class="module-count">1 note</span>
+<span class="module-count">2 notes</span>
 <strong>美食</strong>
 <span>Food</span>
 <p>做饭练习、食材处理、菜谱记录和厨房技巧。</p>
 </a>
 <a class="module-card" style="--module-accent: #c99a35" href="/journal/">
 <span class="module-icon"><i class="fas fa-compass"></i></span>
-<span class="module-count">5 notes</span>
+<span class="module-count">6 notes</span>
 <strong>札记</strong>
 <span>Journal</span>
 <p>读书记录、日常札记、课程记录和未分类文本。</p>
@@ -57,6 +57,8 @@ comments: false
 
 ## 最近更新
 
+- [税收](/notes/税收-b7a72692/) · 札记
+- [中午：滑蛋牛肉](/notes/美食-做饭day2-d62fad81/) · 美食
 - [学习内容](/notes/美食-做饭day1-a065fea8/) · 美食
 - [Le trajet en tram](/notes/法语-fraçais-阅读-2026-07-07-trajet-en-tram-d9a62b91/) · 法语
 - [Une matinée à la bibliothèque](/notes/法语-fraçais-阅读-2026-07-07-matinee-bibliotheque-7f4764d0/) · 法语

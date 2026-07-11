@@ -10,6 +10,10 @@ comments: false
 <p class="hub-intro">读书记录、日常札记、课程记录和未分类文本。</p>
 
 <div class="note-list">
+<a class="note-row" href="/notes/税收-b7a72692/">
+<strong>税收</strong>
+<span>背后的风险逻辑。</span>
+</a>
 <a class="note-row" href="/notes/金融-霍华德《周期》-83bf4f4d/">
 <strong>马克·吐温：“历史不会重演细节，过程却会重复相似。“</strong>
 <span>马克·吐温：“历史不会重演细节，过程却会重复相似。“ 心理是影响周期的主要原因 !Pasted image 20260620140115.png 高收益债是什么？债券违约？</span>
