@@ -12,6 +12,10 @@ comments: false
 <p><a class="text-link" href="/english-reading/">进入 TOEFL Reading 精读专栏</a></p>
 
 <div class="note-list">
+<a class="note-row" href="/notes/英语-toefl-reading-2026-07-11-darwin-coral-reefs-slow-change-d97057a3/">
+<strong>Darwin on Coral Reefs and Slow Change</strong>
+<span>Darwin on Coral Reefs and Slow Change Blog permalink: https://kalax524.com/readings/2026-07-11-darwin-coral-reefs-slow-change/ Source Adapted from Cha</span>
+</a>
 <a class="note-row" href="/notes/英语-toefl-reading-2026-07-07-lyell-rivers-geological-time-3a9df54f/">
 <strong>Lyell on Rivers and Geological Time</strong>
 <span>Lyell on Rivers and Geological Time Blog permalink: https://kalax524.com/readings/2026-07-07-lyell-rivers-geological-time/ Source Adapted from Charles</span>

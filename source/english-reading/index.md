@@ -17,6 +17,7 @@ comments: false
 
 ## Readings
 
+- [Darwin on Coral Reefs and Slow Change](/readings/2026-07-11-darwin-coral-reefs-slow-change/)
 - [Lyell on Rivers and Geological Time](/readings/2026-07-07-lyell-rivers-geological-time/)
 - [Somerville on Ocean Currents and Climate](/readings/2026-07-06-somerville-ocean-currents-climate/)
 - [Herschel on Measurement and Scientific Progress](/readings/2026-07-04-herschel-measurement-scientific-progress/)

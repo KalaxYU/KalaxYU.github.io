@@ -20,14 +20,14 @@ comments: false
 </a>
 <a class="module-card" style="--module-accent: #4666a5" href="/english/">
 <span class="module-icon"><i class="fas fa-feather-pointed"></i></span>
-<span class="module-count">16 notes + TOEFL</span>
+<span class="module-count">17 notes + TOEFL</span>
 <strong>英语</strong>
 <span>English</span>
 <p>TOEFL Reading、原版文本精读、词汇、长难句和写作表达。</p>
 </a>
 <a class="module-card" style="--module-accent: #d96c4f" href="/french/">
 <span class="module-icon"><i class="fas fa-language"></i></span>
-<span class="module-count">26 notes</span>
+<span class="module-count">27 notes</span>
 <strong>法语</strong>
 <span>French</span>
 <p>法语词汇、动词变位、介词、冠词、句式和练习。</p>
@@ -57,14 +57,12 @@ comments: false
 
 ## 最近更新
 
+- [Darwin on Coral Reefs and Slow Change](/notes/英语-toefl-reading-2026-07-11-darwin-coral-reefs-slow-change-d97057a3/) · 英语
+- [Un cahier au bord du lac](/notes/法语-fraçais-阅读-2026-07-11-cahier-au-bord-du-lac-0be52c01/) · 法语
 - [税收](/notes/税收-b7a72692/) · 札记
 - [中午：滑蛋牛肉](/notes/美食-做饭day2-d62fad81/) · 美食
 - [学习内容](/notes/美食-做饭day1-a065fea8/) · 美食
 - [Le trajet en tram](/notes/法语-fraçais-阅读-2026-07-07-trajet-en-tram-d9a62b91/) · 法语
 - [Une matinée à la bibliothèque](/notes/法语-fraçais-阅读-2026-07-07-matinee-bibliotheque-7f4764d0/) · 法语
 - [Lyell on Rivers and Geological Time](/notes/英语-toefl-reading-2026-07-07-lyell-rivers-geological-time-3a9df54f/) · 英语
-- [Somerville on Ocean Currents and Climate](/notes/英语-toefl-reading-2026-07-06-somerville-ocean-currents-climate-495af36c/) · 英语
-- [Le colis du voisin](/notes/法语-fraçais-阅读-2026-07-06-message-apres-cours-4ea446f2/) · 法语
-- [Le pique-nique sous les arbres](/notes/法语-fraçais-阅读-2026-07-04-pique-nique-sous-les-arbres-51e288c4/) · 法语
-- [Herschel on Measurement and Scientific Progress](/notes/英语-toefl-reading-2026-07-04-herschel-measurement-scientific-progress-fcaf357a/) · 英语
 </div>
