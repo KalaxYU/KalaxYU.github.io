@@ -20,7 +20,7 @@ comments: false
 </a>
 <a class="module-card" style="--module-accent: #4666a5" href="/english/">
 <span class="module-icon"><i class="fas fa-feather-pointed"></i></span>
-<span class="module-count">19 notes + TOEFL</span>
+<span class="module-count">18 notes + TOEFL</span>
 <strong>英语</strong>
 <span>English</span>
 <p>TOEFL Reading、原版文本精读、词汇、长难句和写作表达。</p>
@@ -57,12 +57,12 @@ comments: false
 
 ## 最近更新
 
-- [Lubbock on Ants and Collective Labor](/notes/英语-toefl-reading-2026-07-17-lubbock-ants-collective-labor-c6a64b60/) · 英语
 - [Une promenade après la pluie](/notes/法语-fraçais-阅读-2026-07-17-promenade-apres-pluie-4b7ff8a0/) · 法语
-- [Huxley on Reading a Piece of Chalk](/notes/英语-toefl-reading-2026-07-17-huxley-piece-of-chalk-229cccbf/) · 英语
+- [Lubbock on Ants and Collective Labor](/notes/英语-toefl-reading-2026-07-17-lubbock-ants-collective-labor-c6a64b60/) · 英语
 - [做饭Day5](/notes/美食-做饭day5-ae5a7eb3/) · 美食
 - [Darwin on Coral Reefs and Slow Change](/notes/英语-toefl-reading-2026-07-11-darwin-coral-reefs-slow-change-d97057a3/) · 英语
 - [Un cahier au bord du lac](/notes/法语-fraçais-阅读-2026-07-11-cahier-au-bord-du-lac-0be52c01/) · 法语
 - [税收](/notes/税收-b7a72692/) · 札记
 - [中午：滑蛋牛肉](/notes/美食-做饭day2-d62fad81/) · 美食
+- [学习内容](/notes/美食-做饭day1-a065fea8/) · 美食
 </div>

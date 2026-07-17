@@ -16,10 +16,6 @@ comments: false
 <strong>Lubbock on Ants and Collective Labor</strong>
 <span>Lubbock on Ants and Collective Labor Blog permalink: https://kalax524.com/readings/2026-07-17-lubbock-ants-collective-labor/ Source Adapted from John </span>
 </a>
-<a class="note-row" href="/notes/英语-toefl-reading-2026-07-17-huxley-piece-of-chalk-229cccbf/">
-<strong>Huxley on Reading a Piece of Chalk</strong>
-<span>Huxley on Reading a Piece of Chalk Blog permalink: https://kalax524.com/readings/2026-07-17-huxley-piece-of-chalk/ Source Thomas Henry Huxley, On a Pi</span>
-</a>
 <a class="note-row" href="/notes/英语-toefl-reading-2026-07-11-darwin-coral-reefs-slow-change-d97057a3/">
 <strong>Darwin on Coral Reefs and Slow Change</strong>
 <span>Darwin on Coral Reefs and Slow Change Blog permalink: https://kalax524.com/readings/2026-07-11-darwin-coral-reefs-slow-change/ Source Adapted from Cha</span>
