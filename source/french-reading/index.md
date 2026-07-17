@@ -12,6 +12,7 @@ comments: false
 
 ## Readings
 
+- [Une promenade après la pluie](/lectures-francaises/2026-07-17-promenade-apres-pluie/)
 - [Un cahier au bord du lac](/lectures-francaises/2026-07-11-cahier-au-bord-du-lac/)
 - [Le trajet en tram](/lectures-francaises/2026-07-07-trajet-en-tram/)
 - [Le colis du voisin](/lectures-francaises/2026-07-06-message-apres-cours/)
