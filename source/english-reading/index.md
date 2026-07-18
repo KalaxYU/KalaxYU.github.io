@@ -17,6 +17,7 @@ comments: false
 
 ## Readings
 
+- [Powell on Canyons and Landscape Evidence](/readings/2026-07-18-powell-canyons-landscape-evidence/)
 - [Lubbock on Ants and Collective Labor](/readings/2026-07-17-lubbock-ants-collective-labor/)
 - [Darwin on Coral Reefs and Slow Change](/readings/2026-07-11-darwin-coral-reefs-slow-change/)
 - [Lyell on Rivers and Geological Time](/readings/2026-07-07-lyell-rivers-geological-time/)

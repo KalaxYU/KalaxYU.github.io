@@ -12,6 +12,10 @@ comments: false
 <p><a class="text-link" href="/french-reading/">进入 French Reading A1-A2 阅读</a></p>
 
 <div class="note-list">
+<a class="note-row" href="/notes/法语-fraçais-阅读-2026-07-18-message-apres-cours-fdec8c91/">
+<strong>Un message après le cours</strong>
+<span>Un message après le cours Blog permalink: https://kalax524.com/lectures-francaises/2026-07-18-message-apres-cours/ Niveau A1-A2. Texte original court </span>
+</a>
 <a class="note-row" href="/notes/法语-fraçais-阅读-2026-07-17-promenade-apres-pluie-4b7ff8a0/">
 <strong>Une promenade après la pluie</strong>
 <span>Une promenade après la pluie Blog permalink: https://kalax524.com/lectures-francaises/2026-07-17-promenade-apres-pluie/ Niveau A1-A2. Texte original c</span>
