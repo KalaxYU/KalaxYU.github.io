@@ -12,10 +12,6 @@ comments: false
 <p><a class="text-link" href="/english-reading/">进入 TOEFL Reading 精读专栏</a></p>
 
 <div class="note-list">
-<a class="note-row" href="/notes/英语-toefl-reading-2026-07-18-powell-canyons-landscape-evidence-38529e40/">
-<strong>Powell on Canyons and Landscape Evidence</strong>
-<span>Powell on Canyons and Landscape Evidence Blog permalink: https://kalax524.com/readings/2026-07-18-powell-canyons-landscape-evidence/ Source Adapted fr</span>
-</a>
 <a class="note-row" href="/notes/英语-toefl-reading-2026-07-17-lubbock-ants-collective-labor-c6a64b60/">
 <strong>Lubbock on Ants and Collective Labor</strong>
 <span>Lubbock on Ants and Collective Labor Blog permalink: https://kalax524.com/readings/2026-07-17-lubbock-ants-collective-labor/ Source Adapted from John </span>
