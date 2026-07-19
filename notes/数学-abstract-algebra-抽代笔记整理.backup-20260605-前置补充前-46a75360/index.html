@@ -1,0 +1,924 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>抽代笔记整理 | Kalax524</title><meta name="author" content="Nemo YU"><meta name="copyright" content="Nemo YU"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="抽代笔记整理 说明：以下内容按原 PDF 的出现顺序整理，并把手写笔记中的定义、定理、例子与证明改写为较接近数学书的排版。明显划掉、重复或笔误的地方已按上下文修正。 1. 素理想与极大理想 定义：素理想 设 R 为交换环， P subseteq R 为理想。若 1. P ne R ； 2. 对任意">
+<meta property="og:type" content="article">
+<meta property="og:title" content="抽代笔记整理">
+<meta property="og:url" content="https://kalax524.com/notes/%E6%95%B0%E5%AD%A6-abstract-algebra-%E6%8A%BD%E4%BB%A3%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86.backup-20260605-%E5%89%8D%E7%BD%AE%E8%A1%A5%E5%85%85%E5%89%8D-46a75360/index.html">
+<meta property="og:site_name" content="Kalax524">
+<meta property="og:description" content="抽代笔记整理 说明：以下内容按原 PDF 的出现顺序整理，并把手写笔记中的定义、定理、例子与证明改写为较接近数学书的排版。明显划掉、重复或笔误的地方已按上下文修正。 1. 素理想与极大理想 定义：素理想 设 R 为交换环， P subseteq R 为理想。若 1. P ne R ； 2. 对任意">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://kalax524.com/img/avatar.svg">
+<meta property="article:published_time" content="2026-06-05T13:07:34.000Z">
+<meta property="article:modified_time" content="2026-06-05T13:07:34.000Z">
+<meta property="article:author" content="Nemo YU">
+<meta property="article:tag" content="Abstract algebra">
+<meta property="article:tag" content="abstract-algebra">
+<meta property="article:tag" content="fields">
+<meta property="article:tag" content="group-theory">
+<meta property="article:tag" content="modules">
+<meta property="article:tag" content="obsidian">
+<meta property="article:tag" content="ring-theory">
+<meta property="article:tag" content="数学">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://kalax524.com/img/avatar.svg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "抽代笔记整理",
+  "url": "https://kalax524.com/notes/%E6%95%B0%E5%AD%A6-abstract-algebra-%E6%8A%BD%E4%BB%A3%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86.backup-20260605-%E5%89%8D%E7%BD%AE%E8%A1%A5%E5%85%85%E5%89%8D-46a75360/",
+  "image": "https://kalax524.com/img/avatar.svg",
+  "datePublished": "2026-06-05T13:07:34.000Z",
+  "dateModified": "2026-06-05T13:07:34.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Nemo YU",
+      "url": "https://kalax524.com"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://kalax524.com/notes/%E6%95%B0%E5%AD%A6-abstract-algebra-%E6%8A%BD%E4%BB%A3%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86.backup-20260605-%E5%89%8D%E7%BD%AE%E8%A1%A5%E5%85%85%E5%89%8D-46a75360/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="stylesheet" href="/css/index.css?v=5.5.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":true,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":150,"languages":{"author":"作者: Nemo YU","link":"链接: ","source":"来源: Kalax524","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.12.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '抽代笔记整理',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/kalax.css"><!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.svg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">141</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">102</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">26</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/notes/"><i class="fa-fw fas fa-book-open"></i><span> Notes</span></a></div><div class="menus_item"><a class="site-page" href="/english-reading/"><i class="fa-fw fas fa-feather-alt"></i><span> TOEFL Reading</span></a></div><div class="menus_item"><a class="site-page" href="/french-reading/"><i class="fa-fw fas fa-book-reader"></i><span> French Reading</span></a></div><div class="menus_item"><a class="site-page" href="/food/"><i class="fa-fw fas fa-utensils"></i><span> Food</span></a></div><div class="menus_item"><a class="site-page" href="/articles/"><i class="fa-fw fas fa-layer-group"></i><span> Articles</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user-astronaut"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://notes.kalax524.com"><i class="fa-fw fas fa-external-link-alt"></i><span> notes.kalax524.com</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/img/bg.JPG);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Kalax524</span></a><a class="nav-page-title" href="/"><span class="site-name">抽代笔记整理</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/notes/"><i class="fa-fw fas fa-book-open"></i><span> Notes</span></a></div><div class="menus_item"><a class="site-page" href="/english-reading/"><i class="fa-fw fas fa-feather-alt"></i><span> TOEFL Reading</span></a></div><div class="menus_item"><a class="site-page" href="/french-reading/"><i class="fa-fw fas fa-book-reader"></i><span> French Reading</span></a></div><div class="menus_item"><a class="site-page" href="/food/"><i class="fa-fw fas fa-utensils"></i><span> Food</span></a></div><div class="menus_item"><a class="site-page" href="/articles/"><i class="fa-fw fas fa-layer-group"></i><span> Articles</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user-astronaut"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://notes.kalax524.com"><i class="fa-fw fas fa-external-link-alt"></i><span> notes.kalax524.com</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">抽代笔记整理</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-06-05T13:07:34.000Z" title="发表于 2026-06-05 21:07:34">2026-06-05</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-06-05T13:07:34.000Z" title="更新于 2026-06-05 21:07:34">2026-06-05</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%95%B0%E5%AD%A6/Abstract-algebra/">Abstract algebra</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">6.1k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>25分钟</span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1 id="抽代笔记整理"><a href="#抽代笔记整理" class="headerlink" title="抽代笔记整理"></a>抽代笔记整理</h1><blockquote>
+<p>说明：以下内容按原 PDF 的出现顺序整理，并把手写笔记中的定义、定理、例子与证明改写为较接近数学书的排版。明显划掉、重复或笔误的地方已按上下文修正。</p>
+</blockquote>
+<h2 id="1-素理想与极大理想"><a href="#1-素理想与极大理想" class="headerlink" title="1. 素理想与极大理想"></a>1. 素理想与极大理想</h2><h3 id="定义：素理想"><a href="#定义：素理想" class="headerlink" title="定义：素理想"></a>定义：素理想</h3><p>设 <span class="kalax-inline-math">R</span> 为交换环，<span class="kalax-inline-math">P\subseteq R</span> 为理想。若</p>
+<ol>
+<li><span class="kalax-inline-math">P\ne R</span>；</li>
+<li>对任意 <span class="kalax-inline-math">x,y\in R</span>，若 <span class="kalax-inline-math">xy\in P</span>，则 <span class="kalax-inline-math">x\in P</span> 或 <span class="kalax-inline-math">y\in P</span>，</li>
+</ol>
+<p>则称 <span class="kalax-inline-math">P</span> 是 <span class="kalax-inline-math">R</span> 的一个<strong>素理想</strong>。</p>
+<p>等价地，</p>
+<div class="kalax-display-math">P \text{ 是素理想}
+\iff
+R/P \text{ 是整环}.</div>
+
+<h3 id="例"><a href="#例" class="headerlink" title="例"></a>例</h3><ol>
+<li>在 <span class="kalax-inline-math">R=\mathbb Z</span> 中，<span class="kalax-inline-math">(p)</span> 是素理想当且仅当 <span class="kalax-inline-math">p</span> 是素数；<span class="kalax-inline-math">(0)</span> 也是素理想，因为 <span class="kalax-inline-math">\mathbb Z</span> 是整环。</li>
+<li><p>在 <span class="kalax-inline-math">R=\mathbb F_2[x]</span> 中，<span class="kalax-inline-math">(x^2+1)</span> 不是素理想，因为</p>
+<div class="kalax-display-math">x^2+1=(x+1)^2</div>
+
+
+</li>
+</ol>
+<p>   在 <span class="kalax-inline-math">\mathbb F_2[x]</span> 中可约。</p>
+<ol>
+<li>在 <span class="kalax-inline-math">R=\mathbb C[x]/(x^2)</span> 中，<span class="kalax-inline-math">(0)</span> 不是素理想，因为 <span class="kalax-inline-math">[x]^2=0</span>，但 <span class="kalax-inline-math">[x]\ne 0</span>。</li>
+</ol>
+<h3 id="定理：素理想的乘积判别"><a href="#定理：素理想的乘积判别" class="headerlink" title="定理：素理想的乘积判别"></a>定理：素理想的乘积判别</h3><p>设 <span class="kalax-inline-math">R</span> 为交换环，<span class="kalax-inline-math">P\subseteq R</span> 为真理想。以下命题等价：</p>
+<ol>
+<li><span class="kalax-inline-math">P</span> 是素理想；</li>
+<li>对任意理想 <span class="kalax-inline-math">A,B\subseteq R</span>，若 <span class="kalax-inline-math">AB\subseteq P</span>，则 <span class="kalax-inline-math">A\subseteq P</span> 或 <span class="kalax-inline-math">B\subseteq P</span>。</li>
+</ol>
+<p><strong>证明。</strong></p>
+<p>若 <span class="kalax-inline-math">P</span> 是素理想，且 <span class="kalax-inline-math">AB\subseteq P</span>。若 <span class="kalax-inline-math">A\nsubseteq P</span> 且 <span class="kalax-inline-math">B\nsubseteq P</span>，取</p>
+<div class="kalax-display-math">a\in A\setminus P,\qquad b\in B\setminus P.</div>
+
+<p>则 <span class="kalax-inline-math">ab\in AB\subseteq P</span>，与 <span class="kalax-inline-math">P</span> 为素理想矛盾。</p>
+<p>反过来，若对理想乘积有上述性质，取 <span class="kalax-inline-math">a,b\in R</span> 且 <span class="kalax-inline-math">ab\in P</span>，则</p>
+<div class="kalax-display-math">(a)(b)\subseteq P.</div>
+
+<p>于是 <span class="kalax-inline-math">(a)\subseteq P</span> 或 <span class="kalax-inline-math">(b)\subseteq P</span>，即 <span class="kalax-inline-math">a\in P</span> 或 <span class="kalax-inline-math">b\in P</span>。</p>
+<h3 id="定理：商环刻画素理想"><a href="#定理：商环刻画素理想" class="headerlink" title="定理：商环刻画素理想"></a>定理：商环刻画素理想</h3><p>设 <span class="kalax-inline-math">R</span> 为交换环，<span class="kalax-inline-math">P\subseteq R</span> 为真理想，则</p>
+<div class="kalax-display-math">P \text{ 是素理想}
+\iff
+R/P \text{ 是整环}.</div>
+
+<p><strong>证明。</strong></p>
+<p>在 <span class="kalax-inline-math">R/P</span> 中，</p>
+<div class="kalax-display-math">\overline{x}\,\overline{y}=0
+\iff
+xy\in P.</div>
+
+<p>若 <span class="kalax-inline-math">P</span> 是素理想，则 <span class="kalax-inline-math">xy\in P</span> 推出 <span class="kalax-inline-math">x\in P</span> 或 <span class="kalax-inline-math">y\in P</span>，即 <span class="kalax-inline-math">\overline{x}=0</span> 或 <span class="kalax-inline-math">\overline{y}=0</span>，所以 <span class="kalax-inline-math">R/P</span> 无零因子。</p>
+<p>反过来，若 <span class="kalax-inline-math">R/P</span> 是整环，则由 <span class="kalax-inline-math">\overline{x}\,\overline{y}=0</span> 得 <span class="kalax-inline-math">\overline{x}=0</span> 或 <span class="kalax-inline-math">\overline{y}=0</span>，即 <span class="kalax-inline-math">x\in P</span> 或 <span class="kalax-inline-math">y\in P</span>。</p>
+<h3 id="定义：偏序集与-Zorn-引理"><a href="#定义：偏序集与-Zorn-引理" class="headerlink" title="定义：偏序集与 Zorn 引理"></a>定义：偏序集与 Zorn 引理</h3><p>设 <span class="kalax-inline-math">A</span> 为集合，关系 <span class="kalax-inline-math">\leq</span> 若满足：</p>
+<ol>
+<li>自反性：<span class="kalax-inline-math">a\leq a</span>；</li>
+<li>传递性：<span class="kalax-inline-math">a\leq b,\ b\leq c\Rightarrow a\leq c</span>；</li>
+<li>反对称性：<span class="kalax-inline-math">a\leq b,\ b\leq a\Rightarrow a=b</span>，</li>
+</ol>
+<p>则称 <span class="kalax-inline-math">(A,\leq)</span> 为一个<strong>偏序集</strong>。若 <span class="kalax-inline-math">a\leq b</span> 或 <span class="kalax-inline-math">b\leq a</span>，称 <span class="kalax-inline-math">a,b</span> 可比较。</p>
+<p>若 <span class="kalax-inline-math">B\subseteq A</span>，元素 <span class="kalax-inline-math">u\in A</span> 满足对任意 <span class="kalax-inline-math">b\in B</span> 都有 <span class="kalax-inline-math">b\leq u</span>，则称 <span class="kalax-inline-math">u</span> 为 <span class="kalax-inline-math">B</span> 的上界。</p>
+<p><strong>Zorn 引理。</strong> 设 <span class="kalax-inline-math">(A,\leq)</span> 是非空偏序集。若 <span class="kalax-inline-math">A</span> 中每条链都有上界，则 <span class="kalax-inline-math">A</span> 含有极大元。</p>
+<h3 id="定理：极大理想存在"><a href="#定理：极大理想存在" class="headerlink" title="定理：极大理想存在"></a>定理：极大理想存在</h3><p>设 <span class="kalax-inline-math">R</span> 为有单位的交换环，且 <span class="kalax-inline-math">R\ne 0</span>。则 <span class="kalax-inline-math">R</span> 至少有一个极大理想。更强地，任意真理想都包含在某个极大理想中。</p>
+<p><strong>证明。</strong></p>
+<p>给定真理想 <span class="kalax-inline-math">I\subsetneq R</span>。令</p>
+<div class="kalax-display-math">\mathcal A=\{J\subseteq R:J\text{ 是理想且 } I\subseteq J\subsetneq R\}.</div>
+
+<p>按包含关系排序。若 <span class="kalax-inline-math">\mathcal C={C_i}</span> 是一条链，令</p>
+<div class="kalax-display-math">M=\bigcup_i C_i.</div>
+
+<p>则 <span class="kalax-inline-math">M</span> 是理想，并且 <span class="kalax-inline-math">I\subseteq M</span>。若 <span class="kalax-inline-math">M=R</span>，则 <span class="kalax-inline-math">1\in M</span>，于是 <span class="kalax-inline-math">1\in C_i</span> 对某个 <span class="kalax-inline-math">i</span> 成立，矛盾。因此 <span class="kalax-inline-math">M\in\mathcal A</span>。由 Zorn 引理，<span class="kalax-inline-math">\mathcal A</span> 有极大元，即包含 <span class="kalax-inline-math">I</span> 的极大理想。</p>
+<h3 id="定义：极大理想"><a href="#定义：极大理想" class="headerlink" title="定义：极大理想"></a>定义：极大理想</h3><p>设 <span class="kalax-inline-math">R</span> 为环，<span class="kalax-inline-math">M\subseteq R</span> 为理想。若</p>
+<ol>
+<li><span class="kalax-inline-math">M\ne R</span>；</li>
+<li>对任意理想 <span class="kalax-inline-math">I</span>，若 <span class="kalax-inline-math">M\subseteq I\subseteq R</span>，则 <span class="kalax-inline-math">I=M</span> 或 <span class="kalax-inline-math">I=R</span>，</li>
+</ol>
+<p>则称 <span class="kalax-inline-math">M</span> 为<strong>极大理想</strong>。</p>
+<h3 id="定理：极大理想的商环刻画"><a href="#定理：极大理想的商环刻画" class="headerlink" title="定理：极大理想的商环刻画"></a>定理：极大理想的商环刻画</h3><p>设 <span class="kalax-inline-math">R</span> 为有单位交换环，<span class="kalax-inline-math">M\subseteq R</span> 为真理想。则</p>
+<div class="kalax-display-math">M \text{ 是极大理想}
+\iff
+R/M \text{ 是域}.</div>
+
+<p><strong>证明。</strong></p>
+<p>若 <span class="kalax-inline-math">M</span> 极大。取非零元 <span class="kalax-inline-math">\overline a\in R/M</span>，则 <span class="kalax-inline-math">a\notin M</span>。由极大性，</p>
+<div class="kalax-display-math">M+(a)=R.</div>
+
+<p>于是存在 <span class="kalax-inline-math">m\in M,\ r\in R</span>，使得</p>
+<div class="kalax-display-math">m+ra=1.</div>
+
+<p>故 <span class="kalax-inline-math">\overline r\,\overline a=\overline 1</span>，所以 <span class="kalax-inline-math">\overline a</span> 可逆。</p>
+<p>反过来，若 <span class="kalax-inline-math">R/M</span> 是域，设 <span class="kalax-inline-math">M\subsetneq N\subseteq R</span> 为理想。取 <span class="kalax-inline-math">x\in N\setminus M</span>，则 <span class="kalax-inline-math">\overline x\ne 0</span>。由于 <span class="kalax-inline-math">R/M</span> 是域，存在 <span class="kalax-inline-math">\overline y</span> 使</p>
+<div class="kalax-display-math">\overline x\,\overline y=\overline 1.</div>
+
+<p>即 <span class="kalax-inline-math">xy+m=1</span> 对某个 <span class="kalax-inline-math">m\in M</span> 成立。因 <span class="kalax-inline-math">xy\in N</span> 且 <span class="kalax-inline-math">m\in N</span>，得 <span class="kalax-inline-math">1\in N</span>，故 <span class="kalax-inline-math">N=R</span>。</p>
+<h3 id="推论：极大理想是素理想"><a href="#推论：极大理想是素理想" class="headerlink" title="推论：极大理想是素理想"></a>推论：极大理想是素理想</h3><p>若 <span class="kalax-inline-math">R</span> 为交换环，<span class="kalax-inline-math">M</span> 是极大理想，则 <span class="kalax-inline-math">M</span> 是素理想。</p>
+<p><strong>理由。</strong> <span class="kalax-inline-math">R/M</span> 是域，域一定是整环，因此 <span class="kalax-inline-math">M</span> 是素理想。</p>
+<h3 id="定理：域的等价刻画"><a href="#定理：域的等价刻画" class="headerlink" title="定理：域的等价刻画"></a>定理：域的等价刻画</h3><p>设 <span class="kalax-inline-math">R</span> 为非零交换环。以下命题等价：</p>
+<ol>
+<li><span class="kalax-inline-math">R</span> 是域；</li>
+<li><span class="kalax-inline-math">R</span> 没有非平凡真理想；</li>
+<li><span class="kalax-inline-math">(0)</span> 是极大理想；</li>
+<li>任意非零环同态 <span class="kalax-inline-math">f:R\to S</span> 都是单射。</li>
+</ol>
+<p><strong>说明。</strong> 若 <span class="kalax-inline-math">R</span> 是域，则任何非零理想含有非零元 <span class="kalax-inline-math">a</span>，而 <span class="kalax-inline-math">a</span> 可逆，所以 <span class="kalax-inline-math">1=a^{-1}a</span> 属于该理想。</p>
+<h2 id="2-商环与理想对应"><a href="#2-商环与理想对应" class="headerlink" title="2. 商环与理想对应"></a>2. 商环与理想对应</h2><h3 id="回忆：环同态与核"><a href="#回忆：环同态与核" class="headerlink" title="回忆：环同态与核"></a>回忆：环同态与核</h3><p>若 <span class="kalax-inline-math">f:R\to S</span> 是环同态，则</p>
+<div class="kalax-display-math">R/\ker f \cong \operatorname{Im} f.</div>
+
+<p>若 <span class="kalax-inline-math">\ker f=R</span>，则 <span class="kalax-inline-math">f=0</span>；若 <span class="kalax-inline-math">\ker f={0}</span>，则 <span class="kalax-inline-math">f</span> 单射。</p>
+<h3 id="理想对应定理"><a href="#理想对应定理" class="headerlink" title="理想对应定理"></a>理想对应定理</h3><p>设 <span class="kalax-inline-math">I\subseteq R</span> 为理想。则有双射</p>
+<div class="kalax-display-math">\left\{\text{$R/I$ 的理想}\right\}
+\longleftrightarrow
+\left\{\text{$R$ 中包含 $I$ 的理想}\right\}.</div>
+
+<p>具体地，</p>
+<div class="kalax-display-math">J/I\subseteq R/I
+\quad\leftrightarrow\quad
+J\subseteq R,\ I\subseteq J.</div>
+
+<p>特别地，若 <span class="kalax-inline-math">I\subseteq J</span>，则</p>
+<div class="kalax-display-math">(R/I)/(J/I)\cong R/J.</div>
+
+<h2 id="3-有限直积与中国剩余定理"><a href="#3-有限直积与中国剩余定理" class="headerlink" title="3. 有限直积与中国剩余定理"></a>3. 有限直积与中国剩余定理</h2><h3 id="定理：环的直积"><a href="#定理：环的直积" class="headerlink" title="定理：环的直积"></a>定理：环的直积</h3><p>设 <span class="kalax-inline-math">{R<em>i}</em>{i\in I}</span> 是一族环，则</p>
+<div class="kalax-display-math">\prod_{i\in I} R_i</div>
+
+<p>在逐点加法和乘法下仍为环。</p>
+<h3 id="理想的直积"><a href="#理想的直积" class="headerlink" title="理想的直积"></a>理想的直积</h3><p>设 <span class="kalax-inline-math">R=R_1\times\cdots\times R_n</span>。若 <span class="kalax-inline-math">I_i\subseteq R_i</span> 是理想，则</p>
+<div class="kalax-display-math">I_1\times\cdots\times I_n</div>
+
+<p>是 <span class="kalax-inline-math">R</span> 的理想。反过来，<span class="kalax-inline-math">R</span> 的任意理想 <span class="kalax-inline-math">I</span> 都可写成</p>
+<div class="kalax-display-math">I=I_1\times\cdots\times I_n,</div>
+
+<p>其中</p>
+<div class="kalax-display-math">I_i=\pi_i(I)\subseteq R_i.</div>
+
+<p>证明关键是：若 <span class="kalax-inline-math">x=(x_1,\dots,x_n)\in I</span>，则通过乘以标准幂等元</p>
+<div class="kalax-display-math">e_i=(0,\dots,0,1,0,\dots,0)</div>
+
+<p>可得 <span class="kalax-inline-math">(0,\dots,x_i,\dots,0)\in I</span>，从而 <span class="kalax-inline-math">I</span> 由各坐标部分生成。</p>
+<h3 id="例：-mathbb-Z-times-mathbb-Z-中的素理想"><a href="#例：-mathbb-Z-times-mathbb-Z-中的素理想" class="headerlink" title="例：\mathbb Z\times\mathbb Z 中的素理想"></a>例：<span class="kalax-inline-math">\mathbb Z\times\mathbb Z</span> 中的素理想</h3><p>在 <span class="kalax-inline-math">R=\mathbb Z\times\mathbb Z</span> 中，理想形如 <span class="kalax-inline-math">(a)\times(b)</span>。商环为</p>
+<div class="kalax-display-math">R/\bigl((a)\times(b)\bigr)
+\cong
+\mathbb Z/(a)\times\mathbb Z/(b).</div>
+
+<p>该商环为整环时，只能其中一个因子为零环，另一个为整环。因此素理想形如</p>
+<div class="kalax-display-math">(p)\times \mathbb Z
+\quad\text{或}\quad
+\mathbb Z\times(p),</div>
+
+<p>其中 <span class="kalax-inline-math">p=0</span> 或 <span class="kalax-inline-math">p</span> 为素数。</p>
+<h3 id="定理：中国剩余定理的存在唯一形式"><a href="#定理：中国剩余定理的存在唯一形式" class="headerlink" title="定理：中国剩余定理的存在唯一形式"></a>定理：中国剩余定理的存在唯一形式</h3><p>设 <span class="kalax-inline-math">A_1,\dots,A_n\subseteq R</span> 为理想，且两两互素：</p>
+<div class="kalax-display-math">A_i+A_j=R,\qquad i\ne j.</div>
+
+<p>则对任意 <span class="kalax-inline-math">b_1,\dots,b_n\in R</span>，存在 <span class="kalax-inline-math">b\in R</span>，使得</p>
+<div class="kalax-display-math">b\equiv b_i\pmod {A_i},\qquad i=1,\dots,n.</div>
+
+<p>并且这样的 <span class="kalax-inline-math">b</span> 模</p>
+<div class="kalax-display-math">\bigcap_{i=1}^n A_i</div>
+
+<p>唯一。</p>
+<h3 id="中国剩余定理的商环形式"><a href="#中国剩余定理的商环形式" class="headerlink" title="中国剩余定理的商环形式"></a>中国剩余定理的商环形式</h3><p>若 <span class="kalax-inline-math">A_1,\dots,A_n</span> 两两互素，则自然同态</p>
+<div class="kalax-display-math">\varphi:R\longrightarrow \prod_{i=1}^n R/A_i,\qquad
+x\longmapsto (x+A_1,\dots,x+A_n)</div>
+
+<p>诱导同构</p>
+<div class="kalax-display-math">R/\bigcap_{i=1}^n A_i
+\cong
+\prod_{i=1}^n R/A_i.</div>
+
+<h3 id="例-1"><a href="#例-1" class="headerlink" title="例"></a>例</h3><p>求整数 <span class="kalax-inline-math">b</span> 使</p>
+<div class="kalax-display-math">b\equiv 2\pmod 5,\qquad b\equiv 3\pmod 6.</div>
+
+<p>由于 <span class="kalax-inline-math">(5,6)=1</span>，解模 <span class="kalax-inline-math">30</span> 唯一。可取</p>
+<div class="kalax-display-math">b\equiv 27\pmod {30}.</div>
+
+<h2 id="4-交换环中的因子分解"><a href="#4-交换环中的因子分解" class="headerlink" title="4. 交换环中的因子分解"></a>4. 交换环中的因子分解</h2><h3 id="定义：整除与相伴"><a href="#定义：整除与相伴" class="headerlink" title="定义：整除与相伴"></a>定义：整除与相伴</h3><p>设 <span class="kalax-inline-math">R</span> 为交换环，<span class="kalax-inline-math">a,b\in R</span>。</p>
+<ol>
+<li>若存在 <span class="kalax-inline-math">x\in R</span> 使 <span class="kalax-inline-math">ax=b</span>，则称 <span class="kalax-inline-math">a</span> 整除 <span class="kalax-inline-math">b</span>，记作 <span class="kalax-inline-math">a\mid b</span>。</li>
+<li>若 <span class="kalax-inline-math">a\mid b</span> 且 <span class="kalax-inline-math">b\mid a</span>，则称 <span class="kalax-inline-math">a,b</span> <strong>相伴</strong>，记作 <span class="kalax-inline-math">a\sim b</span>。</li>
+</ol>
+<p>在有单位整环中，</p>
+<div class="kalax-display-math">a\sim b
+\iff
+(a)=(b)
+\iff
+a=ub\text{ for some }u\in R^\times.</div>
+
+<h3 id="定义：不可约元、素元、可约元"><a href="#定义：不可约元、素元、可约元" class="headerlink" title="定义：不可约元、素元、可约元"></a>定义：不可约元、素元、可约元</h3><p>设 <span class="kalax-inline-math">R</span> 为整环。</p>
+<ol>
+<li>非零非单位元 <span class="kalax-inline-math">c\in R</span> 称为<strong>不可约元</strong>，若 <span class="kalax-inline-math">c=ab</span> 推出 <span class="kalax-inline-math">a</span> 或 <span class="kalax-inline-math">b</span> 是单位。</li>
+<li><p>非零非单位元 <span class="kalax-inline-math">p\in R</span> 称为<strong>素元</strong>，若</p>
+<div class="kalax-display-math">p\mid ab\Rightarrow p\mid a\text{ 或 }p\mid b.</div>
+</li>
+<li><p>非零非单位元 <span class="kalax-inline-math">c</span> 称为<strong>可约元</strong>，若 <span class="kalax-inline-math">c=ab</span>，其中 <span class="kalax-inline-math">a,b</span> 都不是单位。</p>
+</li>
+</ol>
+<h3 id="例-2"><a href="#例-2" class="headerlink" title="例"></a>例</h3><ol>
+<li>在 <span class="kalax-inline-math">\mathbb Z</span> 中，不可约元等价于素元。</li>
+<li>在 <span class="kalax-inline-math">\mathbb Z/6\mathbb Z</span> 中，<span class="kalax-inline-math">\overline 2</span> 是素元的直观判别会失效，因为环有零因子；因此素元概念通常放在整环中使用。</li>
+<li><p>在</p>
+<div class="kalax-display-math">R=\mathbb Z[\sqrt{-3}]
+=
+\{a+b\sqrt{-3}:a,b\in\mathbb Z\}</div>
+
+<p>中，<span class="kalax-inline-math">1+\sqrt{-3}</span> 可为不可约元，但不是素元。因为</p>
+<div class="kalax-display-math">1+\sqrt{-3}\mid 4=(1+\sqrt{-3})(1-\sqrt{-3}),</div>
+
+<p>但它不整除 <span class="kalax-inline-math">2</span>。</p>
+</li>
+</ol>
+<h3 id="定理：素元与素理想"><a href="#定理：素元与素理想" class="headerlink" title="定理：素元与素理想"></a>定理：素元与素理想</h3><p>设 <span class="kalax-inline-math">R</span> 为整环，<span class="kalax-inline-math">x\in R</span> 非零非单位。则</p>
+<div class="kalax-display-math">x \text{ 是素元}
+\iff
+(x) \text{ 是素理想}.</div>
+
+<h3 id="定理：不可约元与主理想的极大性"><a href="#定理：不可约元与主理想的极大性" class="headerlink" title="定理：不可约元与主理想的极大性"></a>定理：不可约元与主理想的极大性</h3><p>设 <span class="kalax-inline-math">R</span> 为整环，<span class="kalax-inline-math">x\in R</span> 非零非单位。若主理想 <span class="kalax-inline-math">(x)</span> 在所有真主理想中极大，则 <span class="kalax-inline-math">x</span> 不可约。</p>
+<p>若 <span class="kalax-inline-math">R</span> 是 PID，则反过来也成立。因此在 PID 中，</p>
+<div class="kalax-display-math">x\text{ 不可约}
+\iff
+(x)\text{ 是真主理想中的极大元}.</div>
+
+<p>进一步，在 PID 中不可约元都是素元。</p>
+<h3 id="定义：唯一分解整环"><a href="#定义：唯一分解整环" class="headerlink" title="定义：唯一分解整环"></a>定义：唯一分解整环</h3><p>整环 <span class="kalax-inline-math">R</span> 称为<strong>唯一分解整环</strong>（UFD），若任意非零非单位元 <span class="kalax-inline-math">x\in R</span> 都可写成</p>
+<div class="kalax-display-math">x=p_1p_2\cdots p_n,</div>
+
+<p>其中 <span class="kalax-inline-math">p_i</span> 为不可约元；并且若</p>
+<div class="kalax-display-math">x=q_1q_2\cdots q_m</div>
+
+<p>也是不可约分解，则 <span class="kalax-inline-math">m=n</span>，且在重排后 <span class="kalax-inline-math">p_i\sim q_i</span>。</p>
+<h3 id="例-3"><a href="#例-3" class="headerlink" title="例"></a>例</h3><div class="kalax-display-math">\mathbb Z,\quad \mathbb C[x],\quad \mathbb F[x]</div>
+
+<p>都是 UFD。<span class="kalax-inline-math">\mathbb Z[\sqrt{-3}]</span> 不是 UFD。</p>
+<h3 id="引理：PID-中主理想升链稳定"><a href="#引理：PID-中主理想升链稳定" class="headerlink" title="引理：PID 中主理想升链稳定"></a>引理：PID 中主理想升链稳定</h3><p>若 <span class="kalax-inline-math">R</span> 是 PID，且</p>
+<div class="kalax-display-math">(a_1)\subseteq(a_2)\subseteq\cdots</div>
+
+<p>是一条主理想升链，则存在 <span class="kalax-inline-math">n</span>，使得对所有 <span class="kalax-inline-math">i\ge n</span>，</p>
+<div class="kalax-display-math">(a_i)=(a_n).</div>
+
+<p><strong>证明。</strong> 令</p>
+<div class="kalax-display-math">A=\bigcup_i (a_i).</div>
+
+<p>则 <span class="kalax-inline-math">A</span> 是理想。因 <span class="kalax-inline-math">R</span> 是 PID，存在 <span class="kalax-inline-math">a\in R</span> 使 <span class="kalax-inline-math">A=(a)</span>。于是 <span class="kalax-inline-math">a\in(a_n)</span> 对某个 <span class="kalax-inline-math">n</span> 成立，从而</p>
+<div class="kalax-display-math">A=(a)\subseteq(a_n)\subseteq A.</div>
+
+<p>故 <span class="kalax-inline-math">(a_i)=(a_n)</span> 对 <span class="kalax-inline-math">i\ge n</span> 成立。</p>
+<h3 id="定理：PID-是-UFD"><a href="#定理：PID-是-UFD" class="headerlink" title="定理：PID 是 UFD"></a>定理：PID 是 UFD</h3><p>若 <span class="kalax-inline-math">R</span> 是 PID，则 <span class="kalax-inline-math">R</span> 是 UFD。</p>
+<p><strong>证明思路。</strong></p>
+<ol>
+<li><p><strong>存在性。</strong> 若 <span class="kalax-inline-math">x</span> 不可约则结束。若 <span class="kalax-inline-math">x=ab</span> 且 <span class="kalax-inline-math">a,b</span> 都非单位，则继续分解。若该过程不停止，会得到严格升链</p>
+<div class="kalax-display-math">(x)\subsetneq(a_1)\subsetneq(a_2)\subsetneq\cdots,</div>
+
+<p>与升链稳定引理矛盾。</p>
+</li>
+<li><p><strong>唯一性。</strong> 在 PID 中不可约元为素元。若</p>
+<div class="kalax-display-math">p_1\cdots p_m=q_1\cdots q_n</div>
+
+<p>是两种不可约分解，则 <span class="kalax-inline-math">p_1</span> 整除某个 <span class="kalax-inline-math">q_j</span>。因 <span class="kalax-inline-math">q_j</span> 不可约，得 <span class="kalax-inline-math">p_1\sim q_j</span>。约去后归纳。</p>
+</li>
+</ol>
+<h2 id="5-Euclidean-Domain-与最大公因子"><a href="#5-Euclidean-Domain-与最大公因子" class="headerlink" title="5. Euclidean Domain 与最大公因子"></a>5. Euclidean Domain 与最大公因子</h2><h3 id="定义：Euclidean-Domain"><a href="#定义：Euclidean-Domain" class="headerlink" title="定义：Euclidean Domain"></a>定义：Euclidean Domain</h3><p>整环 <span class="kalax-inline-math">R</span> 称为<strong>欧几里得整环</strong>，若存在函数</p>
+<div class="kalax-display-math">N:R\setminus\{0\}\to\mathbb Z_{\ge 0}</div>
+
+<p>使得对任意 <span class="kalax-inline-math">a,b\in R</span>，<span class="kalax-inline-math">b\ne 0</span>，存在 <span class="kalax-inline-math">q,r\in R</span> 满足</p>
+<div class="kalax-display-math">a=qb+r,\qquad r=0\text{ 或 }N(r)&lt;N(b).</div>
+
+<p>其中 <span class="kalax-inline-math">q,r</span> 分别称为商和余数。</p>
+<h3 id="例-4"><a href="#例-4" class="headerlink" title="例"></a>例</h3><ol>
+<li><span class="kalax-inline-math">\mathbb Z</span> 是欧几里得整环，取 <span class="kalax-inline-math">N(n)=|n|</span>。</li>
+<li><p>Gaussian integers</p>
+<div class="kalax-display-math">\mathbb Z[i]=\{a+bi:a,b\in\mathbb Z\}</div>
+
+<p>是欧几里得整环，可取</p>
+<div class="kalax-display-math">N(a+bi)=a^2+b^2.</div>
+
+</li>
+</ol>
+<h3 id="定理：欧几里得整环是-PID"><a href="#定理：欧几里得整环是-PID" class="headerlink" title="定理：欧几里得整环是 PID"></a>定理：欧几里得整环是 PID</h3><p>若 <span class="kalax-inline-math">R</span> 是欧几里得整环，则 <span class="kalax-inline-math">R</span> 是 PID。</p>
+<p><strong>证明。</strong></p>
+<p>令 <span class="kalax-inline-math">I\subseteq R</span> 为非零理想。取 <span class="kalax-inline-math">a\in I</span>，使得 <span class="kalax-inline-math">N(a)</span> 在 <span class="kalax-inline-math">I\setminus{0}</span> 中最小。任取 <span class="kalax-inline-math">b\in I</span>，由带余除法</p>
+<div class="kalax-display-math">b=qa+r,\qquad r=0\text{ 或 }N(r)&lt;N(a).</div>
+
+<p>因为 <span class="kalax-inline-math">r=b-qa\in I</span>，由 <span class="kalax-inline-math">N(a)</span> 的极小性得 <span class="kalax-inline-math">r=0</span>。故 <span class="kalax-inline-math">b\in(a)</span>，所以 <span class="kalax-inline-math">I=(a)</span>。</p>
+<h3 id="最大公因子"><a href="#最大公因子" class="headerlink" title="最大公因子"></a>最大公因子</h3><p>设 <span class="kalax-inline-math">R</span> 为交换环，<span class="kalax-inline-math">X\subseteq R</span>。若 <span class="kalax-inline-math">d\in R</span> 满足：</p>
+<ol>
+<li><span class="kalax-inline-math">d\mid x</span> 对所有 <span class="kalax-inline-math">x\in X</span> 成立；</li>
+<li>若 <span class="kalax-inline-math">c\mid x</span> 对所有 <span class="kalax-inline-math">x\in X</span> 成立，则 <span class="kalax-inline-math">c\mid d</span>，</li>
+</ol>
+<p>则称 <span class="kalax-inline-math">d</span> 为 <span class="kalax-inline-math">X</span> 的一个<strong>最大公因子</strong>，记作 <span class="kalax-inline-math">\gcd(X)</span>。在一般环中最大公因子不一定存在。</p>
+<p>若 <span class="kalax-inline-math">R</span> 是 PID，则任意有限集合 <span class="kalax-inline-math">{a_1,\dots,a_n}</span> 的最大公因子存在，并且可写成线性组合：</p>
+<div class="kalax-display-math">d=r_1a_1+\cdots+r_na_n.</div>
+
+<p>若 <span class="kalax-inline-math">R</span> 是 UFD，则最大公因子也存在：把各 <span class="kalax-inline-math">a_i</span> 分解成不可约元的乘积，取各不可约元指数的最小值即可。</p>
+<h2 id="6-分式域"><a href="#6-分式域" class="headerlink" title="6. 分式域"></a>6. 分式域</h2><h3 id="分式域的构造"><a href="#分式域的构造" class="headerlink" title="分式域的构造"></a>分式域的构造</h3><p>设 <span class="kalax-inline-math">R</span> 是整环。考虑集合</p>
+<div class="kalax-display-math">R\times(R\setminus\{0\}).</div>
+
+<p>定义等价关系</p>
+<div class="kalax-display-math">(r,s)\sim(r',s')
+\iff
+rs'=r's.</div>
+
+<p>记 <span class="kalax-inline-math">(r,s)</span> 的等价类为</p>
+<div class="kalax-display-math">\frac r s.</div>
+
+<p>所有等价类构成 <span class="kalax-inline-math">R</span> 的<strong>分式域</strong>，记作 <span class="kalax-inline-math">\operatorname{Frac}(R)</span>。</p>
+<p>加法与乘法定义为</p>
+<div class="kalax-display-math">\frac a b+\frac c d=\frac{ad+bc}{bd},
+\qquad
+\frac a b\cdot \frac c d=\frac{ac}{bd}.</div>
+
+<h3 id="定理"><a href="#定理" class="headerlink" title="定理"></a>定理</h3><p>若 <span class="kalax-inline-math">R</span> 是整环，则 <span class="kalax-inline-math">\operatorname{Frac}(R)</span> 是域，并且 <span class="kalax-inline-math">R</span> 可自然嵌入其中：</p>
+<div class="kalax-display-math">R\hookrightarrow \operatorname{Frac}(R),\qquad
+r\mapsto \frac r1.</div>
+
+<h3 id="例-5"><a href="#例-5" class="headerlink" title="例"></a>例</h3><div class="kalax-display-math">\operatorname{Frac}(\mathbb Z)=\mathbb Q,
+\qquad
+\operatorname{Frac}(\mathbb Z[i])=\mathbb Q(i).</div>
+
+<h2 id="7-多项式环与形式幂级数"><a href="#7-多项式环与形式幂级数" class="headerlink" title="7. 多项式环与形式幂级数"></a>7. 多项式环与形式幂级数</h2><h3 id="多项式环"><a href="#多项式环" class="headerlink" title="多项式环"></a>多项式环</h3><p>设 <span class="kalax-inline-math">R</span> 为环，</p>
+<div class="kalax-display-math">R[x]=\left\{\sum_{i=0}^n a_ix^i:a_i\in R,\ n\ge 0\right\}.</div>
+
+<p>若</p>
+<div class="kalax-display-math">f=\sum_{i=0}^n a_ix^i,\qquad a_n\ne 0,</div>
+
+<p>则 <span class="kalax-inline-math">a_n</span> 称为首项系数，<span class="kalax-inline-math">a_0</span> 称为常数项，<span class="kalax-inline-math">n</span> 称为次数，记作 <span class="kalax-inline-math">\deg f=n</span>。</p>
+<p>若 <span class="kalax-inline-math">R</span> 为交换环，则 <span class="kalax-inline-math">R[x]</span> 也是交换环。</p>
+<p>多元多项式环可迭代定义：</p>
+<div class="kalax-display-math">R[x_1,\dots,x_n]\cong R[x_1,\dots,x_{n-1}][x_n].</div>
+
+<h3 id="代入同态"><a href="#代入同态" class="headerlink" title="代入同态"></a>代入同态</h3><p>设 <span class="kalax-inline-math">\varphi:R\to S</span> 是环同态，且 <span class="kalax-inline-math">s_1,\dots,s_n\in S</span> 与 <span class="kalax-inline-math">\varphi(R)</span> 中元素可交换，则存在唯一环同态</p>
+<div class="kalax-display-math">\overline\varphi:R[x_1,\dots,x_n]\to S</div>
+
+<p>满足</p>
+<div class="kalax-display-math">\overline\varphi|_R=\varphi,\qquad
+\overline\varphi(x_i)=s_i.</div>
+
+<h3 id="形式幂级数"><a href="#形式幂级数" class="headerlink" title="形式幂级数"></a>形式幂级数</h3><p>形式幂级数环定义为</p>
+<div class="kalax-display-math">Rx
+=
+\left\{\sum_{i=0}^{\infty}a_ix^i:a_i\in R\right\}.</div>
+
+<p>命题：</p>
+<ol>
+<li><p>若</p>
+<div class="kalax-display-math">f=\sum_{i=0}^{\infty}a_ix^i\in Rx,</div>
+
+<p>则</p>
+<div class="kalax-display-math">f\in Rx^\times
+\iff
+a_0\in R^\times.</div>
+</li>
+<li><p>若 <span class="kalax-inline-math">a_0</span> 在 <span class="kalax-inline-math">R</span> 中不可约，则 <span class="kalax-inline-math">f</span> 在 <span class="kalax-inline-math">Rx</span> 中不可约。</p>
+</li>
+</ol>
+<p>注意：<span class="kalax-inline-math">a_0</span> 不是单位并不必然推出 <span class="kalax-inline-math">f</span> 不可约；例如 <span class="kalax-inline-math">1+x</span> 在 <span class="kalax-inline-math">\mathbb Zx</span> 中是单位。</p>
+<h2 id="8-多项式环中的因子分解"><a href="#8-多项式环中的因子分解" class="headerlink" title="8. 多项式环中的因子分解"></a>8. 多项式环中的因子分解</h2><h3 id="单项式与次数"><a href="#单项式与次数" class="headerlink" title="单项式与次数"></a>单项式与次数</h3><p>在多元多项式环 <span class="kalax-inline-math">R[x_1,\dots,x_n]</span> 中，单项式形如</p>
+<div class="kalax-display-math">x_1^{k_1}\cdots x_n^{k_n}.</div>
+
+<p>总次数定义为</p>
+<div class="kalax-display-math">k_1+\cdots+k_n.</div>
+
+<p>零多项式次数约定为 <span class="kalax-inline-math">-\infty</span>；非零常数次数为 <span class="kalax-inline-math">0</span>。</p>
+<p>若 <span class="kalax-inline-math">R</span> 是整环，则 <span class="kalax-inline-math">R[x_1,\dots,x_n]</span> 也是整环，并且</p>
+<div class="kalax-display-math">\deg(fg)=\deg f+\deg g.</div>
+
+<h3 id="一元多项式的带余除法"><a href="#一元多项式的带余除法" class="headerlink" title="一元多项式的带余除法"></a>一元多项式的带余除法</h3><p>设 <span class="kalax-inline-math">R</span> 为交换环，<span class="kalax-inline-math">g\in R[x]</span> 的首项系数为单位。则对任意 <span class="kalax-inline-math">f\in R[x]</span>，存在唯一 <span class="kalax-inline-math">q,r\in R[x]</span>，使得</p>
+<div class="kalax-display-math">f=qg+r,\qquad \deg r&lt;\deg g.</div>
+
+<p>特别地，若 <span class="kalax-inline-math">F</span> 是域，则 <span class="kalax-inline-math">F[x]</span> 是欧几里得整环，因此是 PID。</p>
+<h3 id="推论"><a href="#推论" class="headerlink" title="推论"></a>推论</h3><p>若 <span class="kalax-inline-math">F</span> 是域，则</p>
+<div class="kalax-display-math">F[x]^\times=F^\times.</div>
+
+<p>即 <span class="kalax-inline-math">F[x]</span> 的单位正是非零常数多项式。</p>
+<p>但 <span class="kalax-inline-math">F[x,y]</span> 不是 PID，例如 <span class="kalax-inline-math">(x,y)</span> 不是主理想。因此 <span class="kalax-inline-math">F[x,y]</span> 不是欧几里得整环。不过</p>
+<div class="kalax-display-math">F[x_1,\dots,x_n]</div>
+
+<p>仍然是 UFD。</p>
+<h3 id="根与因式定理"><a href="#根与因式定理" class="headerlink" title="根与因式定理"></a>根与因式定理</h3><p>设 <span class="kalax-inline-math">f\in R[x]</span>，<span class="kalax-inline-math">c\in R</span>。若 <span class="kalax-inline-math">f(c)=0</span>，则称 <span class="kalax-inline-math">c</span> 为 <span class="kalax-inline-math">f</span> 在 <span class="kalax-inline-math">R</span> 中的根。</p>
+<p>若 <span class="kalax-inline-math">R</span> 为交换环，则</p>
+<div class="kalax-display-math">f(c)=0
+\iff
+x-c\mid f(x).</div>
+
+<h3 id="根的个数"><a href="#根的个数" class="headerlink" title="根的个数"></a>根的个数</h3><p>若 <span class="kalax-inline-math">D</span> 是整环，<span class="kalax-inline-math">f\in D[x]</span> 且 <span class="kalax-inline-math">\deg f=n</span>，则 <span class="kalax-inline-math">f</span> 在 <span class="kalax-inline-math">D</span> 中至多有 <span class="kalax-inline-math">n</span> 个根。</p>
+<p><strong>证明思路。</strong> 对次数归纳。若 <span class="kalax-inline-math">c</span> 是根，则 <span class="kalax-inline-math">f=(x-c)g</span>，且 <span class="kalax-inline-math">\deg g=n-1</span>。若 <span class="kalax-inline-math">c’\ne c</span> 也是根，则</p>
+<div class="kalax-display-math">0=f(c')=(c'-c)g(c').</div>
+
+<p>因 <span class="kalax-inline-math">D</span> 是整环且 <span class="kalax-inline-math">c’-c\ne 0</span>，得 <span class="kalax-inline-math">g(c’)=0</span>。</p>
+<h3 id="多重根与导数"><a href="#多重根与导数" class="headerlink" title="多重根与导数"></a>多重根与导数</h3><p>设 <span class="kalax-inline-math">D</span> 为整环，<span class="kalax-inline-math">f\in D[x]</span>。若</p>
+<div class="kalax-display-math">f(x)=(x-c)^m g(x),\qquad g(c)\ne 0,</div>
+
+<p>则称 <span class="kalax-inline-math">m</span> 为根 <span class="kalax-inline-math">c</span> 的重数。<span class="kalax-inline-math">m=1</span> 时称单根，<span class="kalax-inline-math">m&gt;1</span> 时称重根。</p>
+<p>形式导数定义为</p>
+<div class="kalax-display-math">\left(\sum_{i=0}^n a_ix^i\right)'
+=
+\sum_{i=1}^n ia_ix^{i-1}.</div>
+
+<p>若 <span class="kalax-inline-math">D</span> 是整环，则</p>
+<div class="kalax-display-math">c \text{ 是 } f \text{ 的重根}
+\iff
+f(c)=0\text{ 且 } f'(c)=0.</div>
+
+<p>若 <span class="kalax-inline-math">D</span> 是域，则 <span class="kalax-inline-math">f</span> 无重根等价于 <span class="kalax-inline-math">f</span> 与 <span class="kalax-inline-math">f’</span> 互素：</p>
+<div class="kalax-display-math">\gcd(f,f')=1.</div>
+
+<p>例：在 <span class="kalax-inline-math">\mathbb Q[x]</span> 中，<span class="kalax-inline-math">f(x)=x^2+1</span> 的导数为 <span class="kalax-inline-math">2x</span>，故无重根。</p>
+<h3 id="有理根判别"><a href="#有理根判别" class="headerlink" title="有理根判别"></a>有理根判别</h3><p>设 <span class="kalax-inline-math">D</span> 是 UFD，<span class="kalax-inline-math">F=\operatorname{Frac}(D)</span>。若</p>
+<div class="kalax-display-math">f(x)=a_nx^n+\cdots+a_0\in D[x]</div>
+
+<p>且 <span class="kalax-inline-math">c/d\in F</span> 是 <span class="kalax-inline-math">f</span> 的根，其中 <span class="kalax-inline-math">\gcd(c,d)=1</span>，则</p>
+<div class="kalax-display-math">c\mid a_0,\qquad d\mid a_n.</div>
+
+<h3 id="例-6"><a href="#例-6" class="headerlink" title="例"></a>例</h3><p>对</p>
+<div class="kalax-display-math">f(x)=x^4+3x^3-6x^2-11x-6\in\mathbb Z[x],</div>
+
+<p>有理根只能从</p>
+<div class="kalax-display-math">\pm1,\ \pm2,\ \pm3,\ \pm6</div>
+
+<p>中寻找。</p>
+<h2 id="9-Gauss-引理与-Eisenstein-判别法"><a href="#9-Gauss-引理与-Eisenstein-判别法" class="headerlink" title="9. Gauss 引理与 Eisenstein 判别法"></a>9. Gauss 引理与 Eisenstein 判别法</h2><h3 id="内容与本原多项式"><a href="#内容与本原多项式" class="headerlink" title="内容与本原多项式"></a>内容与本原多项式</h3><p>设 <span class="kalax-inline-math">D</span> 是 UFD，</p>
+<div class="kalax-display-math">f(x)=\sum_{i=0}^n a_ix^i\in D[x].</div>
+
+<p>系数 <span class="kalax-inline-math">a_0,\dots,a_n</span> 的最大公因子称为 <span class="kalax-inline-math">f</span> 的<strong>内容</strong>，记作 <span class="kalax-inline-math">c(f)</span>。若 <span class="kalax-inline-math">c(f)</span> 是单位，则称 <span class="kalax-inline-math">f</span> 为<strong>本原多项式</strong>。</p>
+<h3 id="Gauss-引理"><a href="#Gauss-引理" class="headerlink" title="Gauss 引理"></a>Gauss 引理</h3><p>若 <span class="kalax-inline-math">D</span> 是 UFD，<span class="kalax-inline-math">f,g\in D[x]</span>，则</p>
+<div class="kalax-display-math">c(fg)\sim c(f)c(g).</div>
+
+<p>特别地，本原多项式的乘积仍是本原多项式。</p>
+<h3 id="Gauss-引理的推论"><a href="#Gauss-引理的推论" class="headerlink" title="Gauss 引理的推论"></a>Gauss 引理的推论</h3><p>设 <span class="kalax-inline-math">D</span> 是 UFD，<span class="kalax-inline-math">F=\operatorname{Frac}(D)</span>。若 <span class="kalax-inline-math">f,g\in D[x]</span> 均为本原多项式，则</p>
+<div class="kalax-display-math">f\sim g\text{ in }D[x]
+\iff
+f\sim g\text{ in }F[x].</div>
+
+<p>若 <span class="kalax-inline-math">f\in D[x]</span> 为本原多项式，则</p>
+<div class="kalax-display-math">f\text{ 在 }D[x]\text{ 中不可约}
+\iff
+f\text{ 在 }F[x]\text{ 中不可约}.</div>
+
+<h3 id="定理：D-x-是-UFD"><a href="#定理：D-x-是-UFD" class="headerlink" title="定理：D[x] 是 UFD"></a>定理：<span class="kalax-inline-math">D[x]</span> 是 UFD</h3><p>若 <span class="kalax-inline-math">D</span> 是 UFD，则 <span class="kalax-inline-math">D[x]</span> 也是 UFD。</p>
+<p>因此反复归纳可得：</p>
+<div class="kalax-display-math">D[x_1,\dots,x_n]</div>
+
+<p>也是 UFD。</p>
+<h3 id="Eisenstein-判别法"><a href="#Eisenstein-判别法" class="headerlink" title="Eisenstein 判别法"></a>Eisenstein 判别法</h3><p>设 <span class="kalax-inline-math">D</span> 是 UFD，<span class="kalax-inline-math">F=\operatorname{Frac}(D)</span>，</p>
+<div class="kalax-display-math">f(x)=a_nx^n+\cdots+a_0\in D[x],
+\qquad \deg f\ge 1.</div>
+
+<p>若存在素元 <span class="kalax-inline-math">p\in D</span> 满足：</p>
+<ol>
+<li><span class="kalax-inline-math">p\nmid a_n</span>；</li>
+<li><span class="kalax-inline-math">p\mid a_i</span> 对所有 <span class="kalax-inline-math">0\le i\le n-1</span> 成立；</li>
+<li><span class="kalax-inline-math">p^2\nmid a_0</span>，</li>
+</ol>
+<p>则 <span class="kalax-inline-math">f</span> 在 <span class="kalax-inline-math">F[x]</span> 中不可约。若 <span class="kalax-inline-math">f</span> 本原，则 <span class="kalax-inline-math">f</span> 在 <span class="kalax-inline-math">D[x]</span> 中也不可约。</p>
+<h3 id="例-7"><a href="#例-7" class="headerlink" title="例"></a>例</h3><p>令</p>
+<div class="kalax-display-math">f(x)=2x^3-6x^2+9x-15\in\mathbb Z[x].</div>
+
+<p>取 <span class="kalax-inline-math">p=3</span>，有 <span class="kalax-inline-math">3\nmid 2</span>，<span class="kalax-inline-math">3\mid -6,9,-15</span>，且 <span class="kalax-inline-math">9\nmid -15</span>。故 <span class="kalax-inline-math">f</span> 在 <span class="kalax-inline-math">\mathbb Q[x]</span> 中不可约。</p>
+<h2 id="10-群作用"><a href="#10-群作用" class="headerlink" title="10. 群作用"></a>10. 群作用</h2><h3 id="定义：群作用"><a href="#定义：群作用" class="headerlink" title="定义：群作用"></a>定义：群作用</h3><p>设 <span class="kalax-inline-math">G</span> 为群，<span class="kalax-inline-math">S</span> 为集合。<span class="kalax-inline-math">G</span> 在 <span class="kalax-inline-math">S</span> 上的一个左作用是映射</p>
+<div class="kalax-display-math">G\times S\to S,\qquad (g,x)\mapsto gx</div>
+
+<p>满足：</p>
+<ol>
+<li><span class="kalax-inline-math">ex=x</span>；</li>
+<li><span class="kalax-inline-math">g_1(g_2x)=(g_1g_2)x</span>。</li>
+</ol>
+<p>记作</p>
+<div class="kalax-display-math">G\curvearrowright S.</div>
+
+<h3 id="例-8"><a href="#例-8" class="headerlink" title="例"></a>例</h3><ol>
+<li><p><span class="kalax-inline-math">S_n</span> 作用在 <span class="kalax-inline-math">{1,2,\dots,n}</span> 上：</p>
+<div class="kalax-display-math">(\sigma,i)\mapsto \sigma(i).</div>
+</li>
+<li><p><span class="kalax-inline-math">G</span> 作用在自身上：</p>
+<ul>
+<li>左平移：<span class="kalax-inline-math">(h,g)\mapsto hg</span>；</li>
+<li>右平移：<span class="kalax-inline-math">(h,g)\mapsto gh^{-1}</span>；</li>
+<li>共轭作用：<span class="kalax-inline-math">(h,g)\mapsto hgh^{-1}</span>。</li>
+</ul>
+</li>
+<li><p>若 <span class="kalax-inline-math">H\le G</span>，则 <span class="kalax-inline-math">H</span> 作用在 <span class="kalax-inline-math">G</span> 上：</p>
+<div class="kalax-display-math">(h,g)\mapsto hg</div>
+
+<p>其轨道为左陪集。</p>
+</li>
+<li><p>若 <span class="kalax-inline-math">H\le G</span>，<span class="kalax-inline-math">H</span> 作用在 <span class="kalax-inline-math">G</span> 上：</p>
+<div class="kalax-display-math">(h,g)\mapsto gh^{-1}</div>
+
+<p>可看作右平移。</p>
+</li>
+<li><p>若 <span class="kalax-inline-math">H\le G</span>，<span class="kalax-inline-math">H</span> 作用在子群集合上：</p>
+<div class="kalax-display-math">(h,K)\mapsto hKh^{-1},</div>
+
+<p>称为共轭作用。</p>
+</li>
+</ol>
+<h3 id="轨道与稳定子"><a href="#轨道与稳定子" class="headerlink" title="轨道与稳定子"></a>轨道与稳定子</h3><p>设 <span class="kalax-inline-math">G\curvearrowright S</span>。定义关系</p>
+<div class="kalax-display-math">x\sim y
+\iff
+\exists g\in G,\ gx=y.</div>
+
+<p>这是等价关系。</p>
+<p>元素 <span class="kalax-inline-math">x</span> 的轨道为</p>
+<div class="kalax-display-math">Gx=\{gx:g\in G\}.</div>
+
+<p>稳定子为</p>
+<div class="kalax-display-math">G_x=\{g\in G:gx=x\}.</div>
+
+<p>稳定子 <span class="kalax-inline-math">G_x</span> 是 <span class="kalax-inline-math">G</span> 的子群。</p>
+<h3 id="轨道-稳定子定理"><a href="#轨道-稳定子定理" class="headerlink" title="轨道-稳定子定理"></a>轨道-稳定子定理</h3><p>若 <span class="kalax-inline-math">G\curvearrowright S</span>，则</p>
+<div class="kalax-display-math">|Gx|=[G:G_x].</div>
+
+<p><strong>证明。</strong> 映射</p>
+<div class="kalax-display-math">G/G_x\to Gx,\qquad gG_x\mapsto gx</div>
+
+<p>良定义且为双射。</p>
+<h3 id="共轭类、中心化子、正规化子"><a href="#共轭类、中心化子、正规化子" class="headerlink" title="共轭类、中心化子、正规化子"></a>共轭类、中心化子、正规化子</h3><p>若 <span class="kalax-inline-math">G</span> 作用在自身上：</p>
+<div class="kalax-display-math">h\cdot g=hgh^{-1},</div>
+
+<p>则 <span class="kalax-inline-math">g</span> 的轨道称为 <span class="kalax-inline-math">g</span> 的<strong>共轭类</strong>：</p>
+<div class="kalax-display-math">\operatorname{Cl}(g)=\{hgh^{-1}:h\in G\}.</div>
+
+<p>稳定子称为 <span class="kalax-inline-math">g</span> 的<strong>中心化子</strong>：</p>
+<div class="kalax-display-math">C_G(g)=\{h\in G:hg=gh\}.</div>
+
+<p>若 <span class="kalax-inline-math">K\le G</span>，共轭作用在子群集合上：</p>
+<div class="kalax-display-math">h\cdot K=hKh^{-1}.</div>
+
+<p>其稳定子为 <span class="kalax-inline-math">K</span> 的<strong>正规化子</strong>：</p>
+<div class="kalax-display-math">N_G(K)=\{g\in G:gKg^{-1}=K\}.</div>
+
+<p>有</p>
+<div class="kalax-display-math">K\triangleleft N_G(K)\le G.</div>
+
+<h3 id="类方程"><a href="#类方程" class="headerlink" title="类方程"></a>类方程</h3><p>设 <span class="kalax-inline-math">G</span> 为有限群，<span class="kalax-inline-math">x_1,\dots,x_r</span> 为所有非中心元素的共轭类代表，则</p>
+<div class="kalax-display-math">|G|
+=
+|Z(G)|+\sum_{i=1}^r [G:C_G(x_i)].</div>
+
+<p>若 <span class="kalax-inline-math">K\le G</span>，则 <span class="kalax-inline-math">K</span> 的共轭子群个数为</p>
+<div class="kalax-display-math">[G:N_G(K)].</div>
+
+<h3 id="群作用诱导置换表示"><a href="#群作用诱导置换表示" class="headerlink" title="群作用诱导置换表示"></a>群作用诱导置换表示</h3><p>若 <span class="kalax-inline-math">G\curvearrowright S</span>，则得到群同态</p>
+<div class="kalax-display-math">\theta:G\to A(S),</div>
+
+<p>其中 <span class="kalax-inline-math">A(S)</span> 是 <span class="kalax-inline-math">S</span> 上所有双射构成的群，且</p>
+<div class="kalax-display-math">\theta(g)(s)=gs.</div>
+
+<h3 id="Cayley-定理"><a href="#Cayley-定理" class="headerlink" title="Cayley 定理"></a>Cayley 定理</h3><p>任意群 <span class="kalax-inline-math">G</span> 都同构于某个置换群。若 <span class="kalax-inline-math">|G|=n</span>，则</p>
+<div class="kalax-display-math">G\hookrightarrow S_n.</div>
+
+<p><strong>证明。</strong> 取 <span class="kalax-inline-math">G</span> 对自身的左平移作用，得到同态</p>
+<div class="kalax-display-math">G\to A(G).</div>
+
+<p>若 <span class="kalax-inline-math">g_1\ne g_2</span>，则 <span class="kalax-inline-math">\theta(g_1)(e)=g_1\ne g_2=\theta(g_2)(e)</span>，故该同态单射。</p>
+<h3 id="自同构与内自同构"><a href="#自同构与内自同构" class="headerlink" title="自同构与内自同构"></a>自同构与内自同构</h3><p>记</p>
+<div class="kalax-display-math">\operatorname{Aut}(G)=\{f:G\to G:f\text{ 是同构}\}.</div>
+
+<p>共轭作用给出同态</p>
+<div class="kalax-display-math">G\to \operatorname{Aut}(G),\qquad
+g\mapsto \bigl(h\mapsto ghg^{-1}\bigr).</div>
+
+<p>其核为中心：</p>
+<div class="kalax-display-math">\ker=Z(G).</div>
+
+<p>因此</p>
+<div class="kalax-display-math">G/Z(G)\cong \operatorname{Inn}(G)\le \operatorname{Aut}(G).</div>
+
+<h2 id="11-Sylow-定理"><a href="#11-Sylow-定理" class="headerlink" title="11. Sylow 定理"></a>11. Sylow 定理</h2><h3 id="引理：有限-p-群作用的固定点"><a href="#引理：有限-p-群作用的固定点" class="headerlink" title="引理：有限 p-群作用的固定点"></a>引理：有限 <span class="kalax-inline-math">p</span>-群作用的固定点</h3><p>设 <span class="kalax-inline-math">H</span> 为 <span class="kalax-inline-math">p</span>-群，<span class="kalax-inline-math">H\curvearrowright S</span>，且 <span class="kalax-inline-math">S</span> 有限。令</p>
+<div class="kalax-display-math">S_0=\{x\in S:hx=x\text{ for all }h\in H\}.</div>
+
+<p>则</p>
+<div class="kalax-display-math">|S_0|\equiv |S|\pmod p.</div>
+
+<p><strong>理由。</strong> <span class="kalax-inline-math">S</span> 分解为若干轨道。轨道大小为</p>
+<div class="kalax-display-math">|\mathcal O_x|=[H:H_x].</div>
+
+<p>若轨道不是单点，则其大小被 <span class="kalax-inline-math">p</span> 整除。</p>
+<h3 id="Cauchy-定理"><a href="#Cauchy-定理" class="headerlink" title="Cauchy 定理"></a>Cauchy 定理</h3><p>若 <span class="kalax-inline-math">G</span> 为有限群，素数 <span class="kalax-inline-math">p</span> 满足 <span class="kalax-inline-math">p\mid |G|</span>，则存在 <span class="kalax-inline-math">a\in G</span>，使得</p>
+<div class="kalax-display-math">|a|=p.</div>
+
+<p>证明可考虑集合</p>
+<div class="kalax-display-math">S=\{(a_1,\dots,a_p)\in G^p:a_1a_2\cdots a_p=e\},</div>
+
+<p>并令 <span class="kalax-inline-math">\mathbb Z/p\mathbb Z</span> 通过循环移位作用在 <span class="kalax-inline-math">S</span> 上。固定点给出阶为 <span class="kalax-inline-math">p</span> 的元素。</p>
+<h3 id="定义：p-群与-Sylow-p-子群"><a href="#定义：p-群与-Sylow-p-子群" class="headerlink" title="定义：p-群与 Sylow p-子群"></a>定义：<span class="kalax-inline-math">p</span>-群与 Sylow <span class="kalax-inline-math">p</span>-子群</h3><p>若有限群 <span class="kalax-inline-math">G</span> 满足</p>
+<div class="kalax-display-math">|G|=p^n</div>
+
+<p>则称 <span class="kalax-inline-math">G</span> 为 <span class="kalax-inline-math">p</span>-群。</p>
+<p>若 <span class="kalax-inline-math">|G|=p^n m</span>，其中 <span class="kalax-inline-math">(p,m)=1</span>，则 <span class="kalax-inline-math">G</span> 的阶为 <span class="kalax-inline-math">p^n</span> 的子群称为 <strong>Sylow <span class="kalax-inline-math">p</span>-子群</strong>。</p>
+<h3 id="p-群的中心"><a href="#p-群的中心" class="headerlink" title="p-群的中心"></a><span class="kalax-inline-math">p</span>-群的中心</h3><p>若 <span class="kalax-inline-math">G</span> 是有限 <span class="kalax-inline-math">p</span>-群，则</p>
+<div class="kalax-display-math">|Z(G)|&gt;1.</div>
+
+<p><strong>证明。</strong> 令 <span class="kalax-inline-math">G</span> 对自身作共轭作用。类方程为</p>
+<div class="kalax-display-math">|G|=|Z(G)|+\sum_i |\operatorname{Cl}(x_i)|.</div>
+
+<p>非中心元素的共轭类大小都被 <span class="kalax-inline-math">p</span> 整除，且 <span class="kalax-inline-math">p\mid |G|</span>，故 <span class="kalax-inline-math">p\mid |Z(G)|</span>。由于 <span class="kalax-inline-math">e\in Z(G)</span>，得 <span class="kalax-inline-math">|Z(G)|&gt;1</span>。</p>
+<h3 id="正规化子引理"><a href="#正规化子引理" class="headerlink" title="正规化子引理"></a>正规化子引理</h3><p>若 <span class="kalax-inline-math">G</span> 为有限群，<span class="kalax-inline-math">H&lt;G</span> 为 <span class="kalax-inline-math">p</span>-子群，则</p>
+<div class="kalax-display-math">N_G(H)\ne H.</div>
+
+<p>更精确地，在合适假设下</p>
+<div class="kalax-display-math">[N_G(H):H]\equiv [G:H]\pmod p.</div>
+
+<p>因此若 <span class="kalax-inline-math">p\mid [G:H]</span>，则 <span class="kalax-inline-math">N_G(H)</span> 严格大于 <span class="kalax-inline-math">H</span>。</p>
+<h3 id="第一-Sylow-定理"><a href="#第一-Sylow-定理" class="headerlink" title="第一 Sylow 定理"></a>第一 Sylow 定理</h3><p>设</p>
+<div class="kalax-display-math">|G|=p^n m,\qquad (p,m)=1.</div>
+
+<p>则 <span class="kalax-inline-math">G</span> 含有阶为 <span class="kalax-inline-math">p^i</span> 的子群，对所有 <span class="kalax-inline-math">0\le i\le n</span> 成立。特别地，<span class="kalax-inline-math">G</span> 含有 Sylow <span class="kalax-inline-math">p</span>-子群。</p>
+<p>并且可构造链</p>
+<div class="kalax-display-math">H_1\triangleleft H_2\triangleleft\cdots\triangleleft H_n,
+\qquad |H_i|=p^i.</div>
+
+<h3 id="第二-Sylow-定理"><a href="#第二-Sylow-定理" class="headerlink" title="第二 Sylow 定理"></a>第二 Sylow 定理</h3><p>设 <span class="kalax-inline-math">|G|=p^n m</span>，<span class="kalax-inline-math">(p,m)=1</span>。</p>
+<ol>
+<li>任意 Sylow <span class="kalax-inline-math">p</span>-子群的共轭仍是 Sylow <span class="kalax-inline-math">p</span>-子群；</li>
+<li>任意两个 Sylow <span class="kalax-inline-math">p</span>-子群彼此共轭；</li>
+<li>若 Sylow <span class="kalax-inline-math">p</span>-子群唯一，则它在 <span class="kalax-inline-math">G</span> 中正规。</li>
+</ol>
+<h3 id="第三-Sylow-定理"><a href="#第三-Sylow-定理" class="headerlink" title="第三 Sylow 定理"></a>第三 Sylow 定理</h3><p>设 <span class="kalax-inline-math">n_p</span> 为 <span class="kalax-inline-math">G</span> 的 Sylow <span class="kalax-inline-math">p</span>-子群个数。若</p>
+<div class="kalax-display-math">|G|=p^n m,\qquad (p,m)=1,</div>
+
+<p>则</p>
+<div class="kalax-display-math">n_p\mid m,\qquad n_p\equiv 1\pmod p.</div>
+
+<h3 id="例：阶为-28-的群"><a href="#例：阶为-28-的群" class="headerlink" title="例：阶为 28 的群"></a>例：阶为 28 的群</h3><p>若 <span class="kalax-inline-math">|G|=28=2^2\cdot 7</span>，则 Sylow <span class="kalax-inline-math">7</span>-子群个数 <span class="kalax-inline-math">n_7</span> 满足</p>
+<div class="kalax-display-math">n_7\mid 4,\qquad n_7\equiv 1\pmod 7.</div>
+
+<p>故 <span class="kalax-inline-math">n_7=1</span>，所以 <span class="kalax-inline-math">G</span> 含有正规 Sylow <span class="kalax-inline-math">7</span>-子群。</p>
+<h3 id="例：S-4-的-Sylow-3-子群"><a href="#例：S-4-的-Sylow-3-子群" class="headerlink" title="例：S_4 的 Sylow 3-子群"></a>例：<span class="kalax-inline-math">S_4</span> 的 Sylow <span class="kalax-inline-math">3</span>-子群</h3><p>因为</p>
+<div class="kalax-display-math">|S_4|=24=2^3\cdot 3,</div>
+
+<p>Sylow <span class="kalax-inline-math">3</span>-子群个数 <span class="kalax-inline-math">n_3</span> 满足</p>
+<div class="kalax-display-math">n_3\mid 8,\qquad n_3\equiv 1\pmod 3.</div>
+
+<p>故 <span class="kalax-inline-math">n_3=1</span> 或 <span class="kalax-inline-math">4</span>。事实上 <span class="kalax-inline-math">S_4</span> 中的 Sylow <span class="kalax-inline-math">3</span>-子群由 <span class="kalax-inline-math">3</span>-循环生成，共有四个：</p>
+<div class="kalax-display-math">\langle(123)\rangle,\quad
+\langle(124)\rangle,\quad
+\langle(134)\rangle,\quad
+\langle(234)\rangle.</div>
+
+<h2 id="12-模"><a href="#12-模" class="headerlink" title="12. 模"></a>12. 模</h2><h3 id="定义：左模"><a href="#定义：左模" class="headerlink" title="定义：左模"></a>定义：左模</h3><p>设 <span class="kalax-inline-math">R</span> 为环，<span class="kalax-inline-math">A</span> 为交换群。若有映射</p>
+<div class="kalax-display-math">R\times A\to A,\qquad (r,a)\mapsto ra</div>
+
+<p>满足：</p>
+<ol>
+<li><span class="kalax-inline-math">r(a+b)=ra+rb</span>；</li>
+<li><span class="kalax-inline-math">(r+s)a=ra+sa</span>；</li>
+<li><span class="kalax-inline-math">(rs)a=r(sa)</span>；</li>
+<li><span class="kalax-inline-math">1a=a</span>，</li>
+</ol>
+<p>则称 <span class="kalax-inline-math">A</span> 为一个左 <span class="kalax-inline-math">R</span>-模。</p>
+<h3 id="例-9"><a href="#例-9" class="headerlink" title="例"></a>例</h3><ol>
+<li>当 <span class="kalax-inline-math">R=\mathbb Z</span> 时，<span class="kalax-inline-math">\mathbb Z</span>-模恰好是交换群。</li>
+<li>若 <span class="kalax-inline-math">R=k</span> 是域，则 <span class="kalax-inline-math">k</span>-模就是 <span class="kalax-inline-math">k</span> 上的向量空间。</li>
+<li><p>若 <span class="kalax-inline-math">f:R\to S</span> 是环同态，则 <span class="kalax-inline-math">S</span> 可看作 <span class="kalax-inline-math">R</span>-模，标量作用为</p>
+<div class="kalax-display-math">r\cdot s=f(r)s.</div>
+</li>
+<li><p>左理想正是 <span class="kalax-inline-math">R</span> 的左 <span class="kalax-inline-math">R</span>-子模。</p>
+</li>
+</ol>
+<h3 id="零模"><a href="#零模" class="headerlink" title="零模"></a>零模</h3><p>对任意 <span class="kalax-inline-math">a\in A</span> 和 <span class="kalax-inline-math">r\in R</span>，</p>
+<div class="kalax-display-math">0_Ra=0_A,\qquad r0_A=0_A.</div>
+
+<p>通常记零子模为 <span class="kalax-inline-math">0</span> 或 <span class="kalax-inline-math">{0}</span>。</p>
+<h3 id="模同态"><a href="#模同态" class="headerlink" title="模同态"></a>模同态</h3><p>设 <span class="kalax-inline-math">A,B</span> 为 <span class="kalax-inline-math">R</span>-模。映射 <span class="kalax-inline-math">f:A\to B</span> 称为 <span class="kalax-inline-math">R</span>-模同态，若</p>
+<ol>
+<li><span class="kalax-inline-math">f(x+y)=f(x)+f(y)</span>；</li>
+<li><span class="kalax-inline-math">f(ra)=rf(a)</span>。</li>
+</ol>
+<p>即</p>
+<div class="kalax-display-math">f(rx+sy)=rf(x)+sf(y).</div>
+
+<p>单同态、满同态、同构按通常方式定义。</p>
+<h3 id="核与像"><a href="#核与像" class="headerlink" title="核与像"></a>核与像</h3><p>若 <span class="kalax-inline-math">f:A\to B</span> 是 <span class="kalax-inline-math">R</span>-模同态，则</p>
+<div class="kalax-display-math">\ker f=\{a\in A:f(a)=0\}</div>
+
+<p>是 <span class="kalax-inline-math">A</span> 的子模，</p>
+<div class="kalax-display-math">\operatorname{Im}f=f(A)</div>
+
+<p>是 <span class="kalax-inline-math">B</span> 的子模。</p>
+<h3 id="生成子模"><a href="#生成子模" class="headerlink" title="生成子模"></a>生成子模</h3><p>若 <span class="kalax-inline-math">X\subseteq A</span>，则由 <span class="kalax-inline-math">X</span> 生成的子模记作</p>
+<div class="kalax-display-math">\langle X\rangle.</div>
+
+<p>若 <span class="kalax-inline-math">X={a_1,\dots,a_n}</span>，则</p>
+<div class="kalax-display-math">\langle a_1,\dots,a_n\rangle
+=
+\left\{\sum_{i=1}^n r_ia_i:r_i\in R\right\}.</div>
+
+<p>特别地，</p>
+<div class="kalax-display-math">\langle a\rangle=Ra=\{ra:r\in R\}.</div>
+
+<h3 id="商模与第一同构定理"><a href="#商模与第一同构定理" class="headerlink" title="商模与第一同构定理"></a>商模与第一同构定理</h3><p>若 <span class="kalax-inline-math">N\subseteq M</span> 是子 <span class="kalax-inline-math">R</span>-模，则</p>
+<div class="kalax-display-math">M/N</div>
+
+<p>在</p>
+<div class="kalax-display-math">r(m+N)=rm+N</div>
+
+<p>下成为 <span class="kalax-inline-math">R</span>-模，称为商模。</p>
+<p>若 <span class="kalax-inline-math">f:A\to B</span> 是 <span class="kalax-inline-math">R</span>-模同态，则</p>
+<div class="kalax-display-math">A/\ker f\cong \operatorname{Im}f.</div>
+
+<h3 id="第二、第三同构定理"><a href="#第二、第三同构定理" class="headerlink" title="第二、第三同构定理"></a>第二、第三同构定理</h3><p>若 <span class="kalax-inline-math">B,C\subseteq A</span> 是子模，则</p>
+<div class="kalax-display-math">B/(B\cap C)\cong (B+C)/C.</div>
+
+<p>若 <span class="kalax-inline-math">B\subseteq C\subseteq A</span>，则</p>
+<div class="kalax-display-math">(A/B)/(C/B)\cong A/C.</div>
+
+<h3 id="正合列"><a href="#正合列" class="headerlink" title="正合列"></a>正合列</h3><p>模同态列</p>
+<div class="kalax-display-math">A\xrightarrow{f}B\xrightarrow{g}C</div>
+
+<p>称在 <span class="kalax-inline-math">B</span> 处正合，若</p>
+<div class="kalax-display-math">\operatorname{Im}f=\ker g.</div>
+
+<p>短正合列是形如</p>
+<div class="kalax-display-math">0\longrightarrow A\xrightarrow{f}B\xrightarrow{g}C\longrightarrow 0</div>
+
+<p>的正合列。此时 <span class="kalax-inline-math">f</span> 单射，<span class="kalax-inline-math">g</span> 满射，并且</p>
+<div class="kalax-display-math">B/\operatorname{Im}f\cong C.</div>
+
+<h3 id="短五引理"><a href="#短五引理" class="headerlink" title="短五引理"></a>短五引理</h3><p>考虑交换图</p>
+<div class="kalax-display-math">\begin{array}{ccccccccc}
+0&amp;\longrightarrow&amp;A&amp;\xrightarrow{f}&amp;B&amp;\xrightarrow{g}&amp;C&amp;\longrightarrow&amp;0\\
+&amp;&amp;\downarrow\alpha&amp;&amp;\downarrow\beta&amp;&amp;\downarrow\gamma&amp;&amp;\\
+0&amp;\longrightarrow&amp;A'&amp;\xrightarrow{f'}&amp;B'&amp;\xrightarrow{g'}&amp;C'&amp;\longrightarrow&amp;0
+\end{array}</div>
+
+<p>若两行短正合，则：</p>
+<ol>
+<li>若 <span class="kalax-inline-math">\alpha,\gamma</span> 单射，则 <span class="kalax-inline-math">\beta</span> 单射；</li>
+<li>若 <span class="kalax-inline-math">\alpha,\gamma</span> 满射，则 <span class="kalax-inline-math">\beta</span> 满射；</li>
+<li>若 <span class="kalax-inline-math">\alpha,\gamma</span> 是同构，则 <span class="kalax-inline-math">\beta</span> 是同构。</li>
+</ol>
+<p>证明方法是 diagram chasing。</p>
+<h2 id="13-域扩张"><a href="#13-域扩张" class="headerlink" title="13. 域扩张"></a>13. 域扩张</h2><h3 id="动机"><a href="#动机" class="headerlink" title="动机"></a>动机</h3><p>二次方程</p>
+<div class="kalax-display-math">ax^2+bx+c=0</div>
+
+<p>有通用求根公式；三次、四次方程也有根式公式。但五次及以上一般没有根式公式。这推动我们研究域扩张与多项式方程的根。</p>
+<h3 id="定义：域扩张"><a href="#定义：域扩张" class="headerlink" title="定义：域扩张"></a>定义：域扩张</h3><p>若 <span class="kalax-inline-math">K\subseteq F</span> 且 <span class="kalax-inline-math">K,F</span> 都是域，并且 <span class="kalax-inline-math">K</span> 的运算与 <span class="kalax-inline-math">F</span> 中继承的运算一致，则称 <span class="kalax-inline-math">F</span> 是 <span class="kalax-inline-math">K</span> 的一个<strong>域扩张</strong>，记作</p>
+<div class="kalax-display-math">F/K.</div>
+
+<p>此时 <span class="kalax-inline-math">F</span> 自然是 <span class="kalax-inline-math">K</span> 上的向量空间。其维数称为扩张次数，记作</p>
+<div class="kalax-display-math">[F:K]=\dim_K F.</div>
+
+<p>若 <span class="kalax-inline-math">[F:K]&lt;\infty</span>，称 <span class="kalax-inline-math">F/K</span> 为有限扩张。</p>
+<h3 id="例-10"><a href="#例-10" class="headerlink" title="例"></a>例</h3><ol>
+<li><p><span class="kalax-inline-math">\mathbb C/\mathbb R</span> 是次数为 <span class="kalax-inline-math">2</span> 的扩张：</p>
+<div class="kalax-display-math">[\mathbb C:\mathbb R]=2.</div>
+</li>
+<li><p><span class="kalax-inline-math">\mathbb R/\mathbb Q</span> 不是有限扩张：</p>
+<div class="kalax-display-math">[\mathbb R:\mathbb Q]=\infty.</div>
+
+</li>
+</ol>
+<h3 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h3><p>域扩张中的“次数”类似群论中子群指数的概念，但要注意：选取不同基底只改变表示方式，不改变维数。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://kalax524.com">Nemo YU</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://kalax524.com/notes/%E6%95%B0%E5%AD%A6-abstract-algebra-%E6%8A%BD%E4%BB%A3%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86.backup-20260605-%E5%89%8D%E7%BD%AE%E8%A1%A5%E5%85%85%E5%89%8D-46a75360/">https://kalax524.com/notes/%E6%95%B0%E5%AD%A6-abstract-algebra-%E6%8A%BD%E4%BB%A3%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86.backup-20260605-%E5%89%8D%E7%BD%AE%E8%A1%A5%E5%85%85%E5%89%8D-46a75360/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://kalax524.com" target="_blank">Kalax524</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/obsidian/">obsidian</a><a class="post-meta__tags" href="/tags/%E6%95%B0%E5%AD%A6/">数学</a><a class="post-meta__tags" href="/tags/Abstract-algebra/">Abstract algebra</a><a class="post-meta__tags" href="/tags/abstract-algebra/">abstract-algebra</a><a class="post-meta__tags" href="/tags/ring-theory/">ring-theory</a><a class="post-meta__tags" href="/tags/group-theory/">group-theory</a><a class="post-meta__tags" href="/tags/modules/">modules</a><a class="post-meta__tags" href="/tags/fields/">fields</a></div><div class="post-share"><div class="social-share" data-image="/img/avatar.svg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/readings/2026-06-06-burroughs-birds-attention/" title="John Burroughs on Birds and Patient Attention"><img class="cover" src="/img/bg.JPG" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">John Burroughs on Birds and Patient Attention</div></div><div class="info-2"><div class="info-item-1">TOEFL-level close reading adapted from John Burroughs's public-domain essays on birds and field observation.</div></div></div></a><a class="pagination-related" href="/lectures-francaises/2026-06-05-carnet-de-quartier/" title="Le carnet de quartier"><img class="cover" src="/img/bg.JPG" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">Le carnet de quartier</div></div><div class="info-2"><div class="info-item-1">A1-A2 French daily reading about a small neighborhood notebook.</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/notes/%E6%95%B0%E5%AD%A6-abstract-algebra-%E6%8A%BD%E4%BB%A3%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86-bbb68550/" title="抽代笔记整理"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-06-16</div><div class="info-item-2">抽代笔记整理</div></div><div class="info-2"><div class="info-item-1">抽代笔记整理 说明：以下内容按两份 PDF 的内容整理，并把手写笔记中的定义、定理、例子与证明改写为较接近数学书的排版。明显划掉、重复或笔误的地方已按上下文修正。前置补充已并入正文，并按“群论基础与作用 - 环与理想 - 分解与多项式 - 模 - 域扩张”的顺序重排。 1. 群论前置补充 生成子群 </div></div></div></a><a class="pagination-related" href="/notes/%E6%95%B0%E5%AD%A6-abstract-algebra-hungerford-algebra-%E7%AC%ACii-iv%E7%AB%A0%E5%AE%9A%E4%B9%89%E5%AE%9A%E7%90%86%E6%80%A7%E8%B4%A8%E6%91%98%E5%BD%95-37956270/" title="Hungerford Algebra 第 II-IV 章定义、定理与性质整理"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-06-16</div><div class="info-item-2">Hungerford Algebra 第 II-IV 章定义、定理与性质整理</div></div><div class="info-2"><div class="info-item-1">Hungerford Algebra 第 II-IV 章定义、定理与性质整理 这版已经把上一版的英文 OCR 原文块替换成中文讲义式表述。顺序按原书编号排列； Proposition 统一写成“命题/性质”。这里整理的是结论本身，不含证明。 使用方式 每条按这种结构读：先看中文标题，再看“若/则”的</div></div></div></a><a class="pagination-related" href="/notes/%E6%95%B0%E5%AD%A6-abstract-algebra-rings-5e7b79d1/" title="Rings"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-05-19</div><div class="info-item-2">Rings</div></div><div class="info-2"><div class="info-item-1">p is prime if and only if (p) is nonzero prime ideal p is prime ⟺(p) is a nonzero prime ideal</div></div></div></a><a class="pagination-related" href="/notes/%E6%95%B0%E5%AD%A6-abstract-algebra-%E5%BD%A2%E5%BC%8F%E5%B9%82%E7%BA%A7%E6%95%B0-e0bcb283/" title="形式幂级数"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-05-18</div><div class="info-item-2">形式幂级数</div></div><div class="info-2"><div class="info-item-1">https://chengzhaoxi.xyz/483c751f.html</div></div></div></a><a class="pagination-related" href="/notes/%E6%95%B0%E5%AD%A6-abstract-algebra-the-structure-of-groups-bbd56663/" title="The Action Of A Group On A Set"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-05-25</div><div class="info-item-2">The Action Of A Group On A Set</div></div><div class="info-2"><div class="info-item-1">The Action Of A Group On A Set Definition 4.1 An action of a group G on a set is a function G times S to S usually denoted by (g,x) mapsto gx such tha</div></div></div></a><a class="pagination-related" href="/notes/%E6%95%B0%E5%AD%A6-abstract-algebra-%E4%BD%9C%E4%B8%9A-440112c0/" title="Abstract Algebra 作业"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-06-18</div><div class="info-item-2">Abstract Algebra 作业</div></div><div class="info-2"><div class="info-item-1">Abstract Algebra 作业 HW7 题目 Recall in our course, all rings have identity elements. 1. A ring R such that a^2=a for all a in R is called a Boolean ring</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.svg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Nemo YU</div><div class="author-info-description">数学 / 英语 / 法语 / CS / 美食</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">141</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">102</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">26</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/KalaxYU"><i class="fab fa-github"></i><span>GitHub</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/KalaxYU" target="_blank" title="GitHub"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://notes.kalax524.com" target="_blank" title="Notes Hub"><i class="fas fa-sticky-note" style="color: #2b7a78;"></i></a><a class="social-icon" href="mailto:ibioancialo524@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #2b7a78;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">学科索引：数学、英语、法语、CS、美食、札记；英语与法语每日阅读已启用。</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8A%BD%E4%BB%A3%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86"><span class="toc-number">1.</span> <span class="toc-text">抽代笔记整理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E7%B4%A0%E7%90%86%E6%83%B3%E4%B8%8E%E6%9E%81%E5%A4%A7%E7%90%86%E6%83%B3"><span class="toc-number">1.1.</span> <span class="toc-text">1. 素理想与极大理想</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%EF%BC%9A%E7%B4%A0%E7%90%86%E6%83%B3"><span class="toc-number">1.1.1.</span> <span class="toc-text">定义：素理想</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BE%8B"><span class="toc-number">1.1.2.</span> <span class="toc-text">例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E7%90%86%EF%BC%9A%E7%B4%A0%E7%90%86%E6%83%B3%E7%9A%84%E4%B9%98%E7%A7%AF%E5%88%A4%E5%88%AB"><span class="toc-number">1.1.3.</span> <span class="toc-text">定理：素理想的乘积判别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E7%90%86%EF%BC%9A%E5%95%86%E7%8E%AF%E5%88%BB%E7%94%BB%E7%B4%A0%E7%90%86%E6%83%B3"><span class="toc-number">1.1.4.</span> <span class="toc-text">定理：商环刻画素理想</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%EF%BC%9A%E5%81%8F%E5%BA%8F%E9%9B%86%E4%B8%8E-Zorn-%E5%BC%95%E7%90%86"><span class="toc-number">1.1.5.</span> <span class="toc-text">定义：偏序集与 Zorn 引理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E7%90%86%EF%BC%9A%E6%9E%81%E5%A4%A7%E7%90%86%E6%83%B3%E5%AD%98%E5%9C%A8"><span class="toc-number">1.1.6.</span> <span class="toc-text">定理：极大理想存在</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%EF%BC%9A%E6%9E%81%E5%A4%A7%E7%90%86%E6%83%B3"><span class="toc-number">1.1.7.</span> <span class="toc-text">定义：极大理想</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E7%90%86%EF%BC%9A%E6%9E%81%E5%A4%A7%E7%90%86%E6%83%B3%E7%9A%84%E5%95%86%E7%8E%AF%E5%88%BB%E7%94%BB"><span class="toc-number">1.1.8.</span> <span class="toc-text">定理：极大理想的商环刻画</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A8%E8%AE%BA%EF%BC%9A%E6%9E%81%E5%A4%A7%E7%90%86%E6%83%B3%E6%98%AF%E7%B4%A0%E7%90%86%E6%83%B3"><span class="toc-number">1.1.9.</span> <span class="toc-text">推论：极大理想是素理想</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E7%90%86%EF%BC%9A%E5%9F%9F%E7%9A%84%E7%AD%89%E4%BB%B7%E5%88%BB%E7%94%BB"><span class="toc-number">1.1.10.</span> <span class="toc-text">定理：域的等价刻画</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%95%86%E7%8E%AF%E4%B8%8E%E7%90%86%E6%83%B3%E5%AF%B9%E5%BA%94"><span class="toc-number">1.2.</span> <span class="toc-text">2. 商环与理想对应</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9E%E5%BF%86%EF%BC%9A%E7%8E%AF%E5%90%8C%E6%80%81%E4%B8%8E%E6%A0%B8"><span class="toc-number">1.2.1.</span> <span class="toc-text">回忆：环同态与核</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%90%86%E6%83%B3%E5%AF%B9%E5%BA%94%E5%AE%9A%E7%90%86"><span class="toc-number">1.2.2.</span> <span class="toc-text">理想对应定理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%9C%89%E9%99%90%E7%9B%B4%E7%A7%AF%E4%B8%8E%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86"><span class="toc-number">1.3.</span> <span class="toc-text">3. 有限直积与中国剩余定理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E7%90%86%EF%BC%9A%E7%8E%AF%E7%9A%84%E7%9B%B4%E7%A7%AF"><span class="toc-number">1.3.1.</span> <span class="toc-text">定理：环的直积</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%90%86%E6%83%B3%E7%9A%84%E7%9B%B4%E7%A7%AF"><span class="toc-number">1.3.2.</span> <span class="toc-text">理想的直积</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BE%8B%EF%BC%9A-mathbb-Z-times-mathbb-Z-%E4%B8%AD%E7%9A%84%E7%B4%A0%E7%90%86%E6%83%B3"><span class="toc-number">1.3.3.</span> <span class="toc-text">例：\mathbb Z\times\mathbb Z 中的素理想</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E7%90%86%EF%BC%9A%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86%E7%9A%84%E5%AD%98%E5%9C%A8%E5%94%AF%E4%B8%80%E5%BD%A2%E5%BC%8F"><span class="toc-number">1.3.4.</span> <span class="toc-text">定理：中国剩余定理的存在唯一形式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86%E7%9A%84%E5%95%86%E7%8E%AF%E5%BD%A2%E5%BC%8F"><span class="toc-number">1.3.5.</span> <span class="toc-text">中国剩余定理的商环形式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BE%8B-1"><span class="toc-number">1.3.6.</span> <span class="toc-text">例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E4%BA%A4%E6%8D%A2%E7%8E%AF%E4%B8%AD%E7%9A%84%E5%9B%A0%E5%AD%90%E5%88%86%E8%A7%A3"><span class="toc-number">1.4.</span> <span class="toc-text">4. 交换环中的因子分解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%EF%BC%9A%E6%95%B4%E9%99%A4%E4%B8%8E%E7%9B%B8%E4%BC%B4"><span class="toc-number">1.4.1.</span> <span class="toc-text">定义：整除与相伴</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%EF%BC%9A%E4%B8%8D%E5%8F%AF%E7%BA%A6%E5%85%83%E3%80%81%E7%B4%A0%E5%85%83%E3%80%81%E5%8F%AF%E7%BA%A6%E5%85%83"><span class="toc-number">1.4.2.</span> <span class="toc-text">定义：不可约元、素元、可约元</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BE%8B-2"><span class="toc-number">1.4.3.</span> <span class="toc-text">例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E7%90%86%EF%BC%9A%E7%B4%A0%E5%85%83%E4%B8%8E%E7%B4%A0%E7%90%86%E6%83%B3"><span class="toc-number">1.4.4.</span> <span class="toc-text">定理：素元与素理想</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E7%90%86%EF%BC%9A%E4%B8%8D%E5%8F%AF%E7%BA%A6%E5%85%83%E4%B8%8E%E4%B8%BB%E7%90%86%E6%83%B3%E7%9A%84%E6%9E%81%E5%A4%A7%E6%80%A7"><span class="toc-number">1.4.5.</span> <span class="toc-text">定理：不可约元与主理想的极大性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%EF%BC%9A%E5%94%AF%E4%B8%80%E5%88%86%E8%A7%A3%E6%95%B4%E7%8E%AF"><span class="toc-number">1.4.6.</span> <span class="toc-text">定义：唯一分解整环</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BE%8B-3"><span class="toc-number">1.4.7.</span> <span class="toc-text">例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%95%E7%90%86%EF%BC%9APID-%E4%B8%AD%E4%B8%BB%E7%90%86%E6%83%B3%E5%8D%87%E9%93%BE%E7%A8%B3%E5%AE%9A"><span class="toc-number">1.4.8.</span> <span class="toc-text">引理：PID 中主理想升链稳定</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E7%90%86%EF%BC%9APID-%E6%98%AF-UFD"><span class="toc-number">1.4.9.</span> <span class="toc-text">定理：PID 是 UFD</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-Euclidean-Domain-%E4%B8%8E%E6%9C%80%E5%A4%A7%E5%85%AC%E5%9B%A0%E5%AD%90"><span class="toc-number">1.5.</span> <span class="toc-text">5. Euclidean Domain 与最大公因子</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%EF%BC%9AEuclidean-Domain"><span class="toc-number">1.5.1.</span> <span class="toc-text">定义：Euclidean Domain</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BE%8B-4"><span class="toc-number">1.5.2.</span> <span class="toc-text">例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E7%90%86%EF%BC%9A%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%97%E6%95%B4%E7%8E%AF%E6%98%AF-PID"><span class="toc-number">1.5.3.</span> <span class="toc-text">定理：欧几里得整环是 PID</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E5%A4%A7%E5%85%AC%E5%9B%A0%E5%AD%90"><span class="toc-number">1.5.4.</span> <span class="toc-text">最大公因子</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E5%88%86%E5%BC%8F%E5%9F%9F"><span class="toc-number">1.6.</span> <span class="toc-text">6. 分式域</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E5%BC%8F%E5%9F%9F%E7%9A%84%E6%9E%84%E9%80%A0"><span class="toc-number">1.6.1.</span> <span class="toc-text">分式域的构造</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E7%90%86"><span class="toc-number">1.6.2.</span> <span class="toc-text">定理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BE%8B-5"><span class="toc-number">1.6.3.</span> <span class="toc-text">例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E5%A4%9A%E9%A1%B9%E5%BC%8F%E7%8E%AF%E4%B8%8E%E5%BD%A2%E5%BC%8F%E5%B9%82%E7%BA%A7%E6%95%B0"><span class="toc-number">1.7.</span> <span class="toc-text">7. 多项式环与形式幂级数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E9%A1%B9%E5%BC%8F%E7%8E%AF"><span class="toc-number">1.7.1.</span> <span class="toc-text">多项式环</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E5%85%A5%E5%90%8C%E6%80%81"><span class="toc-number">1.7.2.</span> <span class="toc-text">代入同态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BD%A2%E5%BC%8F%E5%B9%82%E7%BA%A7%E6%95%B0"><span class="toc-number">1.7.3.</span> <span class="toc-text">形式幂级数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-%E5%A4%9A%E9%A1%B9%E5%BC%8F%E7%8E%AF%E4%B8%AD%E7%9A%84%E5%9B%A0%E5%AD%90%E5%88%86%E8%A7%A3"><span class="toc-number">1.8.</span> <span class="toc-text">8. 多项式环中的因子分解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%95%E9%A1%B9%E5%BC%8F%E4%B8%8E%E6%AC%A1%E6%95%B0"><span class="toc-number">1.8.1.</span> <span class="toc-text">单项式与次数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E5%85%83%E5%A4%9A%E9%A1%B9%E5%BC%8F%E7%9A%84%E5%B8%A6%E4%BD%99%E9%99%A4%E6%B3%95"><span class="toc-number">1.8.2.</span> <span class="toc-text">一元多项式的带余除法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A8%E8%AE%BA"><span class="toc-number">1.8.3.</span> <span class="toc-text">推论</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B9%E4%B8%8E%E5%9B%A0%E5%BC%8F%E5%AE%9A%E7%90%86"><span class="toc-number">1.8.4.</span> <span class="toc-text">根与因式定理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B9%E7%9A%84%E4%B8%AA%E6%95%B0"><span class="toc-number">1.8.5.</span> <span class="toc-text">根的个数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E9%87%8D%E6%A0%B9%E4%B8%8E%E5%AF%BC%E6%95%B0"><span class="toc-number">1.8.6.</span> <span class="toc-text">多重根与导数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%89%E7%90%86%E6%A0%B9%E5%88%A4%E5%88%AB"><span class="toc-number">1.8.7.</span> <span class="toc-text">有理根判别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BE%8B-6"><span class="toc-number">1.8.8.</span> <span class="toc-text">例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-Gauss-%E5%BC%95%E7%90%86%E4%B8%8E-Eisenstein-%E5%88%A4%E5%88%AB%E6%B3%95"><span class="toc-number">1.9.</span> <span class="toc-text">9. Gauss 引理与 Eisenstein 判别法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%85%E5%AE%B9%E4%B8%8E%E6%9C%AC%E5%8E%9F%E5%A4%9A%E9%A1%B9%E5%BC%8F"><span class="toc-number">1.9.1.</span> <span class="toc-text">内容与本原多项式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Gauss-%E5%BC%95%E7%90%86"><span class="toc-number">1.9.2.</span> <span class="toc-text">Gauss 引理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Gauss-%E5%BC%95%E7%90%86%E7%9A%84%E6%8E%A8%E8%AE%BA"><span class="toc-number">1.9.3.</span> <span class="toc-text">Gauss 引理的推论</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E7%90%86%EF%BC%9AD-x-%E6%98%AF-UFD"><span class="toc-number">1.9.4.</span> <span class="toc-text">定理：D[x] 是 UFD</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Eisenstein-%E5%88%A4%E5%88%AB%E6%B3%95"><span class="toc-number">1.9.5.</span> <span class="toc-text">Eisenstein 判别法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BE%8B-7"><span class="toc-number">1.9.6.</span> <span class="toc-text">例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-%E7%BE%A4%E4%BD%9C%E7%94%A8"><span class="toc-number">1.10.</span> <span class="toc-text">10. 群作用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%EF%BC%9A%E7%BE%A4%E4%BD%9C%E7%94%A8"><span class="toc-number">1.10.1.</span> <span class="toc-text">定义：群作用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BE%8B-8"><span class="toc-number">1.10.2.</span> <span class="toc-text">例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%A8%E9%81%93%E4%B8%8E%E7%A8%B3%E5%AE%9A%E5%AD%90"><span class="toc-number">1.10.3.</span> <span class="toc-text">轨道与稳定子</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%A8%E9%81%93-%E7%A8%B3%E5%AE%9A%E5%AD%90%E5%AE%9A%E7%90%86"><span class="toc-number">1.10.4.</span> <span class="toc-text">轨道-稳定子定理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B1%E8%BD%AD%E7%B1%BB%E3%80%81%E4%B8%AD%E5%BF%83%E5%8C%96%E5%AD%90%E3%80%81%E6%AD%A3%E8%A7%84%E5%8C%96%E5%AD%90"><span class="toc-number">1.10.5.</span> <span class="toc-text">共轭类、中心化子、正规化子</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B1%BB%E6%96%B9%E7%A8%8B"><span class="toc-number">1.10.6.</span> <span class="toc-text">类方程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BE%A4%E4%BD%9C%E7%94%A8%E8%AF%B1%E5%AF%BC%E7%BD%AE%E6%8D%A2%E8%A1%A8%E7%A4%BA"><span class="toc-number">1.10.7.</span> <span class="toc-text">群作用诱导置换表示</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Cayley-%E5%AE%9A%E7%90%86"><span class="toc-number">1.10.8.</span> <span class="toc-text">Cayley 定理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%90%8C%E6%9E%84%E4%B8%8E%E5%86%85%E8%87%AA%E5%90%8C%E6%9E%84"><span class="toc-number">1.10.9.</span> <span class="toc-text">自同构与内自同构</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-Sylow-%E5%AE%9A%E7%90%86"><span class="toc-number">1.11.</span> <span class="toc-text">11. Sylow 定理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%95%E7%90%86%EF%BC%9A%E6%9C%89%E9%99%90-p-%E7%BE%A4%E4%BD%9C%E7%94%A8%E7%9A%84%E5%9B%BA%E5%AE%9A%E7%82%B9"><span class="toc-number">1.11.1.</span> <span class="toc-text">引理：有限 p-群作用的固定点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Cauchy-%E5%AE%9A%E7%90%86"><span class="toc-number">1.11.2.</span> <span class="toc-text">Cauchy 定理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%EF%BC%9Ap-%E7%BE%A4%E4%B8%8E-Sylow-p-%E5%AD%90%E7%BE%A4"><span class="toc-number">1.11.3.</span> <span class="toc-text">定义：p-群与 Sylow p-子群</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#p-%E7%BE%A4%E7%9A%84%E4%B8%AD%E5%BF%83"><span class="toc-number">1.11.4.</span> <span class="toc-text">p-群的中心</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A3%E8%A7%84%E5%8C%96%E5%AD%90%E5%BC%95%E7%90%86"><span class="toc-number">1.11.5.</span> <span class="toc-text">正规化子引理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80-Sylow-%E5%AE%9A%E7%90%86"><span class="toc-number">1.11.6.</span> <span class="toc-text">第一 Sylow 定理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C-Sylow-%E5%AE%9A%E7%90%86"><span class="toc-number">1.11.7.</span> <span class="toc-text">第二 Sylow 定理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89-Sylow-%E5%AE%9A%E7%90%86"><span class="toc-number">1.11.8.</span> <span class="toc-text">第三 Sylow 定理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BE%8B%EF%BC%9A%E9%98%B6%E4%B8%BA-28-%E7%9A%84%E7%BE%A4"><span class="toc-number">1.11.9.</span> <span class="toc-text">例：阶为 28 的群</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BE%8B%EF%BC%9AS-4-%E7%9A%84-Sylow-3-%E5%AD%90%E7%BE%A4"><span class="toc-number">1.11.10.</span> <span class="toc-text">例：S_4 的 Sylow 3-子群</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-%E6%A8%A1"><span class="toc-number">1.12.</span> <span class="toc-text">12. 模</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%EF%BC%9A%E5%B7%A6%E6%A8%A1"><span class="toc-number">1.12.1.</span> <span class="toc-text">定义：左模</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BE%8B-9"><span class="toc-number">1.12.2.</span> <span class="toc-text">例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9B%B6%E6%A8%A1"><span class="toc-number">1.12.3.</span> <span class="toc-text">零模</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A8%A1%E5%90%8C%E6%80%81"><span class="toc-number">1.12.4.</span> <span class="toc-text">模同态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B8%E4%B8%8E%E5%83%8F"><span class="toc-number">1.12.5.</span> <span class="toc-text">核与像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%9F%E6%88%90%E5%AD%90%E6%A8%A1"><span class="toc-number">1.12.6.</span> <span class="toc-text">生成子模</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%95%86%E6%A8%A1%E4%B8%8E%E7%AC%AC%E4%B8%80%E5%90%8C%E6%9E%84%E5%AE%9A%E7%90%86"><span class="toc-number">1.12.7.</span> <span class="toc-text">商模与第一同构定理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E3%80%81%E7%AC%AC%E4%B8%89%E5%90%8C%E6%9E%84%E5%AE%9A%E7%90%86"><span class="toc-number">1.12.8.</span> <span class="toc-text">第二、第三同构定理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A3%E5%90%88%E5%88%97"><span class="toc-number">1.12.9.</span> <span class="toc-text">正合列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9F%AD%E4%BA%94%E5%BC%95%E7%90%86"><span class="toc-number">1.12.10.</span> <span class="toc-text">短五引理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-%E5%9F%9F%E6%89%A9%E5%BC%A0"><span class="toc-number">1.13.</span> <span class="toc-text">13. 域扩张</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A8%E6%9C%BA"><span class="toc-number">1.13.1.</span> <span class="toc-text">动机</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%EF%BC%9A%E5%9F%9F%E6%89%A9%E5%BC%A0"><span class="toc-number">1.13.2.</span> <span class="toc-text">定义：域扩张</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BE%8B-10"><span class="toc-number">1.13.3.</span> <span class="toc-text">例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%87%E6%B3%A8"><span class="toc-number">1.13.4.</span> <span class="toc-text">备注</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/notes/%E8%8B%B1%E8%AF%AD-toefl-reading-2026-07-19-huxley-piece-of-chalk-a1ca0b74/" title="Huxley on Reading a Piece of Chalk">Huxley on Reading a Piece of Chalk</a><time datetime="2026-07-19T00:25:53.000Z" title="发表于 2026-07-19 08:25:53">2026-07-19</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/notes/%E6%B3%95%E8%AF%AD-fra%C3%A7ais-%E9%98%85%E8%AF%BB-2026-07-19-dimanche-sans-voiture-25dab911/" title="Un dimanche sans voiture">Un dimanche sans voiture</a><time datetime="2026-07-19T00:20:52.000Z" title="发表于 2026-07-19 08:20:52">2026-07-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/lectures-francaises/2026-07-19-dimanche-sans-voiture/" title="Un dimanche sans voiture"><img src="/img/bg.JPG" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Un dimanche sans voiture"/></a><div class="content"><a class="title" href="/lectures-francaises/2026-07-19-dimanche-sans-voiture/" title="Un dimanche sans voiture">Un dimanche sans voiture</a><time datetime="2026-07-19T00:10:00.000Z" title="发表于 2026-07-19 08:10:00">2026-07-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/readings/2026-07-19-huxley-piece-of-chalk/" title="Huxley on Reading a Piece of Chalk"><img src="/img/bg.JPG" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Huxley on Reading a Piece of Chalk"/></a><div class="content"><a class="title" href="/readings/2026-07-19-huxley-piece-of-chalk/" title="Huxley on Reading a Piece of Chalk">Huxley on Reading a Piece of Chalk</a><time datetime="2026-07-19T00:00:00.000Z" title="发表于 2026-07-19 08:00:00">2026-07-19</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/notes/%E8%8B%B1%E8%AF%AD-toefl-reading-2026-07-18-powell-canyons-landscape-evidence-38529e40/" title="Powell on Canyons and Landscape Evidence">Powell on Canyons and Landscape Evidence</a><time datetime="2026-07-18T11:17:38.000Z" title="发表于 2026-07-18 19:17:38">2026-07-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/notes/%E6%B3%95%E8%AF%AD-fra%C3%A7ais-%E9%98%85%E8%AF%BB-2026-07-18-message-apres-cours-fdec8c91/" title="Un message après le cours">Un message après le cours</a><time datetime="2026-07-18T11:13:36.000Z" title="发表于 2026-07-18 19:13:36">2026-07-18</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Nemo YU</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></span></div><div class="footer_custom_text">Coursework, reading notes, and language study.</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.2"></script><script src="/js/main.js?v=5.5.2"></script><div class="js-pjax"></div><script defer src="/js/word-translate.js"></script><script defer src="/js/mathjax-loader.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="Search notes, essays, and readings" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.5.2"></script></div></div></body></html>
