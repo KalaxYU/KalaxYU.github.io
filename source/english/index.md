@@ -12,6 +12,10 @@ comments: false
 <p><a class="text-link" href="/english-reading/">进入 TOEFL Reading 精读专栏</a></p>
 
 <div class="note-list">
+<a class="note-row" href="/notes/英语-toefl-reading-2026-07-19-huxley-piece-of-chalk-a1ca0b74/">
+<strong>Huxley on Reading a Piece of Chalk</strong>
+<span>Huxley on Reading a Piece of Chalk Blog permalink: https://kalax524.com/readings/2026-07-19-huxley-piece-of-chalk/ Source Thomas Henry Huxley, On a Pi</span>
+</a>
 <a class="note-row" href="/notes/英语-toefl-reading-2026-07-18-powell-canyons-landscape-evidence-38529e40/">
 <strong>Powell on Canyons and Landscape Evidence</strong>
 <span>Powell on Canyons and Landscape Evidence Blog permalink: https://kalax524.com/readings/2026-07-18-powell-canyons-landscape-evidence/ Source Adapted fr</span>
