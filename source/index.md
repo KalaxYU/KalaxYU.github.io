@@ -26,7 +26,7 @@ top_img: /img/bg.JPG
 </a>
 <a class="module-card" style="--module-accent: #d96c4f" href="/french/">
 <span class="module-icon"><i class="fas fa-language"></i></span>
-<span class="module-count">29 notes</span>
+<span class="module-count">30 notes</span>
 <strong>法语</strong>
 <span>French</span>
 <p>法语词汇、动词变位、介词、冠词、句式和练习。</p>
